@@ -1,0 +1,5232 @@
+[
+  {
+    "id": 1,
+    "name": "Expansion of Area under Horticulture / बागवानी के तहत क्षेत्र का विस्तार",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 2,
+    "name": "Enhance post harvest management/ फसलोपरांत प्रबंधन में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 3,
+    "name": "Increased capacities of nurseries/ नर्सरी की क्षमता में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 4,
+    "name": "Addition of cultivation area खेती क्षेत्र मे बढ़ोतरी",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 5,
+    "name": "Protected cultivation संरक्षित खेती",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 6,
+    "name": "Area under senile plants rejuvenated जीर्ण पौधों के तहत कायाकल्प किया गया क्षेत्र",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 73,
+    "subscheme_id": 74,
+    "created_at": "2022-06-05 07:10:00",
+    "updated_at": "2022-06-05 07:10:00"
+  },
+  {
+    "id": 7,
+    "name": "Farmers’ training and extension support under ATMA/ आत्मा के तहत किसानों का प्रशिक्षण और विस्तार सहायता",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 81,
+    "subscheme_id": 82,
+    "created_at": "2022-06-14 07:10:00",
+    "updated_at": "2022-06-14 07:10:00"
+  },
+  {
+    "id": 8,
+    "name": "Up gradation of knowledge & skill of functionaries EEIs Skill Training courses कर्मचारियों के ज्ञान और कौशल का विकास",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 81,
+    "subscheme_id": 82,
+    "created_at": "2022-06-14 07:10:00",
+    "updated_at": "2022-06-14 07:10:00"
+  },
+  {
+    "id": 9,
+    "name": "1. Ensure quality agri input – fertiliser pesticides and seeds गुणवत्ता पूर्ण कृषि इनपुट यथा उर्वरक कीटनाशक और बीज सुनिश्चित करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 86,
+    "subscheme_id": 87,
+    "created_at": "2022-06-20 07:10:00",
+    "updated_at": "2022-06-20 07:10:00"
+  },
+  {
+    "id": 10,
+    "name": "Integrated farming practices for sustainable agriculture /टिकाऊ कृषि के लिए एकीकृत कृषि पद्धतियां",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 88,
+    "subscheme_id": 89,
+    "created_at": "2022-06-23 07:10:00",
+    "updated_at": "2022-06-23 07:10:00"
+  },
+  {
+    "id": 11,
+    "name": "Additional area under cultivation/ खेती के तहत अतिरिक्त क्षेत्र",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 89,
+    "subscheme_id": 90,
+    "created_at": "2022-06-25 07:10:00",
+    "updated_at": "2022-06-25 07:10:00"
+  },
+  {
+    "id": 12,
+    "name": "Increased yield/productivity उपज/उत्पादकता में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 89,
+    "subscheme_id": 90,
+    "created_at": "2022-06-25 07:10:00",
+    "updated_at": "2022-06-25 07:10:00"
+  },
+  {
+    "id": 13,
+    "name": "Development of pre- and post structure /खेती के पूर्व और बाद की संरचना का विकास",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 91,
+    "subscheme_id": 92,
+    "created_at": "2022-06-28 07:10:00",
+    "updated_at": "2022-06-28 07:10:00"
+  },
+  {
+    "id": 14,
+    "name": "Planning & executing various schemes related to agriculture & allied sectors कृषि और संबद्ध क्षेत्रों से संबंधित विभिन्न योजनाओं की योजना बनाना और उन्हें क्रियान्वित करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 91,
+    "subscheme_id": 92,
+    "created_at": "2022-06-28 07:10:00",
+    "updated_at": "2022-06-28 07:10:00"
+  },
+  {
+    "id": 15,
+    "name": "1. Efficient water conveyance and precision water application devices - sprinklers, drips, pivots, rain-guns etc./ कुशल जल प्रबंधन और सटीक जल अनुप्रयोग उपकरण- स्प्रिंकलर, ड्रिप, पिवोट्स, रेन-गन आदि।",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 93,
+    "subscheme_id": 93,
+    "created_at": "2022-06-28 07:10:00",
+    "updated_at": "2022-06-28 07:10:00"
+  },
+  {
+    "id": 16,
+    "name": "1. Financial assistance to farmers for procurement and hiring of farm equipment/ कृषि उपकरणों की खरीद और किराये पर लेने के लिए किसानों को वित्तीय सहायता",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 95,
+    "subscheme_id": 95,
+    "created_at": "2022-07-04 07:10:00",
+    "updated_at": "2022-07-04 07:10:00"
+  },
+  {
+    "id": 17,
+    "name": "AREA UNDER ADOPTION AND CERTIFICATION OF LAND AS PER PGS INDIA GUIDELINE / पीजीएस इंडिया गाइडलाइन के अनुसार भूमि के गोद लेने और प्रमाणीकरण के तहत क्षेत्र",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 96,
+    "subscheme_id": 96,
+    "created_at": "2022-07-06 07:10:00",
+    "updated_at": "2022-07-06 07:10:00"
+  },
+  {
+    "id": 18,
+    "name": "1. Provide soil test-based recommendations to farmers./ किसानों को मृदा परीक्षण आधारित सिफारिशें प्रदान करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 98,
+    "subscheme_id": 98,
+    "created_at": "2022-07-09 07:10:00",
+    "updated_at": "2022-07-09 07:10:00"
+  },
+  {
+    "id": 19,
+    "name": "1. Upgradationof knowledge & skill of farmers ( किसानों का हुनर एवं ज्ञान का उन्नयन)",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 100,
+    "subscheme_id": 100,
+    "created_at": "2022-07-12 07:10:00",
+    "updated_at": "2022-07-12 07:10:00"
+  },
+  {
+    "id": 20,
+    "name": "2. Training and exposure of officers/ farmers",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 100,
+    "subscheme_id": 100,
+    "created_at": "2022-07-12 07:10:00",
+    "updated_at": "2022-07-12 07:10:00"
+  },
+  {
+    "id": 21,
+    "name": "1. New accounts opening (New KCC Accounts) / नया खाता खोलना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 105,
+    "subscheme_id": 105,
+    "created_at": "2022-07-18 07:10:00",
+    "updated_at": "2022-07-18 07:10:00"
+  },
+  {
+    "id": 22,
+    "name": "1. Increased agri marketing facility and market linkage/ कृषि विपणन सुविधा और बाजार से जुड़ाव में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 106,
+    "subscheme_id": 106,
+    "created_at": "2022-07-20 07:10:00",
+    "updated_at": "2022-07-20 07:10:00"
+  },
+  {
+    "id": 23,
+    "name": "2. Minimizing the intervention of middlemen/बिचौलियों के हस्तक्षेप को कम करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 106,
+    "subscheme_id": 106,
+    "created_at": "2022-07-20 07:10:00",
+    "updated_at": "2022-07-20 07:10:00"
+  },
+  {
+    "id": 24,
+    "name": "1. Financial assistance to farmers for procurement and hiring of farm equipment/ किसानो को कृषि उपकरण खरीदने एवं भाड़े पर देने के लिए वित्तीय सहायता",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 109,
+    "subscheme_id": 109,
+    "created_at": "2022-07-22 07:10:00",
+    "updated_at": "2022-07-22 07:10:00"
+  },
+  {
+    "id": 25,
+    "name": "1. Loan waive-off of farmers / किसानों की कर्ज माफी",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 111,
+    "subscheme_id": 111,
+    "created_at": "2022-07-24 07:10:00",
+    "updated_at": "2022-07-24 07:10:00"
+  },
+  {
+    "id": 26,
+    "name": "1. Additional area under cultivation/ कृषि क्षेत्र अंतर्गत अतिरिक्त अच्छादन",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 115,
+    "subscheme_id": 115,
+    "created_at": "2022-07-29 07:10:00",
+    "updated_at": "2022-07-29 07:10:00"
+  },
+  {
+    "id": 27,
+    "name": "1. Distribution of Solar Powered Irrigation machines. सौर ऊर्जा से चलने वाली सिंचाई मशीनों का वितरण।",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 116,
+    "subscheme_id": 116,
+    "created_at": "2022-07-30 07:10:00",
+    "updated_at": "2022-07-30 07:10:00"
+  },
+  {
+    "id": 28,
+    "name": "Setting up of Centre of Excellence/ उत्कृष्टता केंद्र की स्थापना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 118,
+    "subscheme_id": 118,
+    "created_at": "2022-08-03 07:10:00",
+    "updated_at": "2022-08-03 07:10:00"
+  },
+  {
+    "id": 29,
+    "name": "Capacity development of farmers / किसानों का क्षमता विकास",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 118,
+    "subscheme_id": 118,
+    "created_at": "2022-08-03 07:10:00",
+    "updated_at": "2022-08-03 07:10:00"
+  },
+  {
+    "id": 30,
+    "name": "3.Progressive farmers Developed/ प्रगतिशील किसान को विकसित करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 118,
+    "subscheme_id": 118,
+    "created_at": "2022-08-03 07:10:00",
+    "updated_at": "2022-08-03 07:10:00"
+  },
+  {
+    "id": 31,
+    "name": "1. Providing agri and allied related services to farmers / किसानों को कृषि और उससे संबंधित सेवाएं प्रदान करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 121,
+    "subscheme_id": 121,
+    "created_at": "2022-08-07 07:10:00",
+    "updated_at": "2022-08-07 07:10:00"
+  },
+  {
+    "id": 32,
+    "name": "Additional area under cultivation कृषि क्षेत्र अंतर्गत अतिरिक्त अच्छादन",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 122,
+    "subscheme_id": 122,
+    "created_at": "2022-08-08 07:10:00",
+    "updated_at": "2022-08-08 07:10:00"
+  },
+  {
+    "id": 33,
+    "name": "Enhance judicious use of chemical fertilizer/ रसायनिक उर्वरकों का विवेक पूर्ण उपयोग बढ़ाना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 123,
+    "subscheme_id": 123,
+    "created_at": "2022-08-10 07:10:00",
+    "updated_at": "2022-08-10 07:10:00"
+  },
+  {
+    "id": 34,
+    "name": "Provide soil test-based recommendations to farmers. किसानों कोमिट्टी परीक्षण आधारित सलाह प्रदान करना।",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 123,
+    "subscheme_id": 123,
+    "created_at": "2022-08-10 07:10:00",
+    "updated_at": "2022-08-10 07:10:00"
+  },
+  {
+    "id": 35,
+    "name": "Increased coverage area / आच्छादन क्षेत्र मे बढ़ोतरी",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 123,
+    "subscheme_id": 123,
+    "created_at": "2022-08-10 07:10:00",
+    "updated_at": "2022-08-10 07:10:00"
+  },
+  {
+    "id": 36,
+    "name": "Increased soil fertility मिट्टी की उर्वरता में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 123,
+    "subscheme_id": 123,
+    "created_at": "2022-08-10 07:10:00",
+    "updated_at": "2022-08-10 07:10:00"
+  },
+  {
+    "id": 37,
+    "name": "Enhanced Area under Horticulture Cultivation",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 38,
+    "name": "Promotion of organic farming practices among farmers किसानों के बीच जैविक खेती प्रथाओं को बढ़ावा देना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 39,
+    "name": "High production & productivity of horticulture crops जलस्रोत संरचनाओं का निर्माण",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 40,
+    "name": "Increased capacities of nurseries /नर्सरी की क्षमता मे बढ़ोतरी",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 41,
+    "name": "Addition of cultivation area/ खेती क्षेत्र मे विस्तार",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 42,
+    "name": "Protected cultivation संरक्षित खेती करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 43,
+    "name": "Area under senile plants rejuvenated पुराने पौधे का पुनर्जीवन क्षेत्र मे विस्तार",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 128,
+    "subscheme_id": 128,
+    "created_at": "2022-08-17 07:10:00",
+    "updated_at": "2022-08-17 07:10:00"
+  },
+  {
+    "id": 44,
+    "name": "1. Technical capacity building/ तकनीकी क्षमता निर्माण",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 136,
+    "subscheme_id": 136,
+    "created_at": "2022-08-26 07:10:00",
+    "updated_at": "2022-08-26 07:10:00"
+  },
+  {
+    "id": 45,
+    "name": "2. Increased reach of farmer to market/ किसानों की बाजार तक पहुंच बढ़ाना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 136,
+    "subscheme_id": 136,
+    "created_at": "2022-08-26 07:10:00",
+    "updated_at": "2022-08-26 07:10:00"
+  },
+  {
+    "id": 46,
+    "name": "1. Improved postharvest management फसल कटाई के बाद की प्रबंधन को सुदृढ़ करना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 139,
+    "subscheme_id": 139,
+    "created_at": "2022-08-30 07:10:00",
+    "updated_at": "2022-08-30 07:10:00"
+  },
+  {
+    "id": 47,
+    "name": "1. Export of Agri Produce",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 139,
+    "subscheme_id": 139,
+    "created_at": "2022-08-30 07:10:00",
+    "updated_at": "2022-08-30 07:10:00"
+  },
+  {
+    "id": 48,
+    "name": "Enhance working efficiency/ कार्य कुशलता में वृद्धि",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 141,
+    "subscheme_id": 141,
+    "created_at": "2022-09-02 07:10:00",
+    "updated_at": "2022-09-02 07:10:00"
+  },
+  {
+    "id": 49,
+    "name": "2. Hiring expert services / विशेषज्ञ सेवाओं को किराए पर लेना",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 141,
+    "subscheme_id": 141,
+    "created_at": "2022-09-02 07:10:00",
+    "updated_at": "2022-09-02 07:10:00"
+  },
+  {
+    "id": 50,
+    "name": "Enhance service expansion/ सेवा विस्तार मे बढ़ोतरी",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 144,
+    "subscheme_id": 144,
+    "created_at": "2022-09-06 07:10:00",
+    "updated_at": "2022-09-06 07:10:00"
+  },
+  {
+    "id": 51,
+    "name": "Improved farming technique उन्नत कृषि तकनीक",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 144,
+    "subscheme_id": 144,
+    "created_at": "2022-09-06 07:10:00",
+    "updated_at": "2022-09-06 07:10:00"
+  },
+  {
+    "id": 52,
+    "name": "Efficient water conveyance/ (पानी की उपलब्धता)",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 146,
+    "subscheme_id": 146,
+    "created_at": "2022-09-09 07:10:00",
+    "updated_at": "2022-09-09 07:10:00"
+  },
+  {
+    "id": 53,
+    "name": "Additional area under cultivation खेती के तहत अतिरिक्त क्षेत्र",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 150,
+    "subscheme_id": 150,
+    "created_at": "2022-09-14 07:10:00",
+    "updated_at": "2022-09-14 07:10:00"
+  },
+  {
+    "id": 54,
+    "name": "ADDITIONAL CERTIFIED SEED PRODUCED / उत्पादित अतिरिक्त प्रमाणित बीज",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 151,
+    "subscheme_id": 151,
+    "created_at": "2022-09-15 07:10:00",
+    "updated_at": "2022-09-15 07:10:00"
+  },
+  {
+    "id": 55,
+    "name": "Development of Seed Infrastructure facilities (testing laboratory) बीज संरचना सुविधाओं का विकास (परीक्षण प्रयोगशाला)",
+    "department_id": 2,
+    "division_id": 4,
+    "scheme_id": 151,
+    "subscheme_id": 151,
+    "created_at": "2022-09-15 07:10:00",
+    "updated_at": "2022-09-15 07:10:00"
+  },
+  {
+    "id": 56,
+    "name": "Enhanced pork meat production",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 153,
+    "subscheme_id": 153,
+    "created_at": "2022-09-19 07:10:00",
+    "updated_at": "2022-09-19 07:10:00"
+  },
+  {
+    "id": 57,
+    "name": "Enhanced vet services",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 154,
+    "subscheme_id": 154,
+    "created_at": "2022-09-20 07:10:00",
+    "updated_at": "2022-09-20 07:10:00"
+  },
+  {
+    "id": 58,
+    "name": "increased implementation of scheme",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 156,
+    "subscheme_id": 156,
+    "created_at": "2022-09-24 07:10:00",
+    "updated_at": "2022-09-24 07:10:00"
+  },
+  {
+    "id": 59,
+    "name": "1. increased implementation of scheme",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 157,
+    "subscheme_id": 157,
+    "created_at": "2022-09-25 07:10:00",
+    "updated_at": "2022-09-25 07:10:00"
+  },
+  {
+    "id": 60,
+    "name": "1. Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 158,
+    "subscheme_id": 158,
+    "created_at": "2022-09-27 07:10:00",
+    "updated_at": "2022-09-27 07:10:00"
+  },
+  {
+    "id": 61,
+    "name": "Enhanced vet services",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 159,
+    "subscheme_id": 159,
+    "created_at": "2022-09-29 07:10:00",
+    "updated_at": "2022-09-29 07:10:00"
+  },
+  {
+    "id": 62,
+    "name": "Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 161,
+    "subscheme_id": 161,
+    "created_at": "2022-10-03 07:10:00",
+    "updated_at": "2022-10-03 07:10:00"
+  },
+  {
+    "id": 63,
+    "name": "ESTABLISHMENT OF UNIVERSITY / विश्वविद्यालय की स्थापना",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 162,
+    "subscheme_id": 162,
+    "created_at": "2022-10-04 07:10:00",
+    "updated_at": "2022-10-04 07:10:00"
+  },
+  {
+    "id": 64,
+    "name": "1. Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 163,
+    "subscheme_id": 163,
+    "created_at": "2022-10-06 07:10:00",
+    "updated_at": "2022-10-06 07:10:00"
+  },
+  {
+    "id": 65,
+    "name": "Improve Welfare of Animals",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 164,
+    "subscheme_id": 164,
+    "created_at": "2022-10-08 07:10:00",
+    "updated_at": "2022-10-08 07:10:00"
+  },
+  {
+    "id": 66,
+    "name": "1. Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 165,
+    "subscheme_id": 165,
+    "created_at": "2022-10-08 07:10:00",
+    "updated_at": "2022-10-08 07:10:00"
+  },
+  {
+    "id": 67,
+    "name": "1. Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 166,
+    "subscheme_id": 166,
+    "created_at": "2022-10-14 07:10:00",
+    "updated_at": "2022-10-14 07:10:00"
+  },
+  {
+    "id": 68,
+    "name": "1. Improve service condition",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 167,
+    "subscheme_id": 167,
+    "created_at": "2022-10-16 07:10:00",
+    "updated_at": "2022-10-16 07:10:00"
+  },
+  {
+    "id": 69,
+    "name": "Increased coverage of livestock diseases control vaccination",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 168,
+    "subscheme_id": 168,
+    "created_at": "2022-10-18 07:10:00",
+    "updated_at": "2022-10-18 07:10:00"
+  },
+  {
+    "id": 70,
+    "name": "information of livestock growth",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 169,
+    "subscheme_id": 169,
+    "created_at": "2022-10-22 07:10:00",
+    "updated_at": "2022-10-22 07:10:00"
+  },
+  {
+    "id": 71,
+    "name": "Implementation peste des petits Ruminants Eradication program",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 170,
+    "subscheme_id": 170,
+    "created_at": "2022-10-24 07:10:00",
+    "updated_at": "2022-10-24 07:10:00"
+  },
+  {
+    "id": 72,
+    "name": "1. Enhanced poultry farming 2. Egg & meat production",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 171,
+    "subscheme_id": 171,
+    "created_at": "2022-10-26 07:10:00",
+    "updated_at": "2022-10-26 07:10:00"
+  },
+  {
+    "id": 73,
+    "name": "Production of Poultry meat",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 172,
+    "subscheme_id": 172,
+    "created_at": "2022-10-28 07:10:00",
+    "updated_at": "2022-10-28 07:10:00"
+  },
+  {
+    "id": 74,
+    "name": "BIRD DISTRIBUTION (DUCK AND POULTRY)",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 173,
+    "subscheme_id": 173,
+    "created_at": "2022-10-30 07:10:00",
+    "updated_at": "2022-10-30 07:10:00"
+  },
+  {
+    "id": 75,
+    "name": "ANIMAL DISTRIBUTION (PIG AND GOAT)",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 173,
+    "subscheme_id": 173,
+    "created_at": "2022-10-30 07:10:00",
+    "updated_at": "2022-10-30 07:10:00"
+  },
+  {
+    "id": 76,
+    "name": "Vaccine Production",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 176,
+    "subscheme_id": 176,
+    "created_at": "2022-11-03 07:10:00",
+    "updated_at": "2022-11-03 07:10:00"
+  },
+  {
+    "id": 77,
+    "name": "1.1 Improve animal health",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 177,
+    "subscheme_id": 177,
+    "created_at": "2022-11-05 07:10:00",
+    "updated_at": "2022-11-05 07:10:00"
+  },
+  {
+    "id": 78,
+    "name": "Improve carcasses management",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 178,
+    "subscheme_id": 178,
+    "created_at": "2022-11-07 07:10:00",
+    "updated_at": "2022-11-07 07:10:00"
+  },
+  {
+    "id": 79,
+    "name": "Implementation of Classical Swine Fever Control Programme",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 179,
+    "subscheme_id": 179,
+    "created_at": "2022-11-09 07:10:00",
+    "updated_at": "2022-11-09 07:10:00"
+  },
+  {
+    "id": 80,
+    "name": "Better treatment facilities",
+    "department_id": 2,
+    "division_id": 7,
+    "scheme_id": 180,
+    "subscheme_id": 180,
+    "created_at": "2022-11-11 07:10:00",
+    "updated_at": "2022-11-10 07:10:00"
+  },
+  {
+    "id": 81,
+    "name": "Training & Extension support to cooperative farmers",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 1,
+    "subscheme_id": 1,
+    "created_at": "2022-02-20 07:10:00",
+    "updated_at": "2022-02-20 07:10:00"
+  },
+  {
+    "id": 82,
+    "name": "Upgradation of knowledge & Skill of cooperative functionaries",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 1,
+    "subscheme_id": 1,
+    "created_at": "2022-02-20 07:10:00",
+    "updated_at": "2022-02-20 07:10:00"
+  },
+  {
+    "id": 83,
+    "name": "Digitization of the day-to-day work of lamps/pacs and other co operative societies and cooperative offices",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 4,
+    "subscheme_id": 4,
+    "created_at": "2022-02-24 07:10:00",
+    "updated_at": "2022-02-24 07:10:00"
+  },
+  {
+    "id": 84,
+    "name": "Setting up processing units/retail outlet/ Manufacturing unit for various agri/minor forest produces",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 5,
+    "subscheme_id": 5,
+    "created_at": "2022-02-26 07:10:00",
+    "updated_at": "2022-02-26 07:10:00"
+  },
+  {
+    "id": 85,
+    "name": "Efficient claims assessment through technology & claim settlement mechanism",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 10,
+    "subscheme_id": 10,
+    "created_at": "2022-03-04 07:10:00",
+    "updated_at": "2022-03-04 07:10:00"
+  },
+  {
+    "id": 86,
+    "name": "Increase in coverage",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 10,
+    "subscheme_id": 10,
+    "created_at": "2022-03-04 07:10:00",
+    "updated_at": "2022-03-04 07:10:00"
+  },
+  {
+    "id": 87,
+    "name": "Construction of robust post-harvest infrastructure",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 15,
+    "created_at": "2022-03-10 07:10:00",
+    "updated_at": "2022-03-10 07:10:00"
+  },
+  {
+    "id": 88,
+    "name": "Creation of Cold Storage Capacity",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 16,
+    "created_at": "2022-03-11 07:10:00",
+    "updated_at": "2022-03-11 07:10:00"
+  },
+  {
+    "id": 89,
+    "name": "MAKING TRAINING CENTRE OPERATIONAL",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 17,
+    "created_at": "2022-03-12 07:10:00",
+    "updated_at": "2022-03-12 07:10:00"
+  },
+  {
+    "id": 90,
+    "name": "Construction of regional offices",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 18,
+    "created_at": "2022-03-13 07:10:00",
+    "updated_at": "2022-03-13 07:10:00"
+  },
+  {
+    "id": 91,
+    "name": "Increased business activity",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 19,
+    "created_at": "2022-03-14 07:10:00",
+    "updated_at": "2022-03-14 07:10:00"
+  },
+  {
+    "id": 92,
+    "name": "Increased business activity",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 20,
+    "created_at": "2022-03-15 07:10:00",
+    "updated_at": "2022-03-15 07:10:00"
+  },
+  {
+    "id": 93,
+    "name": "Value addition of district specific products",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 15,
+    "subscheme_id": 21,
+    "created_at": "2022-03-16 07:10:00",
+    "updated_at": "2022-03-16 07:10:00"
+  },
+  {
+    "id": 94,
+    "name": "Creating post harvest infrastructure",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 22,
+    "subscheme_id": 22,
+    "created_at": "2022-03-18 07:10:00",
+    "updated_at": "2022-03-18 07:10:00"
+  },
+  {
+    "id": 95,
+    "name": "Creating post harvest infrastructure",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 22,
+    "subscheme_id": 25,
+    "created_at": "2022-03-20 07:10:00",
+    "updated_at": "2022-03-20 07:10:00"
+  },
+  {
+    "id": 96,
+    "name": "Creating post harvest infrastructure",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 22,
+    "subscheme_id": 27,
+    "created_at": "2022-03-22 07:10:00",
+    "updated_at": "2022-03-22 07:10:00"
+  },
+  {
+    "id": 97,
+    "name": "Custom hiring centres to be established. Equipment and implements are procured and allocated to each center",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 22,
+    "subscheme_id": 28,
+    "created_at": "2022-03-23 07:10:00",
+    "updated_at": "2022-03-23 07:10:00"
+  },
+  {
+    "id": 98,
+    "name": "Establishment of Processing Unit/Creation of Market Chain/Setup State Level PMU/Linkage with existing storage facility",
+    "department_id": 2,
+    "division_id": 5,
+    "scheme_id": 29,
+    "subscheme_id": 30,
+    "created_at": "2022-03-26 07:10:00",
+    "updated_at": "2022-03-26 07:10:00"
+  },
+  {
+    "id": 99,
+    "name": "Increasing fish production through efficient water management/ कुशल जल प्रबंधन के माध्यम से मछली उत्पादन बढ़ाना",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 31,
+    "subscheme_id": 32,
+    "created_at": "2022-03-29 07:10:00",
+    "updated_at": "2022-03-29 07:10:00"
+  },
+  {
+    "id": 100,
+    "name": "Increasing fish seed production/ मत्स्य बीज उत्पादन में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 31,
+    "subscheme_id": 32,
+    "created_at": "2022-03-29 07:10:00",
+    "updated_at": "2022-03-29 07:10:00"
+  },
+  {
+    "id": 101,
+    "name": "Increasing participation of rural youth in fish farming/ मछली पालन में ग्रामीण युवाओं की बढती भागीदारी",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 33,
+    "subscheme_id": 34,
+    "created_at": "2022-04-01 07:10:00",
+    "updated_at": "2022-04-01 07:10:00"
+  },
+  {
+    "id": 102,
+    "name": "Improving the fish rearing methods/ मत्स्य पालन के तरीकों में सुधार",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 33,
+    "subscheme_id": 34,
+    "created_at": "2022-04-01 07:10:00",
+    "updated_at": "2022-04-01 07:10:00"
+  },
+  {
+    "id": 103,
+    "name": "Increasing fish production through knowledge & skill development/ज्ञान और कौशल विकास के माध्यम से मत्स्य उत्पादन में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 33,
+    "subscheme_id": 34,
+    "created_at": "2022-04-01 07:10:00",
+    "updated_at": "2022-04-01 07:10:00"
+  },
+  {
+    "id": 104,
+    "name": "Increasing participation of fish farmers through cooperative movement/ सहकारी आंदोलन के माध्यम से मत्स्य कृषकों की बढ़ती भागीदारी",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 37,
+    "subscheme_id": 37,
+    "created_at": "2022-04-07 07:10:00",
+    "updated_at": "2022-04-07 07:10:00"
+  },
+  {
+    "id": 105,
+    "name": "Improve fish market facility/ मछ्ली बाज़ारों की सुविधा में सुधार",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 38,
+    "subscheme_id": 39,
+    "created_at": "2022-04-09 07:10:00",
+    "updated_at": "2022-04-09 07:10:00"
+  },
+  {
+    "id": 106,
+    "name": "Improved logistic support to fish retailers/ मत्स्य विक्रेताओं को विपणन हेतु परिवहन आदि की सहायता",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 38,
+    "subscheme_id": 39,
+    "created_at": "2022-04-09 07:10:00",
+    "updated_at": "2022-04-09 07:10:00"
+  },
+  {
+    "id": 107,
+    "name": "Increasing fish productivity/ मत्स्य उत्पादकता में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 40,
+    "subscheme_id": 41,
+    "created_at": "2022-04-12 07:10:00",
+    "updated_at": "2022-04-12 07:10:00"
+  },
+  {
+    "id": 108,
+    "name": "Improve fish market facility/ मछ्ली बाज़ारों की सुविधा में सुधार",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 41,
+    "subscheme_id": 42,
+    "created_at": "2022-04-14 07:10:00",
+    "updated_at": "2022-04-14 07:10:00"
+  },
+  {
+    "id": 109,
+    "name": "Increasing fish production in small ponds/ तालाब निर्माण द्वारा मत्स्य उत्पादन में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 42,
+    "subscheme_id": 43,
+    "created_at": "2022-04-16 07:10:00",
+    "updated_at": "2022-04-16 07:10:00"
+  },
+  {
+    "id": 110,
+    "name": "Increasing fish productivity/ मत्स्य उत्पादकता में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 43,
+    "subscheme_id": 44,
+    "created_at": "2022-04-18 07:10:00",
+    "updated_at": "2022-04-18 07:10:00"
+  },
+  {
+    "id": 111,
+    "name": "Enhance social status of fisherman/ मछुआरों के सामाजिक स्थिति में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 44,
+    "subscheme_id": 45,
+    "created_at": "2022-04-20 07:10:00",
+    "updated_at": "2022-04-20 07:10:00"
+  },
+  {
+    "id": 112,
+    "name": "RENOVATION AND UP GRADATION OF FISH SEED FARMS AND CONSTRUCTION OF NEW FISH MARKETS BASED ON REQUIREMENT/ आवश्यकता अनुसार मत्स्य बीज प्रक्षेत्रों का जीर्णोद्धार/सुदृढीकरण तथा नये मछ्ली बाज़ारों का निर्माण",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 45,
+    "subscheme_id": 46,
+    "created_at": "2022-04-22 07:10:00",
+    "updated_at": "2022-04-22 07:10:00"
+  },
+  {
+    "id": 113,
+    "name": "Self sufficiency in fish seed production/ मत्स्य बीज उत्पादन में आत्मनिर्भरता",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 47,
+    "subscheme_id": 48,
+    "created_at": "2022-04-25 07:10:00",
+    "updated_at": "2022-04-25 07:10:00"
+  },
+  {
+    "id": 114,
+    "name": "Increasing fish production through cage culture/केज कल्चर के माध्यम से मत्स्य उत्पादन में वृद्धि",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 48,
+    "subscheme_id": 49,
+    "created_at": "2022-04-27 07:10:00",
+    "updated_at": "2022-04-27 07:10:00"
+  },
+  {
+    "id": 115,
+    "name": "Minimize input cost of fish farming/ मत्स्य उत्पादन के इनपुट लागत में कमी",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 50,
+    "subscheme_id": 51,
+    "created_at": "2022-04-30 07:10:00",
+    "updated_at": "2022-04-30 07:10:00"
+  },
+  {
+    "id": 116,
+    "name": "Beneficiary benefited in different components of PMMSY/ प्रधान मंत्री मत्स्य सम्पदा योजना के विभिन्न अवयवों के लाभुक",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 52,
+    "subscheme_id": 53,
+    "created_at": "2022-05-03 07:10:00",
+    "updated_at": "2022-05-03 07:10:00"
+  },
+  {
+    "id": 117,
+    "name": "To provide Accident Insurance to save fishermen family from financial risk on death of bread earner/ मछुआरे की मृत्यु पर परिवार को वित्तीय जोखिम से बचाने के लिए दुर्घटना बीमा प्रदान करना",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 52,
+    "subscheme_id": 53,
+    "created_at": "2022-05-03 07:10:00",
+    "updated_at": "2022-05-03 07:10:00"
+  },
+  {
+    "id": 118,
+    "name": "Maximum utilization of funds released under centrally sponsored scheme/ केंद्र प्रायोजित योजना के तहत प्राप्त राशि का अधिकतम उपयोग",
+    "department_id": 2,
+    "division_id": 6,
+    "scheme_id": 54,
+    "subscheme_id": 55,
+    "created_at": "2022-05-06 07:10:00",
+    "updated_at": "2022-05-06 07:10:00"
+  },
+  {
+    "id": 119,
+    "name": "To improve animal breed पशु नस्ल में सुधार के लिए",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 55,
+    "subscheme_id": 56,
+    "created_at": "2022-05-08 07:10:00",
+    "updated_at": "2022-05-08 07:10:00"
+  },
+  {
+    "id": 120,
+    "name": "Improvement In Knowledge & Skill of Farmers",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 56,
+    "subscheme_id": 57,
+    "created_at": "2022-05-10 07:10:00",
+    "updated_at": "2022-05-10 07:10:00"
+  },
+  {
+    "id": 121,
+    "name": "Infrastructure of Dairy Development (Establishment of bulk milk coolers village-based milk procurement system central laboratory etc.)",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 62,
+    "subscheme_id": 63,
+    "created_at": "2022-05-17 07:10:00",
+    "updated_at": "2022-05-17 07:10:00"
+  },
+  {
+    "id": 122,
+    "name": "Enhanced Cooperative Milk collection",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 64,
+    "subscheme_id": 65,
+    "created_at": "2022-05-20 07:10:00",
+    "updated_at": "2022-05-20 07:10:00"
+  },
+  {
+    "id": 123,
+    "name": "Improved Milk cooperative",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 64,
+    "subscheme_id": 65,
+    "created_at": "2022-05-20 07:10:00",
+    "updated_at": "2022-05-20 07:10:00"
+  },
+  {
+    "id": 124,
+    "name": "Establishment of Bulk Milk Cooler AMCU Storage Facility Powder Plant",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 66,
+    "subscheme_id": 67,
+    "created_at": "2022-05-23 07:10:00",
+    "updated_at": "2022-05-23 07:10:00"
+  },
+  {
+    "id": 125,
+    "name": "Distribution of fodder seed establishment of silage making units farmer field school & insurance of cattle",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 67,
+    "subscheme_id": 68,
+    "created_at": "2022-05-25 07:10:00",
+    "updated_at": "2022-05-25 07:10:00"
+  },
+  {
+    "id": 126,
+    "name": "Construction of New Office Building",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 69,
+    "subscheme_id": 70,
+    "created_at": "2022-05-28 07:10:00",
+    "updated_at": "2022-05-28 07:10:00"
+  },
+  {
+    "id": 127,
+    "name": "To Rennovate & Maintain Office Buildings",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 70,
+    "subscheme_id": 71,
+    "created_at": "2022-05-30 07:10:00",
+    "updated_at": "2022-05-30 07:10:00"
+  },
+  {
+    "id": 128,
+    "name": "Enhancement of Milk Production",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 71,
+    "subscheme_id": 72,
+    "created_at": "2022-06-01 07:10:00",
+    "updated_at": "2022-06-01 07:10:00"
+  },
+  {
+    "id": 129,
+    "name": "Encourage To Increase Milk Production",
+    "department_id": 2,
+    "division_id": 3,
+    "scheme_id": 72,
+    "subscheme_id": 73,
+    "created_at": "2022-06-03 07:10:00",
+    "updated_at": "2022-06-03 07:10:00"
+  },
+  {
+    "id": 130,
+    "name": "BIG CITIES ARE PROVIDED WITH SAFE AND ADEQUATE DRINKING WATER / बड़े शहरों को सुरक्षित और पर्याप्त पेयजल उपलब्ध कराया जाएगा",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 181,
+    "subscheme_id": 181,
+    "created_at": "2022-11-12 07:10:00",
+    "updated_at": "2022-11-11 07:10:00"
+  },
+  {
+    "id": 131, 
+    "name": "Functional Household Tap Connections Provided to All The Families. / सभी परिवारों को कार्यात्मक घरेलू नल कनेक्शन उपलब्ध कराया जाएगा",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 182,
+    "subscheme_id": 182,
+    "created_at": "2022-11-13 07:10:00",
+    "updated_at": "2022-11-12 07:10:00"
+  },
+  {
+    "id": 132,
+    "name": "Smooth running of Water Supply Schemes & maintenance of departmental assets. / जलापूर्ति योजनाओं का सुचारू संचालन और विभागीय परिसंपत्तियों का रखरखाव।",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 183,
+    "subscheme_id": 183,
+    "created_at": "2022-11-14 07:10:00",
+    "updated_at": "2022-11-13 07:10:00"
+  },
+  {
+    "id": 133,
+    "name": "Uncovered and partially uncovered habitations are connected with safe drinking water facilities. / आनाच्छादित और आंशिक रूप से आच्छादित आवास सुरक्षित पेयजल सुविधा के साथ जुड़े हुए हैं।",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 184,
+    "subscheme_id": 184,
+    "created_at": "2022-11-15 07:10:00",
+    "updated_at": "2022-11-14 07:10:00"
+  },
+  {
+    "id": 134,
+    "name": "To provide sanitation through IHHL, CSC, SLWM, Plastic Waste Management, Gobardhan project & Fecal Sludge Management / व्यक्तिगत शौचालय, CSC, SLWM, प्लास्टिक अपशिष्ट प्रबंधन, गोबरधन परियोजना, फिकलस्लज मैनेजमेंट के माध्यम से स्वच्छता उपलब्ध कराना।",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 186,
+    "subscheme_id": 186,
+    "created_at": "2022-11-17 07:10:00",
+    "updated_at": "2022-11-16 07:10:00"
+  },
+  {
+    "id": 135,
+    "name": "Functional Household Tap Connections Provided To All The Families. / सभी परिवारों को कार्यात्मक घरेलू नल कनेक्शन।",
+    "department_id": 13,
+    "division_id": 17,
+    "scheme_id": 187,
+    "subscheme_id": 187,
+    "created_at": "2022-11-18 07:10:00",
+    "updated_at": "2022-11-17 07:10:00"
+  },
+  {
+    "id": 136,
+    "name": "Maintenance work of Seedling seed orchard and seed production area",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 188,
+    "subscheme_id": 188,
+    "created_at": "2022-11-19 07:10:00",
+    "updated_at": "2022-11-18 07:10:00"
+  },
+  {
+    "id": 137,
+    "name": "Establishment of different processing unit.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 189,
+    "subscheme_id": 189,
+    "created_at": "2022-11-20 07:10:00",
+    "updated_at": "2022-11-19 07:10:00"
+  },
+  {
+    "id": 138,
+    "name": "Protection of wildlife from poaching, construction of water hole, Check dam, cleaning of fire line etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 190,
+    "subscheme_id": 190,
+    "created_at": "2022-11-21 07:10:00",
+    "updated_at": "2022-11-20 07:10:00"
+  },
+  {
+    "id": 139,
+    "name": "Payment of wages to daily wages staff, Construction and repair of forest offices, residential quarters etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 191,
+    "subscheme_id": 191,
+    "created_at": "2022-11-22 07:10:00",
+    "updated_at": "2022-11-21 07:10:00"
+  },
+  {
+    "id": 140,
+    "name": "Maintenance of 3 Research nursery, Training of Forest Staff/ Officers/ JFMCs and Publicity work",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 192,
+    "subscheme_id": 192,
+    "created_at": "2022-11-23 07:10:00",
+    "updated_at": "2022-11-22 07:10:00"
+  },
+  {
+    "id": 141,
+    "name": "Under this scheme, the project coordination unit, created under Jharkhand participatory forest management project, will be maintained.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 193,
+    "subscheme_id": 193,
+    "created_at": "2022-11-24 07:10:00",
+    "updated_at": "2022-11-23 07:10:00"
+  },
+  {
+    "id": 142,
+    "name": "No. of Plants that will be maintained - 3711400 No. of saplings that will be Planted-525200",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 194,
+    "subscheme_id": 194,
+    "created_at": "2022-11-25 07:10:00",
+    "updated_at": "2022-11-24 07:10:00"
+  },
+  {
+    "id": 143,
+    "name": "Payment to daily wagers, maintenance of wireless devices, vehicles, expenditure on secret information etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 195,
+    "subscheme_id": 195,
+    "created_at": "2022-11-26 07:10:00",
+    "updated_at": "2022-11-25 07:10:00"
+  },
+  {
+    "id": 144,
+    "name": "Construction of water conservation structure to provide water to wild life, counting of wildlife, maintenance of GPS and camera etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 196,
+    "subscheme_id": 196,
+    "created_at": "2022-11-27 07:10:00",
+    "updated_at": "2022-11-26 07:10:00"
+  },
+  {
+    "id": 145,
+    "name": "Maintenance of zoo, food to animals and birds in the zoo, salary to officers and staff.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 197,
+    "subscheme_id": 197,
+    "created_at": "2022-11-28 07:10:00",
+    "updated_at": "2022-11-27 07:10:00"
+  },
+  {
+    "id": 146,
+    "name": "Constitution of Bio-diversity Management Committee, creation of bio diversity register, study and documentation etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 198,
+    "subscheme_id": 198,
+    "created_at": "2022-11-29 07:10:00",
+    "updated_at": "2022-11-28 07:10:00"
+  },
+  {
+    "id": 147,
+    "name": "This scheme is for conservating aquatic ecosystems (lakes and wetlands) through implementation of sustainable conservation.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 199,
+    "subscheme_id": 199,
+    "created_at": "2022-11-30 07:10:00",
+    "updated_at": "2022-11-29 07:10:00"
+  },
+  {
+    "id": 148,
+    "name": "Construction of Forest Boundaries with DGPS Survey.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 200,
+    "subscheme_id": 200,
+    "created_at": "2022-12-01 07:10:00",
+    "updated_at": "2022-11-30 07:10:00"
+  },
+  {
+    "id": 149,
+    "name": "Development and maintenance of Sidhu-Kanhu park and Nakshtra Van, salary to officers and staff",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 201,
+    "subscheme_id": 201,
+    "created_at": "2022-12-02 07:10:00",
+    "updated_at": "2022-12-01 07:10:00"
+  },
+  {
+    "id": 150,
+    "name": "Green India Mission puts the 'greening' in the context of climate change adaptation and mitigation",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 202,
+    "subscheme_id": 202,
+    "created_at": "2022-12-03 07:10:00",
+    "updated_at": "2022-12-02 07:10:00"
+  },
+  {
+    "id": 151,
+    "name": "Basic infrastructure developed in Dalma and Betla.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 203,
+    "subscheme_id": 203,
+    "created_at": "2022-12-04 07:10:00",
+    "updated_at": "2022-12-03 07:10:00"
+  },
+  {
+    "id": 152,
+    "name": "Increase in forest cover on private lands",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 204,
+    "subscheme_id": 204,
+    "created_at": "2022-12-05 07:10:00",
+    "updated_at": "2022-12-04 07:10:00"
+  },
+  {
+    "id": 153,
+    "name": "A climate change cell by the name Jharkhand State Climate Change Action Unit will be set up under this scheme",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 205,
+    "subscheme_id": 205,
+    "created_at": "2022-12-06 07:10:00",
+    "updated_at": "2022-12-05 07:10:00"
+  },
+  {
+    "id": 154,
+    "name": "No. of Plants that will be maintained - 51475304 No. of saplings that will be Planted-6278828",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 206,
+    "subscheme_id": 206,
+    "created_at": "2022-12-07 07:10:00",
+    "updated_at": "2022-12-06 07:10:00"
+  },
+  {
+    "id": 155,
+    "name": "No. of Plants that will be maintained - 5988760 No. of saplings that will be Planted-599760",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 207,
+    "subscheme_id": 207,
+    "created_at": "2022-12-08 07:10:00",
+    "updated_at": "2022-12-07 07:10:00"
+  },
+  {
+    "id": 156,
+    "name": "Construction of water harvesting structure, constitution of anti depredation squad, construction of ponds purchasing of salt licks etc",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 208,
+    "subscheme_id": 208,
+    "created_at": "2022-12-09 07:10:00",
+    "updated_at": "2022-12-08 07:10:00"
+  },
+  {
+    "id": 157,
+    "name": "Expenditure on establishment of strike force and tiger protection force, Construction of toilet for staff, procurement of hardware, expenditure on establishment of wireless network",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 209,
+    "subscheme_id": 209,
+    "created_at": "2022-12-10 07:10:00",
+    "updated_at": "2022-12-09 07:10:00"
+  },
+  {
+    "id": 158,
+    "name": "This scheme provides support, both in physical and capacity terms to Forest development agencies",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 210,
+    "subscheme_id": 210,
+    "created_at": "2022-12-11 07:10:00",
+    "updated_at": "2022-12-10 07:10:00"
+  },
+  {
+    "id": 159,
+    "name": "Establishment of hi-tech nursery, low density plantation, high density plantation, peripheral boundary plantation etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 211,
+    "subscheme_id": 211,
+    "created_at": "2022-12-12 07:10:00",
+    "updated_at": "2022-12-11 07:10:00"
+  },
+  {
+    "id": 160,
+    "name": "Fire tracing along roads maintenance of existing fire lines, purchasing of firefighting equipment etc.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 212,
+    "subscheme_id": 212,
+    "created_at": "2022-12-13 07:10:00",
+    "updated_at": "2022-12-12 07:10:00"
+  },
+  {
+    "id": 161,
+    "name": "Establishment of hi-tech nursery, bamboo plantation Establishment of bamboo treatment and seasoning plants etc",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 213,
+    "subscheme_id": 213,
+    "created_at": "2022-12-14 07:10:00",
+    "updated_at": "2022-12-13 07:10:00"
+  },
+  {
+    "id": 162,
+    "name": "Advance Work",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 214,
+    "subscheme_id": 214,
+    "created_at": "2022-12-15 07:10:00",
+    "updated_at": "2022-12-14 07:10:00"
+  },
+  {
+    "id": 163,
+    "name": "Catchment Area Treatment activities against the forest areas which have been diverted for non-forestry purposes, soil moisture conservation and water harvesting Structures.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 216,
+    "subscheme_id": 216,
+    "created_at": "2022-12-17 07:10:00",
+    "updated_at": "2022-12-16 07:10:00"
+  },
+  {
+    "id": 164,
+    "name": "To improve wildlife habitat and maintain biodiversity destroyed due to diversion of forest land for non-forestry purpose.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 217,
+    "subscheme_id": 217,
+    "created_at": "2022-12-18 07:10:00",
+    "updated_at": "2022-12-17 07:10:00"
+  },
+  {
+    "id": 165,
+    "name": "Advance Work",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 218,
+    "subscheme_id": 218,
+    "created_at": "2022-12-19 07:10:00",
+    "updated_at": "2022-12-18 07:10:00"
+  },
+  {
+    "id": 166,
+    "name": "For constitution of CAMPA state authority. Incremental cost due to increase in wage rate. Research related to NTFP, wildlife and fire.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 225,
+    "subscheme_id": 225,
+    "created_at": "2022-12-26 07:10:00",
+    "updated_at": "2022-12-25 07:10:00"
+  },
+  {
+    "id": 167,
+    "name": "Miscellaneous activities for conservation of forests",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 226,
+    "subscheme_id": 226,
+    "created_at": "2022-12-27 07:10:00",
+    "updated_at": "2022-12-26 07:10:00"
+  },
+  {
+    "id": 168,
+    "name": "Creation and maintenance of parks, plantation on road side, institution etc in and around urban areas.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 227,
+    "subscheme_id": 227,
+    "created_at": "2022-12-28 07:10:00",
+    "updated_at": "2022-12-27 07:10:00"
+  },
+  {
+    "id": 169,
+    "name": "Creation and maintenance of parks, plantation on road side, institution etc in and around urban areas.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 228,
+    "subscheme_id": 228,
+    "created_at": "2022-12-29 07:10:00",
+    "updated_at": "2022-12-28 07:10:00"
+  },
+  {
+    "id": 170,
+    "name": "Creation of godown.",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 229,
+    "subscheme_id": 229,
+    "created_at": "2022-12-30 07:10:00",
+    "updated_at": "2022-12-29 07:10:00"
+  },
+  {
+    "id": 171,
+    "name": "Maintenance and Development of Palamau Tiger reserve, food to animals, Development of Grass Land",
+    "department_id": 4,
+    "division_id": 18,
+    "scheme_id": 230,
+    "subscheme_id": 230,
+    "created_at": "2022-12-31 07:10:00",
+    "updated_at": "2022-12-30 07:10:00"
+  },
+  {
+    "id": 172,
+    "name": "DISTRIBUTION OF CLOTHES TO ELIGIBLE HOUSEHOLDS",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 231,
+    "subscheme_id": 231,
+    "created_at": "2023-01-01 07:10:00",
+    "updated_at": "2022-12-31 07:10:00"
+  },
+  {
+    "id": 173,
+    "name": "Distribution of Food grains to eligible household",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 235,
+    "subscheme_id": 235,
+    "created_at": "2023-01-05 07:10:00",
+    "updated_at": "2023-01-04 07:10:00"
+  },
+  {
+    "id": 174,
+    "name": "Distribution of Food grains to eligible household",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 237,
+    "subscheme_id": 237,
+    "created_at": "2023-01-07 07:10:00",
+    "updated_at": "2023-01-06 07:10:00"
+  },
+  {
+    "id": 175,
+    "name": "CONSTRUCTION & RENNOVATION OF GODOWNS",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 239,
+    "subscheme_id": 239,
+    "created_at": "2023-01-09 07:10:00",
+    "updated_at": "2023-01-08 07:10:00"
+  },
+  {
+    "id": 176,
+    "name": "Distribution of Food grains to eligible beneficiaries",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 242,
+    "subscheme_id": 242,
+    "created_at": "2023-01-12 07:10:00",
+    "updated_at": "2023-01-11 07:10:00"
+  },
+  {
+    "id": 177,
+    "name": "Distribution of Food grains to eligible beneficiaries",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 244,
+    "subscheme_id": 244,
+    "created_at": "2023-01-14 07:10:00",
+    "updated_at": "2023-01-13 07:10:00"
+  },
+  {
+    "id": 178,
+    "name": "Provision of one time meal to the poor people @ Rs. 5/- per meal",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 246,
+    "subscheme_id": 246,
+    "created_at": "2023-01-16 07:10:00",
+    "updated_at": "2023-01-15 07:10:00"
+  },
+  {
+    "id": 179,
+    "name": "PROCUREMENT OF PADDY TO PROVIDE MSP TO FARMERS",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 248,
+    "subscheme_id": 248,
+    "created_at": "2023-01-18 07:10:00",
+    "updated_at": "2023-01-17 07:10:00"
+  },
+  {
+    "id": 180,
+    "name": "Distribution of salt to eligible household",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 250,
+    "subscheme_id": 250,
+    "created_at": "2023-01-20 07:10:00",
+    "updated_at": "2023-01-19 07:10:00"
+  },
+  {
+    "id": 181,
+    "name": "Distribution of Food grains to eligible household",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 252,
+    "subscheme_id": 252,
+    "created_at": "2023-01-22 07:10:00",
+    "updated_at": "2023-01-21 07:10:00"
+  },
+  {
+    "id": 182,
+    "name": "To support eligible households for purchasing petrol having eligible two wheelers",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 254,
+    "subscheme_id": 254,
+    "created_at": "2023-01-24 07:10:00",
+    "updated_at": "2023-01-23 07:10:00"
+  },
+  {
+    "id": 183,
+    "name": "Distribution of Pulses to eligible households",
+    "department_id": 3,
+    "division_id": 9,
+    "scheme_id": 255,
+    "subscheme_id": 255,
+    "created_at": "2023-01-25 07:10:00",
+    "updated_at": "2023-01-24 07:10:00"
+  },
+  {
+    "id": 184,
+    "name": "Quality",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 533,
+    "subscheme_id": 533,
+    "created_at": "2023-10-30 07:10:00",
+    "updated_at": "2023-10-29 07:10:00"
+  },
+  {
+    "id": 185,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 535,
+    "subscheme_id": 535,
+    "created_at": "2023-11-01 07:10:00",
+    "updated_at": "2023-10-31 07:10:00"
+  },
+  {
+    "id": 186,
+    "name": "Universal access and retention",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 537,
+    "subscheme_id": 537,
+    "created_at": "2023-11-03 07:10:00",
+    "updated_at": "2023-11-02 07:10:00"
+  },
+  {
+    "id": 187,
+    "name": "Infrastructure activities",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 539,
+    "subscheme_id": 539,
+    "created_at": "2023-11-05 07:10:00",
+    "updated_at": "2023-11-04 07:10:00"
+  },
+  {
+    "id": 188,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 540,
+    "subscheme_id": 540,
+    "created_at": "2023-11-06 07:10:00",
+    "updated_at": "2023-11-05 07:10:00"
+  },
+  {
+    "id": 189,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 542,
+    "subscheme_id": 542,
+    "created_at": "2023-11-08 07:10:00",
+    "updated_at": "2023-11-07 07:10:00"
+  },
+  {
+    "id": 190,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 545,
+    "subscheme_id": 545,
+    "created_at": "2023-11-11 07:10:00",
+    "updated_at": "2023-11-10 07:10:00"
+  },
+  {
+    "id": 191,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 549,
+    "subscheme_id": 549,
+    "created_at": "2023-11-15 07:10:00",
+    "updated_at": "2023-11-14 07:10:00"
+  },
+  {
+    "id": 192,
+    "name": "ICT and Digital Initiatives",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 549,
+    "subscheme_id": 549,
+    "created_at": "2023-11-15 07:10:00",
+    "updated_at": "2023-11-14 07:10:00"
+  },
+  {
+    "id": 193,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 552,
+    "subscheme_id": 552,
+    "created_at": "2023-11-18 07:10:00",
+    "updated_at": "2023-11-17 07:10:00"
+  },
+  {
+    "id": 194,
+    "name": "Universal access retention and infrastructure activity",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 555,
+    "subscheme_id": 555,
+    "created_at": "2023-11-21 07:10:00",
+    "updated_at": "2023-11-20 07:10:00"
+  },
+  {
+    "id": 195,
+    "name": "Quality",
+    "department_id": 10,
+    "division_id": 20,
+    "scheme_id": 555,
+    "subscheme_id": 555,
+    "created_at": "2023-11-21 07:10:00",
+    "updated_at": "2023-11-20 07:10:00"
+  },
+  {
+    "id": 196,
+    "name": "Quality",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 491,
+    "subscheme_id": 491,
+    "created_at": "2023-09-18 07:10:00",
+    "updated_at": "2023-09-17 07:10:00"
+  },
+  {
+    "id": 197,
+    "name": "1.) Universal Access, Retention and Infrastructure activity",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 198,
+    "name": "Universal Access, Retention and Infrastructure activity",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 199,
+    "name": "2.) Quality",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 200,
+    "name": "3.) ICT and digital initiatives",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 201,
+    "name": "4.) Teacher Education and teacher training",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 202,
+    "name": "5. ) Development",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 203,
+    "name": "6.) Equity",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 204,
+    "name": "7.) Equity and Inclusive Education",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 494,
+    "subscheme_id": 494,
+    "created_at": "2023-09-21 07:10:00",
+    "updated_at": "2023-09-20 07:10:00"
+  },
+  {
+    "id": 205,
+    "name": "Provision of free meals to children in eligible schools",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 511,
+    "created_at": "2023-10-08 07:10:00",
+    "updated_at": "2023-10-07 07:10:00"
+  },
+  {
+    "id": 206,
+    "name": "Compliance with NP-MDMS 2019 guidelines",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 511,
+    "created_at": "2023-10-08 07:10:00",
+    "updated_at": "2023-10-07 07:10:00"
+  },
+  {
+    "id": 207,
+    "name": "Provision of infrastructure at schools",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 511,
+    "created_at": "2023-10-08 07:10:00",
+    "updated_at": "2023-10-07 07:10:00"
+  },
+  {
+    "id": 208,
+    "name": "Provision of free meals to children in eligible schools",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 516,
+    "created_at": "2023-10-13 07:10:00",
+    "updated_at": "2023-10-12 07:10:00"
+  },
+  {
+    "id": 209,
+    "name": "Compliance with NP-MDMS 2019 guidelines",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 516,
+    "created_at": "2023-10-13 07:10:00",
+    "updated_at": "2023-10-12 07:10:00"
+  },
+  {
+    "id": 210,
+    "name": "Provision of infrastructure at schools",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 511,
+    "subscheme_id": 516,
+    "created_at": "2023-10-13 07:10:00",
+    "updated_at": "2023-10-12 07:10:00"
+  },
+  {
+    "id": 211,
+    "name": "Gender",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 521,
+    "subscheme_id": 521,
+    "created_at": "2023-10-18 07:10:00",
+    "updated_at": "2023-10-17 07:10:00"
+  },
+  {
+    "id": 212,
+    "name": "Universal access and retention",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 522,
+    "subscheme_id": 522,
+    "created_at": "2023-10-19 07:10:00",
+    "updated_at": "2023-10-18 07:10:00"
+  },
+  {
+    "id": 213,
+    "name": "Quality",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 523,
+    "subscheme_id": 523,
+    "created_at": "2023-10-20 07:10:00",
+    "updated_at": "2023-10-19 07:10:00"
+  },
+  {
+    "id": 214,
+    "name": "Universal access and retention",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 524,
+    "subscheme_id": 524,
+    "created_at": "2023-10-21 07:10:00",
+    "updated_at": "2023-10-20 07:10:00"
+  },
+  {
+    "id": 215,
+    "name": "Gender Equity",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 525,
+    "subscheme_id": 525,
+    "created_at": "2023-10-22 07:10:00",
+    "updated_at": "2023-10-21 07:10:00"
+  },
+  {
+    "id": 216,
+    "name": "Universal Access Retention",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 527,
+    "subscheme_id": 527,
+    "created_at": "2023-10-24 07:10:00",
+    "updated_at": "2023-10-23 07:10:00"
+  },
+  {
+    "id": 217,
+    "name": "Teacher education and teacher training",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 528,
+    "subscheme_id": 528,
+    "created_at": "2023-10-25 07:10:00",
+    "updated_at": "2023-10-24 07:10:00"
+  },
+  {
+    "id": 218,
+    "name": "Infrastructure",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 530,
+    "subscheme_id": 530,
+    "created_at": "2023-10-27 07:10:00",
+    "updated_at": "2023-10-26 07:10:00"
+  },
+  {
+    "id": 219,
+    "name": "Provision of free egg/fruits",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 531,
+    "subscheme_id": 531,
+    "created_at": "2023-10-28 07:10:00",
+    "updated_at": "2023-10-27 07:10:00"
+  },
+  {
+    "id": 220,
+    "name": "Infrastructure",
+    "department_id": 10,
+    "division_id": 14,
+    "scheme_id": 532,
+    "subscheme_id": 532,
+    "created_at": "2023-10-29 07:10:00",
+    "updated_at": "2023-10-28 07:10:00"
+  },
+  {
+    "id": 221,
+    "name": "Government Institutions/ Infrastructure to be made accessible to Divyangjans.",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 619,
+    "subscheme_id": 619,
+    "created_at": "2024-01-24 07:10:00",
+    "updated_at": "2024-01-23 07:10:00"
+  },
+  {
+    "id": 249,
+    "name": "State capacity building and implementation support",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 677,
+    "subscheme_id": 677,
+    "created_at": "2024-03-22 07:10:00",
+    "updated_at": "2024-03-21 07:10:00"
+  },
+  {
+    "id": 222,
+    "name": "Availability of first aid infrastructure and health counseling at the AWCs/ आंगनवाड़ी केंद्रों में प्राथमिक उपचार एवं स्वास्थ्य परामर्श हेतु बुनियादी ढांचे की",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 620,
+    "subscheme_id": 620,
+    "created_at": "2024-01-25 07:10:00",
+    "updated_at": "2024-01-24 07:10:00"
+  },
+  {
+    "id": 223,
+    "name": "Operationalizing the AWCs (Anganwadi Centres)/ आंगनवाड़ी केंद्रों का संचालन करना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 621,
+    "subscheme_id": 621,
+    "created_at": "2024-01-26 07:10:00",
+    "updated_at": "2024-01-25 07:10:00"
+  },
+  {
+    "id": 224,
+    "name": "Availability of fundamental Infrastructure at the AWCs/ आंगनवाड़ी केंद्रों में बुनियादी ढांचे की उपलब्धता सुनिश्चित करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 621,
+    "subscheme_id": 621,
+    "created_at": "2024-01-26 07:10:00",
+    "updated_at": "2024-01-25 07:10:00"
+  },
+  {
+    "id": 225,
+    "name": "Financial assistance to girls on occasion of marriage.",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 630,
+    "subscheme_id": 630,
+    "created_at": "2024-02-04 07:10:00",
+    "updated_at": "2024-02-03 07:10:00"
+  },
+  {
+    "id": 226,
+    "name": "Anganwadi Workers and Anganwadi Helpers are to be provided additional honorarium. आंगनबाडी सेविकाओं एवं आंगनबाडी सहायिकाओं को अतिरिक्त मानदेय उपलब्ध कराना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 631,
+    "subscheme_id": 631,
+    "created_at": "2024-02-05 07:10:00",
+    "updated_at": "2024-02-04 07:10:00"
+  },
+  {
+    "id": 227,
+    "name": "Cash relief of Rs. 1000/- P/M to Divyangjans / दिव्यांगजनों को रुपये1000/- प्रति माह की आर्थिक सहायता",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 633,
+    "subscheme_id": 633,
+    "created_at": "2024-02-07 07:10:00",
+    "updated_at": "2024-02-06 07:10:00"
+  },
+  {
+    "id": 228,
+    "name": "Availability of early childhood education and care Infrastructure at the AWCs./ आंगनवाड़ी केंद्रों में बच्चों प्रारंभिक शिक्षा और देखभाल हेतु बुनियादी ढांचे की उपलब्धता सुनिश्चित करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 634,
+    "subscheme_id": 634,
+    "created_at": "2024-02-08 07:10:00",
+    "updated_at": "2024-02-07 07:10:00"
+  },
+  {
+    "id": 229,
+    "name": "Availability of uniform to all the AWWs & AWHs. सभी आंगनवाड़ी सेविकाओं/ सहायिकाओं को वर्दी की उपलब्ध कराना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 637,
+    "subscheme_id": 637,
+    "created_at": "2024-02-11 07:10:00",
+    "updated_at": "2024-02-10 07:10:00"
+  },
+  {
+    "id": 230,
+    "name": "Provision of care, protection and rehabilitation services, Statutory Support Services and Service Delivery Structures/ देखभाल, सुरक्षा और पुनर्वास सेवाओं का प्रावधान, विधिक सहायता सेवाएं और सेवा वितरण संरचनाएं",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 639,
+    "subscheme_id": 639,
+    "created_at": "2024-02-13 07:10:00",
+    "updated_at": "2024-02-12 07:10:00"
+  },
+  {
+    "id": 231,
+    "name": "Distribution of Supplementary Nutrition to Pregnant Women, Lactating Mother, Children of age group 06-72 months. गर्भवती महिलाओं, धातृ माताओं, 06-72 माह आयु वर्ग के बच्चों को पूरक पोषाहार उपलब्ध कराना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 649,
+    "subscheme_id": 649,
+    "created_at": "2024-02-23 07:10:00",
+    "updated_at": "2024-02-22 07:10:00"
+  },
+  {
+    "id": 232,
+    "name": "AWCs with Owned Buildings & Premises. स्वभवनों एवं स्वपरिसरो युक्त आंगनवाड़ी केंद्र",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 656,
+    "subscheme_id": 656,
+    "created_at": "2024-03-01 07:10:00",
+    "updated_at": "2024-02-29 07:10:00"
+  },
+  {
+    "id": 233,
+    "name": "Beneficiary coverage/ लाभार्थियों का आच्छादन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 658,
+    "subscheme_id": 658,
+    "created_at": "2024-03-03 07:10:00",
+    "updated_at": "2024-03-02 07:10:00"
+  },
+  {
+    "id": 234,
+    "name": "NUMBER OF OLD AGE PERSONS PROVIDED CASH RELIEF. / आर्थिक सहायता दिये जाने वाले वृद्धजनों की संख्या",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 660,
+    "subscheme_id": 660,
+    "created_at": "2024-03-05 07:10:00",
+    "updated_at": "2024-03-04 07:10:00"
+  },
+  {
+    "id": 235,
+    "name": "Cash relief of Rs. 1000/- P/M to Primitive Tribal Group आदिम जनजाति समूह के व्यक्ति को रुपये 1000/- प्रति माह की आर्थिक सहायता",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 661,
+    "subscheme_id": 661,
+    "created_at": "2024-03-06 07:10:00",
+    "updated_at": "2024-03-05 07:10:00"
+  },
+  {
+    "id": 236,
+    "name": "Beneficiary coverage लाभार्थियों का आच्छादन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 662,
+    "subscheme_id": 662,
+    "created_at": "2024-03-07 07:10:00",
+    "updated_at": "2024-03-06 07:10:00"
+  },
+  {
+    "id": 237,
+    "name": "Beneficiary coverage लाभार्थियों का आच्छादन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 664,
+    "subscheme_id": 664,
+    "created_at": "2024-03-09 07:10:00",
+    "updated_at": "2024-03-08 07:10:00"
+  },
+  {
+    "id": 238,
+    "name": "Beneficiary coverage लाभार्थियों का आच्छादन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 666,
+    "subscheme_id": 666,
+    "created_at": "2024-03-11 07:10:00",
+    "updated_at": "2024-03-10 07:10:00"
+  },
+  {
+    "id": 239,
+    "name": "1% OF PWD TO BE SUPPORTED THROUGH STATE FUND FOR PWDS / 1% दिव्यांगजनों को राज्य निधि से समर्थित करना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 667,
+    "subscheme_id": 667,
+    "created_at": "2024-03-12 07:10:00",
+    "updated_at": "2024-03-11 07:10:00"
+  },
+  {
+    "id": 240,
+    "name": "Awareness and Assessment camp for PWDs. दिव्यांगजनों के लिए जागरूकता और मूल्यांकन शिविर।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 667,
+    "subscheme_id": 667,
+    "created_at": "2024-03-12 07:10:00",
+    "updated_at": "2024-03-11 07:10:00"
+  },
+  {
+    "id": 241,
+    "name": "Financial assistance to PWD students. दिव्यांगजन छात्रों को वित्तीय सहायता।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 667,
+    "subscheme_id": 667,
+    "created_at": "2024-03-12 07:10:00",
+    "updated_at": "2024-03-11 07:10:00"
+  },
+  {
+    "id": 242,
+    "name": "Provision of care and protection for senior Citizens/वरिष्ठ नागरिकों की देखभाल और सुरक्षा का प्रावधान",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 670,
+    "subscheme_id": 670,
+    "created_at": "2024-03-15 07:10:00",
+    "updated_at": "2024-03-14 07:10:00"
+  },
+  {
+    "id": 243,
+    "name": "Provision of care, protection and Education for Disabled Students/. विकलांग छात्रों के लिए देखभाल, सुरक्षा और शिक्षा का प्रावधान।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 670,
+    "subscheme_id": 670,
+    "created_at": "2024-03-15 07:10:00",
+    "updated_at": "2024-03-14 07:10:00"
+  },
+  {
+    "id": 244,
+    "name": "Utensils avaibility in AWCs for Hot Cook Meal preparation/आंगनवाड़ी केंद्रों में गर्म ताजा पोषाहार पकाने हेतु बर्तनों को उपलब्ध कराना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 673,
+    "subscheme_id": 673,
+    "created_at": "2024-03-18 07:10:00",
+    "updated_at": "2024-03-17 07:10:00"
+  },
+  {
+    "id": 245,
+    "name": "Water Purifier Avaibility in AWCs/आंगनवाड़ी केंद्रों में जलशोधक की उपलब्ध कराना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 673,
+    "subscheme_id": 673,
+    "created_at": "2024-03-18 07:10:00",
+    "updated_at": "2024-03-17 07:10:00"
+  },
+  {
+    "id": 246,
+    "name": "Cash relief of Rs. 1000/- P/M to HIV/AIDS Affected persons एचआईवी/एड्स पीड़ित व्यक्तियों को 1000/- रु0 प्रति माह की आर्थिक सहायता",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 675,
+    "subscheme_id": 675,
+    "created_at": "2024-03-20 07:10:00",
+    "updated_at": "2024-03-19 07:10:00"
+  },
+  {
+    "id": 247,
+    "name": "Cash relief of Rs. 1000/- P/M to Widows aged 18 and above, destitute women aged 18 and above, single women aged 45 and above. 18 वर्ष और उससे अधिक आयु की विधवाओं, 18 वर्ष और उससे अधिक आयु की निराश्रित महिलाओं, 45 वर्ष और उससे अधिक आयु की एकल महिलाओं को 1000/- रुपये प्रति माह की आर्थिक सहायता",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 676,
+    "subscheme_id": 676,
+    "created_at": "2024-03-21 07:10:00",
+    "updated_at": "2024-03-20 07:10:00"
+  },
+  {
+    "id": 248,
+    "name": "Expanding social, educational, and economic opportunities, and Intensive service delivery सामाजिक, शैक्षिक और आर्थिक अवसरों का विस्तारण और सघन सेवा वितरण",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 677,
+    "subscheme_id": 677,
+    "created_at": "2024-03-22 07:10:00",
+    "updated_at": "2024-03-21 07:10:00"
+  },
+  {
+    "id": 250,
+    "name": "Beneficiary coverage लाभार्थियों का आच्छादन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 682,
+    "subscheme_id": 682,
+    "created_at": "2024-03-27 07:10:00",
+    "updated_at": "2024-03-26 07:10:00"
+  },
+  {
+    "id": 251,
+    "name": "Provision of financial assistance for maternity benefit through DBT/ डीबीटी के माध्यम से मातृत्व लाभ हेतु वित्तीय सहायता का उपलब्ध कराना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 684,
+    "subscheme_id": 684,
+    "created_at": "2024-03-29 07:10:00",
+    "updated_at": "2024-03-28 07:10:00"
+  },
+  {
+    "id": 252,
+    "name": "DBT to beneficiaries for each installment within 30 days as per scheme guidelines योजना के दिशा-निर्देशों के अनुरुप लाभुकों को प्रत्येक किश्त का डीबीटी भुगतान 30 दिनों के अन्दर सुनिश्चित करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 684,
+    "subscheme_id": 684,
+    "created_at": "2024-03-29 07:10:00",
+    "updated_at": "2024-03-28 07:10:00"
+  },
+  {
+    "id": 253,
+    "name": "Operationalizing the State PMMVY Cell, District PMMVY Cell/ राज्य पी0 एम0 एम0 वी0 वाई0 सेल, जिला पी0 एम0 एम0 वी0 वाई0 सेल को कार्यशील बनाना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 684,
+    "subscheme_id": 684,
+    "created_at": "2024-03-29 07:10:00",
+    "updated_at": "2024-03-28 07:10:00"
+  },
+  {
+    "id": 254,
+    "name": "AWCs with Toilet & Drinking Water Facilities. शौचालय एवं पेयजल सुविधा की व्यवस्था वाले आंगनवाड़ी केंद्र",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 695,
+    "subscheme_id": 695,
+    "created_at": "2024-04-09 07:10:00",
+    "updated_at": "2024-04-08 07:10:00"
+  },
+  {
+    "id": 255,
+    "name": "AWCs with storage room./ भंडारण कक्षयुक्त आंगनवाड़ी केंद्र।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 695,
+    "subscheme_id": 695,
+    "created_at": "2024-04-09 07:10:00",
+    "updated_at": "2024-04-08 07:10:00"
+  },
+  {
+    "id": 256,
+    "name": "AWCs with Safety Measures like lightning conductor etc./ तड़ित चालक जैसे सुरक्षा उपायों से युक्त आंगनवाड़ी केंद्र।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 695,
+    "subscheme_id": 695,
+    "created_at": "2024-04-09 07:10:00",
+    "updated_at": "2024-04-08 07:10:00"
+  },
+  {
+    "id": 257,
+    "name": "Prevention of Witch Craft Practices. डायन कुप्रथा का रोकथाम",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 699,
+    "subscheme_id": 699,
+    "created_at": "2024-04-13 07:10:00",
+    "updated_at": "2024-04-12 07:10:00"
+  },
+  {
+    "id": 258,
+    "name": "Financial assistance for encouraging good practices such as mass marriage, mass cremation. सामूहिक विवाह, सामूहिक अन्तिम संस्कार जैसी अच्छी प्रथाओं को प्रोत्साहित करने के लिए वित्तीय सहायता उपलब्ध कराना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 699,
+    "subscheme_id": 699,
+    "created_at": "2024-04-13 07:10:00",
+    "updated_at": "2024-04-12 07:10:00"
+  },
+  {
+    "id": 259,
+    "name": "Create Awareness Regarding health and Nutrition. स्वास्थ्य और पोषण के बारे में जागरूकता पैदा करना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 260,
+    "name": "Strengthening the ICDS System through real time ICT-enabled monitoring. रीयल टाइम आई0सी0टी0 सक्षम निगराणी प्रणाली के माध्यम से आईसीडीएस व्यवस्था को सुदृढ़ बनाना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 261,
+    "name": "Ensuring Convergence by setting achievable targets, sector level meetings with concerned Secretaries of line departments under the Chairmanship of Chief Secretary, joint guidelines for each level, joint monitoring visits and decentralised planning मुख्य सचिव की अध्यक्षता में संबंधित विभागों के सचिवों के साथ सेक्टर स्तरीय बैठकों एवं प्राप्त करने योग्य लक्ष्यों हेतु अभिसरण सुनिश्चित करना, प्रत्येक स्तर पर संयुक्त दिशा निर्देश तैयार करना, संयुक्त अनुश्रवण एवं विकेंद्रीकृत योजना निर्माण सुनिश्चित करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 262,
+    "name": "Incentivizing States/UTs राज्यों/संघराज्य क्षेत्रों को प्रोत्साहन देना",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 263,
+    "name": "Community-based management of Severely Acute Malnourished अतिकुपोषितों का समुदाय-आधारित प्रबंधन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 264,
+    "name": "Citizen Engagement and Grievance Redressal नागरिक जुड़ाव और शिकायत निवारण",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 265,
+    "name": "Smartphones/Tablet efficiency स्मार्टफोन/टैबलेट युक्त कार्य व्यवस्था Community Mobilization and Behavioral Change सामुदायिक लामबंदी और व्यवहार परिवर्तन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 266,
+    "name": "Community Mobilization and Behavioral Change सामुदायिक लामबंदी और व्यवहार परिवर्तन",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 267,
+    "name": "Activating Village Health Sanitation and Nutrition Day (VHSNDs) स्वास्थ्य स्वच्छता और पोषण दिवस(VHSNDs) का सक्रिय संचालन करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 702,
+    "subscheme_id": 702,
+    "created_at": "2024-04-16 07:10:00",
+    "updated_at": "2024-04-15 07:10:00"
+  },
+  {
+    "id": 268,
+    "name": "Financial assistance to girls from its birth. बालिकाओं को जन्म से ही आर्थिक सहायता।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 727,
+    "subscheme_id": 727,
+    "created_at": "2024-05-11 07:10:00",
+    "updated_at": "2024-05-10 07:10:00"
+  },
+  {
+    "id": 269,
+    "name": "Distribution of one each blanket to poor annd needy. गरीबों और जरूरत मंदों को एक-एक कंबल का वितरण।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 730,
+    "subscheme_id": 730,
+    "created_at": "2024-05-14 07:10:00",
+    "updated_at": "2024-05-13 07:10:00"
+  },
+  {
+    "id": 270,
+    "name": "Distribution of Wollen Clothes to AWCs going children आंगनवाड़ी केंद्रों में उपस्थित होने वाले बच्चों को ऊनी वस्त्रों का वितरण करना।",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 731,
+    "subscheme_id": 731,
+    "created_at": "2024-05-15 07:10:00",
+    "updated_at": "2024-05-14 07:10:00"
+  },
+  {
+    "id": 271,
+    "name": "1. Renovation/ Repairing of Minority Hostels.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 847,
+    "subscheme_id": 847,
+    "created_at": "2024-09-08 07:10:00",
+    "updated_at": "2024-09-07 07:10:00"
+  },
+  {
+    "id": 272,
+    "name": "1. Distribution of cycles to 100% eligible students enrolled in Class - VIII.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 848,
+    "subscheme_id": 848,
+    "created_at": "2024-09-09 07:10:00",
+    "updated_at": "2024-09-08 07:10:00"
+  },
+  {
+    "id": 273,
+    "name": "1.1. Construction of concrete boundary walls around graveyards.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 849,
+    "subscheme_id": 849,
+    "created_at": "2024-09-10 07:10:00",
+    "updated_at": "2024-09-09 07:10:00"
+  },
+  {
+    "id": 274,
+    "name": "1. Loan-cum-Subsidy support to potential youth for taking up income generation activities as per the scheme provisions.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 850,
+    "subscheme_id": 850,
+    "created_at": "2024-09-11 07:10:00",
+    "updated_at": "2024-09-10 07:10:00"
+  },
+  {
+    "id": 275,
+    "name": "1. Functional Skill Training/ Vocational Training Centres.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 852,
+    "subscheme_id": 852,
+    "created_at": "2024-09-13 07:10:00",
+    "updated_at": "2024-09-12 07:10:00"
+  },
+  {
+    "id": 276,
+    "name": "1. Building infrastructure like Schools Residential Schools hostels colleges ITIs polytechnics skill centres hunar hubs sadbhavmandaps common service centres toilets drinking water etc.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 855,
+    "subscheme_id": 855,
+    "created_at": "2024-09-16 07:10:00",
+    "updated_at": "2024-09-15 07:10:00"
+  },
+  {
+    "id": 277,
+    "name": "1. Construction of new residential schools",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 862,
+    "subscheme_id": 862,
+    "created_at": "2024-09-23 07:10:00",
+    "updated_at": "2024-09-22 07:10:00"
+  },
+  {
+    "id": 278,
+    "name": "Financial assistance to minority students for studying in select institutes of UK of Great Britain and Northern Ireland.",
+    "department_id": 9,
+    "division_id": 2,
+    "scheme_id": 864,
+    "subscheme_id": 864,
+    "created_at": "2024-09-25 07:10:00",
+    "updated_at": "2024-09-24 07:10:00"
+  },
+  {
+    "id": 279,
+    "name": "Provide scholarship to SC students for pursuing higher and technical education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 733,
+    "subscheme_id": 733,
+    "created_at": "2024-05-17 07:10:00",
+    "updated_at": "2024-05-16 07:10:00"
+  },
+  {
+    "id": 280,
+    "name": "Filling the gaps in various sectors of development",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 735,
+    "subscheme_id": 735,
+    "created_at": "2024-05-19 07:10:00",
+    "updated_at": "2024-05-18 07:10:00"
+  },
+  {
+    "id": 281,
+    "name": "Provide scholarship to ST students for completion of Post-Matric education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 740,
+    "subscheme_id": 740,
+    "created_at": "2024-05-24 07:10:00",
+    "updated_at": "2024-05-23 07:10:00"
+  },
+  {
+    "id": 282,
+    "name": "Fillilng the gaps in various sectors of development",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 742,
+    "subscheme_id": 742,
+    "created_at": "2024-05-26 07:10:00",
+    "updated_at": "2024-05-25 07:10:00"
+  },
+  {
+    "id": 283,
+    "name": "Building infrastructure like residential schools hostels and their upgradation strengthening rural connectivity strengthening health facilities skill development drinking water sports facilities etc.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 744,
+    "subscheme_id": 744,
+    "created_at": "2024-05-28 07:10:00",
+    "updated_at": "2024-05-27 07:10:00"
+  },
+  {
+    "id": 284,
+    "name": "Income generating programmes",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 749,
+    "subscheme_id": 749,
+    "created_at": "2024-06-02 07:10:00",
+    "updated_at": "2024-06-01 07:10:00"
+  },
+  {
+    "id": 285,
+    "name": "Skill development programmes",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 749,
+    "subscheme_id": 749,
+    "created_at": "2024-06-02 07:10:00",
+    "updated_at": "2024-06-01 07:10:00"
+  },
+  {
+    "id": 286,
+    "name": "Infrastructure development",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 749,
+    "subscheme_id": 749,
+    "created_at": "2024-06-02 07:10:00",
+    "updated_at": "2024-06-01 07:10:00"
+  },
+  {
+    "id": 287,
+    "name": "4 Other Development Projects",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 749,
+    "subscheme_id": 749,
+    "created_at": "2024-06-02 07:10:00",
+    "updated_at": "2024-06-01 07:10:00"
+  },
+  {
+    "id": 288,
+    "name": "Provide scholarship to ST students for completion of Pre-Matric education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 753,
+    "subscheme_id": 753,
+    "created_at": "2024-06-06 07:10:00",
+    "updated_at": "2024-06-05 07:10:00"
+  },
+  {
+    "id": 289,
+    "name": "Provide scholarship to SC students for completion of Pre-Matric education (Class IX-X).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 755,
+    "subscheme_id": 755,
+    "created_at": "2024-06-08 07:10:00",
+    "updated_at": "2024-06-07 07:10:00"
+  },
+  {
+    "id": 290,
+    "name": "Provide scholarship to BC students for completion of Post-Matric education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 757,
+    "subscheme_id": 757,
+    "created_at": "2024-06-10 07:10:00",
+    "updated_at": "2024-06-09 07:10:00"
+  },
+  {
+    "id": 291,
+    "name": "Providing relief / compensation etc to victims of atrocities.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 759,
+    "subscheme_id": 759,
+    "created_at": "2024-06-12 07:10:00",
+    "updated_at": "2024-06-11 07:10:00"
+  },
+  {
+    "id": 292,
+    "name": "Conduct awareness generation activities/Workshop/ Seminars/ Jan-jagaran /Training Programs etc.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 759,
+    "subscheme_id": 759,
+    "created_at": "2024-06-12 07:10:00",
+    "updated_at": "2024-06-11 07:10:00"
+  },
+  {
+    "id": 293,
+    "name": "Establishment of special authorities for implementation and monitoring of the PCR Act 1955.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 759,
+    "subscheme_id": 759,
+    "created_at": "2024-06-12 07:10:00",
+    "updated_at": "2024-06-11 07:10:00"
+  },
+  {
+    "id": 294,
+    "name": "Conduct awareness generation activities/Workshop/ Seminars/ Jan-jagaran /Training Programs etc.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 762,
+    "subscheme_id": 762,
+    "created_at": "2024-06-15 07:10:00",
+    "updated_at": "2024-06-14 07:10:00"
+  },
+  {
+    "id": 295,
+    "name": "Providing relief /compensation etc to victims of atrocities.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 762,
+    "subscheme_id": 762,
+    "created_at": "2024-06-15 07:10:00",
+    "updated_at": "2024-06-14 07:10:00"
+  },
+  {
+    "id": 296,
+    "name": "Establishment of special authorities for implementation and monitoring of the PCR Act 1955.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 762,
+    "subscheme_id": 762,
+    "created_at": "2024-06-15 07:10:00",
+    "updated_at": "2024-06-14 07:10:00"
+  },
+  {
+    "id": 297,
+    "name": "Provide scholarship to BC students for completion of Pre-Matric education",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 765,
+    "subscheme_id": 765,
+    "created_at": "2024-06-18 07:10:00",
+    "updated_at": "2024-06-17 07:10:00"
+  },
+  {
+    "id": 298,
+    "name": "Distribution of cycles to 100% eligible ST students enrolled in Class - VIII.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 767,
+    "subscheme_id": 767,
+    "created_at": "2024-06-20 07:10:00",
+    "updated_at": "2024-06-19 07:10:00"
+  },
+  {
+    "id": 299,
+    "name": "Functional Skill Training/ Vocational Training Centres.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 770,
+    "subscheme_id": 770,
+    "created_at": "2024-06-23 07:10:00",
+    "updated_at": "2024-06-22 07:10:00"
+  },
+  {
+    "id": 300,
+    "name": "Functional SC Residential Schools through NGOs.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 773,
+    "subscheme_id": 773,
+    "created_at": "2024-06-26 07:10:00",
+    "updated_at": "2024-06-25 07:10:00"
+  },
+  {
+    "id": 301,
+    "name": "Loan-cum-Subsidy support to potential youth for taking up income generation activities as per the scheme provisions.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 775,
+    "subscheme_id": 775,
+    "created_at": "2024-06-28 07:10:00",
+    "updated_at": "2024-06-27 07:10:00"
+  },
+  {
+    "id": 302,
+    "name": "Provide scholarship to students for pursuing higher and technical education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 777,
+    "subscheme_id": 777,
+    "created_at": "2024-06-30 07:10:00",
+    "updated_at": "2024-06-29 07:10:00"
+  },
+  {
+    "id": 303,
+    "name": "Renovation/ Repairing of Hostels.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 779,
+    "subscheme_id": 779,
+    "created_at": "2024-07-02 07:10:00",
+    "updated_at": "2024-07-01 07:10:00"
+  },
+  {
+    "id": 304,
+    "name": "Provide scholarship to SC students for pursuing higher and technical education.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 781,
+    "subscheme_id": 781,
+    "created_at": "2024-07-04 07:10:00",
+    "updated_at": "2024-07-03 07:10:00"
+  },
+  {
+    "id": 305,
+    "name": "Functional Skill Training/ Vocational Training Centres.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 783,
+    "subscheme_id": 783,
+    "created_at": "2024-07-06 07:10:00",
+    "updated_at": "2024-07-05 07:10:00"
+  },
+  {
+    "id": 306,
+    "name": "Loan-cum-Subsidy support to potential youth for taking up income generation activities as per the scheme provisions.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 786,
+    "subscheme_id": 786,
+    "created_at": "2024-07-09 07:10:00",
+    "updated_at": "2024-07-08 07:10:00"
+  },
+  {
+    "id": 307,
+    "name": "Functional Skill Training/ Vocational Training Centres.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 788,
+    "subscheme_id": 788,
+    "created_at": "2024-07-11 07:10:00",
+    "updated_at": "2024-07-10 07:10:00"
+  },
+  {
+    "id": 308,
+    "name": "Fully functional primary health facilities (OPD + IPD) in 16 Kalyan Hospitals.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 791,
+    "subscheme_id": 791,
+    "created_at": "2024-07-14 07:10:00",
+    "updated_at": "2024-07-13 07:10:00"
+  },
+  {
+    "id": 309,
+    "name": "Loan-cum-Subsidy support to potential youth for taking up income generation activities as per the scheme provisions.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 792,
+    "subscheme_id": 792,
+    "created_at": "2024-07-15 07:10:00",
+    "updated_at": "2024-07-14 07:10:00"
+  },
+  {
+    "id": 310,
+    "name": "Renovation of residential schools",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 794,
+    "subscheme_id": 794,
+    "created_at": "2024-07-17 07:10:00",
+    "updated_at": "2024-07-16 07:10:00"
+  },
+  {
+    "id": 311,
+    "name": "Construction of new residential schools",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 794,
+    "subscheme_id": 794,
+    "created_at": "2024-07-17 07:10:00",
+    "updated_at": "2024-07-16 07:10:00"
+  },
+  {
+    "id": 312,
+    "name": "Renovation/Repairing of SC Hostels.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 798,
+    "subscheme_id": 798,
+    "created_at": "2024-07-21 07:10:00",
+    "updated_at": "2024-07-20 07:10:00"
+  },
+  {
+    "id": 313,
+    "name": "Construction of Tribal Art & Cultural Centres/ Manjhi Houses/ Manki- Munda Houses/ Pargana Houses/ Dhumkuria Houses",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 799,
+    "subscheme_id": 799,
+    "created_at": "2024-07-22 07:10:00",
+    "updated_at": "2024-07-21 07:10:00"
+  },
+  {
+    "id": 314,
+    "name": "Construction of new residential schools",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 800,
+    "subscheme_id": 800,
+    "created_at": "2024-07-23 07:10:00",
+    "updated_at": "2024-07-22 07:10:00"
+  },
+  {
+    "id": 315,
+    "name": "Renovation of residential schools",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 800,
+    "subscheme_id": 800,
+    "created_at": "2024-07-23 07:10:00",
+    "updated_at": "2024-07-22 07:10:00"
+  },
+  {
+    "id": 316,
+    "name": "1. Financial grant of Rs. 1.325 lacs to PVTGs for construction of a house.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 804,
+    "subscheme_id": 804,
+    "created_at": "2024-07-27 07:10:00",
+    "updated_at": "2024-07-26 07:10:00"
+  },
+  {
+    "id": 317,
+    "name": "1.Construction of concrete boundary wall around graveyards.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 806,
+    "subscheme_id": 806,
+    "created_at": "2024-07-29 07:10:00",
+    "updated_at": "2024-07-28 07:10:00"
+  },
+  {
+    "id": 318,
+    "name": "Providing identified villages amenities like housing drinking water electricity etc.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 808,
+    "subscheme_id": 808,
+    "created_at": "2024-07-31 07:10:00",
+    "updated_at": "2024-07-30 07:10:00"
+  },
+  {
+    "id": 319,
+    "name": "Functional ST Residential Schools through NGOs.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 813,
+    "subscheme_id": 813,
+    "created_at": "2024-08-05 07:10:00",
+    "updated_at": "2024-08-04 07:10:00"
+  },
+  {
+    "id": 320,
+    "name": "Provision of basic infrastructure like housing potable water supply coverage under Dakiya scheme (by way of convergence) livelihood support solar street light repairing of sanctioned anganbari/health centres need-based construction of ponds strengthening of other basic infrastructure etc.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 815,
+    "subscheme_id": 815,
+    "created_at": "2024-08-07 07:10:00",
+    "updated_at": "2024-08-06 07:10:00"
+  },
+  {
+    "id": 321,
+    "name": "1.1 Financial assistance to students for studying in select institutes of Great Britain and Northern Ireland.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 820,
+    "subscheme_id": 820,
+    "created_at": "2024-08-12 07:10:00",
+    "updated_at": "2024-08-11 07:10:00"
+  },
+  {
+    "id": 322,
+    "name": "Provide scholarship to ST students for completion of Pre-Matric education (Class I-VIII).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 823,
+    "subscheme_id": 823,
+    "created_at": "2024-08-15 07:10:00",
+    "updated_at": "2024-08-14 07:10:00"
+  },
+  {
+    "id": 323,
+    "name": "Provide scholarship to SC students for completion of Pre-Matric education (Class I-VIII).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 823,
+    "subscheme_id": 823,
+    "created_at": "2024-08-15 07:10:00",
+    "updated_at": "2024-08-14 07:10:00"
+  },
+  {
+    "id": 324,
+    "name": "Provide scholarship to OBC students for completion of Pre-Matric education (Class I-VIII).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 823,
+    "subscheme_id": 823,
+    "created_at": "2024-08-15 07:10:00",
+    "updated_at": "2024-08-14 07:10:00"
+  },
+  {
+    "id": 325,
+    "name": "Provide scholarship to ST students for completion of Pre-Matric education (Class IX-X).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 828,
+    "subscheme_id": 828,
+    "created_at": "2024-08-20 07:10:00",
+    "updated_at": "2024-08-19 07:10:00"
+  },
+  {
+    "id": 326,
+    "name": "Provide scholarship to SC students for completion of Pre-Matric education (Class IX-X).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 828,
+    "subscheme_id": 828,
+    "created_at": "2024-08-20 07:10:00",
+    "updated_at": "2024-08-19 07:10:00"
+  },
+  {
+    "id": 327,
+    "name": "Provide scholarship to BC students for completion of Pre-Matric education (Class IX-X).",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 828,
+    "subscheme_id": 828,
+    "created_at": "2024-08-20 07:10:00",
+    "updated_at": "2024-08-19 07:10:00"
+  },
+  {
+    "id": 328,
+    "name": "1.1 DISTRIBUTION OF GOATS PIGS CHICKENS AND DUCKLINGS TO THE BENEFICIARIES",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 834,
+    "subscheme_id": 834,
+    "created_at": "2024-08-26 07:10:00",
+    "updated_at": "2024-08-25 07:10:00"
+  },
+  {
+    "id": 329,
+    "name": "Providing financial aid to persons suffering from diseases.",
+    "department_id": 9,
+    "division_id": 1,
+    "scheme_id": 838,
+    "subscheme_id": 838,
+    "created_at": "2024-08-30 07:10:00",
+    "updated_at": "2024-08-29 07:10:00"
+  },
+  {
+    "id": 330,
+    "name": "Various infrastructural development activities taken up by the ULBs/ निकायों द्वारा शुरू की गई विभिन्न ढांचा गतविकास गति विधियां",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 557,
+    "subscheme_id": 557,
+    "created_at": "2023-11-23 07:10:00",
+    "updated_at": "2023-11-22 07:10:00"
+  },
+  {
+    "id": 331,
+    "name": "Air monitoring System Installed/ वायु निगरानी प्रणाली स्थापित हवा निगरानी प्रणाली स्थापित",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 557,
+    "subscheme_id": 557,
+    "created_at": "2023-11-23 07:10:00",
+    "updated_at": "2023-11-22 07:10:00"
+  },
+  {
+    "id": 332,
+    "name": "Construction of PCC road and Laying of Paver block / पी.सी.सी. सड़क का निर्माण और पेवर ब्लॉक बिछाने का कार्य",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 566,
+    "subscheme_id": 566,
+    "created_at": "2023-12-02 07:10:00",
+    "updated_at": "2023-12-01 07:10:00"
+  },
+  {
+    "id": 333,
+    "name": "Construction of Black Top Road. / कालिकृत सड़क का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 566,
+    "subscheme_id": 566,
+    "created_at": "2023-12-02 07:10:00",
+    "updated_at": "2023-12-01 07:10:00"
+  },
+  {
+    "id": 334,
+    "name": "Construction of culvert and minor bridges. / पुलिया और छोटे पुलों का निर्माण।",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 566,
+    "subscheme_id": 566,
+    "created_at": "2023-12-02 07:10:00",
+    "updated_at": "2023-12-01 07:10:00"
+  },
+  {
+    "id": 335,
+    "name": "Installation of traffic signals etc./ ट्रैफिक सिग्नल का अधिष्ठापन आदि",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 566,
+    "subscheme_id": 566,
+    "created_at": "2023-12-02 07:10:00",
+    "updated_at": "2023-12-01 07:10:00"
+  },
+  {
+    "id": 336,
+    "name": "Redevelopment/ Construction of Bus stand/Bus stop/ Auto stand/ बस स्टैंड / बस स्टॉप / ऑटो स्टैंड का निर्माण/ पुनर्विकास",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 566,
+    "subscheme_id": 566,
+    "created_at": "2023-12-02 07:10:00",
+    "updated_at": "2023-12-01 07:10:00"
+  },
+  {
+    "id": 337,
+    "name": "Construction of Drainage/ नाली का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 571,
+    "subscheme_id": 571,
+    "created_at": "2023-12-07 07:10:00",
+    "updated_at": "2023-12-06 07:10:00"
+  },
+  {
+    "id": 338,
+    "name": "Construction/ Maintenance of Community Hall/ Marriage Hall / Crematorium etc./ सामुदायिक भवन/ मैरेज हॉल/ श्मशान आदि का निर्माण/ रख-रखाव।",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 571,
+    "subscheme_id": 571,
+    "created_at": "2023-12-07 07:10:00",
+    "updated_at": "2023-12-06 07:10:00"
+  },
+  {
+    "id": 339,
+    "name": "Parking shed/ Crematorium shed/ पार्किंग शेड/श्मशान शेड",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 571,
+    "subscheme_id": 571,
+    "created_at": "2023-12-07 07:10:00",
+    "updated_at": "2023-12-06 07:10:00"
+  },
+  {
+    "id": 340,
+    "name": "Sanitation and Cleaning work & Equipment purchase/ स्वच्छता और सफाई कार्य तथा उपकरण का क्रय",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 571,
+    "subscheme_id": 571,
+    "created_at": "2023-12-07 07:10:00",
+    "updated_at": "2023-12-06 07:10:00"
+  },
+  {
+    "id": 341,
+    "name": "Coverage of water supply in 15 ULBs under JMDP project/ जे.एम.डी.पी. परियोजना के तहत 15 शहरी स्थानीय निकायों में जलापूर्ति।",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 575,
+    "subscheme_id": 575,
+    "created_at": "2023-12-11 07:10:00",
+    "updated_at": "2023-12-10 07:10:00"
+  },
+  {
+    "id": 342,
+    "name": "Construction of Road in Dhanbad Municipal area/ धनबाद नगरपालिका क्षेत्र में सड़क निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 575,
+    "subscheme_id": 575,
+    "created_at": "2023-12-11 07:10:00",
+    "updated_at": "2023-12-10 07:10:00"
+  },
+  {
+    "id": 343,
+    "name": "Coverage of water supply in 4 ULBs under JUWSIP/ जे॰यू॰डब्लू॰एस॰आई॰पी॰ के तहत 4 शहरी स्थानीय निकायो में जलापूर्ति",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 575,
+    "subscheme_id": 575,
+    "created_at": "2023-12-11 07:10:00",
+    "updated_at": "2023-12-10 07:10:00"
+  },
+  {
+    "id": 344,
+    "name": "Sewage Network to be Connected with Rajmahal Municipal Waste Water Project/ सीवेज नेटवर्क को राजमहल नगर अपशिष्ट जल परियोजना से जोड़ा जाएगा",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 582,
+    "subscheme_id": 582,
+    "created_at": "2023-12-18 07:10:00",
+    "updated_at": "2023-12-17 07:10:00"
+  },
+  {
+    "id": 345,
+    "name": "1. Employment oriented skill development trainings and support for micro-entrepreneurship/ रोजगार उन्मुख कौशल विकास प्रशिक्षण और सूक्ष्म उद्यमिता के लिए समर्थन.",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 583,
+    "subscheme_id": 583,
+    "created_at": "2023-12-19 07:10:00",
+    "updated_at": "2023-12-18 07:10:00"
+  },
+  {
+    "id": 346,
+    "name": "2. Provision of shelters for urban homeless/ शहरी बेघरों के लिए आश्रयों का प्रावधान.",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 583,
+    "subscheme_id": 583,
+    "created_at": "2023-12-19 07:10:00",
+    "updated_at": "2023-12-18 07:10:00"
+  },
+  {
+    "id": 347,
+    "name": "3. Providing support to urban street vendors / शहरीपथ विक्रेताओं को सहायता प्रदान करना.",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 583,
+    "subscheme_id": 583,
+    "created_at": "2023-12-19 07:10:00",
+    "updated_at": "2023-12-18 07:10:00"
+  },
+  {
+    "id": 348,
+    "name": "4. Promoting social strengthening and financial inclusion / सामाजिक मजबूती और वित्तीय समावेशन को बढ़ावा देना",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 583,
+    "subscheme_id": 583,
+    "created_at": "2023-12-19 07:10:00",
+    "updated_at": "2023-12-18 07:10:00"
+  },
+  {
+    "id": 349,
+    "name": "5. Providing Financial Assistance to urban poor under Self Employment Programme (SEP)/ स्वरोजगार कार्यक्रम (एसईपी) के तहत शहरी गरीबों को वित्तीय सहायता प्रदान करना.",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 583,
+    "subscheme_id": 583,
+    "created_at": "2023-12-19 07:10:00",
+    "updated_at": "2023-12-18 07:10:00"
+  },
+  {
+    "id": 350,
+    "name": "Construction of individual Household Toilets/ व्यक्तिगत शौचालय का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 594,
+    "subscheme_id": 594,
+    "created_at": "2023-12-30 07:10:00",
+    "updated_at": "2023-12-29 07:10:00"
+  },
+  {
+    "id": 351,
+    "name": "Construction of Community/ Public Toilets/ सामुदायिक/ सार्वजनिक शौचालयों का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 594,
+    "subscheme_id": 594,
+    "created_at": "2023-12-30 07:10:00",
+    "updated_at": "2023-12-29 07:10:00"
+  },
+  {
+    "id": 352,
+    "name": "Completion & operation of SWM projects/ ठोस अपशिष्ट प्रबंधन परियोजनाओं का निर्माण और संचालन",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 594,
+    "subscheme_id": 594,
+    "created_at": "2023-12-30 07:10:00",
+    "updated_at": "2023-12-29 07:10:00"
+  },
+  {
+    "id": 353,
+    "name": "Capacity Building of ULB functionaries/निकायों के पदाधिकारियों/ कर्मियों का क्षमता संवर्धन",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 594,
+    "subscheme_id": 594,
+    "created_at": "2023-12-30 07:10:00",
+    "updated_at": "2023-12-29 07:10:00"
+  },
+  {
+    "id": 354,
+    "name": "A. Provision of water connections to urban households / शहरी घरों में पानी के कनेक्शन का प्रावधान",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 598,
+    "subscheme_id": 598,
+    "created_at": "2024-01-03 07:10:00",
+    "updated_at": "2024-01-02 07:10:00"
+  },
+  {
+    "id": 355,
+    "name": "B. Improvement in Sewerage treatment capacity and Wastewater recycling/reuse capacity/ सीवरेज ट्रीटमेंट क्षमता और अपशिष्ट जल पुनर्चक्रण / पुन: उपयोग क्षमता में सुधार",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 598,
+    "subscheme_id": 598,
+    "created_at": "2024-01-03 07:10:00",
+    "updated_at": "2024-01-02 07:10:00"
+  },
+  {
+    "id": 356,
+    "name": "C. Development of 15 waterbodies, 10 Parks. /15 जलाशयों, 10 पार्कों का विकास।",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 598,
+    "subscheme_id": 598,
+    "created_at": "2024-01-03 07:10:00",
+    "updated_at": "2024-01-02 07:10:00"
+  },
+  {
+    "id": 357,
+    "name": "Capacity Building of ULB functionaries/ निकायों के पदाधिकारियों/ कर्मियों का क्षमता निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 598,
+    "subscheme_id": 598,
+    "created_at": "2024-01-03 07:10:00",
+    "updated_at": "2024-01-02 07:10:00"
+  },
+  {
+    "id": 358,
+    "name": "35000 Houses will be constructed for beneficiaries of urban areas who doesn''t have Pucca House/ जिन शहरी क्षेत्रों के निवासीयों के पास पक्के मकान नहीं हैं, उनके लिए 35000 आवासों का निर्माण किया जाएगा.",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 602,
+    "subscheme_id": 602,
+    "created_at": "2024-01-07 07:10:00",
+    "updated_at": "2024-01-06 07:10:00"
+  },
+  {
+    "id": 359,
+    "name": "Construction of 14 water supply projects/14 जलापूर्ति परियोजनाओं का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 360,
+    "name": "Construction of Fecal Sludge treatment plant/फीकल स्लज ट्रीटमेंट प्लांट का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 361,
+    "name": "Construction of 11 Nos. Building /11 भवन का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 362,
+    "name": "Construction of Flyover i.e. Yogada satsang, Bahubazaar to shanti nagar, kokar, Ranchi/योगदा सत्संग, बहुबाजार से शांति नगर, कोकर, रांची तक का फ्लाईओवर निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 363,
+    "name": "Construction/ Sanction of Transport Nagar projects/निर्माण/स्वीकृति किए जाने वाले ट्रांसपोर्ट नगर परियोजना",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 364,
+    "name": "Widening and redevelopment of road from KutchehriChowk to KantatoliChowk via circular road./ कचहरी चौक से कांटाटोली चौक तक भाया सर्कुलर रोड का चौड़ी करण और पुनर्विकास।",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 365,
+    "name": "Construction of foot over bridge and installation of escalator in Ranchi/ रांची में फुट ओवर ब्रिज एस्केलेटर सहित निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 603,
+    "subscheme_id": 603,
+    "created_at": "2024-01-08 07:10:00",
+    "updated_at": "2024-01-07 07:10:00"
+  },
+  {
+    "id": 366,
+    "name": "Construction of Road/ सडक का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 615,
+    "subscheme_id": 615,
+    "created_at": "2024-01-20 07:10:00",
+    "updated_at": "2024-01-19 07:10:00"
+  },
+  {
+    "id": 367,
+    "name": "Construction of Drainage नाली का निर्माण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 615,
+    "subscheme_id": 615,
+    "created_at": "2024-01-20 07:10:00",
+    "updated_at": "2024-01-19 07:10:00"
+  },
+  {
+    "id": 368,
+    "name": "Water body conservation जल स्रोतो का संरक्षण",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 615,
+    "subscheme_id": 615,
+    "created_at": "2024-01-20 07:10:00",
+    "updated_at": "2024-01-19 07:10:00"
+  },
+  {
+    "id": 369,
+    "name": "Job cards to be provided to unskilled labour in ULBs of Jharkhand/ झारखंड के शहरी स्थानीय निकायों में अकुशल श्रमिकों को जॉब कार्ड उपलब्ध कराये जाएंगे",
+    "department_id": 12,
+    "division_id": 16,
+    "scheme_id": 618,
+    "subscheme_id": 618,
+    "created_at": "2024-01-23 07:10:00",
+    "updated_at": "2024-01-22 07:10:00"
+  },
+  {
+    "id": 370,
+    "name": "Infrastructure development including machine, equipment fixture & furniture / मशीन, उपकरण, उपस्कर एवंफर्नीचर सहित बुनियादीढाँचे का विकास",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 257,
+    "subscheme_id": 257,
+    "created_at": "2023-01-27 07:10:00",
+    "updated_at": "2023-01-26 07:10:00"
+  },
+  {
+    "id": 371,
+    "name": "Operationalization of Geriatric Centre in RIMS, Ranchi / रिम्स, राँची में एक जेरियट्रिक केन्द्र की स्थापना करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 260,
+    "subscheme_id": 260,
+    "created_at": "2023-01-30 07:10:00",
+    "updated_at": "2023-01-29 07:10:00"
+  },
+  {
+    "id": 372,
+    "name": "Provision of AYUSH Services / आयुष चिकित्सा सेवा का प्रावधान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 261,
+    "subscheme_id": 261,
+    "created_at": "2023-01-31 07:10:00",
+    "updated_at": "2023-01-30 07:10:00"
+  },
+  {
+    "id": 373,
+    "name": "Infrastructure development including machine, equipment, fixture & furniture/ आधारभूत संरचना का विकास (मशीन, उपकरण, फ़र्निचर एवं उपस्कर सहित)",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 261,
+    "subscheme_id": 266,
+    "created_at": "2023-02-05 07:10:00",
+    "updated_at": "2023-02-04 07:10:00"
+  },
+  {
+    "id": 374,
+    "name": "Improved Coverage of Mental Health Services / मानसिक स्वास्थ्य सेवाओं का बेहतर कवरेज",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 267,
+    "subscheme_id": 267,
+    "created_at": "2023-02-06 07:10:00",
+    "updated_at": "2023-02-05 07:10:00"
+  },
+  {
+    "id": 375,
+    "name": "Improved Coverage of Tertiary Healthcare services / तृतीयक स्वास्थ्य देखभाल सेवाओं तक बेहतर पहुँच",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 269,
+    "subscheme_id": 269,
+    "created_at": "2023-02-08 07:10:00",
+    "updated_at": "2023-02-07 07:10:00"
+  },
+  {
+    "id": 376,
+    "name": "Strengthening of Govt Medical Colleges (UG Seats) / सरकारी मेडिकल कॉलेजों का सुदृढ़ीकरण (यूजी सीटें)",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 269,
+    "subscheme_id": 269,
+    "created_at": "2023-02-08 07:10:00",
+    "updated_at": "2023-02-07 07:10:00"
+  },
+  {
+    "id": 377,
+    "name": "Ensure availability of Paramedics, housekeeping, sanitation, security etc. services / पैरामेडिक्स, हाउस कीपिंग, स्वच्छता, सुरक्षा आदि सेवाओं की उपलब्धता सुनिश्चित करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 269,
+    "subscheme_id": 269,
+    "created_at": "2023-02-08 07:10:00",
+    "updated_at": "2023-02-07 07:10:00"
+  },
+  {
+    "id": 378,
+    "name": "Ensure availability of Paramedics, housekeeping, sanitation, security etc. services / पैरामेडिक्स, हाउसकीपिंग, स्वच्छता, सुरक्षा आदि सेवाओं की उपलब्धता सुनिश्चित करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 277,
+    "subscheme_id": 277,
+    "created_at": "2023-02-16 07:10:00",
+    "updated_at": "2023-02-15 07:10:00"
+  },
+  {
+    "id": 379,
+    "name": "Expanded basket of primary care services provided by Health & Wellness Centers (HWCs) / स्वास्थ्य एवं कल्याण केंद्रों(एचडब्ल्यूसी) द्वारा प्रदान की जाने वाली प्राथमिक स्वास्थ्य सेवाओं का विस्तृत पैकेज",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 380,
+    "name": "Implementation of IT system backed procurement management and logistics systems for provision of Free Drugs at the public health facilities / सार्वजनिक स्वास्थ्य केंद्रों पर मुफ्त दवाओंके प्रावधान के लिए आईटी प्रणाली समर्थित क्रय प्रबंधन एवं लॉजिस्टिक सिस्टम का क्रियान्वयन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 381,
+    "name": "NQAS/ LaQshya certified public health facilities / एन.क्यु.ए.एस./लक्ष्य प्रमाणित सार्वजनिक स्वास्थ्य केन्द्र",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 382,
+    "name": "Public health facilities with Kayakalp Score >70% / 70 प्रतिशत से अधिक कायाकल्प स्कोर वाले सार्वजनिक स्वास्थ्य केन्द्र",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 383,
+    "name": "Dialysis sessions held under free dialysis services / निःशुल्क डायलिसिस सेवा के तहत आयोजित डायलिसिस सत्र",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 416,
+    "name": "Distribution of Albendazole and IFA Tablets / एल्बेंडाजोल और आईएफए गोलियों का वितरण",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 324,
+    "subscheme_id": 324,
+    "created_at": "2023-04-04 07:10:00",
+    "updated_at": "2023-04-03 07:10:00"
+  },
+  {
+    "id": 384,
+    "name": "Pregnant women given 180 Iron Folic Acid (IFA) tablets / 180 आयरन फोलिक एसिड (आई.एफ.ए.) गोली प्राप्त करनेवाती गर्भवती महिलाएँ",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 385,
+    "name": "Percentage of pregnant women received Skilled Birth attendant during deliveries (Institutional + home) / प्रसव के दौरान स्किल्ड बर्थ अटेंडेंट (एस.बी.ए.) प्रशिक्षित नर्स द्वारा गर्भवती महिलाओं के प्रसव का प्रतिशत(संस्थागत + घर)",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 386,
+    "name": "Public facilities notified under SUMAN / सुमन के तहत अधिसूचित सार्वजनिक अस्पताल",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 387,
+    "name": "LaQshya certified units (Labour rooms+ Operation Theatres) / लक्ष्य प्रमाणित इकाइयाँ(लेबर रूम + ऑपरेशन थिएटर)",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 388,
+    "name": "Full Immunization Coverage / पूर्ण टीकाकरण कवरेज",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 389,
+    "name": "Increase in Modern Method Contraceptive prevalence Rate (mCPR) / आधुनिक प्रकार के गर्भनिरोधक के गर्भनिरोधक प्रसारदर में वृद्धि",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 390,
+    "name": "SNCU Admission / एस.एन.सी.यू. में भर्ती",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 278,
+    "subscheme_id": 278,
+    "created_at": "2023-02-17 07:10:00",
+    "updated_at": "2023-02-16 07:10:00"
+  },
+  {
+    "id": 391,
+    "name": "Diseases covered under scheme / योजना के अंतर्गत आने वाले रोग",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 290,
+    "subscheme_id": 290,
+    "created_at": "2023-03-01 07:10:00",
+    "updated_at": "2023-02-28 07:10:00"
+  },
+  {
+    "id": 392,
+    "name": "Beneficiary Identification / लाभार्थी की पहचान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 290,
+    "subscheme_id": 290,
+    "created_at": "2023-03-01 07:10:00",
+    "updated_at": "2023-02-28 07:10:00"
+  },
+  {
+    "id": 393,
+    "name": "Claim Payment / क्लेम भुगतान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 290,
+    "subscheme_id": 290,
+    "created_at": "2023-03-01 07:10:00",
+    "updated_at": "2023-02-28 07:10:00"
+  },
+  {
+    "id": 394,
+    "name": "Hospital Empanelment / अस्पतालों का सूचीकरण",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 290,
+    "subscheme_id": 290,
+    "created_at": "2023-03-01 07:10:00",
+    "updated_at": "2023-02-28 07:10:00"
+  },
+  {
+    "id": 395,
+    "name": "Construction/ up gradation of Pharmacy Institutions / फार्मेसी संस्थानों का निर्माण/उन्नयन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 294,
+    "subscheme_id": 294,
+    "created_at": "2023-03-05 07:10:00",
+    "updated_at": "2023-03-04 07:10:00"
+  },
+  {
+    "id": 396,
+    "name": "Improved Coverage of Tertiary Healthcare services / तृतीयक स्वास्थ्य देखभाल सेवाओं तक बेहतर पहुँच",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 295,
+    "subscheme_id": 295,
+    "created_at": "2023-03-06 07:10:00",
+    "updated_at": "2023-03-05 07:10:00"
+  },
+  {
+    "id": 397,
+    "name": "Provision of AYUSH Services / आयुष चिकित्सा सेवा का प्रावधान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 296,
+    "subscheme_id": 296,
+    "created_at": "2023-03-07 07:10:00",
+    "updated_at": "2023-03-06 07:10:00"
+  },
+  {
+    "id": 398,
+    "name": "Operationalisation of ambulances / एम्बुलेंस का संचालन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 298,
+    "subscheme_id": 298,
+    "created_at": "2023-03-09 07:10:00",
+    "updated_at": "2023-03-08 07:10:00"
+  },
+  {
+    "id": 399,
+    "name": "Operationalisation of Mortuary vans / शव वाहन का संचालन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 298,
+    "subscheme_id": 298,
+    "created_at": "2023-03-09 07:10:00",
+    "updated_at": "2023-03-08 07:10:00"
+  },
+  {
+    "id": 400,
+    "name": "Provision for operationalisation of Dialysis Centre in Medical Colleges and District Hospitals / चिकित्सा महाविद्यालयों एवं जिला चिकित्सालयों में डायलिसिस केन्द्र के संचालन का प्रावधान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 300,
+    "subscheme_id": 300,
+    "created_at": "2023-03-11 07:10:00",
+    "updated_at": "2023-03-10 07:10:00"
+  },
+  {
+    "id": 401,
+    "name": "Construction/ up gradation of primary and secondary health sector infrastructure / प्राथमिक और माध्यमिक स्वास्थ्यक्षेत्र के बुनियादी ढाँचे का निर्माण/उन्नयन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 300,
+    "subscheme_id": 301,
+    "created_at": "2023-03-12 07:10:00",
+    "updated_at": "2023-03-11 07:10:00"
+  },
+  {
+    "id": 402,
+    "name": "Stipen provision for Nurses / नर्सों के लिए वजीफे का प्रावधान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 300,
+    "subscheme_id": 301,
+    "created_at": "2023-03-12 07:10:00",
+    "updated_at": "2023-03-11 07:10:00"
+  },
+  {
+    "id": 403,
+    "name": "Ensure availability of Paramedics, housekeeping, sanitation, security etc. services / पैरामेडिक्स, हाउस कीपिंग, स्वच्छता, सुरक्षा आदि सेवाओं की उपलब्धता सुनिश्चित करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 303,
+    "subscheme_id": 303,
+    "created_at": "2023-03-14 07:10:00",
+    "updated_at": "2023-03-13 07:10:00"
+  },
+  {
+    "id": 404,
+    "name": "Hospital Admission / हॉस्पिटल एडमिशन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 304,
+    "subscheme_id": 304,
+    "created_at": "2023-03-15 07:10:00",
+    "updated_at": "2023-03-14 07:10:00"
+  },
+  {
+    "id": 405,
+    "name": "Beneficiary Identification / लाभार्थी की पहचान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 304,
+    "subscheme_id": 304,
+    "created_at": "2023-03-15 07:10:00",
+    "updated_at": "2023-03-14 07:10:00"
+  },
+  {
+    "id": 406,
+    "name": "Claim Payment / क्लेम भुगतान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 304,
+    "subscheme_id": 304,
+    "created_at": "2023-03-15 07:10:00",
+    "updated_at": "2023-03-14 07:10:00"
+  },
+  {
+    "id": 407,
+    "name": "Hospital Empanelment / अस्पतालों का सूचीकरण",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 304,
+    "subscheme_id": 304,
+    "created_at": "2023-03-15 07:10:00",
+    "updated_at": "2023-03-14 07:10:00"
+  },
+  {
+    "id": 408,
+    "name": "Hospital Admission / हॉस्पिटल एडमिशन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 309,
+    "subscheme_id": 309,
+    "created_at": "2023-03-20 07:10:00",
+    "updated_at": "2023-03-19 07:10:00"
+  },
+  {
+    "id": 409,
+    "name": "Beneficiary Identification / लाभार्थी की पहचान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 309,
+    "subscheme_id": 309,
+    "created_at": "2023-03-20 07:10:00",
+    "updated_at": "2023-03-19 07:10:00"
+  },
+  {
+    "id": 410,
+    "name": "Claim Payment / क्लेम भुगतान",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 309,
+    "subscheme_id": 309,
+    "created_at": "2023-03-20 07:10:00",
+    "updated_at": "2023-03-19 07:10:00"
+  },
+  {
+    "id": 411,
+    "name": "Hospital Empanelment / अस्पतालों का सूचीकरण",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 309,
+    "subscheme_id": 309,
+    "created_at": "2023-03-20 07:10:00",
+    "updated_at": "2023-03-19 07:10:00"
+  },
+  {
+    "id": 412,
+    "name": "Improving access to Healthcare in Urban area / शहरी क्षेत्र में स्वास्थ्य सेवा तक पहुँच में सुधार",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 314,
+    "subscheme_id": 314,
+    "created_at": "2023-03-25 07:10:00",
+    "updated_at": "2023-03-24 07:10:00"
+  },
+  {
+    "id": 413,
+    "name": "Providing quality healthcare services in Urban area / शहरी क्षेत्र में गुणवत्तापूर्ण स्वास्थ्य सेवाएँ प्रदान करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 314,
+    "subscheme_id": 314,
+    "created_at": "2023-03-25 07:10:00",
+    "updated_at": "2023-03-24 07:10:00"
+  },
+  {
+    "id": 414,
+    "name": "Strengthening grass root public health institutions to deliver universal Comprehensive Primary Health Care, including surveillance, active community engagement and improved risk communication, health education and prevention / निगरानी, सक्रिय सामुदायिक जुड़ाव और बेहतर जोखिम संचार, स्वास्थ्य शिक्षा और रोकथाम सहित सार्वभौमिकव्यापक प्राथमिक स्वास्थ्य देखभाल प्रदान करने के लिए जमीनी स्तर पर सार्वजनिक स्वास्थ्य संस्थानों को सुदृढ़ करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 319,
+    "subscheme_id": 319,
+    "created_at": "2023-03-30 07:10:00",
+    "updated_at": "2023-03-29 07:10:00"
+  },
+  {
+    "id": 415,
+    "name": "Distribution of free sanitary napkin to adolescents / किशोरियों को निःशुल्क सैनिटरी नैपकिन का वितरण",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 324,
+    "subscheme_id": 324,
+    "created_at": "2023-04-04 07:10:00",
+    "updated_at": "2023-04-03 07:10:00"
+  },
+  {
+    "id": 417,
+    "name": "Increase in number of institutional delivery and improve the care of newborn / संस्थागत प्रसव की संख्या में वृद्धि और नवजात शिशु की देखभाल में सुधार लाना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 326,
+    "subscheme_id": 326,
+    "created_at": "2023-04-06 07:10:00",
+    "updated_at": "2023-04-05 07:10:00"
+  },
+  {
+    "id": 418,
+    "name": "Clinical setup on rental basis including operational cost / किराये के भवन में क्लिनिकल सेटअप एवं संचालन व्यय",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 327,
+    "subscheme_id": 327,
+    "created_at": "2023-04-07 07:10:00",
+    "updated_at": "2023-04-06 07:10:00"
+  },
+  {
+    "id": 419,
+    "name": "Organisation of Health camps in Hat-Bazaar in each block of tribal dominant districts / आदिवासी बहुल जिलों के प्रत्येक प्रखण्ड में हाट-बाजार में स्वास्थ्य शिविरों का आयोजन",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 328,
+    "subscheme_id": 328,
+    "created_at": "2023-04-08 07:10:00",
+    "updated_at": "2023-04-07 07:10:00"
+  },
+  {
+    "id": 420, 
+    "name": "Strengthening grass root public health institutions to deliver universal Comprehensive Primary Health Care, including surveillance, active community engagement and improved risk communication, health education and prevention / निगरानी, सक्रिय सामुदायिक जुड़ाव और बेहतर जोखिम संचार, स्वास्थ्य शिक्षा और रोकथामसहित सार्वभौमिकव्यापक प्राथमिक स्वास्थ्य देखभाल प्रदान करने के लिए जमीनी स्तर परसार्वजनिक स्वास्थ्य संस्थानों को सुदृढ़ करना",
+    "department_id": 5,
+    "division_id": 10,
+    "scheme_id": 329,
+    "subscheme_id": 329,
+    "created_at": "2023-04-09 07:10:00",
+    "updated_at": "2023-04-08 07:10:00"
+  },
+  {
+    "id": 421,
+    "name": "GPs having community infrastructure",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 414,
+    "created_at": "2023-07-03 07:10:00",
+    "updated_at": "2023-07-02 07:10:00"
+  },
+  {
+    "id": 422,
+    "name": "GPs having access to safe drinking water",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 414,
+    "created_at": "2023-07-03 07:10:00",
+    "updated_at": "2023-07-02 07:10:00"
+  },
+  {
+    "id": 423,
+    "name": "Inter villages having road connectivity within GP boundary",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 414,
+    "created_at": "2023-07-03 07:10:00",
+    "updated_at": "2023-07-02 07:10:00"
+  },
+  {
+    "id": 424,
+    "name": "GPs having Sanitation facility",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 414,
+    "created_at": "2023-07-03 07:10:00",
+    "updated_at": "2023-07-02 07:10:00"
+  },
+  {
+    "id": 425,
+    "name": "ZPs having community infrastructure",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 418,
+    "created_at": "2023-07-07 07:10:00",
+    "updated_at": "2023-07-06 07:10:00"
+  },
+  {
+    "id": 426,
+    "name": "ZPs creating access to safe drinking water in GPs",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 418,
+    "created_at": "2023-07-07 07:10:00",
+    "updated_at": "2023-07-06 07:10:00"
+  },
+  {
+    "id": 427,
+    "name": "ZPs under taken road connectivity infrastructure",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 418,
+    "created_at": "2023-07-07 07:10:00",
+    "updated_at": "2023-07-06 07:10:00"
+  },
+  {
+    "id": 428,
+    "name": "ZPs creating community Sanitation facility in GPs",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 418,
+    "created_at": "2023-07-07 07:10:00",
+    "updated_at": "2023-07-06 07:10:00"
+  },
+  {
+    "id": 429,
+    "name": "BPs having community infrastructure",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 422,
+    "created_at": "2023-07-11 07:10:00",
+    "updated_at": "2023-07-10 07:10:00"
+  },
+  {
+    "id": 430,
+    "name": "BPs creating access to safe drinking water in GPs",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 422,
+    "created_at": "2023-07-11 07:10:00",
+    "updated_at": "2023-07-10 07:10:00"
+  },
+  {
+    "id": 431,
+    "name": "BPs under taken road connectivity infrastructure",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 422,
+    "created_at": "2023-07-11 07:10:00",
+    "updated_at": "2023-07-10 07:10:00"
+  },
+  {
+    "id": 432,
+    "name": "BPs creating community Sanitation facility in GPs",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 414,
+    "subscheme_id": 422,
+    "created_at": "2023-07-11 07:10:00",
+    "updated_at": "2023-07-10 07:10:00"
+  },
+  {
+    "id": 433,
+    "name": "3-Tier PRIs fulfilling eligibiulity criteria and submit their applications for award /त्रि-स्तरीय पंचायती राज संस्थान, जो अर्हता पूर्ण करते हैं, पुरूस्कार हासिल करने हेतु आवेदन समर्पित किए हैं",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 426,
+    "subscheme_id": 426,
+    "created_at": "2023-07-15 07:10:00",
+    "updated_at": "2023-07-14 07:10:00"
+  },
+  {
+    "id": 434,
+    "name": "Member of GP, BP & ZP will be trained",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 429,
+    "subscheme_id": 429,
+    "created_at": "2023-07-18 07:10:00",
+    "updated_at": "2023-07-17 07:10:00"
+  },
+  {
+    "id": 435,
+    "name": "Strengthening the infrastructure and building human capacities of rural local bodies (PRIs)",
+    "department_id": 6,
+    "division_id": 11,
+    "scheme_id": 430,
+    "subscheme_id": 430,
+    "created_at": "2023-07-19 07:10:00",
+    "updated_at": "2023-07-18 07:10:00"
+  },
+  {
+    "id": 436,
+    "name": "Number of houses constructed",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 440,
+    "subscheme_id": 440,
+    "created_at": "2023-07-29 07:10:00",
+    "updated_at": "2023-07-28 07:10:00"
+  },
+  {
+    "id": 437,
+    "name": "Strengthening of three Tire Community Based Organisation Structure (SHG, VO and Cluster Level Federation",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 442,
+    "subscheme_id": 442,
+    "created_at": "2023-07-31 07:10:00",
+    "updated_at": "2023-07-30 07:10:00"
+  },
+  {
+    "id": 438,
+    "name": "Accessibility of Low intrest loan to SHG members in the Form of Revolving Fund, Community Investment Fund and Bank Credit Linkage",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 442,
+    "subscheme_id": 442,
+    "created_at": "2023-07-31 07:10:00",
+    "updated_at": "2023-07-30 07:10:00"
+  },
+  {
+    "id": 439,
+    "name": "Promote Aggregation models like Farmers Producer groups/ organisation through DAY-NRLM",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 442,
+    "subscheme_id": 442,
+    "created_at": "2023-07-31 07:10:00",
+    "updated_at": "2023-07-30 07:10:00"
+  },
+  {
+    "id": 440,
+    "name": "Number of new works registered during the year",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 445,
+    "subscheme_id": 445,
+    "created_at": "2023-08-03 07:10:00",
+    "updated_at": "2023-08-02 07:10:00"
+  },
+  {
+    "id": 441,
+    "name": "Number of Person days generation",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 445,
+    "subscheme_id": 445,
+    "created_at": "2023-08-03 07:10:00",
+    "updated_at": "2023-08-02 07:10:00"
+  },
+  {
+    "id": 442,
+    "name": "Introducing new work programmes",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 445,
+    "subscheme_id": 445,
+    "created_at": "2023-08-03 07:10:00",
+    "updated_at": "2023-08-02 07:10:00"
+  },
+  {
+    "id": 443,
+    "name": "Construction of quarters in blocks",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 448,
+    "subscheme_id": 448,
+    "created_at": "2023-08-06 07:10:00",
+    "updated_at": "2023-08-05 07:10:00"
+  },
+  {
+    "id": 444,
+    "name": "Poverty reduction through off season agriculture intervention through micro-drip irrigation.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 449,
+    "subscheme_id": 449,
+    "created_at": "2023-08-07 07:10:00",
+    "updated_at": "2023-08-06 07:10:00"
+  },
+  {
+    "id": 445,
+    "name": "Ensure integrated development of the selected villages with more than 50% SC population",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 451,
+    "subscheme_id": 451,
+    "created_at": "2023-08-09 07:10:00",
+    "updated_at": "2023-08-08 07:10:00"
+  },
+  {
+    "id": 446,
+    "name": "Development of Degraded/Rainfed Area",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 452,
+    "subscheme_id": 452,
+    "created_at": "2023-08-10 07:10:00",
+    "updated_at": "2023-08-09 07:10:00"
+  },
+  {
+    "id": 447,
+    "name": "Conserve Soil, Moisture and rainwater to reduce surface run off and recharge ground water",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 452,
+    "subscheme_id": 452,
+    "created_at": "2023-08-10 07:10:00",
+    "updated_at": "2023-08-09 07:10:00"
+  },
+  {
+    "id": 448,
+    "name": "Diversification of crops",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 452,
+    "subscheme_id": 452,
+    "created_at": "2023-08-10 07:10:00",
+    "updated_at": "2023-08-09 07:10:00"
+  },
+  {
+    "id": 449,
+    "name": "Increase in Cropping intensity",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 452,
+    "subscheme_id": 452,
+    "created_at": "2023-08-10 07:10:00",
+    "updated_at": "2023-08-09 07:10:00"
+  },
+  {
+    "id": 450,
+    "name": "PROVIDE HOUSES TO THE WIDOWED AND FAMILIES AFFECTED FROM NATURAL CALAMITIES.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 456,
+    "subscheme_id": 456,
+    "created_at": "2023-08-14 07:10:00",
+    "updated_at": "2023-08-13 07:10:00"
+  },
+  {
+    "id": 451,
+    "name": "To establish Micro irrigation systems by tapping surface water and make it available in nearby fields now under cultivation by combining appropriate technology, quality materials, low cost, public-community-private partnership & time bound implementation.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 458,
+    "subscheme_id": 458,
+    "created_at": "2023-08-16 07:10:00",
+    "updated_at": "2023-08-15 07:10:00"
+  },
+  {
+    "id": 452,
+    "name": "clusters will be developed",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 460,
+    "subscheme_id": 460,
+    "created_at": "2023-08-18 07:10:00",
+    "updated_at": "2023-08-17 07:10:00"
+  },
+  {
+    "id": 453,
+    "name": "To enhance and diversify household income in select farm and non‐farm sectors for targeted beneficiaries in project areas.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 463,
+    "subscheme_id": 463,
+    "created_at": "2023-08-21 07:10:00",
+    "updated_at": "2023-08-20 07:10:00"
+  },
+  {
+    "id": 454,
+    "name": "improvement of wasteland and fallow land into arable land , Runoff control, Rain water harvesting , Conversion of mono cropped area into double/multiple  crop, Capacity Building of all the stakeholders  and enhancement of income generating activities.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 467,
+    "subscheme_id": 467,
+    "created_at": "2023-08-25 07:10:00",
+    "updated_at": "2023-08-24 07:10:00"
+  },
+  {
+    "id": 455,
+    "name": "To strengthen the traditional artisans through providing technical inputs, marketing, promotion and branding",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 470,
+    "subscheme_id": 470,
+    "created_at": "2023-08-28 07:10:00",
+    "updated_at": "2023-08-27 07:10:00"
+  },
+  {
+    "id": 456,
+    "name": "Holistic development of all the Particularly Vulnerable Tribal Groups (PVTG) on phase & sustainable manner.",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 471,
+    "subscheme_id": 471,
+    "created_at": "2023-08-29 07:10:00",
+    "updated_at": "2023-08-28 07:10:00"
+  },
+  {
+    "id": 457,
+    "name": "Number of Person days generation",
+    "department_id": 7,
+    "division_id": 12,
+    "scheme_id": 474,
+    "subscheme_id": 474,
+    "created_at": "2023-09-01 07:10:00",
+    "updated_at": "2023-08-31 07:10:00"
+  },
+  {
+    "id": 458,
+    "name": "Establishment of New Professional (Engineering college)/ नए प्रोफेशनल कॉलेज का निर्माण",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 459,
+    "name": "Upgradation of existing degree college to model degree college डिग्री कॉलेज का मॉडल डिग्री कॉलेज का उन्नयन",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 460,
+    "name": "Infrastructure Grant of Universities. विश्वविद्यालयों का बुनियादी ढांचा अनुदान।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 461,
+    "name": "Infrastructure Grant of colleges. महाविद्यालयों का बुनियादी ढांचा अनुदान।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 462,
+    "name": "New Model Degree Colleges/ नए मॉडल डिग्री कॉलेज",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 463,
+    "name": "Enhancing quality and excellence in selected autonomous college/ चयनित स्वायत महावोद्यालय में गुणवत्ता और उत्कृष्टता में वृधि",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 464,
+    "name": "Grants to strengthen the HEIs/ उच्च शिक्षा संस्थानों के सशक्तिकरण हेतु अनुदान",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 465,
+    "name": "ICT facilities to HEIs/ उच्च शिक्षण संस्थानों में ICT की सुविधा",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 466,
+    "name": "Enhancing Employability through Vocationalization and Skill Upgradation/ व्यावसायीकरण और कौशल उन्नयन के माध्यम से रोजगार में वृद्धि",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 332,
+    "subscheme_id": 332,
+    "created_at": "2023-04-12 07:10:00",
+    "updated_at": "2023-04-11 07:10:00"
+  },
+  {
+    "id": 467,
+    "name": "Fellowship given to eligible students in Ph.D पीएचडी में पात्र छात्रों को दी गई फैलोशिप",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 347,
+    "subscheme_id": 347,
+    "created_at": "2023-04-27 07:10:00",
+    "updated_at": "2023-04-26 07:10:00"
+  },
+  {
+    "id": 468,
+    "name": "Scholarship given to eligible students for Technical and Professional education in topmost Institutions of the country देश के शीर्ष संस्थानों में तकनीकी और व्यावसायिक शिक्षा के लिए पात्र छात्रों को दी जाने वाली छात्रवृत्ति",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 347,
+    "subscheme_id": 347,
+    "created_at": "2023-04-27 07:10:00",
+    "updated_at": "2023-04-26 07:10:00"
+  },
+  {
+    "id": 469,
+    "name": "Travel cost to foreign countries given to students for presentation of research work in top 100 Universities शीर्ष 100 विश्वविद्यालयों में शोधकार्य की प्रस्तुति के लिए छात्रों को दी गई विदेश यात्रा की लागत",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 347,
+    "subscheme_id": 347,
+    "created_at": "2023-04-27 07:10:00",
+    "updated_at": "2023-04-26 07:10:00"
+  },
+  {
+    "id": 470,
+    "name": "Construction of hostels and M.P Hall छात्रावास एवंम.प्र. हॉल का निर्माण",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 353,
+    "subscheme_id": 353,
+    "created_at": "2023-05-03 07:10:00",
+    "updated_at": "2023-05-02 07:10:00"
+  },
+  {
+    "id": 471,
+    "name": "Repair and renovation work मरम्मत और नवीनीकरण कार्य",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 353,
+    "subscheme_id": 353,
+    "created_at": "2023-05-03 07:10:00",
+    "updated_at": "2023-05-02 07:10:00"
+  },
+  {
+    "id": 472,
+    "name": "Development of infrastructure and campus of existing colleges मौजूदा कॉलेजों के बुनियादी ढांचे और परिसर का विकास",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 353,
+    "subscheme_id": 353,
+    "created_at": "2023-05-03 07:10:00",
+    "updated_at": "2023-05-02 07:10:00"
+  },
+  {
+    "id": 473,
+    "name": "ICT enabled Universities/ Colleges आईसीटी सक्षम विश्वविद्यालय/कॉलेज।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 359,
+    "subscheme_id": 359,
+    "created_at": "2023-05-09 07:10:00",
+    "updated_at": "2023-05-08 07:10:00"
+  },
+  {
+    "id": 474,
+    "name": "Establishment of laboratories with modern equipment's आधुनिक उपकरणों सेयुक्त प्रयोगशालाओं की स्थापना।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 359,
+    "subscheme_id": 359,
+    "created_at": "2023-05-09 07:10:00",
+    "updated_at": "2023-05-08 07:10:00"
+  },
+  {
+    "id": 475,
+    "name": "Establishment of language lab भाषा प्रयोगशाला की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 359,
+    "subscheme_id": 359,
+    "created_at": "2023-05-09 07:10:00",
+    "updated_at": "2023-05-08 07:10:00"
+  },
+  {
+    "id": 476,
+    "name": "Establishment of library with all the amenities and facilities समस्त सुविधाओं एवं सुविधाओं से युक्त पुस्तकालय की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 359,
+    "subscheme_id": 359,
+    "created_at": "2023-05-09 07:10:00",
+    "updated_at": "2023-05-08 07:10:00"
+  },
+  {
+    "id": 477,
+    "name": "Running of second shift classes in all the colleges where number of enrollment is more than intake capacity उन सभी महाविद्यालयोंमें द्वितीय पाली की कक्षाओं का संचालन जहाँ नामांकन की संख्या प्रवेश क्षमता से अधिक है।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 364,
+    "subscheme_id": 364,
+    "created_at": "2023-05-14 07:10:00",
+    "updated_at": "2023-05-13 07:10:00"
+  },
+  {
+    "id": 478,
+    "name": "Reimbursement of tuition fees of female students of undergraduate and postgraduate स्नातक और स्नातकोत्तर की छात्राओं की ट्यूशन फीस की प्रतिपूर्ति",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 364,
+    "subscheme_id": 364,
+    "created_at": "2023-05-14 07:10:00",
+    "updated_at": "2023-05-13 07:10:00"
+  },
+  {
+    "id": 479,
+    "name": "Increase in number of seats intake in coaching centres. कोचिंग सेंटरों में सीटों की संख्या में वृद्धि।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 364,
+    "subscheme_id": 364,
+    "created_at": "2023-05-14 07:10:00",
+    "updated_at": "2023-05-13 07:10:00"
+  },
+  {
+    "id": 480,
+    "name": "Establishment of coaching centers in Universities विश्वविद्यालयों में कोचिंग सेंटरों की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 364,
+    "subscheme_id": 364,
+    "created_at": "2023-05-14 07:10:00",
+    "updated_at": "2023-05-13 07:10:00"
+  },
+  {
+    "id": 481,
+    "name": "Coaching centres functional throughout the year कोचिंग सेंटर साल भरकाम करते हैं",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 364,
+    "subscheme_id": 364,
+    "created_at": "2023-05-14 07:10:00",
+    "updated_at": "2023-05-13 07:10:00"
+  },
+  {
+    "id": 482,
+    "name": "Career Counselling/ करियर परामर्श कार्यक्रम",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 483,
+    "name": "PLACEMENT DRIVE / प्लेसमेंट ड्राइव",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 484,
+    "name": "Trainings on soft skill सॉफ्ट स्किल परप्रशिक्षण",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 485,
+    "name": "Start up स्टार्ट अप",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 486,
+    "name": "Placement cell fully operational प्लेसमेंट सेल पूरी तरह से चालू",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 487,
+    "name": "Completion of Study/ अध्ययन पूर्ण करना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 488,
+    "name": "Studies on development of Higher Education in the state conducted राज्य में उच्च शिक्षा के विकास पर अध्ययन आयोजित",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 489,
+    "name": "Trainings , conferences, workshops and excursion organized प्रशिक्षण, सम्मेलन, कार्य शालाएं और भ्रमण आयोजित",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 371,
+    "subscheme_id": 371,
+    "created_at": "2023-05-21 07:10:00",
+    "updated_at": "2023-05-20 07:10:00"
+  },
+  {
+    "id": 490,
+    "name": "Establishment of New Universities नए विश्वविद्यालयों की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 379,
+    "subscheme_id": 379,
+    "created_at": "2023-05-29 07:10:00",
+    "updated_at": "2023-05-28 07:10:00"
+  },
+  {
+    "id": 491,
+    "name": "establishment model colleges मॉडल कॉलेजों की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 379,
+    "subscheme_id": 379,
+    "created_at": "2023-05-29 07:10:00",
+    "updated_at": "2023-05-28 07:10:00"
+  },
+  {
+    "id": 492,
+    "name": "Establishment of women's college महिला महाविद्यालय की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 379,
+    "subscheme_id": 379,
+    "created_at": "2023-05-29 07:10:00",
+    "updated_at": "2023-05-28 07:10:00"
+  },
+  {
+    "id": 493,
+    "name": "Establishment of degree colleges डिग्री कॉलेजों की स्थापना",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 379,
+    "subscheme_id": 379,
+    "created_at": "2023-05-29 07:10:00",
+    "updated_at": "2023-05-28 07:10:00"
+  },
+  {
+    "id": 494,
+    "name": "Establishment of Incubation Centre. इन्क्यूबेशन सेंटर की स्थापना।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 388,
+    "subscheme_id": 388,
+    "created_at": "2023-06-07 07:10:00",
+    "updated_at": "2023-06-06 07:10:00"
+  },
+  {
+    "id": 495,
+    "name": "Completion of Research Work. अनुसंधान कार्य का समापन।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 388,
+    "subscheme_id": 388,
+    "created_at": "2023-06-07 07:10:00",
+    "updated_at": "2023-06-06 07:10:00"
+  },
+  {
+    "id": 496,
+    "name": "NAAC Accreditation. नैक प्रत्यायन।",
+    "department_id": 1,
+    "division_id": 8,
+    "scheme_id": 388,
+    "subscheme_id": 388,
+    "created_at": "2023-06-07 07:10:00",
+    "updated_at": "2023-06-06 07:10:00"
+  },
+  {
+    "id": 497,
+    "name": "To complete the under construction polytechnics and engineering institutes. Rejuvenate the old technical institutes like BIT Sindri and other Govt. Polytechnics. Construction of New buildings and hostels in Different polytechnics. निर्माणाधीन पॉलिटेक्निक और इंजीनियरिंग संस्थानों को पूरा करना। पुराने तकनीकी संस्थानों यथा बीआईटी सिंदरी और अन्य राजकीय पॉलिटेक्निक का कायाकल्प करें। विभिन्न पॉलीटेक्निकों में नए भवन एवं छात्रावास का निर्माण।",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 391,
+    "subscheme_id": 391,
+    "created_at": "2023-06-10 07:10:00",
+    "updated_at": "2023-06-09 07:10:00"
+  },
+  {
+    "id": 498,
+    "name": "To start operation of Regional Science Centre, Ranchi by the council and its renovation with the help of NCSM. परिषद द्वारा क्षेत्रीय विज्ञान केंद्र, रांची का संचालन शुरू करना और एनसीएसएम की मदद से इसका नवीनीकरण करना।Establishment of Patent facilitation Centre. पेटेंट सुविधा केंद्र की स्थापना।",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 394,
+    "subscheme_id": 394,
+    "created_at": "2023-06-13 07:10:00",
+    "updated_at": "2023-06-12 07:10:00"
+  },
+  {
+    "id": 499,
+    "name": "Training and development.",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 500,
+    "name": "Examination",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 501,
+    "name": "Courses",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 502,
+    "name": "syllabus",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 503,
+    "name": "Computer Lab",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 504,
+    "name": "General Lab",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 505,
+    "name": "Library",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 395,
+    "subscheme_id": 395,
+    "created_at": "2023-06-14 07:10:00",
+    "updated_at": "2023-06-13 07:10:00"
+  },
+  {
+    "id": 506,
+    "name": "BIT Mesra, a non-governmental educational institute set up in the state of Jharkhand, is to be given a grant/ झारखंड राज्य में स्थापित एक गैर-सरकारी शैक्षणिक संस्थान, बीआईटी मेसरा अनुदान दिया जाना है/",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 404,
+    "subscheme_id": 404,
+    "created_at": "2023-06-23 07:10:00",
+    "updated_at": "2023-06-22 07:10:00"
+  },
+  {
+    "id": 507,
+    "name": "2. To provide grants to PREJHA for starting academic session in new eight Polytechnics. आठ नए पॉलीटेक्निकों में PREJHA के माध्यम से शैक्षणिकसत्र प्रारंभ करने हेतु अनुदान प्रदान करना।",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 404,
+    "subscheme_id": 404,
+    "created_at": "2023-06-23 07:10:00",
+    "updated_at": "2023-06-22 07:10:00"
+  },
+  {
+    "id": 508,
+    "name": "employment fair organized for he employment of pass out students. उत्तीर्ण छात्रों को रोजगार दिलाने के लिए रोजगार मेला का आयोजन।",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 406,
+    "subscheme_id": 406,
+    "created_at": "2023-06-25 07:10:00",
+    "updated_at": "2023-06-24 07:10:00"
+  },
+  {
+    "id": 509,
+    "name": "1. For official work and tour expenses. 2. To provide training to teachers and non-teaching officials/personnel educational institutions. 3. employment fair organized for he employment of pass out students. 1. सरकारी काम और दौरे के खर्च के लिए। 2. शिक्षकों और गैर-शैक्षणिक अधिकारियों/कार्मिक शिक्षण संस्थानों को प्रशिक्षण प्रदान करना। 3. उत्तीर्ण छात्रों को रोजगार दिलाने के लिए रोजगार मेला का आयोजन।",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 406,
+    "subscheme_id": 406,
+    "created_at": "2023-06-25 07:10:00",
+    "updated_at": "2023-06-24 07:10:00"
+  },
+  {
+    "id": 510,
+    "name": "Apprentice Program. अपरेंटिस कार्यक्रम",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 406,
+    "subscheme_id": 406,
+    "created_at": "2023-06-25 07:10:00",
+    "updated_at": "2023-06-24 07:10:00"
+  },
+  {
+    "id": 511,
+    "name": "1.IN ORDER TO INCREASE WOMEN'S PARTICIPATION IN THE FIELD OF TECHNICAL EDUCATION IN THE STATE OF JHARKHAND AND TO EMPOWER THEM. 2. THE FINANCIAL ASSISTANCE WILL BE PROVIDED TO THE GIRL STUDENTS THROUGH DBT. 1. झारखण्ड राज्य में महिला सशक्तिकरण एवं तकनीकी शिक्षा के क्षेत्र में महिलाओं की भागीदारी बढ़ाना. 2. DBT के माध्यम से छात्राओं को आर्थिक सहायता देना.",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 410,
+    "subscheme_id": 410,
+    "created_at": "2023-06-29 07:10:00",
+    "updated_at": "2023-06-28 07:10:00"
+  },
+  {
+    "id": 512,
+    "name": "Buildings construction of IIIT, Ranchi. IIIT, रांची का भवन निर्माण कार्य करना.",
+    "department_id": 1,
+    "division_id": 19,
+    "scheme_id": 412,
+    "subscheme_id": 412,
+    "created_at": "2023-07-01 07:10:00",
+    "updated_at": "2023-06-30 07:10:00"
+  },
+  {
+    "id": 513,
+    "name": "Implementation and monitoring of schemes under jsrrda",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 475,
+    "subscheme_id": 475,
+    "created_at": "2023-09-02 07:10:00",
+    "updated_at": "2023-09-01 07:10:00"
+  },
+  {
+    "id": 514,
+    "name": "Construction/ Strengthening of Roads in rural areas",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 477,
+    "subscheme_id": 477,
+    "created_at": "2023-09-04 07:10:00",
+    "updated_at": "2023-09-03 07:10:00"
+  },
+  {
+    "id": 515,
+    "name": "Salary of consultant",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 477,
+    "subscheme_id": 479,
+    "created_at": "2023-09-06 07:10:00",
+    "updated_at": "2023-09-05 07:10:00"
+  },
+  {
+    "id": 516,
+    "name": "Land acquire as per requirement",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 477,
+    "subscheme_id": 480,
+    "created_at": "2023-09-07 07:10:00",
+    "updated_at": "2023-09-06 07:10:00"
+  },
+  {
+    "id": 517,
+    "name": "Construction/ Strengthening of Roads in rural areas",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 477,
+    "subscheme_id": 481,
+    "created_at": "2023-09-08 07:10:00",
+    "updated_at": "2023-09-07 07:10:00"
+  },
+  {
+    "id": 518,
+    "name": "Monitoring of schemes",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 477,
+    "subscheme_id": 483,
+    "created_at": "2023-09-10 07:10:00",
+    "updated_at": "2023-09-09 07:10:00"
+  },
+  {
+    "id": 519,
+    "name": "Construction of Bridges",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 484,
+    "subscheme_id": 484,
+    "created_at": "2023-09-11 07:10:00",
+    "updated_at": "2023-09-10 07:10:00"
+  },
+  {
+    "id": 520,
+    "name": "No. of DPR prepared",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 486,
+    "subscheme_id": 486,
+    "created_at": "2023-09-13 07:10:00",
+    "updated_at": "2023-09-12 07:10:00"
+  },
+  {
+    "id": 521,
+    "name": "To provide all weather connectivity to rural habitations.",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 487,
+    "subscheme_id": 487,
+    "created_at": "2023-09-14 07:10:00",
+    "updated_at": "2023-09-13 07:10:00"
+  },
+  {
+    "id": 522,
+    "name": "To provide all weather connectivity in Left Wing extermism affected Areas",
+    "department_id": 8,
+    "division_id": 13,
+    "scheme_id": 489,
+    "subscheme_id": 489,
+    "created_at": "2023-09-16 07:10:00",
+    "updated_at": "2023-09-15 07:10:00"
+  },
+  {
+    "id": 523,
+    "name": "Provision of care protection and rehabilitation of destitute women/",
+    "department_id": 11,
+    "division_id": 15,
+    "scheme_id": 670,
+    "subscheme_id": 670,
+    "created_at": "2024-03-15 07:10:00",
+    "updated_at": "2024-03-14 07:10:00"
+  }
+]

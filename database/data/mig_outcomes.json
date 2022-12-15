@@ -1,0 +1,3706 @@
+[
+    {
+        "id": 1,
+        "name": "Increased acreage of horticulture crops /बागवानी फसलों का बढ़ा रकबा",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 73,
+        "subscheme_id": 74
+    },
+    {
+        "id": 2,
+        "name": "High production & productivity of horticulture crops/ बागवानी फसलों का उच्च उत्पादन और उत्पादकता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 73,
+        "subscheme_id": 74
+    },
+    {
+        "id": 3,
+        "name": "Increased farmers’ training and extension support / किसानों के प्रशिक्षण और विस्तार समर्थन में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 81,
+        "subscheme_id": 82
+    },
+    {
+        "id": 4,
+        "name": "Increased availability of Quality inputs / गुणवत्ता इनपुट की उपलब्धता में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 86,
+        "subscheme_id": 87
+    },
+    {
+        "id": 5,
+        "name": "Increase in productivity उत्पादकता में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 88,
+        "subscheme_id": 89
+    },
+    {
+        "id": 6,
+        "name": "Self-sufficiency in food grains production खाद्यान्न उत्पादन में आत्मनिर्भरता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 89,
+        "subscheme_id": 90
+    },
+    {
+        "id": 7,
+        "name": "Making farming a remunerative economic activity through strengthening the farmers’ effort risk mitigation and promoting agrientrepreneurship किसानों के प्रयास को मजबूत करके जोखिम कम करने और कृषि उद्यमिता को बढ़ावा देकर खेती को लाभकारी आर्थिक गतिविधि बनाना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 91,
+        "subscheme_id": 92
+    },
+    {
+        "id": 8,
+        "name": "1. Crop diversification under micro irrigation/ सूक्ष्म सिंचाई के तहत फसल विविधीकरण",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 93,
+        "subscheme_id": 93
+    },
+    {
+        "id": 9,
+        "name": "1. Increased reach of farm mechanizationamong target beneficiaries/ लक्षित लाभार्थियों के  बीच कृषि  मशीनीकरणकी  पहुंच में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 95,
+        "subscheme_id": 95
+    },
+    {
+        "id": 10,
+        "name": "Expansion in area under organic cultivation जैविक खेती के तहत क्षेत्र में विस्तार",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 96,
+        "subscheme_id": 96
+    },
+    {
+        "id": 11,
+        "name": "1. Maintenance of soil fertility/ मिट्टी की उर्वरता बनाए रखना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 98,
+        "subscheme_id": 98
+    },
+    {
+        "id": 12,
+        "name": "1. Increased farmers’ training and extension support / बढ़ा हुआ किसानों का प्रशिक्षण और विस्तार सहयोग",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 100,
+        "subscheme_id": 100
+    },
+    {
+        "id": 13,
+        "name": "2. Enhancement in technology adoption through capacity building of agriculture extension functionaries/ प्रौद्योगिकी क्षमता के माध्यम से कृषि का विस्तार में वृद्धि करना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 100,
+        "subscheme_id": 100
+    },
+    {
+        "id": 14,
+        "name": "1. Access to credit/ ऋण साख की बढ़ोतरी",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 105,
+        "subscheme_id": 105
+    },
+    {
+        "id": 15,
+        "name": "1. Ensuring better prices to farmers/ किसानों को बेहतर दाम सुनिश्चित करना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 106,
+        "subscheme_id": 106
+    },
+    {
+        "id": 16,
+        "name": "1. Increased reach of farm mechanization among target beneficiaries लाभार्थियों के बीच कृषि यंत्र के पहुंच में वृद्धि कालक्ष्य",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 109,
+        "subscheme_id": 109
+    },
+    {
+        "id": 17,
+        "name": "2. Improved beneficiaries/ stakeholder awareness उन्नतलाभार्थी/ हितधारक जागरूकता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 109,
+        "subscheme_id": 109
+    },
+    {
+        "id": 18,
+        "name": "2. Small and marginal farmers benefitting/ लाभान्वित छोटे और सीमांत किसान",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 111,
+        "subscheme_id": 111
+    },
+    {
+        "id": 19,
+        "name": "1. Reduce crop loan burden of farmers / किसानों के फसल ऋणका बोझ कमकरना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 111,
+        "subscheme_id": 111
+    },
+    {
+        "id": 20,
+        "name": "Reduction in NPA",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 111,
+        "subscheme_id": 111
+    },
+    {
+        "id": 21,
+        "name": "Increased Fresh Loan/ Credit Flow to Farmers",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 111,
+        "subscheme_id": 111
+    },
+    {
+        "id": 22,
+        "name": "1. Self-sufficiency in sugancane production खाद्यान्न उत्पादन में आत्मनिर्भरता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 115,
+        "subscheme_id": 115
+    },
+    {
+        "id": 23,
+        "name": "1. Increased Irrigate d Area/ उत्पादकता मेंवृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 116,
+        "subscheme_id": 116
+    },
+    {
+        "id": 24,
+        "name": "1. Increase in Crop productivity/ उत्पादकता में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 116,
+        "subscheme_id": 116
+    },
+    {
+        "id": 25,
+        "name": "2. Farmers enrolled in Krishak Pathshala कृषक पाठशाला में नामांकित किसानों की संख्या",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 118,
+        "subscheme_id": 118
+    },
+    {
+        "id": 26,
+        "name": "1. Increased Farmers income Increase in marketing potential and price realization/ किसानों की आय विपणन क्षमता और कीमत वसूली में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 118,
+        "subscheme_id": 118
+    },
+    {
+        "id": 27,
+        "name": "3. Increase in productivity / उत्पादकता में वृद्धि",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 118,
+        "subscheme_id": 118
+    },
+    {
+        "id": 28,
+        "name": "1. Farmer Visit to Clinic",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 121,
+        "subscheme_id": 121
+    },
+    {
+        "id": 29,
+        "name": "Self-sufficiency in food grains production खाद्यान्न उत्पादन में आत्मनिर्भरता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 122,
+        "subscheme_id": 122
+    },
+    {
+        "id": 30,
+        "name": "Increased productivity उत्पादक्ता मे बढ़ोतरी",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 123,
+        "subscheme_id": 123
+    },
+    {
+        "id": 31,
+        "name": "Increased acreage of horticulture crops बागवानी फसलों का बढ़ा हुआ रकबा",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 128,
+        "subscheme_id": 128
+    },
+    {
+        "id": 32,
+        "name": "High production & productivity of horticulture crops उच्च उत्पादन एवं बागवानी फसलों की उत्पादकता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 128,
+        "subscheme_id": 128
+    },
+    {
+        "id": 33,
+        "name": "Establishment of JSHS/ झारखण्ड राज्यउद्यान प्रोमोशन सोसाईटी की स्थापना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 136,
+        "subscheme_id": 136
+    },
+    {
+        "id": 34,
+        "name": "Better prices of farm produce to farmers/ किसानों को कृषि उपजकी बेहतर कीमत",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 136,
+        "subscheme_id": 136
+    },
+    {
+        "id": 89,
+        "name": "Increased awarness camp/ जागरूकता शिविर/गोष्ठियों में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 33,
+        "subscheme_id": 34
+    },
+    {
+        "id": 35,
+        "name": "Better farm yield of horticulture crops stoppage of wastage improved infrastructure बेहतर कृषि उपज बागवानी का फसल अपव्यय में कमी एवं उन्नत आधारभूत संरचना",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 139,
+        "subscheme_id": 139
+    },
+    {
+        "id": 36,
+        "name": "Improved Farmers Income",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 139,
+        "subscheme_id": 139
+    },
+    {
+        "id": 37,
+        "name": "1.1 Improved work effectiveness बेहतर कार्य प्रभावशीलता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 141,
+        "subscheme_id": 141
+    },
+    {
+        "id": 38,
+        "name": "1.1 Improved quality work बेहतर गुणवत्ता का काम",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 141,
+        "subscheme_id": 141
+    },
+    {
+        "id": 39,
+        "name": "Improved service delivery बेहतर सेवावितरण",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 144,
+        "subscheme_id": 144
+    },
+    {
+        "id": 40,
+        "name": "Improved crop productivity बेहतर फसल उत्पादकता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 144,
+        "subscheme_id": 144
+    },
+    {
+        "id": 41,
+        "name": "1. Enhancement of irrigation facility (सिंचाई सुविधा में वृद्धि)",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 146,
+        "subscheme_id": 146
+    },
+    {
+        "id": 42,
+        "name": "Drought proofing of agriculture सूखी खेती का प्रमाण",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 146,
+        "subscheme_id": 146
+    },
+    {
+        "id": 43,
+        "name": "Self-sufficiency in oilseeds production तिलहन उत्पादन में आत्मनिर्भरता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 150,
+        "subscheme_id": 150
+    },
+    {
+        "id": 44,
+        "name": "Self-sufficiency in food grains production खाद्यान्न उत्पादन में आत्मनिर्भरता",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 151,
+        "subscheme_id": 151
+    },
+    {
+        "id": 45,
+        "name": "1. Increased farmers income 2. Enhanced pig meat production and marketing",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 153,
+        "subscheme_id": 153
+    },
+    {
+        "id": 46,
+        "name": "Better animal health",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 154,
+        "subscheme_id": 154
+    },
+    {
+        "id": 47,
+        "name": "Improved services to farmers",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 156,
+        "subscheme_id": 156
+    },
+    {
+        "id": 48,
+        "name": "1. Improved services to farmers",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 157,
+        "subscheme_id": 157
+    },
+    {
+        "id": 49,
+        "name": "1. Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 158,
+        "subscheme_id": 158
+    },
+    {
+        "id": 50,
+        "name": "Better animal health",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 159,
+        "subscheme_id": 159
+    },
+    {
+        "id": 51,
+        "name": "Participation of farmers",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 161,
+        "subscheme_id": 161
+    },
+    {
+        "id": 52,
+        "name": "Improved services to farmers",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 162,
+        "subscheme_id": 162
+    },
+    {
+        "id": 53,
+        "name": "1. Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 163,
+        "subscheme_id": 163
+    },
+    {
+        "id": 54,
+        "name": "Reduction in Animal Trafficking",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 164,
+        "subscheme_id": 164
+    },
+    {
+        "id": 55,
+        "name": "Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 165,
+        "subscheme_id": 165
+    },
+    {
+        "id": 56,
+        "name": "1. Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 166,
+        "subscheme_id": 166
+    },
+    {
+        "id": 57,
+        "name": "1. Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 167,
+        "subscheme_id": 167
+    },
+    {
+        "id": 58,
+        "name": "Increasing the livestock productivity by reducing disease burden",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 168,
+        "subscheme_id": 168
+    },
+    {
+        "id": 59,
+        "name": "Help to create plan for livestocks and rearers",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 169,
+        "subscheme_id": 169
+    },
+    {
+        "id": 60,
+        "name": "Increasing the livestock productivity by reducing disease burden",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 170,
+        "subscheme_id": 170
+    },
+    {
+        "id": 61,
+        "name": "1. Increased egg production 2. Self employment, 3. Income generation",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 171,
+        "subscheme_id": 171
+    },
+    {
+        "id": 62,
+        "name": "Economic growth of farmERS",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 172,
+        "subscheme_id": 172
+    },
+    {
+        "id": 63,
+        "name": "ENHANCE EGG PRODUCTION",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 173,
+        "subscheme_id": 173
+    },
+    {
+        "id": 64,
+        "name": "ENHANCE MEAT PRODUCTION",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 173,
+        "subscheme_id": 173
+    },
+    {
+        "id": 65,
+        "name": "INCREASE IN FARMERS INCOME",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 173,
+        "subscheme_id": 173
+    },
+    {
+        "id": 66,
+        "name": "Supply of vaccines & revenue generation",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 176,
+        "subscheme_id": 176
+    },
+    {
+        "id": 67,
+        "name": "1.1 Enhance milk productivity",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 177,
+        "subscheme_id": 177
+    },
+    {
+        "id": 68,
+        "name": "Improved public service delivery",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 178,
+        "subscheme_id": 178
+    },
+    {
+        "id": 69,
+        "name": "Increasing the productivity of swine by reducing disease burden",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 179,
+        "subscheme_id": 179
+    },
+    {
+        "id": 70,
+        "name": "Rapid treatment facilities",
+        "department_id": 2,
+        "division_id": 7,
+        "scheme_id": 180,
+        "subscheme_id": 180
+    },
+    {
+        "id": 71,
+        "name": "Increase in farmers training & extension support",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 1,
+        "subscheme_id": 1
+    },
+    {
+        "id": 72,
+        "name": "Capacity building of Co-operative extension functionaries",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 1,
+        "subscheme_id": 1
+    },
+    {
+        "id": 73,
+        "name": "Improved service delivery of LAMPS / PACS. Systems are in place for speedy and timely delivery of services",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 4,
+        "subscheme_id": 4
+    },
+    {
+        "id": 74,
+        "name": "Increase in procurement processing and selling of various agricultural produce through coop. societies",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 5,
+        "subscheme_id": 5
+    },
+    {
+        "id": 75,
+        "name": "Increase in Risk coverage for covered farmers",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 10,
+        "subscheme_id": 10
+    },
+    {
+        "id": 76,
+        "name": "Increase in shelf life of vegetables and other perishable goods",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 15
+    },
+    {
+        "id": 77,
+        "name": "Reducing wastage loss and making farm goods selling a profitable profession",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 16
+    },
+    {
+        "id": 78,
+        "name": "Training & Skill development",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 17
+    },
+    {
+        "id": 79,
+        "name": "Increased service delivery to farmers and LAMPS/PACS",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 18
+    },
+    {
+        "id": 80,
+        "name": "Provide service dilevery to farmers",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 19
+    },
+    {
+        "id": 81,
+        "name": "Provide service delivery to society members",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 20
+    },
+    {
+        "id": 82,
+        "name": "Increase in the incomes and local employment by improvement in product quality and skill development",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 15,
+        "subscheme_id": 21
+    },
+    {
+        "id": 83,
+        "name": "Reduction in post harvest losses",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 22,
+        "subscheme_id": 22
+    },
+    {
+        "id": 84,
+        "name": "Reduction in post harvest losses",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 22,
+        "subscheme_id": 25
+    },
+    {
+        "id": 85,
+        "name": "Reduction in post harvest losses",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 22,
+        "subscheme_id": 27
+    },
+    {
+        "id": 86,
+        "name": "Increase in small and marginal farmers access to modern agricultural equipment and implements and reduction drudgery",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 22,
+        "subscheme_id": 28
+    },
+    {
+        "id": 87,
+        "name": "Production Collection Processing Storage Research and Marketing of the agro produce/forest produce of the state in a quality and better manner.",
+        "department_id": 2,
+        "division_id": 5,
+        "scheme_id": 29,
+        "subscheme_id": 30
+    },
+    {
+        "id": 88,
+        "name": "Enhanced fish and fish seed production/ मत्स्य एवं मत्स्य बीज उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 31,
+        "subscheme_id": 32
+    },
+    {
+        "id": 90,
+        "name": "Increased Best practices/ सर्वोत्तम प्रयासों में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 33,
+        "subscheme_id": 34
+    },
+    {
+        "id": 91,
+        "name": "Increased fish farmers training & extension support/ मत्स्य कृषकों के प्रशिक्षण एवं प्रसार कार्यो में सहायता",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 33,
+        "subscheme_id": 34
+    },
+    {
+        "id": 92,
+        "name": "Increase number of fish cooperatives (No.) / सहकारी मत्स्य जीवी सहयोग समितियों की संख्या मे वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 37,
+        "subscheme_id": 37
+    },
+    {
+        "id": 93,
+        "name": "Increase in fish trade volume/ मत्स्य व्यापार में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 38,
+        "subscheme_id": 39
+    },
+    {
+        "id": 94,
+        "name": "Enhanced fish productivity/ मछ्ली के उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 40,
+        "subscheme_id": 41
+    },
+    {
+        "id": 95,
+        "name": "Increase in fish trade volume/ मत्स्य व्यापार में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 41,
+        "subscheme_id": 42
+    },
+    {
+        "id": 96,
+        "name": "Enhanced fish production/ मत्स्य उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 42,
+        "subscheme_id": 43
+    },
+    {
+        "id": 97,
+        "name": "Enhanced fish productivity/ मछ्ली के उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 43,
+        "subscheme_id": 44
+    },
+    {
+        "id": 98,
+        "name": "Enhanced quality of life of fisherman family/ मछुआरों के परिवार के जीवन की गुणवत्ता में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 44,
+        "subscheme_id": 45
+    },
+    {
+        "id": 99,
+        "name": "Increase in fish trade volume/मत्स्य व्यापार में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 45,
+        "subscheme_id": 46
+    },
+    {
+        "id": 100,
+        "name": "Renovation and up gradation of fish farms for more seed production /बीज उत्पादन में वृद्धि हेतु मत्स्य बीज प्रक्षेत्रों का जीर्णोद्धार/सुदृढीकरण",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 45,
+        "subscheme_id": 46
+    },
+    {
+        "id": 101,
+        "name": "Enhanced fish seed production/ मत्स्य बीज उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 47,
+        "subscheme_id": 48
+    },
+    {
+        "id": 102,
+        "name": "Enhance fish production/ मत्स्य उत्पादन में वृद्धि",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 48,
+        "subscheme_id": 49
+    },
+    {
+        "id": 103,
+        "name": "Reduce cost of fish production/ मत्स्य उत्पादन के लागत में कमी",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 50,
+        "subscheme_id": 51
+    },
+    {
+        "id": 104,
+        "name": "EMPLOYMENT GENERATION / रोजगार सृजन",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 52,
+        "subscheme_id": 53
+    },
+    {
+        "id": 105,
+        "name": "Increased risk coverage of life/ मछुआरों को बीमा कवरेज",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 52,
+        "subscheme_id": 53
+    },
+    {
+        "id": 106,
+        "name": "Promoted maximum utilization of funds release under centrally sponsored Pradhan Mantri Matsya Sampada Yojna/ केंद्र प्रायोजित प्रधान मंत्री मत्स्य सम्पदा योजना के तहत प्राप्त राशि का अधिकतम उपयोग",
+        "department_id": 2,
+        "division_id": 6,
+        "scheme_id": 54,
+        "subscheme_id": 55
+    },
+    {
+        "id": 107,
+        "name": "Successful artificial insemination",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 55,
+        "subscheme_id": 56
+    },
+    {
+        "id": 108,
+        "name": "Participation of Farmers",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 56,
+        "subscheme_id": 57
+    },
+    {
+        "id": 109,
+        "name": "Growth in quality milk production and profitable price to farmers",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 62,
+        "subscheme_id": 63
+    },
+    {
+        "id": 110,
+        "name": "Increased Membership in Milk Cooperative",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 64,
+        "subscheme_id": 65
+    },
+    {
+        "id": 111,
+        "name": "Increase in Income",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 64,
+        "subscheme_id": 65
+    },
+    {
+        "id": 112,
+        "name": "Growth in dairy sector",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 66,
+        "subscheme_id": 67
+    },
+    {
+        "id": 113,
+        "name": "Growth in milk production",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 67,
+        "subscheme_id": 68
+    },
+    {
+        "id": 114,
+        "name": "Number of Office Buildings Constructed",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 69,
+        "subscheme_id": 70
+    },
+    {
+        "id": 115,
+        "name": "Improved Work Culture",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 70,
+        "subscheme_id": 71
+    },
+    {
+        "id": 116,
+        "name": "Enhanced milk production",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 71,
+        "subscheme_id": 72
+    },
+    {
+        "id": 117,
+        "name": "Improve Income of Farmers",
+        "department_id": 2,
+        "division_id": 3,
+        "scheme_id": 72,
+        "subscheme_id": 73
+    },
+    {
+        "id": 118,
+        "name": "People have access to adequate drinking water and reduction in water borne diseases/ सुरक्षित और पर्याप्त पेयजल की उपलब्धता सुनिश्चित होगी और जल जनित रोगों में कमी आएगी",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 181,
+        "subscheme_id": 181
+    },
+    {
+        "id": 119,
+        "name": "Coverage of safe and adequate drinking water will increase/ स्वच्छ एवं सुरक्षित पेयजल की उपलब्धता में वृद्धि होगी",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 182,
+        "subscheme_id": 182
+    },
+    {
+        "id": 120,
+        "name": "Operation and maintenance of all rural PWS schemes/ सभी ग्रामीण जलापूर्ति योजनाओं का संचालन एवं संपोषण",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 183,
+        "subscheme_id": 183
+    },
+    {
+        "id": 121,
+        "name": "Remote habitations connected with safe and adequate drinking water facilities/ सुरक्षित और पर्याप्त पेयजल की सुविधा से जुड़े दूरदराज के आवास।",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 184,
+        "subscheme_id": 184
+    },
+    {
+        "id": 122,
+        "name": "Households in rural areas have access to a toilet and continued behavior change for cleanliness/ ग्रामीण परिवारों में शौचालय की उपलधता के साथ-साथ सफाई के प्रति लोगों की आदतों में बदलाव होगा",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 186,
+        "subscheme_id": 186
+    },
+    {
+        "id": 123,
+        "name": "Coverage of safe and adequate drinking water will increase/ स्वच्छ एवं सुरक्षित पेयजल की उपलब्धता में वृद्धि होगी",
+        "department_id": 13,
+        "division_id": 17,
+        "scheme_id": 187,
+        "subscheme_id": 187
+    },
+    {
+        "id": 124,
+        "name": "Seedling seed orchard and seed production area ensured the creation of seed areas and production desirable seeds.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 188,
+        "subscheme_id": 188
+    },
+    {
+        "id": 125,
+        "name": "Income generation and livelihood opportunities to the local people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 189,
+        "subscheme_id": 189
+    },
+    {
+        "id": 126,
+        "name": "Reduced wildlife and forest offences in protected areas.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 190,
+        "subscheme_id": 190
+    },
+    {
+        "id": 127,
+        "name": "Increase in the capacity in the production development and upkeep of the forest and forest facilities.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 191,
+        "subscheme_id": 191
+    },
+    {
+        "id": 128,
+        "name": "Maintenance of 3 Research nursery, Training of Forest Staff/ Officers/ JFMCs and Publicity work",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 192,
+        "subscheme_id": 192
+    },
+    {
+        "id": 129,
+        "name": "Increase in the awareness of the people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 193,
+        "subscheme_id": 193
+    },
+    {
+        "id": 130,
+        "name": "Increase in the quality and quantity of forest cover. Increase in the CO2 absorption there by reducing climate change. Increase in Bio-diversity of flora and fauna. Creation of Man-days for the local people. Increase in Soil and Water conservation Increase in the livelihood opportunities for local people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 194,
+        "subscheme_id": 194
+    },
+    {
+        "id": 131,
+        "name": "Increase in Bio-diversity and Carbon Sequestration by natural forests.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 195,
+        "subscheme_id": 195
+    },
+    {
+        "id": 132,
+        "name": "Better habitat created for wildlife increased Soil and Water Conservation.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 196,
+        "subscheme_id": 196
+    },
+    {
+        "id": 133,
+        "name": "Maintenance of zoo, food to animals and birds in the zoo, salary to officers and staff.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 197,
+        "subscheme_id": 197
+    },
+    {
+        "id": 134,
+        "name": "Constitution of Bio-diversity Management Committee, creation of bio diversity register, study and documentation etc",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 198,
+        "subscheme_id": 198
+    },
+    {
+        "id": 135,
+        "name": "Increase in the awareness of the people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 199,
+        "subscheme_id": 199
+    },
+    {
+        "id": 136,
+        "name": "Better recognition of forest boundaries lead to identification detection, avoidance and control of forest offences and encroachment of forest in particular.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 200,
+        "subscheme_id": 200
+    },
+    {
+        "id": 137,
+        "name": "Development and maintenance of Sidhu-Kanhu park and Nakshtra Van, salary to officers and staff.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 201,
+        "subscheme_id": 201
+    },
+    {
+        "id": 138,
+        "name": "Increase in greening and awareness of the people",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 202,
+        "subscheme_id": 202
+    },
+    {
+        "id": 139,
+        "name": "Basic infrastructure developed in Dalma and Betla.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 203,
+        "subscheme_id": 203
+    },
+    {
+        "id": 140,
+        "name": "Increase in the quality and quantity of forest cover. Increase in the CO2 absorption there by reducing climate change. Increase in Bio-diversity of flora and fauna. Creation of Man-days for the local people. Increase in Soil and Water conservation Increase in the livelihood opportunities for local people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 204,
+        "subscheme_id": 204
+    },
+    {
+        "id": 141,
+        "name": "Increase in awareness of the people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 205,
+        "subscheme_id": 205
+    },
+    {
+        "id": 142,
+        "name": "Increase in the quality and quantity of forest cover. Increase in the CO2 absorption there by reducing climate change. Increase in Bio-diversity of flora and fauna. Creation of Man-days for the local people. Increase in Soil and Water conservation Increase in the livelihood opportunities for local people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 206,
+        "subscheme_id": 206
+    },
+    {
+        "id": 143,
+        "name": "Increase in the quality and quantity of forest cover. Increase in the CO2 absorption there by reducing climate change. Increase in Bio-diversity of flora and fauna. Creation of Mandays for the local people. Increase in Soil and Water conservation Increase in the livelihood opportunities for local people.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 207,
+        "subscheme_id": 207
+    },
+    {
+        "id": 144,
+        "name": "Construction of water harvesting structure, constitution of anti depredation squad, construction of ponds purchasing of salt licks etc",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 208,
+        "subscheme_id": 208
+    },
+    {
+        "id": 145,
+        "name": "Increase in Bio-diversity and Carbon Sequestration by natural forests.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 209,
+        "subscheme_id": 209
+    },
+    {
+        "id": 146,
+        "name": "Better participation of joint forest management committees",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 210,
+        "subscheme_id": 210
+    },
+    {
+        "id": 147,
+        "name": "Hi-tech nurseries producing better quality seedlings for the public and forest department. Increase in agroforestry initiatives of the people towards higher income",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 211,
+        "subscheme_id": 211
+    },
+    {
+        "id": 148,
+        "name": "Fire tracing along roads maintenance of existing fire lines, purchasing of firefighting equipment etc.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 212,
+        "subscheme_id": 212
+    },
+    {
+        "id": 149,
+        "name": "Awareness of the local people towards bamboo plantation for better income",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 213,
+        "subscheme_id": 213
+    },
+    {
+        "id": 150,
+        "name": "Preparation work for plantation of approx 41.94 lakh sapling, Preparation work for silviculture operation. Conservation if flora and soil moisture conservation structure.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 214,
+        "subscheme_id": 214
+    },
+    {
+        "id": 151,
+        "name": "Soil moisture and plantation work in 15000 ha. Gully plugging, Silt detention dam, check-dam, contour trenches will be constructed in 15000 ha.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 216,
+        "subscheme_id": 216
+    },
+    {
+        "id": 152,
+        "name": "Improve wildlife habitat by providing water harvesting structure, planting fruit trees and other suitable species. Maintaining corridor of wildlife. Reduce man-animal conflict in 24 forest divisions.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 217,
+        "subscheme_id": 217
+    },
+    {
+        "id": 153,
+        "name": "Preparation work for plantation of approx 41.10 lakh. Sapling preparation work for block plantation 3700 ha, Silviculture operation in 2050 ha.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 218,
+        "subscheme_id": 218
+    },
+    {
+        "id": 154,
+        "name": "Flora of Jharkhand, Monitoring & evaluation",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 218,
+        "subscheme_id": 218
+    },
+    {
+        "id": 155,
+        "name": "Protection of forest and wildlife",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 218,
+        "subscheme_id": 218
+    },
+    {
+        "id": 156,
+        "name": "Protection, restoration and sustainable use of ecosystems, sustainable management of forests. The study will help in forest management.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 225,
+        "subscheme_id": 225
+    },
+    {
+        "id": 157,
+        "name": "Protection, restoration and sustainable use of ecosystems, sustainable management of forests.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 226,
+        "subscheme_id": 226
+    },
+    {
+        "id": 158,
+        "name": "As per IFSR report 2021 the forest cover in the state is 23721 sqkm which shows a total gain of 11000 ha. of forest cover from 2019 to 2021.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 227,
+        "subscheme_id": 227
+    },
+    {
+        "id": 159,
+        "name": "As per IFSR report 2021 the forest cover in the state is 23721 sq km which shows a total gain of 11000 ha. of forest cover from 2019 to 2021.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 228,
+        "subscheme_id": 228
+    },
+    {
+        "id": 160,
+        "name": "Better management and development for Kendu leaves & NTFP for higher income of the primary collectors of NTFP.",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 229,
+        "subscheme_id": 229
+    },
+    {
+        "id": 161,
+        "name": "Maintenance and Development of Palamau Tiger reserve, food to animals, Development of Grass Land",
+        "department_id": 4,
+        "division_id": 18,
+        "scheme_id": 230,
+        "subscheme_id": 230
+    },
+    {
+        "id": 162,
+        "name": "Improve social status of the people through distribution of subsidized clothes distributed to the targeted households",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 231,
+        "subscheme_id": 231
+    },
+    {
+        "id": 163,
+        "name": "Food security of the people through distribution of subsidized food grains distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 235,
+        "subscheme_id": 235
+    },
+    {
+        "id": 164,
+        "name": "Food security of the people through distribution of subsidized food grains distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 237,
+        "subscheme_id": 237
+    },
+    {
+        "id": 165,
+        "name": "Increase storage capacity, Strengthen supply chain management and Checking wastage of food grains",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 239,
+        "subscheme_id": 239
+    },
+    {
+        "id": 166,
+        "name": "Food security of the people through distribution of subsidized food grains distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 242,
+        "subscheme_id": 242
+    },
+    {
+        "id": 167,
+        "name": "Food security of the people through distribution of subsidized food grains distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 244,
+        "subscheme_id": 244
+    },
+    {
+        "id": 168,
+        "name": "Food security of the people through provision of one time meal at subsidized rate.",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 246,
+        "subscheme_id": 246
+    },
+    {
+        "id": 169,
+        "name": "Financial support to farmers by providing bonus in addition to MSP",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 248,
+        "subscheme_id": 248
+    },
+    {
+        "id": 170,
+        "name": "To provide iodine input of the people through distribution of subsidized iodized salt distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 250,
+        "subscheme_id": 250
+    },
+    {
+        "id": 171,
+        "name": "Food security of the people through distribution of subsidized food grains distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 252,
+        "subscheme_id": 252
+    },
+    {
+        "id": 172,
+        "name": "To support eligible households for purchasing petrol having eligible two wheelers",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 254,
+        "subscheme_id": 254
+    },
+    {
+        "id": 173,
+        "name": "To provide protein input of the people through distribution of subsidized pulses distributed to the targeted population",
+        "department_id": 3,
+        "division_id": 9,
+        "scheme_id": 255,
+        "subscheme_id": 255
+    },
+    {
+        "id": 174,
+        "name": "Promoting competitiveness among students",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 533,
+        "subscheme_id": 533
+    },
+    {
+        "id": 175,
+        "name": "Enhancing access retention transition",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 535,
+        "subscheme_id": 535
+    },
+    {
+        "id": 176,
+        "name": "Enhancing access retention transition and reducing dropout rate",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 537,
+        "subscheme_id": 537
+    },
+    {
+        "id": 177,
+        "name": "Enhancing access",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 539,
+        "subscheme_id": 539
+    },
+    {
+        "id": 178,
+        "name": "Enhancing access retention transition",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 540,
+        "subscheme_id": 540
+    },
+    {
+        "id": 179,
+        "name": "Enhancing access retention transition",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 542,
+        "subscheme_id": 542
+    },
+    {
+        "id": 180,
+        "name": "Enhancing access retention transition and reducing dropout rate",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 545,
+        "subscheme_id": 545
+    },
+    {
+        "id": 181,
+        "name": "Enhancing access retention transition and reducing dropout rate",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 549,
+        "subscheme_id": 549
+    },
+    {
+        "id": 182,
+        "name": "Enhancing learning outcome of students",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 549,
+        "subscheme_id": 549
+    },
+    {
+        "id": 183,
+        "name": "Enhancing access, retention, transition",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 552,
+        "subscheme_id": 552
+    },
+    {
+        "id": 184,
+        "name": "Enhancing access retention transition",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 552,
+        "subscheme_id": 552
+    },
+    {
+        "id": 185,
+        "name": "Enhancing access retention transition and reducing dropout rate",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 555,
+        "subscheme_id": 555
+    },
+    {
+        "id": 186,
+        "name": "Enhancing learning outcome of students",
+        "department_id": 10,
+        "division_id": 20,
+        "scheme_id": 555,
+        "subscheme_id": 555
+    },
+    {
+        "id": 187,
+        "name": "Enhancing learning outcome of students",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 491,
+        "subscheme_id": 491
+    },
+    {
+        "id": 188,
+        "name": "1.) Enhancing Access, retention, transition and reducing drop-out",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 189,
+        "name": "2.) Enhancing learning outcome of students",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 190,
+        "name": "3..)  Enhancing learning outcome of students",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 191,
+        "name": "4.) Improving overall quality of teachers.",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 192,
+        "name": "5. ) Promoting vocational-ization of education",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 193,
+        "name": "6.) Bridging social gender gap in school education by providing special emphasis on girls and ensuring equitable and inclusive education at all levels for children belonging to SC/ST/Minorities and CWSN-less dropout",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 194,
+        "name": "7 ) Enrolment of CWSN",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 494,
+        "subscheme_id": 494
+    },
+    {
+        "id": 195,
+        "name": "To improve attendance",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 511
+    },
+    {
+        "id": 196,
+        "name": "Reduction in gender / social gap in education",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 511
+    },
+    {
+        "id": 197,
+        "name": "Preparing meals in all the eligible schools",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 511
+    },
+    {
+        "id": 198,
+        "name": "Improvement in nutrition levels of children",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 511
+    },
+    {
+        "id": 199,
+        "name": "To improve attendance",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 516
+    },
+    {
+        "id": 200,
+        "name": "Reduction in gender / social gap in education",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 516
+    },
+    {
+        "id": 201,
+        "name": "Preparing meals in all the eligible schools",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 516
+    },
+    {
+        "id": 202,
+        "name": "Improvement in nutrition levels of children",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 511,
+        "subscheme_id": 516
+    },
+    {
+        "id": 203,
+        "name": "Bridging social and gender gaps in school education by providing special emphasis on girls",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 521,
+        "subscheme_id": 521
+    },
+    {
+        "id": 204,
+        "name": "Enhancing access",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 522,
+        "subscheme_id": 522
+    },
+    {
+        "id": 205,
+        "name": "To improve attendance",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 523,
+        "subscheme_id": 523
+    },
+    {
+        "id": 206,
+        "name": "To reduce dropout rate",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 524,
+        "subscheme_id": 524
+    },
+    {
+        "id": 207,
+        "name": "Bridging social gender gap in school education",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 525,
+        "subscheme_id": 525
+    },
+    {
+        "id": 208,
+        "name": "Enhancement in retention rate",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 527,
+        "subscheme_id": 527
+    },
+    {
+        "id": 209,
+        "name": "Overall improvement of quality of teaching",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 528,
+        "subscheme_id": 528
+    },
+    {
+        "id": 210,
+        "name": "Improvement of Student attendance",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 530,
+        "subscheme_id": 530
+    },
+    {
+        "id": 211,
+        "name": "Improvement in nutrition levels of children",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 531,
+        "subscheme_id": 531
+    },
+    {
+        "id": 212,
+        "name": "Strengthening of kitchen in schools",
+        "department_id": 10,
+        "division_id": 14,
+        "scheme_id": 532,
+        "subscheme_id": 532
+    },
+    {
+        "id": 213,
+        "name": "Increased Accessible infrastructure for Divyangjans.",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 619,
+        "subscheme_id": 619
+    },
+    {
+        "id": 214,
+        "name": "Promotes healthy lives and well being for all./ सभी के लिए स्वस्थ एवंसुरक्षित जीवन को बढ़ावा देता है",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 620,
+        "subscheme_id": 620
+    },
+    {
+        "id": 215,
+        "name": "Institutions, Offices are well equipped and fully functional for proper operationalization of AWCs./ आंगनवाड़ी केंद्रों के उचित संचालन हेतु सुसज्जित एवं कार्यात्मक संस्थाओं एवं कार्यालयों की व्यवस्था करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 621,
+        "subscheme_id": 621
+    },
+    {
+        "id": 216,
+        "name": "Women empowerment and preventing child marriage.",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 630,
+        "subscheme_id": 630
+    },
+    {
+        "id": 217,
+        "name": "Creation of better work environment for AWWs, AWHs / आंगनबाडी सेविकाओं एवं आंगनबाडी सहायिकाओं को बेहतर कार्य वातावरण का निर्माण करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 631,
+        "subscheme_id": 631
+    },
+    {
+        "id": 218,
+        "name": "Coverage to be increased by 10 %./ आच्छादन में 10 प्रतिशत की वृद्धि",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 633,
+        "subscheme_id": 633
+    },
+    {
+        "id": 291,
+        "name": "Strengthened basic infrastructure and source of livelihood in PVTG dominated areas.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 815,
+        "subscheme_id": 815
+    },
+    {
+        "id": 219,
+        "name": "Availability of early childhood education and care Infrastructure at the AWCs./ आंगनवाड़ी केंद्रों में बच्चों प्रारंभिक शिक्षा और देखभाल हेतु बुनियादी ढांचे की उपलब्धता सुनिश्चित करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 634,
+        "subscheme_id": 634
+    },
+    {
+        "id": 220,
+        "name": "Creation of better work environment for ICDS workers. आई0सी0डी0एस0 कर्मियों के लिए बेहतर कार्य वातावरण का निर्माण।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 637,
+        "subscheme_id": 637
+    },
+    {
+        "id": 221,
+        "name": "To  institution alize and strengthen institutional care/ संस्थागत देखभाल को संस्थापित करने और मजबूत करना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 639,
+        "subscheme_id": 639
+    },
+    {
+        "id": 222,
+        "name": "Enhancing capability of families to look after health & nutrition of Child, Pregnant Women, Lactating Mother. गर्भवती महिलाओं, धातृ माताओं, बच्चों के स्वास्थ्य देखभाल करने हेतु उनके परिवारों की क्षमता वर्द्धन करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 649,
+        "subscheme_id": 649
+    },
+    {
+        "id": 223,
+        "name": "Children, Adolscent girls, Women have accessible centers for receiving health and nutrition and referal services. स्वास्थ्य, पोषण और संदर्भ सेवाएं प्राप्त करने हेतु बच्चों, किशोरियों, महिलाओं को सुलभ केंद्र उपलब्ध कराना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 656,
+        "subscheme_id": 656
+    },
+    {
+        "id": 224,
+        "name": "Providing social assistence to the poorest of poor segment of the society",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 658,
+        "subscheme_id": 658
+    },
+    {
+        "id": 225,
+        "name": "100% eligible old age people to be covered. आच्छादन में 100 प्रतिशत कीप्राप्ति",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 660,
+        "subscheme_id": 660
+    },
+    {
+        "id": 226,
+        "name": "Coverage to be increased by 10% आच्छादन में 10 प्रतिशत की वृद्धि",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 661,
+        "subscheme_id": 661
+    },
+    {
+        "id": 227,
+        "name": "Providing social assistance to the poorest of poor segment of the society समाज के सबसे गरीब तबके के लोगों को सामाजिक सहायता प्रदान करना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 662,
+        "subscheme_id": 662
+    },
+    {
+        "id": 228,
+        "name": "Providing social assistance to the disabled segment of the society समाज के सबसे गरीब तबके के लोगों को सामाजिक सहायता प्रदान करना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 664,
+        "subscheme_id": 664
+    },
+    {
+        "id": 229,
+        "name": "Providing timely social assistance to the poorest of poor segment of the society समाज के सबसे गरीब तबके के लोगों को सामाजिक सहायता प्रदान करना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 666,
+        "subscheme_id": 666
+    },
+    {
+        "id": 230,
+        "name": "Support system for PWD. दिव्यांगजनों के लिए सहायता तंत्र",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 667,
+        "subscheme_id": 667
+    },
+    {
+        "id": 231,
+        "name": "To institutionalize and strengthen institutional care for senior Citezens disabled and destitute women. वरिष्ठ नागरिक विकलांग और निराश्रित महिलाओं के लिए संस्थागत देखभाल को संस्थागत और मजबूत करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 670,
+        "subscheme_id": 670
+    },
+    {
+        "id": 232,
+        "name": "Safe and hygienic environment for holistic development of children upto 6 years. 6 वर्ष तक के बच्चों के सर्वांगीण विकास के लिए सुरक्षित और स्वच्छ वातावरण उपलब्ध कराना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 673,
+        "subscheme_id": 673
+    },
+    {
+        "id": 233,
+        "name": "Coverage to be increased by 20 % आच्छादन में 20 प्रतिशत की वृद्धि.",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 675,
+        "subscheme_id": 675
+    },
+    {
+        "id": 234,
+        "name": "Coverage to be increased by 2 %. आच्छादन में 2 प्रतिशत की वृद्धि",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 676,
+        "subscheme_id": 676
+    },
+    {
+        "id": 235,
+        "name": "To improve completion of market-driven skills training and secondary education for adolescent girls and young women in select districts of Jharkhand झारखंड के चुनिंदा जिलों में किशोरियों और युवतियों के लिए व्व्यवसायिक एवं व्यापारिक कौशल प्रशिक्षण और माध्यमिक शिक्षा को पूरा करने में सुधारकरना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 677,
+        "subscheme_id": 677
+    },
+    {
+        "id": 236,
+        "name": "Providing social assistance to the poorest of poor segment of the society समाज के सबसे गरीब तबके के लोगों को सामाजिक सहायता प्रदान करना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 682,
+        "subscheme_id": 682
+    },
+    {
+        "id": 237,
+        "name": "Improved health seeking behavior amongst the Pregnant Women and Lactating Mothers गर्भवती महिलाओं एवं धात्री माताओं के मध्य स्वास्थ्य आदतों/व्यवहारों को बेहतर बनाना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 684,
+        "subscheme_id": 684
+    },
+    {
+        "id": 238,
+        "name": "Children, Adolscent girls, Women have accessible centers for receiving health and nutrition and referal services. स्वास्थ्य, पोषण और संदर्भ सेवाएं प्राप्त करने हेतु बच्चों, किशोरियों, महिलाओं को सुलभ केंद्र उपलब्ध कराना",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 695,
+        "subscheme_id": 695
+    },
+    {
+        "id": 239,
+        "name": "Creation of support system for prevention of social evils and promotion of good practices in society. सामाजिक कुरीतियों की रोकथाम और समाज में अच्छी प्रथाओं को प्रोत्साहित करने हेतु सहयोगी व्यवस्था का निर्माण।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 699,
+        "subscheme_id": 699
+    },
+    {
+        "id": 240,
+        "name": "Strengthened ICDS policy framework, systems and capacities, and improved community engagement, for greater focus on children under three years of age, Lactating Mother and Pregnant women./तीन साल से कम उम्र के बच्चों, धातृ माताओं और गर्भवती महिलाओं पर विशेष ध्यान देने के लिए आईसीडीएस संबंधी नीतिगत ढांचे, व्यवस्थाओं और क्षमताओं, तथा बेहतर सामुदायिक जुड़ाव संबंधी वातावरण को सुदृढ़ कराना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 702,
+        "subscheme_id": 702
+    },
+    {
+        "id": 241,
+        "name": "Women empowerment, ensuring education of girl child, discouraging child marriage. महिला सशक्तिकरण, बालिकाओं की शिक्षा सुनिश्चित करना, बाल विवाह को हतोत्साहित करना।",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 727,
+        "subscheme_id": 727
+    },
+    {
+        "id": 242,
+        "name": "Coverage to be increased by 10 %. आच्छादन में 10 प्रतिशत की वृद्धि.",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 730,
+        "subscheme_id": 730
+    },
+    {
+        "id": 243,
+        "name": "Supporting to fulfill basic needs of early age child like nutrition, education, clothes.",
+        "department_id": 11,
+        "division_id": 15,
+        "scheme_id": 731,
+        "subscheme_id": 731
+    },
+    {
+        "id": 244,
+        "name": "1. Improvement in the infrastructure and living conditions in minority hostels.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 847,
+        "subscheme_id": 847
+    },
+    {
+        "id": 245,
+        "name": "1. Reduction in dropout rate.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 848,
+        "subscheme_id": 848
+    },
+    {
+        "id": 246,
+        "name": "1.1. Security of the burial places of minorities.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 849,
+        "subscheme_id": 849
+    },
+    {
+        "id": 247,
+        "name": "1. Improvement in livelihood security of the targeted community.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 850,
+        "subscheme_id": 850
+    },
+    {
+        "id": 248,
+        "name": "1. Skill development and employment generation.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 852,
+        "subscheme_id": 852
+    },
+    {
+        "id": 249,
+        "name": "To improve the socio-economic infrastructure & basic amenities in identified MCAs by creating infrastructure for education health skill sanitation  drinking water women empowerment etc.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 855,
+        "subscheme_id": 855
+    },
+    {
+        "id": 250,
+        "name": "1.1. Access to residential education.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 862,
+        "subscheme_id": 862
+    },
+    {
+        "id": 251,
+        "name": "Access of minority students to world class education.",
+        "department_id": 9,
+        "division_id": 2,
+        "scheme_id": 864,
+        "subscheme_id": 864
+    },
+    {
+        "id": 252,
+        "name": "Enable completion of post matric education of SC students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 733,
+        "subscheme_id": 733
+    },
+    {
+        "id": 253,
+        "name": "Improvement in socio-economic infrastructure & basic amenities in identified sectors by focussing on education health agriculture and dairy livelihood housing and habitat and others.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 735,
+        "subscheme_id": 735
+    },
+    {
+        "id": 254,
+        "name": "Enable completion of Post matric education of ST students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 740,
+        "subscheme_id": 740
+    },
+    {
+        "id": 255,
+        "name": "Completion of activities and benefit to the ST residents of the villages.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 742,
+        "subscheme_id": 742
+    },
+    {
+        "id": 256,
+        "name": "To improve the socio-economic infrastructure & basic amenities in identified  areas  by creating infrastructure for education health skill development rural connectivity drinking water etc.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 744,
+        "subscheme_id": 744
+    },
+    {
+        "id": 257,
+        "name": "Completion of activities and benefit to the population",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 749,
+        "subscheme_id": 749
+    },
+    {
+        "id": 258,
+        "name": "Enable completion of Pre-Matric education of ST students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 753,
+        "subscheme_id": 753
+    },
+    {
+        "id": 259,
+        "name": "Enable completion of pre matric education (Class IX-X) of SC students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 755,
+        "subscheme_id": 755
+    },
+    {
+        "id": 260,
+        "name": "Enable completion of Post Matric education of BC students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 757,
+        "subscheme_id": 757
+    },
+    {
+        "id": 261,
+        "name": "1.Active participation and inclusion of SC/STs in society at large elimination of offence of untouchability and discrimination against SC/STs.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 759,
+        "subscheme_id": 759
+    },
+    {
+        "id": 262,
+        "name": "2. Increase in number of cases resolved in the court under PCR Act 1955.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 759,
+        "subscheme_id": 759
+    },
+    {
+        "id": 263,
+        "name": "1.Active participation and inclusion of SC/STs in society at large elimination of offence of untouchability and discrimination against SC/STs.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 762,
+        "subscheme_id": 762
+    },
+    {
+        "id": 264,
+        "name": "2. Increase in number of cases resolved in the court under PCR Act 1955.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 762,
+        "subscheme_id": 762
+    },
+    {
+        "id": 265,
+        "name": "Enable completion of pre matric education (Class IX-X) of BC students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 765,
+        "subscheme_id": 765
+    },
+    {
+        "id": 266,
+        "name": "Reduction in dropout rate",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 767,
+        "subscheme_id": 767
+    },
+    {
+        "id": 267,
+        "name": "Skill development and generation of Employment opportunities.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 770,
+        "subscheme_id": 770
+    },
+    {
+        "id": 268,
+        "name": "Increase in availability of trained SC youth.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 770,
+        "subscheme_id": 770
+    },
+    {
+        "id": 269,
+        "name": "Improved access of SC students to residential education.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 773,
+        "subscheme_id": 773
+    },
+    {
+        "id": 270,
+        "name": "Improvement in livelihood security of the targeted community.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 775,
+        "subscheme_id": 775
+    },
+    {
+        "id": 271,
+        "name": "Enable completion of post matric education of ST students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 777,
+        "subscheme_id": 777
+    },
+    {
+        "id": 272,
+        "name": "Improvement in the infrastructure and living conditions in BC hostels.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 779,
+        "subscheme_id": 779
+    },
+    {
+        "id": 273,
+        "name": "Enable completion of post matric education of SC students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 781,
+        "subscheme_id": 781
+    },
+    {
+        "id": 274,
+        "name": "Skill development and employment generation.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 783,
+        "subscheme_id": 783
+    },
+    {
+        "id": 275,
+        "name": "Increase in availability of trained BC youth.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 783,
+        "subscheme_id": 783
+    },
+    {
+        "id": 276,
+        "name": "Improvement in livelihood security of the targeted community.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 786,
+        "subscheme_id": 786
+    },
+    {
+        "id": 277,
+        "name": "Skill development and employment generation.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 788,
+        "subscheme_id": 788
+    },
+    {
+        "id": 278,
+        "name": "Increase in availability of trained ST youth.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 788,
+        "subscheme_id": 788
+    },
+    {
+        "id": 279,
+        "name": "Improved access to primary health facilities.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 791,
+        "subscheme_id": 791
+    },
+    {
+        "id": 280,
+        "name": "Improvement in livelihood security of the targeted community.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 792,
+        "subscheme_id": 792
+    },
+    {
+        "id": 281,
+        "name": "Loan-cum-Subsidy support to potential youth for taking up income generation activities as per the scheme provisions.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 792,
+        "subscheme_id": 792
+    },
+    {
+        "id": 282,
+        "name": "Strengthening of schools",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 794,
+        "subscheme_id": 794
+    },
+    {
+        "id": 283,
+        "name": "Improvement in the infrastructure and living conditions in SC hostels.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 798,
+        "subscheme_id": 798
+    },
+    {
+        "id": 284,
+        "name": "Increased preservation of tribal art & culture",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 799,
+        "subscheme_id": 799
+    },
+    {
+        "id": 285,
+        "name": "Strengthening of schools.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 800,
+        "subscheme_id": 800
+    },
+    {
+        "id": 286,
+        "name": "Improved access to education",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 800,
+        "subscheme_id": 800
+    },
+    {
+        "id": 287,
+        "name": "Better housing for the beneficiaries.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 804,
+        "subscheme_id": 804
+    },
+    {
+        "id": 288,
+        "name": "Improvement in security and development of sacred places of tribals.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 806,
+        "subscheme_id": 806
+    },
+    {
+        "id": 289,
+        "name": "1. Development selected villages as model villages.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 808,
+        "subscheme_id": 808
+    },
+    {
+        "id": 290,
+        "name": "Improved access of ST students to residential education",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 813,
+        "subscheme_id": 813
+    },
+    {
+        "id": 292,
+        "name": "Access of ST students to world class education.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 820,
+        "subscheme_id": 820
+    },
+    {
+        "id": 293,
+        "name": "Access of SC students to world class education.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 820,
+        "subscheme_id": 820
+    },
+    {
+        "id": 294,
+        "name": "Access of BC students to world class education.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 820,
+        "subscheme_id": 820
+    },
+    {
+        "id": 295,
+        "name": "Enable completion of Pre-Matric education (Class I-VIII) of OBC students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 823,
+        "subscheme_id": 823
+    },
+    {
+        "id": 296,
+        "name": "Enable completion of Pre-Matric education (Class I-VIII) of ST students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 823,
+        "subscheme_id": 823
+    },
+    {
+        "id": 297,
+        "name": "Enable completion of Pre-Matric education (Class I-VIII) of SC students",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 823,
+        "subscheme_id": 823
+    },
+    {
+        "id": 298,
+        "name": "Enable completion of pre matric education (Class IX-X) of ST students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 828,
+        "subscheme_id": 828
+    },
+    {
+        "id": 299,
+        "name": "Enable completion of pre matric education (Class IX-X) of SC students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 828,
+        "subscheme_id": 828
+    },
+    {
+        "id": 300,
+        "name": "Enable completion of pre matric education (Class IX-X) of OBC students.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 828,
+        "subscheme_id": 828
+    },
+    {
+        "id": 301,
+        "name": "Income generation and livelihood security of the beneficiaries.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 834,
+        "subscheme_id": 834
+    },
+    {
+        "id": 302,
+        "name": "Support to the beneficiaries during the time of economic hardship due to diseases.",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 838,
+        "subscheme_id": 838
+    },
+    {
+        "id": 303,
+        "name": "Community access to basic services will be improved and Community quality of life will be improved. / बुनियादी सेवाओं तक सामुदायिक पहुंच में सुधार तथा सामुदायिक जीवन की गुणवत्ता में सुधार होगा।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 557,
+        "subscheme_id": 557
+    },
+    {
+        "id": 304,
+        "name": "Real time air quality can be monitored/ वास्तविक समय वायुगुणवत्ता की निगरानी की जा सकती है",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 557,
+        "subscheme_id": 557
+    },
+    {
+        "id": 305,
+        "name": "Better traffic and transport amenities and infrastructure in Urban Area/ शहरी क्षेत्र में बेहतर यातायात और परिवहन सुविधाएं और आधारभूत संरचना का विकास",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 566,
+        "subscheme_id": 566
+    },
+    {
+        "id": 306,
+        "name": "1. Beautiful and hygenic cities would be developed with proper drainage system./ उचित जल निकासी व्यवस्था के साथ सुंदर और स्वच्छ शहरों का विकास किया जाएगा।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 571,
+        "subscheme_id": 571
+    },
+    {
+        "id": 307,
+        "name": "Improve basic & community amenities./ बुनियादी और सामुदायिक सुविधाओं में सुधार।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 571,
+        "subscheme_id": 571
+    },
+    {
+        "id": 308,
+        "name": "Sanitation and cleaning works enhance the hygiene in concerned urban area./ स्वच्छता और सफाई कार्य से संबंधित शहरी क्षेत्र में आरोग्य बढ़ेगा।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 571,
+        "subscheme_id": 571
+    },
+    {
+        "id": 309,
+        "name": "122872 water tap connections will be provided to the Citizen of 15 ULBs/ 15 शहरी स्थानीय निकायों के नागरिकों को 122872 नल कनेक्शन उपलब्ध कराए जाएंगे",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 575,
+        "subscheme_id": 575
+    },
+    {
+        "id": 310,
+        "name": "1. Movement of heavy vehicle will be avoided in city area resulting in reduction of traffic congestion and smooth mobility./ 1. शहरी क्षेत्रो में भारी वाहनों की आवाजाही के रोक से यातायात व्यवस्था एवं परिचालन मे सुधार होगा. 2.  Ensure reduction in time & cost to the public due to less congestion of traffic and less consumption of fuel. / 2. यातायात व्यवस्थाएवं परिचालन मे सुधार से ईंधन खपत तथा समय की बचत होगी. 3. Better and safe pedestrian movement/ 3. पैदल यात्रियो के बेहतर और सुरक्षित आवाजाही. 4. Petrol stations, shopping centres and some other businesses are built resulting in boosting local economy./ 4. पेट्रोल स्टेशन, शॉपिंग सेंटर और कुछ अन्य व्यवसाय के विकास के परिणाम स्वरूप अर्थव्यवस्था को बढ़ावा मिलेगा",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 575,
+        "subscheme_id": 575
+    },
+    {
+        "id": 314,
+        "name": "116989 water tap connections will be provided to the Citizen of 4 ULBs/ 4 शहरी स्थानीय निकायों के नागरिकों को 116989 नल कनेक्शन प्रदान किया जाएंगे",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 575,
+        "subscheme_id": 575
+    },
+    {
+        "id": 315,
+        "name": "Improvement in sewage treatment capacity, and Waste water recycling/ reuse capacity/ सीवेज उपचार क्षमता में सुधार और अपशिष्ट जल पुनर्चक्रण / पुन: उपयोग क्षमता",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 582,
+        "subscheme_id": 582
+    },
+    {
+        "id": 316,
+        "name": "“Improved Livelihoods of Urban Poor” शहरी गरीबों की आजीविका संवर्धन",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 583,
+        "subscheme_id": 583
+    },
+    {
+        "id": 317,
+        "name": "To provide 24X7all weather shelters to urban homeless/ शहरी बेघरों को चौबीसों घंटे सभी मौसम में आश्रय प्रदान करना",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 583,
+        "subscheme_id": 583
+    },
+    {
+        "id": 318,
+        "name": "The mobilization of urban poor households to form their own institutions is an important investment for an effective and sustainable poverty reduction programme./ प्रभावी एवं टिकाऊ गरीबी उन्मूलन की कार्य योजना हेतु शहरी गरीबों को समूह निर्माण के माध्यम से गतिशील करना।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 583,
+        "subscheme_id": 583
+    },
+    {
+        "id": 319,
+        "name": "Improved access to financial inclusion among urban poor. / शहरी गरीबों के बीच वित्तीय समावेशन की बेहतर पहुंच।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 583,
+        "subscheme_id": 583
+    },
+    {
+        "id": 320,
+        "name": "All statutory towns become Open Defecation Free (ODF)/ सभी शहर खुले में शौच से मुक्त(ओडीएफ)",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 594,
+        "subscheme_id": 594
+    },
+    {
+        "id": 321,
+        "name": "Improved waste management and processing capacity/ बेहतर अपशिष्ट प्रबंधन और प्रसंस्करण क्षमता",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 594,
+        "subscheme_id": 594
+    },
+    {
+        "id": 322,
+        "name": "Improvement in Urban Service Delivery/ शहरी सेवावितरण में सुधार",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 594,
+        "subscheme_id": 594
+    },
+    {
+        "id": 323,
+        "name": "A. Universal coverage to water supply in household premises of all mission cities/ सभी मिशन शहरों के घरेलू परिसरों में जलापूर्ति के लिए सार्वभौमिक सम्बद्धता.",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 598,
+        "subscheme_id": 598
+    },
+    {
+        "id": 324,
+        "name": "B. Improved access to sewerage and septage management for households in mission cities/ मिशन शहरों में घरों के लिए सीवरेज और सेप्टेज प्रबंधन तक बेहतर पहुंच",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 598,
+        "subscheme_id": 598
+    },
+    {
+        "id": 325,
+        "name": "C. Development of green spaces and access to clean surface water/ हरितस्थानों का विकास और स्वच्छ सतही जलतक पहुंच",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 598,
+        "subscheme_id": 598
+    },
+    {
+        "id": 326,
+        "name": "Improvement in Urban Service Delivery/ शहरी सेवावितरण में सुधार",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 598,
+        "subscheme_id": 598
+    },
+    {
+        "id": 327,
+        "name": "1.75 lakh people will get pucca houses and around 90% will have ownership/joint ownership of female in the family. (Considering 5 family members)/ 1.75 लाख लोगों को पक्के घर मिलेंगे और लगभग 90%  के पास परिवार में महिलाओं का स्वामित्व/ संयुक्त स्वामित्व होगा।(पांच परिवार के सदस्यों को ध्यान में रखते हुए)",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 602,
+        "subscheme_id": 602
+    },
+    {
+        "id": 328,
+        "name": "2,53,899 Households in urban areas will get tap water facility. /शहरी क्षेत्र के 2,53,899 घरों को नल के माध्यम से पानी की सुविधा प्रदान की जाएगी",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 329,
+        "name": "Safe disposal of human waste as an essential factor for improved health and improved sanitation. Also treated water will be used for Vegetation, Gardening etc./बेहतर स्वास्थ्य और बेहतर स्वच्छता के लिए एक आवश्यककारक के रूप में मानव अपशिष्टका सुरक्षित निस्तारण। साथ ही उपचारित पानी का उपयोग सब्जी, बागबानी आदि में किया जाएगा।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 332,
+        "name": "Completion of building/पूर्ण किए जाने वाले भवन",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 333,
+        "name": "Reduction in traffic congestion resulting in smooth mobility/यातायात हेतु भीड़ में कमी तथा सुगम परिचालन",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 334,
+        "name": "Movement of heavy vehicle will be avoided in city area resulting in reduction of traffic congestion/यातायात हेतु भीड़ में कमी तथा सुगम गतिशीलता",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 335,
+        "name": "Reduction in traffic congestion resulting in smooth mobility. Also construction of utility duct will avoid future damage of road caused by pipe laying, drainage construction etc./ यातायात की भीड़ में कमी, सुगम गतिशीलता। साथ ही, यूटिलिटीडक्ट के निर्माण से भविष्य में पाइप बिछाने, नाली निर्माण आदि से होने वाली सड़क की क्षति से बचा जा सकेगा।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 336,
+        "name": "Better and safe pedestrian movement and smooth mobility of vehicles./ पैदल यात्रियों की बेहतर और सुरक्षित आवाजाही साथ ही वाहनों की सुगम आवागमन",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 603,
+        "subscheme_id": 603
+    },
+    {
+        "id": 337,
+        "name": "Better civic amenities & infrastructure in Regional Development Authority Areas/ क्षेत्रीय विकास प्राधिकरण क्षेत्रों में बेहतर नागरिक सुविधाएं और आधारभूत संरचना उपलब्ध कराना",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 615,
+        "subscheme_id": 615
+    },
+    {
+        "id": 338,
+        "name": "Provide guaranteed wage employment to the adult members of urban house holds who are willing to do unskilled labour subject to a maximum 100 days per job card in financial year/ वित्तीय वर्ष में शहरी क्षेत्रो के वयस्क सदस्यों को रोजगार की गारंटी एवं मजदूरी प्रदान किए जाने हेतु अकुशल श्रमिको को प्रति जॉब कार्ड अधिकतम 100 दिनों की मजदूरी प्रदान करना।",
+        "department_id": 12,
+        "division_id": 16,
+        "scheme_id": 618,
+        "subscheme_id": 618
+    },
+    {
+        "id": 339,
+        "name": "To increase the availability of specialist doctors / विशेषज्ञ चिकित्सकों की उपलब्धता बढ़ाना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 257,
+        "subscheme_id": 257
+    },
+    {
+        "id": 340,
+        "name": "Improved health care services for Senior Citizens / वरिष्ठ नागरिकों की स्वास्थ्य देखभाल सेवाओं में",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 260,
+        "subscheme_id": 260
+    },
+    {
+        "id": 341,
+        "name": "To increase the availability of Ayurvedic doctor seats / आयुर्वेदिक चिकित्सक के सीटों की उपलब्धता बढ़ाने के लिए",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 261,
+        "subscheme_id": 261
+    },
+    {
+        "id": 342,
+        "name": "Strengthened AYUSH Health System / सुदृढ़ आयुष चिकित्सा स्वास्थ्य प्रणाली",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 261,
+        "subscheme_id": 261
+    },
+    {
+        "id": 343,
+        "name": "Increased number of ayurvedic doctors / आयुर्वेदिक चिकित्सको की संख्या में वृद्धि होगी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 261,
+        "subscheme_id": 266
+    },
+    {
+        "id": 344,
+        "name": "Improved coverage of Mental Health Services / मानसिक स्वास्थ्य सेवाओं का बेहतर कवरेज",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 267,
+        "subscheme_id": 267
+    },
+    {
+        "id": 345,
+        "name": "Improved availability of mental health professionals / मानसिक स्वास्थ्य पेशेवरों की बेहतर उपलब्धता",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 267,
+        "subscheme_id": 267
+    },
+    {
+        "id": 372,
+        "name": "Reduction in household health expenditure / घरेलू स्वास्थ्य व्यय में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 304,
+        "subscheme_id": 304
+    },
+    {
+        "id": 346,
+        "name": "Improved medical education and access to health services / बेहतर चिकित्सा शिक्षा और स्वास्थ्य सेवाओं तक पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 269,
+        "subscheme_id": 269
+    },
+    {
+        "id": 347,
+        "name": "To increase availability of Doctors/ चिकित्सकों की उपलब्धता में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 269,
+        "subscheme_id": 269
+    },
+    {
+        "id": 348,
+        "name": "Increase in OPD/IPD number / ओपीडी/ आईपीडी संख्या में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 269,
+        "subscheme_id": 269
+    },
+    {
+        "id": 349,
+        "name": "Increase in OPD/IPD number / ओपीडी/आईपीडी संख्या में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 277,
+        "subscheme_id": 277
+    },
+    {
+        "id": 350,
+        "name": "Improved utilization of primary care services and screening & management of NCDs / प्राथमिक स्वास्थ्य सेवाओं के बेहतर उपयोग के साथ-साथ एनसीडी की जाँच एवं प्रबंधन",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 351,
+        "name": "Increased availability of drugs and diagnostics at public health facilities / सार्वजनिक स्वास्थ्य कें द्रोंपर दवाओं एवं डायग्नोस्टिक की उपलब्धता में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 352,
+        "name": "Strengthening of public health facilities to provide quality healthcare services; Improved utilization of NQAS/ LaQshya certified public health facilities and FRUs / गुणवत्ता पूर्ण स्वास्थ्य सेवाएँ प्रदान करने के लिए सार्वजनिक स्वास्थ्य सुविधाओं को सुदृढ़ बनाना; एन.क्यू.ए.एस./लक्ष्य प्रमाणित सार्वजनिक स्वास्थ्य केन्द्रों और एफ.आर.यू. का बेहतर उपयोग",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 353,
+        "name": "Improved utilization of public health facilities / सार्वजनिक स्वास्थ्य केन्द्रों का बेहतर उपयोग",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 354,
+        "name": "Patients receiving free dialysis care / निःशुल्क डायलिसिस देखभाल प्राप्त करने वाले रोगी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 355,
+        "name": "Reduction in Anemia contributing to reduction of Maternal Mortality Ratio (MMR) / एनीमिया की कमी के कारण होने वाले मातृमृत्यु दर (एम.एम.आर.) में कमी आना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 356,
+        "name": "Increased access to safe delivery services contributing to reduction of Maternal Mortality Ratio (MMR) / मातृमृत्यु दर (एम.एम.आर.) में कमी के लिए योगदान सुरक्षित प्रसव सेवाओं तक पहुंच में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 357,
+        "name": "Assured , quality and respectful maternity care at birth contributing to reduction of Maternal Mortality Ratio (MMR) / जन्म के समय सुनिश्चित, गुणवत्तापूर्ण और सम्मानजनक मातृत्व देखभाल से मातृ मृत्यु दर में कमी लाना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 358,
+        "name": "Quality care at birth contributing to reduction of Maternal Mortality Ratio (MMR) / जन्मके समय गुणवत्तापूर्ण देखभाल से मातृ मृत्यु दर में कमी लाना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 359,
+        "name": "Reduction of Under 5 Mortality Rate (U5MR) / 5 वर्ष से कम आयु की मृत्यु दर में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 360,
+        "name": "Reduction of Total fertility  Rate to 2.3 by 2023 / 2023 तक कुल प्रजनन दर में 2.3 की कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 361,
+        "name": "Management of higher number of sick newborns in SNCUs will result in reduction of newborn deaths / एस.एन.सी.यू. में अधिक संख्या में बीमार नवजात शिशुओं के प्रबंधन से नवजात मृत्यु में कमी आएगी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 278,
+        "subscheme_id": 278
+    },
+    {
+        "id": 362,
+        "name": "Reduction in household health expenditure / घरेलू स्वास्थ्य व्यय में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 290,
+        "subscheme_id": 290
+    },
+    {
+        "id": 363,
+        "name": "Increase in number of Allied Health Professionals / फार्मेसी/संबद्ध स्वास्थ्य पेशेवरों की संख्या में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 294,
+        "subscheme_id": 294
+    },
+    {
+        "id": 364,
+        "name": "Improved medical education and access to health services / बेहतर चिकित्सा शिक्षा और स्वास्थ्य सेवाओं तक पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 295,
+        "subscheme_id": 295
+    },
+    {
+        "id": 365,
+        "name": "Strengthened AYUSH Health System / सुदृढ़ आयुष चिकित्सा स्वास्थ्य प्रणाली",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 296,
+        "subscheme_id": 296
+    },
+    {
+        "id": 366,
+        "name": "Reduction in number of death due to road accidents and other critical health condition / सड़क दुर्घटनाओं और अन्य गंभीर स्वास्थ्य स्थिति के कारण होने वाली मौतों की संख्या में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 298,
+        "subscheme_id": 298
+    },
+    {
+        "id": 367,
+        "name": "Low cost mortuary van service to the essential people/ आवश्यकतानुसार कम लागत पर शव वाहन सेवा की उपलब्धता",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 298,
+        "subscheme_id": 298
+    },
+    {
+        "id": 368,
+        "name": "Minimize the number of deaths due to Kidney failure / गुर्दे की विफलता के कारण होने वाली मौतों की संख्या को कम करना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 300,
+        "subscheme_id": 300
+    },
+    {
+        "id": 369,
+        "name": "Improved access to health services / स्वास्थ्य सेवाओं तक बेहतर पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 300,
+        "subscheme_id": 301
+    },
+    {
+        "id": 370,
+        "name": "Availability of skilled nursing professionals / कुशल नर्सिंग पेशेवरों की उपलब्धता",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 300,
+        "subscheme_id": 301
+    },
+    {
+        "id": 371,
+        "name": "Increase in OPD/IPD number / ओपीडी/आईपीडी संख्या में वृद्धि",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 303,
+        "subscheme_id": 303
+    },
+    {
+        "id": 373,
+        "name": "Reduction in household health expenditure / घरेलू स्वास्थ्य व्यय में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 309,
+        "subscheme_id": 309
+    },
+    {
+        "id": 374,
+        "name": "Improved access to quality healthcare in Urban area / शहरी क्षेत्र में गुणवत्तापूर्ण स्वास्थ्य सेवा तक बेहतर पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 314,
+        "subscheme_id": 314
+    },
+    {
+        "id": 375,
+        "name": "Reduction in Maternal Mortality Ratio (MMR) /  मातृ मृत्यु दर (एम.एम.आर.) में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 314,
+        "subscheme_id": 314
+    },
+    {
+        "id": 376,
+        "name": "Reduction in Infant Mortality Rate (IMR) / शिशु मृत्यु दर(आई.एम.आर.) में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 314,
+        "subscheme_id": 314
+    },
+    {
+        "id": 377,
+        "name": "Strengthening public health institutions and public health governance capacities, to meet challenges posed by the current and future pandemics/epidemics with capacities for comprehensive diagnostic and treatment including for critical care services / क्रिटिकल केयर सेवाओं सहित व्यापक जाँच और उपचार की क्षमता के साथ वर्तमान और भविष्यकी महामारियों/महामारी से उत्पन्न चुनौतियों का सामना करने के लिए सार्वजनिक स्वास्थ्य संस्थानों और सार्वजनिक स्वास्थ्य शासन क्षमताओं को सुदृढ़ करना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 319,
+        "subscheme_id": 319
+    },
+    {
+        "id": 378,
+        "name": "Anemia control among adolescent girls / किशोर लड़कियोंके मध्य अनिमिया की रोकथाम",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 324,
+        "subscheme_id": 324
+    },
+    {
+        "id": 379,
+        "name": "Reduction in Infant Mortality Rate (IMR) / शिशु मृत्यु दर(आई.एम.आर.) में कमी",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 326,
+        "subscheme_id": 326
+    },
+    {
+        "id": 380,
+        "name": "Improved access to health services / स्वास्थ्य सेवाओं तक बेहतर पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 327,
+        "subscheme_id": 327
+    },
+    {
+        "id": 381,
+        "name": "Improved access to health services / स्वास्थ्य सेवाओं तक बेहतर पहुँच",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 328,
+        "subscheme_id": 328
+    },
+    {
+        "id": 382,
+        "name": "Strengthening public health institutions and public health governance capacities, to meet challenges posed by the current and future pandemics/epidemics with capacities for comprehensive diagnostic and treatment including for critical care services / क्रिटिकलकेयर सेवाओं सहितव्यापक जाँच और उपचार की क्षमता के साथ वर्तमान और भविष्य की महामारियों/महामारी से उत्पन्न चुनौतियों का सामना करने के लिए सार्वजनिक स्वास्थ्य संस्थानों और सार्वजनिक स्वास्थ्य शासन क्षमताओंको सुदृढ़ करना",
+        "department_id": 5,
+        "division_id": 10,
+        "scheme_id": 329,
+        "subscheme_id": 329
+    },
+    {
+        "id": 383,
+        "name": "GPs having community infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 414
+    },
+    {
+        "id": 384,
+        "name": "GPs having drinking water infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 414
+    },
+    {
+        "id": 385,
+        "name": "Improved access of road connectivity in GP",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 414
+    },
+    {
+        "id": 386,
+        "name": "GPs having Sanitation Infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 414
+    },
+    {
+        "id": 387,
+        "name": "ZPs having community infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 418
+    },
+    {
+        "id": 388,
+        "name": "ZPs creating access to safe drinking water infrastructure in GPs",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 418
+    },
+    {
+        "id": 389,
+        "name": "Improved access of road connectivity in rural area",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 418
+    },
+    {
+        "id": 390,
+        "name": "ZPs creating community Sanitation Infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 418
+    },
+    {
+        "id": 391,
+        "name": "BPs having community infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 422
+    },
+    {
+        "id": 392,
+        "name": "BPs creating access to safe drinking water infrastructure in GPs",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 422
+    },
+    {
+        "id": 393,
+        "name": "Improved access of road connectivity in rural areas",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 422
+    },
+    {
+        "id": 394,
+        "name": "BPs creating community Sanitation Infrastructure",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 414,
+        "subscheme_id": 422
+    },
+    {
+        "id": 395,
+        "name": "Best performed local bodies awarded (GP/BP/ZP)/ उत्कृष्ट प्रदर्शन कर पुरुष्कार प्राप्त करने वाले पंचायती राज संस्थान(ग्राम पंचायत, पंचायत समिति, जिला परिषद्)",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 426,
+        "subscheme_id": 426
+    },
+    {
+        "id": 396,
+        "name": "Holding of Gram Sabha & Updation of Schemes in e-Gram Swaraj portal",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 429,
+        "subscheme_id": 429
+    },
+    {
+        "id": 397,
+        "name": "Capacity development of Elected Representative and Functionaries",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 398,
+        "name": "Availability of learning facilities at panchayat level",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 399,
+        "name": "Improvement in the infrastructure and facilities in the Gram Panchayats",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 400,
+        "name": "Enhanced capabilities of Panchayats for good governance and attainment of SDGs through participatory local planning, democratic decision making, transparency and accountability.",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 401,
+        "name": "FUNCTIONAL PANCHAYAT BAHAWAN",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 402,
+        "name": "GRAM PANCHAYAT SECRETARIAT FULLY FUNCTIONAL/क्रियाशील पंचायत सचिवालय",
+        "department_id": 6,
+        "division_id": 11,
+        "scheme_id": 430,
+        "subscheme_id": 430
+    },
+    {
+        "id": 403,
+        "name": "Providing Social security, economic security, creating asset and upgrading living standards",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 440,
+        "subscheme_id": 440
+    },
+    {
+        "id": 404,
+        "name": "No. of Individuals undertaken Micro Entrepreneurship as means of Livelihood Generation",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 442,
+        "subscheme_id": 442
+    },
+    {
+        "id": 405,
+        "name": "Promotion of multiple Livelihood opportunities based on Argo Ecological Practices, Livestock and Non-Farm activities to the SHG''s Members",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 442,
+        "subscheme_id": 442
+    },
+    {
+        "id": 406,
+        "name": "Providing Economic Security, creating rural assets and empowerment of society disadvantaged groups.",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 445,
+        "subscheme_id": 445
+    },
+    {
+        "id": 407,
+        "name": "Strengthening of Block offices",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 448,
+        "subscheme_id": 448
+    },
+    {
+        "id": 408,
+        "name": "Promotion of Livelihood opportunity through MDI to increase additional income",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 449,
+        "subscheme_id": 449
+    },
+    {
+        "id": 409,
+        "name": "Village Level Convergence Committee (VLCC) has been formed in all the selected PMAGY Villages",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 451,
+        "subscheme_id": 451
+    },
+    {
+        "id": 410,
+        "name": "Higher Agriculture Yield",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 452,
+        "subscheme_id": 452
+    },
+    {
+        "id": 411,
+        "name": "Increase in Productivity of Land",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 452,
+        "subscheme_id": 452
+    },
+    {
+        "id": 412,
+        "name": "Coverage of Scheme",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 452,
+        "subscheme_id": 452
+    },
+    {
+        "id": 413,
+        "name": "Houses will be constructed",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 456,
+        "subscheme_id": 456
+    },
+    {
+        "id": 414,
+        "name": "Lift Irrigation work will be done",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 458,
+        "subscheme_id": 458
+    },
+    {
+        "id": 415,
+        "name": "Institutional of perspective planning at cluster",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 460,
+        "subscheme_id": 460
+    },
+    {
+        "id": 416,
+        "name": "saturation of SHGs",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 460,
+        "subscheme_id": 460
+    },
+    {
+        "id": 417,
+        "name": "convergence with schemes",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 460,
+        "subscheme_id": 460
+    },
+    {
+        "id": 418,
+        "name": "Promotion of HVA, Fisheries and NTFP to the targeted HH through JOHAR by providing Input Grant",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 463,
+        "subscheme_id": 463
+    },
+    {
+        "id": 419,
+        "name": "1. treatment of wasteland (in ha) 2. conversion of arable land into mono crop (in ha) 3. capacity building of stakeholders (in No.) 4. income generating activities (no. of family)",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 467,
+        "subscheme_id": 467
+    },
+    {
+        "id": 420,
+        "name": "To improve livelihood of Rural Native Artisans",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 470,
+        "subscheme_id": 470
+    },
+    {
+        "id": 421,
+        "name": "Mainstreaming of PVTG HH and providing sustainable livelihood to the families",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 471,
+        "subscheme_id": 471
+    },
+    {
+        "id": 422,
+        "name": "Providing Economic Security, creating rural assets and empowerment of society disadvantaged groups.",
+        "department_id": 7,
+        "division_id": 12,
+        "scheme_id": 474,
+        "subscheme_id": 474
+    },
+    {
+        "id": 423,
+        "name": "1. .Increase in enrollment of students in technical Institutes/ 1. नामांकन की संख्या में वृधि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 424,
+        "name": "2. Increase in enrollment of female, SC, ST students  in technical Institutes/ 2.महिलायों, अनुसूचितजाति, अनुसूचित जनजातिमें नामांकन की संख्या मेंवृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 425,
+        "name": "1.Increase in enrollment/ 1.कुल नामांकन की संख्या / जीईआर में वृधि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 426,
+        "name": "Increase in enrollment of female, SC, ST students. महिला, अनुसूचित जाति, अनुसूचित जनजाति के छात्रों के नामांकन में वृधि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 427,
+        "name": "Increase in number of students passing out with more than 75% at UG and PG level/ यूजी और पीजी स्तर पर 75% से अधिक के साथउत्तीर्ण होने वाले छात्रों कीसंख्या में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 428,
+        "name": "Increase in number of enrolment at PG level/ पीजी स्तर पर नामांकन मेंवृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 429,
+        "name": "Increase in employability/ रोजगार में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 430,
+        "name": "Increase in Research and Innovation/ अनुसंधान और नवाचार में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 332,
+        "subscheme_id": 332
+    },
+    {
+        "id": 431,
+        "name": "percentage increase in number of research work presented in 100 top Universities 100 शीर्ष विश्वविद्यालयों में प्रस्तुत शोध कार्यों की संख्या में प्रतिशत वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 347,
+        "subscheme_id": 347
+    },
+    {
+        "id": 432,
+        "name": "Percentage increase in number of students enrolled and pass outs in technical and professional courses. तकनीकी और व्यावसायिक पाठ्यक्रमों में नामांकित और उत्तीर्ण छात्रों की संख्या में प्रतिशत वृद्धि।",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 347,
+        "subscheme_id": 347
+    },
+    {
+        "id": 433,
+        "name": "Increase in number of employment receiving Technical/Professional courses and PH.D तकनीकी/व्यावसायिक पाठ्यक्रम और पीएच.डी. प्राप्त करने वाले रोजगारों की संख्या में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 347,
+        "subscheme_id": 347
+    },
+    {
+        "id": 434,
+        "name": "percentage increase in number Ph.D students पीएचडी छात्रों की संख्या में प्रतिशत वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 347,
+        "subscheme_id": 347
+    },
+    {
+        "id": 435,
+        "name": "percentage Decrease in dropout ड्रॉपआउट में प्रतिशत कमी",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 347,
+        "subscheme_id": 347
+    },
+    {
+        "id": 436,
+        "name": "Access, Equity and Quality enhancement पहुंच, इक्विटी और गुणवत्ता में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 353,
+        "subscheme_id": 353
+    },
+    {
+        "id": 437,
+        "name": "Quality Enhancement Improved teaching-learning methods गुणवत्ता संवर्धन शिक्षण-अधिगम विधियों में सुधार।",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 359,
+        "subscheme_id": 359
+    },
+    {
+        "id": 438,
+        "name": "Percentage increase in access and equity. Percentage increase in employability. Percentage decrease in dropout. पहुंच और इक्विटी में प्रतिशत वृद्धि।रोजगार क्षमता में प्रतिशत वृद्धि। ड्रॉपआउट में प्रतिशत में कमी।",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 364,
+        "subscheme_id": 364
+    },
+    {
+        "id": 439,
+        "name": "Quality enhancement Skill enhancement Entrepreneurship development गुणवत्ता वृद्धि कौशल वृद्धि उद्यमिता विकास",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 371,
+        "subscheme_id": 371
+    },
+    {
+        "id": 440,
+        "name": "Quality enhancement of existing facilities in Universities and Colleges विश्वविद्यालयों और कॉलेजों में मौजूदा सुविधाओं की गुणवत्ता में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 379,
+        "subscheme_id": 379
+    },
+    {
+        "id": 441,
+        "name": "Increase in enrollment नामांकन में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 379,
+        "subscheme_id": 379
+    },
+    {
+        "id": 442,
+        "name": "Increase in enrollment of female, SC, ST students महिला, एससी, एसटी छात्रों के नामांकन में वृद्धि",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 379,
+        "subscheme_id": 379
+    },
+    {
+        "id": 443,
+        "name": "Access, equity and Quality Enhancement of Higher Education. उच्च शिक्षा की पहुंच, समानता और गुणवत्ता में वृद्धि।",
+        "department_id": 1,
+        "division_id": 8,
+        "scheme_id": 388,
+        "subscheme_id": 388
+    },
+    {
+        "id": 444,
+        "name": "नए निर्माण कार्य तथा पुराने संस्थानों में कायाकल्प होने से नामांकन क्षमता और रोजगार सृजन होगा. Enrollment capacity and employment generation will increase due to new construction work and rejuvenation of old institutions.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 391,
+        "subscheme_id": 391
+    },
+    {
+        "id": 445,
+        "name": "It will benefit 2000 persons per year (especially students).इससे प्रति वर्ष 2000 व्यक्तियों(विशेषकर छात्रों) को लाभ होगा।",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 394,
+        "subscheme_id": 394
+    },
+    {
+        "id": 446,
+        "name": "Award of certificates. प्रमाण पत्रवितरण.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 395,
+        "subscheme_id": 395
+    },
+    {
+        "id": 447,
+        "name": "Pass out उत्तीर्ण",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 395,
+        "subscheme_id": 395
+    },
+    {
+        "id": 448,
+        "name": "Employments. रोजगार.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 395,
+        "subscheme_id": 395
+    },
+    {
+        "id": 449,
+        "name": "Results",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 395,
+        "subscheme_id": 395
+    },
+    {
+        "id": 450,
+        "name": "Provide services as consultant to different organization. विभिन्न संगठनों के लिए सलाहकार के रूप में सेवाएं प्रदान करना।",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 395,
+        "subscheme_id": 395
+    },
+    {
+        "id": 451,
+        "name": "50% seats reserved for students of Jharkhand state in the B.Tech. And M.Tech. Courses. बी.टेक औरएम.टेक. पाठ्यक्रम में झारखंड राज्य के छात्रों के लिए 50% सीटें आरक्षित हैं।",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 404,
+        "subscheme_id": 404
+    },
+    {
+        "id": 452,
+        "name": "Providing technical education and employment to the students of the state/ राज्य के विद्यार्थियों को तकनीकी शिक्षा प्रदान करना एवं रोजगार उपलब्ध कराना",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 404,
+        "subscheme_id": 404
+    },
+    {
+        "id": 453,
+        "name": "Creation of jobs. रोजगार का सृजन.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 406,
+        "subscheme_id": 406
+    },
+    {
+        "id": 454,
+        "name": "Skill the pass out students, उत्तीर्ण छात्रों को हुनरमंद बनाना.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 406,
+        "subscheme_id": 406
+    },
+    {
+        "id": 455,
+        "name": "To promote technical education for girls. लड़कियों के लिए तकनीकी शिक्षा को बढ़ावा देना।",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 410,
+        "subscheme_id": 410
+    },
+    {
+        "id": 456,
+        "name": "With the construction and operation of a national level institute in the capital region employment will be generated directly and indirectly. राजधानी क्षेत्र में एक राष्ट्रीय स्तर के संस्थान के निर्माण और सञ्चालन करना.",
+        "department_id": 1,
+        "division_id": 19,
+        "scheme_id": 412,
+        "subscheme_id": 412
+    },
+    {
+        "id": 457,
+        "name": "Improvement in quality of schemes",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 475,
+        "subscheme_id": 475
+    },
+    {
+        "id": 458,
+        "name": "To provide all weather connectivity to village / habitations",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 477,
+        "subscheme_id": 477
+    },
+    {
+        "id": 459,
+        "name": "Easy and smooth operation of departmental online services",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 477,
+        "subscheme_id": 479
+    },
+    {
+        "id": 460,
+        "name": "Issues related to road construction due to land disputes will be resolved",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 477,
+        "subscheme_id": 480
+    },
+    {
+        "id": 461,
+        "name": "No. of habitations got connected & Population got benefitted.",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 477,
+        "subscheme_id": 481
+    },
+    {
+        "id": 462,
+        "name": "Improvement in quality of schemes",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 477,
+        "subscheme_id": 483
+    },
+    {
+        "id": 463,
+        "name": "No. of People to be provided connectivity from Rural Household with respective block and District Headquarter",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 484,
+        "subscheme_id": 484
+    },
+    {
+        "id": 464,
+        "name": "Provides sketch to the construction work",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 486,
+        "subscheme_id": 486
+    },
+    {
+        "id": 465,
+        "name": "To Provide connectivity to Habitations access to Markets Educational/Health facilities.",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 487,
+        "subscheme_id": 487
+    },
+    {
+        "id": 466,
+        "name": "To provide connectivity in Left Wing Extermism affected Areas for easy access to markets Educational/Health facilities.",
+        "department_id": 8,
+        "division_id": 13,
+        "scheme_id": 489,
+        "subscheme_id": 489
+    },
+    {
+        "id": 467,
+        "name": "Improved access to education",
+        "department_id": 9,
+        "division_id": 1,
+        "scheme_id": 794,
+        "subscheme_id": 794
+    },
+    {
+        "id": 468,
+        "name": "Enhancement in technology adoption through capacity building of agriculture extension functionaries/",
+        "department_id": 2,
+        "division_id": 4,
+        "scheme_id": 81,
+        "subscheme_id": 82
+    }
+]

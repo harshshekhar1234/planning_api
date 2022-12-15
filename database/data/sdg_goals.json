@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "goal_number": 1,
+    "goal_name": "No Poverty",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 2,
+    "goal_number": 2,
+    "goal_name": "Zero Hunger",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 3,
+    "goal_number": 3,
+    "goal_name": "Good Health & Well-Being",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 4,
+    "goal_number": 4,
+    "goal_name": "Quality Education",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 5,
+    "goal_number": 5,
+    "goal_name": "Gender Equality",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 6,
+    "goal_number": 6,
+    "goal_name": "Clear Water and Sanitation",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 7,
+    "goal_number": 7,
+    "goal_name": "Affordable & Clean Energy",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 8,
+    "goal_number": 8,
+    "goal_name": "Decent Work & Economic Growth",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 9,
+    "goal_number": 9,
+    "goal_name": "Industry Innovation & Infrastructure",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 10,
+    "goal_number": 10,
+    "goal_name": "Reduced Inequalities",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 11,
+    "goal_number": 11,
+    "goal_name": "Sustainable Cities and Communities",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 12,
+    "goal_number": 12,
+    "goal_name": "Responsible Consumption and Production",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 13,
+    "goal_number": 13,
+    "goal_name": "Climate Action",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 14,
+    "goal_number": 14,
+    "goal_name": "Life Below Water",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 15,
+    "goal_number": 15,
+    "goal_name": "Life on Land",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 16,
+    "goal_number": 16,
+    "goal_name": "Peace, Justice and Strong Institutions",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 17,
+    "goal_number": 17,
+    "goal_name": "Partnership for the Goals",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  },
+  {
+    "id": 0,
+    "goal_number": 0,
+    "goal_name": "NA",
+    "created_at": "27-07-2024 07:10",
+    "updated_at": "26-07-2024 07:10"
+  }
+]

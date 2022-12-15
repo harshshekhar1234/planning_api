@@ -1,0 +1,772 @@
+import React, {useState, useEffect} from 'react'
+import {getSubschemeData,submitVerification,getComment,submitCorrection,sendSubmitMail,getLatestQuater} from '../store/departmentMaker-actions';
+import {departmentMakerActions} from '../store/departmentMakerSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams, useNavigate } from "react-router-dom";
+import {subschemesActions} from '../store/subschemesSlice';
+import {divisionsActions} from '../store/divisionsSlice';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import { DataGrid, GridToolbar,GridActionsCellItem } from '@mui/x-data-grid';
+import PropTypes from 'prop-types';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import CancelIcon from '@mui/icons-material/Cancel';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+import DeleteIcon from '@mui/icons-material/Delete';
+import clsx from 'clsx';
+import Chip from '@mui/material/Chip';
+import PageviewIcon from '@mui/icons-material/Pageview';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import CommentButton from './Utilities/CommentButton'
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
+function isOverflown(element) {
+  return (
+    element.scrollHeight > element.clientHeight ||
+    element.scrollWidth > element.clientWidth
+  );
+}
+
+const GridCellExpand = React.memo(function GridCellExpand(props) {
+  const { width, value } = props;
+  const wrapper = React.useRef(null);
+  const cellDiv = React.useRef(null);
+  const cellValue = React.useRef(null);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [showFullCell, setShowFullCell] = React.useState(false);
+  const [showPopper, setShowPopper] = React.useState(false);
+
+  const handleMouseEnter = () => {
+    const isCurrentlyOverflown = isOverflown(cellValue.current);
+    setShowPopper(isCurrentlyOverflown);
+    setAnchorEl(cellDiv.current);
+    setShowFullCell(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowFullCell(false);
+  };
+
+  React.useEffect(() => {
+    if (!showFullCell) {
+      return undefined;
+    }
+
+    function handleKeyDown(nativeEvent) {
+      // IE11, Edge (prior to using Bink?) use 'Esc'
+      if (nativeEvent.key === 'Escape' || nativeEvent.key === 'Esc') {
+        setShowFullCell(false);
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [setShowFullCell, showFullCell]);
+
+  return (
+    <Box
+      ref={wrapper}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      sx={{
+        alignItems: 'center',
+        lineHeight: '24px',
+        width: 1,
+        height: 1,
+        position: 'relative',
+        display: 'flex',
+      }}
+    >
+      <Box
+        ref={cellDiv}
+        sx={{
+          height: 1,
+          width,
+          display: 'block',
+          position: 'absolute',
+          top: 0,
+        }}
+      />
+      <Box
+        ref={cellValue}
+        sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
+      >
+        {value}
+      </Box>
+      {showPopper && (
+        <Popper
+          open={showFullCell && anchorEl !== null}
+          anchorEl={anchorEl}
+          style={{ width, marginLeft: -17 }}
+        >
+          <Paper
+            elevation={1}
+            style={{ minHeight: wrapper.current.offsetHeight - 3 }}
+          >
+            <Typography variant="body2" style={{ padding: 8 }}>
+              {value}
+            </Typography>
+          </Paper>
+        </Popper>
+      )}
+    </Box>
+  );
+});
+
+GridCellExpand.propTypes = {
+  value: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
+};
+
+function renderCellExpand(params) {
+  return (
+    <GridCellExpand value={params.value || ''} width={params.colDef.computedWidth} />
+  );
+}
+
+renderCellExpand.propTypes = {
+  /**
+   * The column of the row that the current cell belongs to.
+   */
+  colDef: PropTypes.object.isRequired,
+  /**
+   * The cell value, but if the column has valueGetter, use getValue.
+   */
+  value: PropTypes.string.isRequired,
+};
+
+
+const SubmitVerification = () => {
+
+  const dispatch = useDispatch();
+  let navigate = useNavigate();
+
+  const divisionid = useSelector((state) => state.divisions.divisionId);
+  const subschemes = useSelector((state) => state.maker.subschemes);
+  const update = useSelector((state) => state.maker.update);
+  const comment = useSelector((state) => state.maker.comment);
+  const sendEmail = useSelector((state) => state.maker.sendEmail);
+  const mailDetail = useSelector((state) => state.maker.mailDetail);
+  const quaterTs = useSelector((state) => state.maker.quaterTs);
+  const submitNotificationSuccess = useSelector((state) => state.maker.submitNotificationSuccess);
+  const submitNotificationFailure = useSelector((state) => state.maker.submitNotificationFailure);
+  const correctNotificationSuccess = useSelector((state) => state.maker.correctNotificationSuccess);
+  const correctNotificationFailure = useSelector((state) => state.maker.correctNotificationFailure);
+
+  const [filteredSubscheme,setFilteredSubschemes] = useState([]);
+  const [submitButton, setSubmitButton] = useState(false)
+  const [approvedcount, setApprovedCount] = useState(0)
+    const [pendingcount, setPendingCount] = useState(0)
+    const [reviewcount, setReviewCount] = useState(0)
+    const [correctedcount, setCorrectededCount] = useState(0)
+  const [dropQuater1, setdropQuater1] = useState(false)
+  const [dropQuater2, setdropQuater2] = useState(false)
+  const [dropQuater3, setdropQuater3] = useState(false)
+  const [dropQuater4, setdropQuater4] = useState(false)
+  const [dropFinYear1, setdropFinYear1] = useState(false)
+  const [dropFinYear2, setdropFinYear2] = useState(false)
+  const [dropFinYear3, setdropFinYear3] = useState(false)
+  const [quaterTD, setquaterTD] = useState('')
+  const [yearTD, setyearTD] = useState('2022-23')
+
+  useEffect(() => {
+    dispatch(getSubschemeData(divisionid));
+    dispatch(getLatestQuater(divisionid));
+    
+    return () => {
+      setApprovedCount(0)
+        setPendingCount(0)
+        setReviewCount(0)
+        setCorrectededCount(0)
+        setQuater('')
+        setFinancialYear('')
+        setquaterTD('')
+        setyearTD('2022-23')
+        dispatch(departmentMakerActions.setSubschemes({subschemes: []}))
+      dispatch(subschemesActions.setSubSchemeSearch({subschemeSearch: []})) 
+      dispatch(departmentMakerActions.setQuaterTs({quaterTs:''}))
+      dispatch(departmentMakerActions.setSubmitNotificationSuccess({submitNotificationSuccess:false}))
+      dispatch(departmentMakerActions.setSubmitNotificationFailure({submitNotificationFailure:false}))
+      dispatch(departmentMakerActions.setCorrectNotificationSuccess({correctNotificationSuccess:false}))
+      dispatch(departmentMakerActions.setCorrectNotificationFailure({correctNotificationFailure:false}))
+    }
+    }, []);
+
+    useEffect(() => {
+      if(quaterTs){
+      if(quaterTs === '0'){
+        setdropQuater1(true)
+        setdropFinYear1(true)
+      }
+      if(quaterTs.name === 'quater1'){
+        setdropFinYear1(true)
+        setdropQuater2(true)
+      }
+      if(quaterTs.name === 'quater2'){
+        setdropQuater3(true)
+        setdropFinYear1(true)
+      }
+      if(quaterTs.name === 'quater3'){
+        setdropFinYear1(true)
+        setdropQuater4(true)
+      }
+      if(quaterTs.name === 'quater4'){
+        setdropFinYear2(true)
+        setdropQuater1(true)
+      }
+      }
+      }, [quaterTs]);
+
+      useEffect(() => {
+        if(quaterTs){
+        if(quaterTs === '0'){
+          setquaterTD('Quater 1')
+          
+        }
+        if(quaterTs.name === 'quater1'){
+          setquaterTD('Quater 2')
+          
+        }
+        if(quaterTs.name === 'quater2'){
+          setquaterTD('Quater 3')
+          
+        }
+        if(quaterTs.name === 'quater3'){
+          setquaterTD('Quater 4')
+          
+        }
+        if(quaterTs.name === 'quater4'){
+          setquaterTD('Quater 1')
+          setyearTD('2023-24')
+        }
+        }
+        }, [quaterTs]);
+
+    useEffect(() => {
+      if(subschemes){
+        setSubmitButton(false)
+        setFilteredSubschemes(subschemes)
+        const a = subschemes.filter(subscheme => subscheme.verified_status === 'A').length
+        const p = subschemes.filter(subscheme => subscheme.verified_status === 'N').length
+        const c = subschemes.filter(subscheme => subscheme.verified_status === 'T').length
+        const r = subschemes.filter(subscheme => subscheme.verified_status === 'R').length
+        setApprovedCount(a)
+        setPendingCount(p)
+        setReviewCount(r)
+        setCorrectededCount(c)
+        const f = subschemes.map(subscheme => {
+          if(subscheme.verified_status === "R"){
+            return 'a'
+          }
+          return 'b'
+        })
+        const y = f.indexOf('a')
+        if(y !== -1){
+          setSubmitButton(true)
+        }
+
+      }
+      }, [subschemes]);
+
+  useEffect(() => {
+      if(update){
+        dispatch(getSubschemeData(divisionid));
+      }
+      }, [update]);
+
+   useEffect(() => {
+      if(mailDetail){
+        dispatch(sendSubmitMail(mailDetail));
+      }
+      }, [mailDetail]);
+
+  const [subschemeStatus, setSubschemeStatus] = React.useState('Z');
+
+  const handleSubschemeChange = (event) => {
+    setSubschemeStatus(event.target.value);
+  };
+
+  const handleActionClick = (id) => {
+    const subschemeselected = subschemes.filter(subscheme => subscheme.id === id)
+    dispatch(subschemesActions.setSubSchemeSearch({subschemeSearch: subschemeselected[0]})) 
+    return navigate(`/dashboarddeptuser/achievemententry/${id}`);
+}
+
+const handleFilledStatus = (params) => {
+  if((params.row.fin_add_btn_flag === false) && (parseFloat(params.row.pending_output_indicator) === 0) && (parseFloat(params.row.pending_outcome_indicator) === 0)){
+    return true
+  }
+  return false
+}
+
+const handleSubmittedStatus = (params) => {
+  if(params.row.submitted_status === 'N'){
+    return false
+  }
+  return true
+}
+
+const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [open3, setOpen3] = React.useState(false);
+
+  const handleClickOpen3 = () => {
+    setOpen3(true);
+  };
+
+  const handleClose3 = () => {
+    setQuaterMessage('')
+    setFinancialYearMessage('')
+    setOpen3(false);
+  };
+
+  const [open2, setOpen2] = React.useState(false);
+
+  const handleClickOpen2 = () => {
+    setOpen2(true);
+  };
+
+  const handleClose2 = () => {
+    setOpen2(false);
+  };
+
+  const [open1, setOpen1] = React.useState(false);
+
+  const handleClickOpen1 = (id) => {
+    dispatch(getComment(id));
+    setOpen1(true);
+  };
+
+  const handleClose1 = () => {
+    dispatch(departmentMakerActions.setComment({comment:''}))
+    setOpen1(false);
+  };
+
+useEffect(() => {
+  let filtered = [...subschemes]
+  if(subschemeStatus === 'Z'){
+    setFilteredSubschemes(filtered)
+    return
+  }
+
+  filtered = filtered.filter(subscheme => subscheme.verified_status === subschemeStatus)
+  setFilteredSubschemes(filtered)
+  // if(divisionId !== 'default'){
+  //   filtered = filtered.filter(subscheme => subscheme.division_id === parseFloat(divisionId))
+  // }
+  // if(statescheme){
+  //   const center = filtered.filter(subscheme => `${subscheme.stateCode}-${subscheme.stateName}` === statescheme)
+  //   const optionCenter = center.map(subscheme => `${subscheme.Centercode}-${subscheme.CenterName}`)
+  //   setOptionsCenter([...new Set(optionCenter),''])
+  // }
+  // if(!statescheme){
+  //   const optionCenter = filtered.map(subscheme => `${subscheme.Centercode}-${subscheme.CenterName}`)
+  //   setOptionsCenter([...new Set(optionCenter),''])
+  // }
+    
+}, [subschemeStatus]);
+
+const onSubmitCorrection = () => {
+  dispatch(submitCorrection(divisionid));
+}
+
+const onSubmitReview = () => {
+  const s = subschemes.map(subscheme => {
+    if((subscheme.fin_add_btn_flag === false) && (parseFloat(subscheme.pending_output_indicator) === 0) && (parseFloat(subscheme.pending_outcome_indicator) === 0)){
+      return 'a'
+    }
+    return 'b'
+  })
+  const t = s.indexOf('b')
+  if(t !== -1){
+    handleClickOpen()
+    return
+  }
+  const f = subschemes.map(subscheme => {
+    if(subscheme.submitted_status === "S"){
+      return 'a'
+    }
+    return 'b'
+  })
+  const y = f.indexOf('b')
+  if(y === -1){
+    handleClickOpen2()
+    return
+  }
+  handleClickOpen3()
+}
+
+const [quater, setQuater] = useState('')
+const [quatermessage, setQuaterMessage] = useState('')
+const [financialyear, setFinancialYear] = useState('')
+const [financialyearmessage, setFinancialYearMessage] = useState('')
+
+const handleQuaterChange = (event) => {
+  setQuaterMessage('')
+  setQuater(event.target.value);
+}
+
+const handleFinancialYearChange = (event) => {
+  setFinancialYearMessage('')
+  setFinancialYear(event.target.value);
+}
+
+const handleFinalSubmit = () => {
+  if(quater === ''){
+    setQuaterMessage('Please select a quater')
+    return
+  }
+  if(financialyear === ''){
+    setFinancialYearMessage('Please select a year')
+    return
+  }
+  dispatch(submitVerification(divisionid,quater,financialyear));
+  handleClose3()
+}
+
+const handleVerificationStatus = (params) => {
+  if(params.row.verified_status === 'N'){
+    return <Chip label="Pending" color="primary" variant="outlined" />
+  }
+  if(params.row.verified_status === 'A'){
+    return <Chip label="Approved" color="success" variant="outlined" />
+  }
+  if(params.row.verified_status === 'R'){
+    return <Chip label="Review" color="error" variant="outlined" />
+  }
+  if(params.row.verified_status === 'T'){
+    return <Chip label="Corrected" color="warning" variant="outlined" />
+  }
+  return
+}
+
+const handleViewComment = (id) => {
+  handleClickOpen1(id)
+}
+
+const columns = React.useMemo(
+  () => [
+    { field: 'subscheme_code', hideable: false, headerName: 'Sub Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', width: 125,},
+  { field: 'name', headerName: 'Sub Scheme Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
+  {
+    field: 'filledStatus',
+    headerName: 'Filled Status',
+    width: 160,
+    type: 'boolean',
+    headerClassName: 'themeheader',
+    cellClassName: 'themecell1',
+    valueGetter: handleFilledStatus,
+  },
+  {
+    field: 'submittedStatus',
+    headerName: 'Submitted Status',
+    width: 160,
+    type: 'boolean',
+    headerClassName: 'themeheader',
+    cellClassName: 'themecell1',
+    valueGetter: handleSubmittedStatus,
+  },
+  {
+    field: 'verificationStatus',
+    headerName: 'Verification Status',
+    width: 160,
+    headerClassName: 'themeheader',
+    // cellClassName: (params) => {
+    //   console.log(params)
+    //   return clsx({
+        
+    //     pending: params.row.verified_status  === "N",
+    //     approvedMUI: params.row.verified_status === "A",
+    //     review: params.row.verified_status === "R",
+    //     corrected: params.row.verified_status === "T",
+    //   });
+    // },
+    // valueGetter: handleVerificationStatus,
+    renderCell: handleVerificationStatus
+  },
+  {
+    field: 'actions',
+    type: 'actions',
+    width: 150,
+    headerName: 'Actions',
+    headerAlign: 'center', 
+    headerClassName: 'themeheader',
+    cellClassName: 'themecell',
+    getActions: (params) => [
+      <GridActionsCellItem
+        icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>Fill Details</span></div>}
+        label="Delete"
+        onClick={() => handleActionClick(params.id)}
+      />,
+    ],
+  },
+  {
+    field: 'viewcomment',
+    headerName: 'Comments',
+    width: 150,
+    headerClassName: 'themeheader',
+    cellClassName: 'themecell1',
+    renderCell: (params) => <CommentButton status={params} handleViewComment={handleViewComment}/>
+  },
+],
+[handleActionClick],
+);
+
+const handleCloseSubmitSuccess = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+  }
+  dispatch(departmentMakerActions.setSubmitNotificationSuccess({submitNotificationSuccess:false}))
+};
+
+const handleCloseSubmitFailure = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+  }
+  dispatch(departmentMakerActions.setSubmitNotificationFailure({submitNotificationFailure:false}))
+};
+
+const handleCloseCorrectSuccess = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+  }
+  dispatch(departmentMakerActions.setCorrectNotificationSuccess({correctNotificationSuccess:false}))
+};
+
+const handleCloseCorrectFailure = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+  }
+  dispatch(departmentMakerActions.setCorrectNotificationFailure({correctNotificationFailure:false}))
+};
+
+  return (
+  <>
+  <Snackbar open={submitNotificationSuccess} autoHideDuration={4000} onClose={handleCloseSubmitSuccess}>
+        <Alert onClose={handleCloseSubmitSuccess} severity="success" sx={{ width: '100%' }}>
+          Schemes submitted for verification!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={submitNotificationFailure} autoHideDuration={4000} onClose={handleCloseSubmitFailure}>
+        <Alert onClose={handleCloseSubmitFailure} severity="error" sx={{ width: '100%' }}>
+        Something went wrong!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={correctNotificationSuccess} autoHideDuration={4000} onClose={handleCloseCorrectSuccess}>
+        <Alert onClose={handleCloseCorrectSuccess} severity="success" sx={{ width: '100%' }}>
+          Schemes submitted for verification!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={correctNotificationFailure} autoHideDuration={4000} onClose={handleCloseCorrectFailure}>
+        <Alert onClose={handleCloseCorrectFailure} severity="error" sx={{ width: '100%' }}>
+        Something went wrong!
+        </Alert>
+      </Snackbar>
+  <Dialog
+    open={open}
+    onClose={handleClose}
+    aria-labelledby="alert-dialog-title"
+    aria-describedby="alert-dialog-description"
+  >
+    <DialogTitle id="alert-dialog-title">
+      {"Alert!!"}
+    </DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-description">
+        You cannot submit for verification as you have not filled every achievement of output, outcome or financial entry.
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={handleClose} autoFocus>
+        Ok
+      </Button>
+    </DialogActions>
+  </Dialog>
+  <Dialog
+    open={open2}
+    onClose={handleClose2}
+    aria-labelledby="alert-dialog-title"
+    aria-describedby="alert-dialog-description"
+  >
+    <DialogTitle id="alert-dialog-title">
+      {"Alert!!"}
+    </DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-description">
+        You have already submitted for verification.
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={handleClose2} autoFocus>
+        Ok
+      </Button>
+    </DialogActions>
+  </Dialog>
+  <Dialog
+    open={open1}
+    onClose={handleClose1}
+    aria-labelledby="alert-dialog-title"
+    aria-describedby="alert-dialog-description"
+  >
+    <DialogTitle id="alert-dialog-title">
+      {"Remarks"}
+    </DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-description">
+        {comment}
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={handleClose1} autoFocus>
+        Ok
+      </Button>
+    </DialogActions>
+  </Dialog>
+  <Dialog
+    open={open3}
+    onClose={handleClose3}
+    aria-labelledby="alert-dialog-title"
+    aria-describedby="alert-dialog-description"
+  >
+    <DialogTitle id="alert-dialog-title">
+      {"Select Quater"}
+    </DialogTitle>
+    <DialogContent>
+      <DialogContentText id="alert-dialog-description">
+      <Box sx={{ minWidth: 200 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Financial Year</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={financialyear}
+          label="Financial Year"
+          onChange={handleFinancialYearChange}
+        >
+          {dropFinYear1 && <MenuItem value={'2022-23'}>2022-23</MenuItem>}
+          {dropFinYear2 && <MenuItem value={'2023-24'}>2023-24</MenuItem>}
+          {dropFinYear3 && <MenuItem value={'2024-25'}>2024-25</MenuItem>}
+        </Select>
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Quater</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={quater}
+          label="Quater"
+          onChange={handleQuaterChange}
+        >
+          {dropQuater1 && <MenuItem value={'quater1'}>Quater 1</MenuItem>}
+          {dropQuater2 && <MenuItem value={'quater2'}>Quater 2</MenuItem>}
+          {dropQuater3 && <MenuItem value={'quater3'}>Quater 3</MenuItem>}
+          {dropQuater4 && <MenuItem value={'quater4'}>Quater 4</MenuItem>}
+        </Select>
+      </FormControl>
+    </Box>
+    {quatermessage && <h3 className='f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito'>Please select a quater!!</h3>}
+    {financialyearmessage && <h3 className='f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito'>Please select a year!!</h3>}
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions>
+      <Button onClick={handleFinalSubmit} autoFocus>
+        Ok
+      </Button>
+    </DialogActions>
+  </Dialog>
+  <div className="container-fluid px-4 mt3">
+    <h1 className='b'>{`Dashboard for submission of sub-schemes for verification of ${quaterTD} (${yearTD})`}</h1>
+        <div className="row">
+        <div className="col-xl-3 col-md-6 center">
+              <div className="card budgetColor text-white mb-4">
+                  <div className="card-body f3 h4">Approved Sub-Schemes
+                  <p className='f2'>{approvedcount}</p>
+                  </div>
+              </div>
+          </div>
+          <div className="col-xl-3 col-md-6 center">
+              <div className="card outcomeColor text-white mb-4">
+                  <div className="card-body f3 h4">Pending Sub-Schemes
+                  <p className='f2'>{pendingcount}</p>
+                  </div>
+              </div>
+          </div>
+          <div className="col-xl-3 col-md-6 center">
+              <div className="card schemeColor text-white mb-4">
+                  <div className="card-body f3 h4">
+                  <p>In-review Sub-Schemes
+                  <p className='f2'>{reviewcount}</p></p>
+                  </div>
+              </div>
+          </div>
+          <div className="col-xl-3 col-md-6 center">
+              <div className="card outputColor text-white mb-4">
+                  <div className="card-body f3 h4">
+                  <p>Corrected Sub-Schemes
+                  <p className='f2'>{correctedcount}</p></p>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div className='mw5 center mt3'>
+        <Box sx={{ minWidth: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Sub-Scheme Status</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={subschemeStatus}
+          label="Sub-Scheme Status"
+          onChange={handleSubschemeChange}
+        >
+          <MenuItem value={'Z'}>All</MenuItem>
+          <MenuItem value={'N'}>Pending</MenuItem>
+          <MenuItem value={'A'}>Approved</MenuItem>
+          <MenuItem value={'R'}>Review</MenuItem>
+          <MenuItem value={'T'}>Corrected</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+    </div>
+    {submitButton ? <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={onSubmitCorrection}>Submit correction</p> : <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={onSubmitReview}>Submit for review</p>}
+    <div style={{ display: 'flex', height: '900px' }} className='mt3'>
+    {/* <div style={{ flexGrow: 1 }}> */}
+      <DataGrid 
+      columns={columns}
+      rows={filteredSubscheme} 
+      // components={{ Toolbar: GridToolbar }}
+       />
+    </div>
+    </div>
+    </>
+  )
+}
+
+export default SubmitVerification

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Higher and Technical Education",
+    "created_at": "2022-02-20 07:10:00",
+    "updated_at": "2022-02-20 07:10:00"
+  },
+  {
+    "id": 2,
+    "name": "Agriculture, Animal Husbandry and Co-Operative",
+    "created_at": "2022-02-20 07:11:00",
+    "updated_at": "2022-02-20 07:11:00"
+  },
+  {
+    "id": 3,
+    "name": "Food, Public Distribution and Consumer Affairs",
+    "created_at": "2022-02-20 07:12:00",
+    "updated_at": "2022-02-20 07:12:00"
+  },
+  {
+    "id": 4,
+    "name": "Forest, Environment and Climate Change",
+    "created_at": "2022-02-20 07:12:00",
+    "updated_at": "2022-02-20 07:12:00"
+  },
+  {
+    "id": 5,
+    "name": "Health, Medical Education and Family Welfare",
+    "created_at": "2022-02-20 07:13:00",
+    "updated_at": "2022-02-20 07:13:00"
+  },
+  {
+    "id": 6,
+    "name": "Panchayati Raj",
+    "created_at": "2022-02-20 07:13:00",
+    "updated_at": "2022-02-20 07:13:00"
+  },
+  {
+    "id": 7,
+    "name": "Rural Development",
+    "created_at": "2022-02-20 07:14:00",
+    "updated_at": "2022-02-20 07:14:00"
+  },
+  {
+    "id": 8,
+    "name": "Rural Works",
+    "created_at": "2022-02-20 07:14:00",
+    "updated_at": "2022-02-20 07:14:00"
+  },
+  {
+    "id": 9,
+    "name": "Schedule Tribe, Schedule Caste, Minority and Backward Class Welfare",
+    "created_at": "2022-02-20 07:15:00",
+    "updated_at": "2022-02-20 07:15:00"
+  },
+  {
+    "id": 10,
+    "name": "School Education and Literacy",
+    "created_at": "2022-02-20 07:15:00",
+    "updated_at": "2022-02-20 07:15:00"
+  },
+  {
+    "id": 11,
+    "name": "Women, Child Development and Social Security",
+    "created_at": "2022-02-20 07:17:00",
+    "updated_at": "2022-02-20 07:17:00"
+  },
+  {
+    "id": 12,
+    "name": "Urban Development and Housing",
+    "created_at": "2022-02-20 07:17:00",
+    "updated_at": "2022-02-20 07:17:00"
+  },
+  {
+    "id": 13,
+    "name": "Drinking Water and Sanitation",
+    "created_at": "2022-02-20 07:19:00",
+    "updated_at": "2022-02-20 07:19:00"
+  }
+]
