@@ -16,8 +16,8 @@ import Alert from '@mui/material/Alert';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import {migrationActions} from '../store/migrationSlice';
-import SchemeForm from './Utilities/SchemeForm';
-import SubSchemeForm from './Utilities/SubSchemeForm';
+import SchemeForm from './Utilities/SchemeDeptUserForm';
+import SubSchemeForm from './Utilities/SubSchemeDeptUserForm';
 import OutputForm from './Utilities/OutputForm';
 import OutcomeForm from './Utilities/OutcomeForm';
 import {socialActions} from '../store/socialSlice';
@@ -71,6 +71,7 @@ export default function DeptUserCreateScheme() {
 
   useEffect(() => {
     return () => {
+      setActiveStep(0)
       dispatch(migrationActions.setMessage({message:''}))
       dispatch(migrationActions.setSchemeStateName({schemeStateName:''}))
       dispatch(migrationActions.setSchemeCenterName({schemeCenterName:''}))
@@ -86,6 +87,7 @@ export default function DeptUserCreateScheme() {
       dispatch(migrationActions.setOutputs({outputs:[]}))
       dispatch(migrationActions.setOutcomes({outcomes:[]}))
       dispatch(migrationActions.setRiskRemarks({riskremarks:''}))
+      dispatch(migrationActions.setSubSchemes({subschemes:[]}))
     }
   }, []);
 

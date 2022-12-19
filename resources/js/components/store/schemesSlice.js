@@ -20,7 +20,8 @@ const schemesSlice = createSlice({
     deleteSchemeId:'',
     editNotificationSuccess:false,
     deleteNotificationSuccess:false,
-    updateScheme:false
+    updateScheme:false,
+    pendingSchemes:[]
    },
   reducers: {
     setSchemes(state, action) {
@@ -76,6 +77,9 @@ const schemesSlice = createSlice({
     },
     setEditSchemeStateCode(state, action) {
       state.editSchemeStateCode = action.payload.editSchemeStateCode;
+    },
+    setPendingScheme(state, action) {
+      state.pendingSchemes = action.payload.pendingSchemes;
     },
   },
 });

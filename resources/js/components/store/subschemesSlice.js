@@ -26,11 +26,15 @@ const subschemesSlice = createSlice({
     editNotificationSuccess:false,
     deleteNotificationSuccess:false,
     updateSubScheme:false,
-    deleteSubSchemeId:''
+    deleteSubSchemeId:'',
+    pendingSubSchemes:[]
    },
   reducers: {
     setSubSchemes(state, action) {
       state.subschemes = action.payload.subschemes;
+    },
+    setPendingSubSchemes(state, action) {
+      state.pendingSubSchemes = action.payload.pendingSubSchemes;
     },
     setSubSchemeName(state, action) {
       state.subschemename = action.payload.subschemename;

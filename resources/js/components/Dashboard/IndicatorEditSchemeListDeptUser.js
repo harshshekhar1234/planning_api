@@ -202,7 +202,7 @@ function IndicatorEditSchemeListDeptUser() {
     }, [updateScheme]);
 
   const handleCreateScheme = () => {
-    return navigate(`/dashboarddeptuser/createscheme`);
+    return navigate(`/dashboarddeptuser/pendingscheme`);
   }
 
   const handleActionClick = (id) => {
@@ -360,16 +360,8 @@ function IndicatorEditSchemeListDeptUser() {
     { field: 'center_code', headerName: 'Center Code',headerAlign: 'center', headerClassName: 'themeheader',cellClassName: 'themecell',flex: 1 },
     { field: 'center_name', headerName: 'Center Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
     {
-      field: 'edit',
-      headerName: 'Edit',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: (params) => <SchemeEditButton status={params} handleEditScheme={handleEditScheme}/>
-    },
-    {
       field: 'delete',
-      headerName: 'Delete',
+      headerName: 'Exclude from Migration',
       width: 150,
       headerClassName: 'themeheader',
       cellClassName: 'themecell1',
@@ -385,7 +377,7 @@ function IndicatorEditSchemeListDeptUser() {
       cellClassName: 'themecell',
       getActions: (params) => [
         <GridActionsCellItem
-          icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>Fill Details</span></div>}
+          icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>View Details</span></div>}
           label="Delete"
           onClick={() => handleActionClick(params.id)}
         />,
@@ -432,7 +424,7 @@ function IndicatorEditSchemeListDeptUser() {
         </DialogTitle>
         {allowDeleteScheme ? <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this scheme?
+            Are you sure you want to exclude this scheme?
           </DialogContentText>
         </DialogContent> : <DialogContent>
           <DialogContentText id="alert-dialog-description">

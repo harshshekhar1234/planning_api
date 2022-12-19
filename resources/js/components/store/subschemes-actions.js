@@ -59,6 +59,60 @@ export const getSubSchemesData = (id) => {
     };
   };
 
+  export const miggetPendingSubSchemesData = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}mig_pendingsubschemes/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.length !== 0) {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(subschemesActions.setPendingSubSchemes({pendingSubSchemes: res})) 
+          } else {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(errorActions.setError({error:true}))
+            dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+          }
+        }).catch((err) => {
+          dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+          dispatch(errorActions.setError({error:true}))
+          dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+        })
+    };
+  };
+
+  export const miggetPendingSubSchemesDeptData = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}mig_pendingsubschemesdept/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.length !== 0) {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(subschemesActions.setPendingSubSchemes({pendingSubSchemes: res})) 
+          } else {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(errorActions.setError({error:true}))
+            dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+          }
+        }).catch((err) => {
+          dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+          dispatch(errorActions.setError({error:true}))
+          dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+        })
+    };
+  };
+
   export const getSubSchemesDataDeptUser = (id) => {
   
     return (dispatch) => {

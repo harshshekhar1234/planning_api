@@ -57,6 +57,33 @@ export const getSchemesData = (id) => {
     };    
   };
 
+  export const miggetPendingSchemesData = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}mig_pendingschemes/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.length !== 0) {
+            dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
+            dispatch(schemesActions.setPendingScheme({pendingSchemes: res})) 
+          } else {
+            dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
+            dispatch(errorActions.setError({error:true}))
+            dispatch(schemesActions.setMessage({message:'Sorry something went wrong!!'}))
+          }
+        }).catch((err) => {
+          dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
+          dispatch(errorActions.setError({error:true}))
+          dispatch(schemesActions.setMessage({message:'Sorry something went wrong!!'}))
+        })
+    };    
+  };
+
   export const getSchemesDeptData = (id) => {
   
     return (dispatch) => {

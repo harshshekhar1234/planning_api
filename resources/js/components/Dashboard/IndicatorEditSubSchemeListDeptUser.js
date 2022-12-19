@@ -190,7 +190,7 @@ function IndicatorEditSubSchemeListDeptUser() {
     }, [updateSubScheme]);
 
   const handleCreateSubScheme = () => {
-    return navigate(`/dashboarddeptuser/createsubscheme`);
+    return navigate(`/dashboarddeptuser/pendingsubscheme`);
   }
 
   const handleActionClick = (id) => {
@@ -290,17 +290,17 @@ function IndicatorEditSubSchemeListDeptUser() {
     () => [
       { field: 'subscheme_code', hideable: false, headerName: 'Sub Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
     { field: 'name', headerName: 'Sub Scheme Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
-    {
-      field: 'edit',
-      headerName: 'Edit',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: (params) => <SubSchemeEditButton status={params} handleEditSubScheme={handleEditSubScheme}/>
-    },
+    // {
+    //   field: 'edit',
+    //   headerName: 'Edit',
+    //   width: 150,
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell1',
+    //   renderCell: (params) => <SubSchemeEditButton status={params} handleEditSubScheme={handleEditSubScheme}/>
+    // },
     {
       field: 'delete',
-      headerName: 'Delete',
+      headerName: 'Exclude from migration',
       width: 150,
       headerClassName: 'themeheader',
       cellClassName: 'themecell1',
@@ -316,7 +316,7 @@ function IndicatorEditSubSchemeListDeptUser() {
       cellClassName: 'themecell',
       getActions: (params) => [
         <GridActionsCellItem
-          icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>Fill Details</span></div>}
+          icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>View Details</span></div>}
           label="Delete"
           onClick={() => handleActionClick(params.id)}
         />,

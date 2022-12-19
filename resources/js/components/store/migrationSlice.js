@@ -4,6 +4,7 @@ const migrationSlice = createSlice({
   name: 'migration',
   initialState: { 
     schemeId:'',
+    subschemes:[],
     schemeStateName: '',
     schemeCenterName: '',
     schemeStateCode: '',
@@ -27,6 +28,9 @@ const migrationSlice = createSlice({
   reducers: {
     setSchemeId(state, action) {
       state.schemeId = action.payload.schemeId;
+    },
+    setSubSchemes(state, action) {
+      state.subschemes = action.payload.subschemes;
     },
     setMessage(state, action) {
       state.message = action.payload.message;

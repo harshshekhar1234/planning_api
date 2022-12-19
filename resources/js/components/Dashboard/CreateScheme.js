@@ -71,6 +71,7 @@ export default function DeptUserCreateScheme() {
 
   useEffect(() => {
     return () => {
+      setActiveStep(0)
       dispatch(migrationActions.setMessage({message:''}))
       dispatch(migrationActions.setSchemeStateName({schemeStateName:''}))
       dispatch(migrationActions.setSchemeCenterName({schemeCenterName:''}))

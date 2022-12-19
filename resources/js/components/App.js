@@ -104,6 +104,8 @@ import MigrationDivisionReportDownload from './Dashboard/MigrationDivisionReport
 import MigrationOutcomeBudgetDashboard from './Dashboard/MigrationOutcomeBudgetDashboard';
 import MigrationDeptUserDivisionReportDownload from './Dashboard/MigrationDeptUserDivisionReportDownload';
 import CurrentSubScheme from './Dashboard/CurrentSubScheme';
+import PendingScheme from './Dashboard/PendingScheme';
+import PendingSubScheme from './Dashboard/PendingSubScheme';
 
 
 const App = () => {
@@ -206,6 +208,8 @@ const App = () => {
               <Route path='blockentry' element={<BlockEntry />}/>
               <Route path='createscheme' element={<DeptUserCreateScheme />}/>
               <Route path='createsubscheme' element={<DeptUserCreateSubScheme />}/>
+              <Route path='pendingscheme' element={<PendingScheme />}/>
+              <Route path='pendingsubscheme' element={<PendingSubScheme />}/>
               <Route path='migrationdivisionreport/:id' element={<MigrationDeptUserDivisionReportDownload />}/>
         </Route>
         <Route path='/dashboardverifier' element={<DashboardVerifier />}>
