@@ -221,7 +221,9 @@ class MigSubSchemeController extends Controller
                 foreach ($filteredSocial as $social) {
                     $dataSocial[] = [
                         'subscheme_id' => $subScheme->id,
-                        'social_id' => $social['id']
+                        'social_id' => $social['id'],
+                        'created_at' => new \dateTime,
+                        'updated_at' => new \dateTime
                     ];
                 }
                 MigSubschemeSocial::insert($dataSocial);
@@ -229,7 +231,9 @@ class MigSubSchemeController extends Controller
                 foreach ($filteredGender as $gender) {
                     $dataGender[] = [
                         'subscheme_id' => $subScheme->id,
-                        'gender_id' => $gender['id']
+                        'gender_id' => $gender['id'],
+                        'created_at' => new \dateTime,
+                        'updated_at' => new \dateTime
                     ];
                 }
                 MigSubschemeGender::insert($dataGender);

@@ -134,7 +134,9 @@ class SocialController extends Controller
         foreach($filteredCollection as $item) {
             $data[] =[
                 'subscheme_id' => $id,
-                'social_id' => $item['id']
+                'social_id' => $item['id'],
+                'created_at' => new \dateTime,
+                'updated_at' => new \dateTime
             ];
         }
 
