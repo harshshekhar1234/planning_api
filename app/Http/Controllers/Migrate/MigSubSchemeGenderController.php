@@ -76,7 +76,9 @@ class MigSubSchemeGenderController extends Controller
         foreach ($filteredCollection as $item) {
             $data[] = [
                 'subscheme_id' => $id,
-                'gender_id' => $item['id']
+                'gender_id' => $item['id'],
+                'created_at' => new \dateTime,
+                'updated_at' => new \dateTime
             ];
         }
 
