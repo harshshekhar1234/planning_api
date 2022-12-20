@@ -25,7 +25,7 @@ class FinanceApiController extends Controller
         });
         return response()->json([
             'status' => 200,
-            'pending_schemes' => $pending_schemes,
+            'pending_schemes' => $pending_schemes->values()->all(),
         ]);
     }
 }
