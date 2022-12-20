@@ -16,8 +16,11 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getscheme/' . $demand_no . '/2023-24');
         $api_schemes = $response->json();
         $local_schemes = MigScheme::select('state_code', 'center_code')->where('division_id', $id)->get();
-        $pending_schemes = collect($api_schemes)->filter(function ($value, $key) use ($local_schemes) {
-            return !$local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+        $pending_schemes = collect($api_schemes)->reject(function ($value, $key) use ($local_schemes) {
+            return $local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                //Using filter
+                //$pending_schemes = collect($api_schemes)->filter(function ($value, $key) use ($local_schemes) {
+                //return !$local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
                 //dd ($lvalue['state_code']);exit;
                 return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
             });
