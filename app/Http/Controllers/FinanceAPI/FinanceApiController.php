@@ -5,6 +5,7 @@ namespace App\Http\Controllers\FinanceAPI;
 use App\Http\Controllers\Controller;
 use App\Models\Division;
 use App\Models\MigScheme;
+use App\Models\MigSubScheme;
 use Illuminate\Support\Facades\Http;
 
 class FinanceApiController extends Controller
@@ -26,9 +27,46 @@ class FinanceApiController extends Controller
             });
             //dd ($value['state_name']);exit;
         });
+        // $pending_schemes = $pending_schemes->map(function ($value, $key) {
+        //     $value['id'] = $key;
+        //     return $value;
+        // });
+
         return response()->json([
             'status' => 200,
             'pending_schemes' => $pending_schemes->values()->all(),
+        ]);
+    }
+
+    public function pending_subscheme($id)
+    {
+        $division = Division::find($id);
+        $demand_no = $division->demand_no;
+        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubscheme/' . $demand_no . '/2023-24');
+        $api_subschemes = $response->json();
+        $local_schemes = MigScheme::select('id', 'state_code', 'center_code')->where('division_id', $id)->get();
+        $local_subschemes = MigSubScheme::select('subscheme_code', 'name')->where('division_id', $id)->get();
+        $pending_subschemes = collect($api_subschemes)->reject(function ($value, $key) use ($local_subschemes) {
+            return $local_subschemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return $lvalue['subscheme_code'] == $value['subscheme_code'];
+            });
+        });
+
+        $pending_subschemes = $pending_subschemes->map(function ($item, $key) use ($local_schemes) {
+            $scheme = $local_schemes->where('state_code', $item['state_code'])->where('center_code', $item['center_code'])->first();
+            if ($scheme) {
+                $item['isScheme'] = 'Y';
+                $item['scheme_id'] = $scheme->id;
+            } else {
+                $item['isScheme'] = 'N';
+                $item['scheme_id'] = null;
+            }
+            return $item;
+        });
+
+        return response()->json([
+            'status' => 200,
+            'pending_subschemes' => $pending_subschemes->values()->all(),
         ]);
     }
 }
