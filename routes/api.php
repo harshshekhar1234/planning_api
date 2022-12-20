@@ -40,6 +40,7 @@ use App\Http\Controllers\Migrate\MigFinancialOutlayController;
 use App\Http\Controllers\Migrate\MigSubSchemeGenderController;
 use App\Http\Controllers\Migrate\MigSubSchemeSocialController;
 use App\Http\Controllers\Migrate\MigSubSchemeSdgController;
+use App\Http\Controllers\FinanceAPI\FinanceApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -452,4 +453,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Fetch Department Summary - Count
     Route::get('/mig_dept_dashboard', [DepartmentController::class, 'mig_dept_dashboard'])->middleware(['can:isAdmin']);
     /*----------------------------------- End of Outcome Budget Migration Module ------------------------------------*/
+
+    /*------------------------ Start of API Integration in Outcome Budget Migration Module ---------------------------*/
+    Route::get('/mig_pendingschemes/{id}', [FinanceApiController::class, 'pending_scheme']);
+    /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });
