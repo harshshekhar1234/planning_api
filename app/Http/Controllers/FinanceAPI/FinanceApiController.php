@@ -38,7 +38,7 @@ class FinanceApiController extends Controller
         ]);
     }
 
-    public function pending_subscheme($id)
+    public function pending_subscheme_dept($id)
     {
         $division = Division::find($id);
         $demand_no = $division->demand_no;

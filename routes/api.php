@@ -458,6 +458,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Pending Scheme List by division_id
     Route::get('/mig_pendingschemes/{id}', [FinanceApiController::class, 'pending_scheme']);
     //Pending Sub-Scheme List by division_id
-    Route::get('/mig_pendingsubschemes/{id}', [FinanceApiController::class, 'pending_subscheme']);
+    Route::get('/mig_pendingsubschemesdept/{id}', [FinanceApiController::class, 'pending_subscheme_dept']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });
