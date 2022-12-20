@@ -69,4 +69,22 @@ class FinanceApiController extends Controller
             'pending_subschemes' => $pending_subschemes->values()->all(),
         ]);
     }
+
+    public function pending_subscheme($id)
+    {
+        $scheme = MigScheme::find($id);
+        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
+        $api_subschemes = $response->json();
+        $local_subschemes = MigSubScheme::select('subscheme_code', 'name')->where('scheme_id', $id)->get();
+        $pending_subschemes = collect($api_subschemes)->reject(function ($value, $key) use ($local_subschemes) {
+            return $local_subschemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return $lvalue['subscheme_code'] == $value['subscheme_code'];
+            });
+        });
+
+        return response()->json([
+            'status' => 200,
+            'pending_subschemes' => $pending_subschemes->values()->all(),
+        ]);
+    }
 }
