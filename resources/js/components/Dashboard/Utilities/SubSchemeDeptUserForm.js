@@ -241,7 +241,7 @@ export default function SubSchemeForm() {
             label="subschemecode"
             >
             {subschemes && subschemes.map(subscheme => {
-                <MenuItem value={subscheme.subscheme_code}>{subscheme.subscheme_code}</MenuItem>
+              return <MenuItem value={subscheme.subscheme_code}>{subscheme.subscheme_code}</MenuItem>
             })}
             </Select>
         </FormControl>   
@@ -268,7 +268,7 @@ export default function SubSchemeForm() {
             label="subschemename"
             >
             {subschemes && subschemes.map(subscheme => {
-                <MenuItem value={subscheme.name}>{subscheme.name}</MenuItem>
+                return <MenuItem value={subscheme.name}>{subscheme.name}</MenuItem>
             })}
             </Select>
         </FormControl>

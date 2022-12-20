@@ -197,21 +197,23 @@ function PendingSubSchemeDept() {
   }
 
   const handleActionClick = (params) => {
-    if(params.row.isScheme){
+    const subscheme = []
+    subscheme.push({...params.row})
+    if(params.row.isScheme === "Y"){
         const scheme = {id: params.row.scheme_id}
         dispatch(schemesActions.setSchemeSearch({schemeSearch: scheme})) 
         dispatch(migrationActions.setSubSchemeName({subSchemeName:params.row.name}))
         dispatch(migrationActions.setSubSchemeCode({subSchemeCode:params.row.subscheme_code}))
         dispatch(migrationActions.setSubSchemeStateShare({subSchemeStateShare:params.row.state_share}))
         dispatch(migrationActions.setSubSchemeCenterShare({subSchemeCenterShare:params.row.center_share}))
-        dispatch(migrationActions.setSubSchemes({subschemes:params.row}))
+        dispatch(migrationActions.setSubSchemes({subschemes:subscheme}))
         return navigate(`/dashboarddeptuser/createsubscheme`);
     }
     dispatch(migrationActions.setSchemeStateName({schemeStateName:params.row.state_name}))
     dispatch(migrationActions.setSchemeCenterName({schemeCenterName:params.row.center_name}))
     dispatch(migrationActions.setSchemeStateCode({schemeStateCode:params.row.state_code}))
     dispatch(migrationActions.setSchemeCenterCode({schemeCenterCode:params.row.center_code}))
-    dispatch(migrationActions.setSubSchemes({subschemes:params.row.subschemes}))
+    dispatch(migrationActions.setSubSchemes({subschemes:subscheme}))
     dispatch(migrationActions.setSubSchemeName({subSchemeName:params.row.name}))
     dispatch(migrationActions.setSubSchemeCode({subSchemeCode:params.row.subscheme_code}))
     dispatch(migrationActions.setSubSchemeStateShare({subSchemeStateShare:params.row.state_share}))
@@ -429,7 +431,8 @@ function PendingSubSchemeDept() {
       <DataGrid 
       columns={columns}
       rows={subschemes} 
-       />
+      getRowId={row => row.subscheme_code}
+      components={{ Toolbar: GridToolbar }} />
     </div>
     </div>
     </>

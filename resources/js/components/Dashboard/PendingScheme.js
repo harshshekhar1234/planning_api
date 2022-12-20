@@ -471,6 +471,7 @@ function PendingScheme() {
       <DataGrid 
       columns={columns}
       rows={schemes} 
+      getRowId={row => row.state_code + row.center_code}
       components={{ Toolbar: GridToolbar }} />
     </div>
     </div>

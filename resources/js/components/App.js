@@ -106,6 +106,11 @@ import MigrationDeptUserDivisionReportDownload from './Dashboard/MigrationDeptUs
 import CurrentSubScheme from './Dashboard/CurrentSubScheme';
 import PendingScheme from './Dashboard/PendingScheme';
 import PendingSubScheme from './Dashboard/PendingSubScheme';
+import PendingSubSchemeDept from './Dashboard/PendingSubSchemeDept';
+import AdminDivisionSubSchemePendingList from './Dashboard/AdminDivisionSubSchemePendingList';
+import AdminDivisionSchemePendingList from './Dashboard/AdminDivisionSchemePendingList';
+import AdminPendingScheme from './Dashboard/AdminPendingScheme';
+import AdminPendingSubScheme from './Dashboard/AdminPendingSubScheme';
 
 
 const App = () => {
@@ -187,6 +192,10 @@ const App = () => {
               <Route path='aorreportadmin/:divisionid' element={<AsOnReportListAdmin />}/>
               <Route path='quaterreportid/:id/:rid' element={<QuaterReportDivisionDownload />}/>
               <Route path='aorreportid/:id/:rid' element={<AsOnReportDivisionDownload />}/>
+              <Route path='pendingsubschemedept/:id' element={<AdminPendingSubScheme />}/>
+              <Route path='pendingschemedept/:id' element={<AdminPendingScheme />}/>
+              <Route path='divisionpendingsubschemedept' element={<AdminDivisionSubSchemePendingList />}/>
+              <Route path='divisionpendingschemedept' element={<AdminDivisionSchemePendingList />}/>
         </Route>
         <Route path='/dashboarddeptuser' element={<Dashboard_Dept_User />}>
               <Route path='main' element={<Main_Dept_User />}/>
@@ -210,6 +219,7 @@ const App = () => {
               <Route path='createsubscheme' element={<DeptUserCreateSubScheme />}/>
               <Route path='pendingscheme' element={<PendingScheme />}/>
               <Route path='pendingsubscheme' element={<PendingSubScheme />}/>
+              <Route path='pendingsubschemedept/:id' element={<PendingSubSchemeDept />}/>
               <Route path='migrationdivisionreport/:id' element={<MigrationDeptUserDivisionReportDownload />}/>
         </Route>
         <Route path='/dashboardverifier' element={<DashboardVerifier />}>

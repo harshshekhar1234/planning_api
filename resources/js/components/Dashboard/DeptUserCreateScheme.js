@@ -187,15 +187,15 @@ export default function DeptUserCreateScheme() {
       return
     }
 
-    if (subSchemeCode.includes(".")){
-      dispatch(migrationActions.setMessage({message:'Sub-scheme code should be of 8 characters'}))
-      return
-    }
+    // if (subSchemeCode.includes(".")){
+    //   dispatch(migrationActions.setMessage({message:'Sub-scheme code should be of 8 characters'}))
+    //   return
+    // }
 
-    if (subSchemeCode.length !== 8){
-      dispatch(migrationActions.setMessage({message:'Sub-scheme code should be of 8 characters'}))
-      return
-    }
+    // if (subSchemeCode.length !== 8){
+    //   dispatch(migrationActions.setMessage({message:'Sub-scheme code should be of 8 characters'}))
+    //   return
+    // }
 
     if (subSchemeStateShare === ''){
       dispatch(migrationActions.setMessage({message:'Please enter sub-scheme state share (Rs. in Lakhs) or enter 0'}))

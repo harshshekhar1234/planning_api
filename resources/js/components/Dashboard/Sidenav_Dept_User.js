@@ -110,6 +110,10 @@ function Sidenav_Dept_User() {
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Directorate Report Download</span>
             </Link>
+            <Link className="nav-link" to={`/dashboarddeptuser/pendingsubschemedept/${divisionid}`}>
+            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+            <span className='white'>Pending Sub-Scheme List</span>
+            </Link>
             {/* <Link className="nav-link" to='/dashboard/departmentdata'>
                 <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
                 <span className='white'>Department Data</span>

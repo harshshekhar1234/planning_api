@@ -97,9 +97,9 @@ export const getSubSchemesData = (id) => {
         })
         .then(response => response.json())
         .then(res => {
-          if (res.length !== 0) {
+          if (res.status === 200) {
             dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
-            dispatch(subschemesActions.setPendingSubSchemes({pendingSubSchemes: res})) 
+            dispatch(subschemesActions.setPendingSubSchemes({pendingSubSchemes: res.pending_subschemes})) 
           } else {
             dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
             dispatch(errorActions.setError({error:true}))

@@ -196,11 +196,13 @@ function PendingSubScheme() {
   }
 
   const handleActionClick = (params) => {
+    const subscheme = []
+    subscheme.push({...params.row})
     dispatch(migrationActions.setSubSchemeName({subSchemeName:params.row.name}))
     dispatch(migrationActions.setSubSchemeCode({subSchemeCode:params.row.subscheme_code}))
     dispatch(migrationActions.setSubSchemeStateShare({subSchemeStateShare:params.row.state_share}))
     dispatch(migrationActions.setSubSchemeCenterShare({subSchemeCenterShare:params.row.center_share}))
-    dispatch(migrationActions.setSubSchemes({subschemes:params.row}))
+    dispatch(migrationActions.setSubSchemes({subschemes:subscheme}))
     return navigate(`/dashboarddeptuser/createsubscheme`);
   }
 

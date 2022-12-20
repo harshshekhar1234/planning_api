@@ -68,9 +68,9 @@ export const getSchemesData = (id) => {
         })
         .then(response => response.json())
         .then(res => {
-          if (res.length !== 0) {
+          if (res.status === 200) {
             dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
-            dispatch(schemesActions.setPendingScheme({pendingSchemes: res})) 
+            dispatch(schemesActions.setPendingScheme({pendingSchemes: res.pending_schemes})) 
           } else {
             dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
             dispatch(errorActions.setError({error:true}))
