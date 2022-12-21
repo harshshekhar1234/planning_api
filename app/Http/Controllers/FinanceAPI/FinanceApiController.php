@@ -7,6 +7,7 @@ use App\Models\Division;
 use App\Models\MigScheme;
 use App\Models\MigSubScheme;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
 
 class FinanceApiController extends Controller
 {
@@ -142,6 +143,59 @@ class FinanceApiController extends Controller
         return response()->json([
             'status' => 200,
             'migrated_subschemes' => $migrated_subschemes->values()->all(),
+        ]);
+    }
+
+    public function subscheme_outlay($id)
+    {
+        $subscheme = MigSubScheme::find($id);
+        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
+        $api_subscheme = $response->json();
+
+        $SubschemeOutlay = $api_subscheme['state_share'] + $api_subscheme['center_share'];
+        return response()->json([
+            'status' => 200,
+            'result' => $SubschemeOutlay,
+            'state_share' => $api_subscheme['state_share'],
+            'center_share' => $api_subscheme['center_share']
+        ]);
+    }
+
+    public function subscheme_header($id)
+    {
+        $sub_scheme = DB::table('mig_sub_schemes AS ss')
+            ->select(
+                'ss.*',
+                's.id',
+                's.state_name',
+                's.state_code',
+                's.center_name',
+                's.center_code',
+                'dept.id as dept_id',
+                'dept.name as dept_name',
+                'div.id as div_id',
+                'div.name as div_name',
+                'div.demand_no'
+            )
+            ->join('mig_schemes AS s', 's.id', '=', 'ss.scheme_id')
+            ->join('departments AS dept', 'dept.id', '=', 'ss.department_id')
+            ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
+            ->where('ss.id', $id)->get();
+
+        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $sub_scheme[0]->subscheme_code . '/2023-24');
+        $api_subscheme = $response->json();
+        $sub_scheme[0]->name = $api_subscheme['subscheme_name'];
+        $sub_scheme[0]->state_name = $api_subscheme['state_name'];
+        $sub_scheme[0]->state_code = $api_subscheme['state_code'];
+        $sub_scheme[0]->center_name = $api_subscheme['center_name'];
+        $sub_scheme[0]->center_code = $api_subscheme['center_code'];
+
+        return response()->json([
+            'status' => 200,
+            'sub_scheme' => $sub_scheme,
+            'sanction' => 0,
+            'allotment' => 0,
+            'expenditure' => 0
         ]);
     }
 }
