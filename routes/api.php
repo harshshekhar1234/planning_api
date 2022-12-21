@@ -379,7 +379,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Create Sub-Scheme - with output, outcome, indicators and targets
     Route::post('/mig_subscheme/create', [MigSubSchemeController::class, 'create_sub_scheme']);
     //Fetch Sub-Scheme header detail by id
-    Route::get('/mig_subscheme_header/{id}', [MigSubSchemeController::class, 'subscheme_header']);
+    //Route::get('/mig_subscheme_header/{id}', [MigSubSchemeController::class, 'subscheme_header']);
     //Fetch Output for a subscheme
     Route::get('/mig_outputs/{id}', [MigOutputController::class, 'index']);
     //Update Output Name
@@ -409,7 +409,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Update SDG Goal for a subscheme
     Route::post('/mig_subchemeSdg/update/{id}', [MigSubSchemeSdgController::class, 'update']);
     //Fetch Financial Outlay for a subscheme
-    Route::get('/mig_subscheme_outlay/{id}', [MigFinancialOutlayController::class, 'index']);
+    //Route::get('/mig_subscheme_outlay/{id}', [MigFinancialOutlayController::class, 'index']);
     //Update Financial Outlay for a subscheme
     Route::post('/mig_financialOutlay/update/{id}', [MigFinancialOutlayController::class, 'update']);
     //Fetch list of Output Indicator Targets for an Output
@@ -465,5 +465,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_schemesdept/{id}', [FinanceApiController::class, 'migrated_scheme']);
     //Fetch list of sub-schemes for a scheme - existing in API and local both
     Route::get('/mig_subschemesdeptuser/{id}', [FinanceApiController::class, 'migrated_subscheme']);
+    //Fetch Financial Outlay for a subscheme
+    Route::get('/mig_subscheme_outlay/{id}', [FinanceApiController::class, 'subscheme_outlay']);
+    //Fetch Sub-Scheme header detail by id
+    Route::get('/mig_subscheme_header/{id}', [FinanceApiController::class, 'subscheme_header']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });
