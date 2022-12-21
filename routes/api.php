@@ -363,15 +363,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     /*--------------------------------- Start of Outcome Budget Migration Module ------------------------------------*/
     //Fetch list of schemes for a division
-    Route::get('/mig_schemesdept/{id}', [MigSchemeController::class, 'indexdept']);
+    //Route::get('/mig_schemesdept/{id}', [MigSchemeController::class, 'indexdept']);
     //Delete Scheme
     Route::delete('/mig_scheme/delete/{id}', [MigSchemeController::class, 'destroy']);
     //Edit Scheme
     Route::post('/mig_scheme/edit/{id}', [MigSchemeController::class, 'update']);
     //Create Scheme - with sub-scheme, output, outcome, indicators and targets
     Route::post('/mig_scheme/create', [MigSchemeController::class, 'create_scheme']);
-    //Fetch list of sub-schemes for a division
-    Route::get('/mig_subschemesdeptuser/{id}', [MigSubSchemeController::class, 'indexdept']);
+    //Fetch list of sub-schemes for a scheme
+    //Route::get('/mig_subschemesdeptuser/{id}', [MigSubSchemeController::class, 'indexdept']);
     //Delete Sub-Scheme
     Route::delete('/mig_subscheme/delete/{id}', [MigSubSchemeController::class, 'destroy']);
     //Edit Sub-Scheme
@@ -461,5 +461,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_pendingsubschemesdept/{id}', [FinanceApiController::class, 'pending_subscheme_dept']);
     //Pending Sub-Scheme List by scheme_id
     Route::get('/mig_pendingsubschemes/{id}', [FinanceApiController::class, 'pending_subscheme']);
+    //Fetch list of schemes for a division - existing in API and local both
+    Route::get('/mig_schemesdept/{id}', [FinanceApiController::class, 'migrated_scheme']);
+    //Fetch list of sub-schemes for a scheme - existing in API and local both
+    Route::get('/mig_subschemesdeptuser/{id}', [FinanceApiController::class, 'migrated_subscheme']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });
