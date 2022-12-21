@@ -467,6 +467,12 @@ const DeptUserEntryForm = () => {
         if(id !== 1){
           newSocial = newSocial.map(s => {if(s.id === 1){s.selected = false} return s})
         }
+        if(id === 8){
+          newSocial = newSocial.map(s => {if(s.id !== 8){s.selected = false} return s})
+        }
+        if(id !== 8){
+          newSocial = newSocial.map(s => {if(s.id === 8){s.selected = false} return s})
+        }
         dispatch(socialActions.setEditSocial({editSocial: newSocial}))
         dispatch(socialActions.setEditSocialMessage({editSocialMessage: ''}))
         
@@ -610,7 +616,12 @@ const DeptUserEntryForm = () => {
         if(id !== 1){
           newGender = newGender.map(s => {if(s.id === 1){s.selected = false} return s})
         }
-        
+        if(id === 8){
+          newGender = newGender.map(s => {if(s.id !== 8){s.selected = false} return s})
+        }
+        if(id !== 8){
+          newGender = newGender.map(s => {if(s.id === 8){s.selected = false} return s})
+        }
         dispatch(genderActions.setEditGender({editGender: newGender})) 
         dispatch(genderActions.setEditGenderMessage({editGenderMessage: ''})) 
       };
@@ -2689,14 +2700,14 @@ const DeptUserEntryForm = () => {
         <tr>
           <th className="b--black-80 tc pb3 pr3 b">{"State Share (Rs. in Lakh)"}</th>
           <th className="b--black-80 tc pb3 pr3 b">{"Center Share (Rs. in Lakh)"}</th>
-          <th className="b--black-80 tc pb3 pr3 b">Update Details</th>
+          {/* <th className="b--black-80 tc pb3 pr3 b">Update Details</th> */}
         </tr>
       </thead>
       <tbody className="lh-copy">
         <tr>
           <td className="pv3 pr3  b--black-80">{stateShare}</td>
           <td className="pv3 pr3  b--black-80">{centerShare}</td>
-          <td className="pv3 pr3  b--black-80"><span className="pv1 pr3  b--black-80 f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={()=> handleOpen12()}>Update</span></td>
+          {/* <td className="pv3 pr3  b--black-80"><span className="pv1 pr3  b--black-80 f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={()=> handleOpen12()}>Update</span></td> */}
         </tr>
       </tbody>
     </table>

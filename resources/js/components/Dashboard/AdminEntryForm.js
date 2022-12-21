@@ -443,6 +443,12 @@ const AdminEntryForm = () => {
         if(id !== 1){
           newSocial = newSocial.map(s => {if(s.id === 1){s.selected = false} return s})
         }
+        if(id === 8){
+          newSocial = newSocial.map(s => {if(s.id !== 8){s.selected = false} return s})
+        }
+        if(id !== 8){
+          newSocial = newSocial.map(s => {if(s.id === 8){s.selected = false} return s})
+        }
         dispatch(socialActions.setEditSocial({editSocial: newSocial}))
         dispatch(socialActions.setEditSocialMessage({editSocialMessage: ''}))
         
@@ -586,7 +592,12 @@ const AdminEntryForm = () => {
         if(id !== 1){
           newGender = newGender.map(s => {if(s.id === 1){s.selected = false} return s})
         }
-        
+        if(id === 8){
+          newGender = newGender.map(s => {if(s.id !== 8){s.selected = false} return s})
+        }
+        if(id !== 8){
+          newGender = newGender.map(s => {if(s.id === 8){s.selected = false} return s})
+        }
         dispatch(genderActions.setEditGender({editGender: newGender})) 
         dispatch(genderActions.setEditGenderMessage({editGenderMessage: ''})) 
       };

@@ -413,6 +413,7 @@ function PendingSubScheme() {
       <DataGrid 
       columns={columns}
       rows={subschemes} 
+      getRowId={row => row.subscheme_code}
        />
     </div>
     </div>

@@ -124,7 +124,7 @@ export const getSchemesData = (id) => {
         .then(res => {
           if (res.length !== 0) {
             dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
-            dispatch(schemesActions.setSchemes({schemes: res}))  
+            dispatch(schemesActions.setSchemes({schemes: res.migrated_schemes}))  
           } else {
             dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
             dispatch(errorActions.setError({error:true}))

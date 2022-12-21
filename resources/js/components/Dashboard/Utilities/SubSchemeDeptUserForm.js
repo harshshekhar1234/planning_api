@@ -118,6 +118,12 @@ export default function SubSchemeForm() {
         if(id !== 1){
           newSocial = newSocial.map(s => {if(s.id === 1){s.selected = false} return s})
         }
+        if(id === 8){
+            newSocial = newSocial.map(s => {if(s.id !== 8){s.selected = false} return s})
+          }
+          if(id !== 8){
+            newSocial = newSocial.map(s => {if(s.id === 8){s.selected = false} return s})
+          }
         dispatch(socialActions.setSocial({social: newSocial}))
         dispatch(migrationActions.setMessage({message:''}))
       };
@@ -131,6 +137,12 @@ export default function SubSchemeForm() {
         if(id !== 1){
           newGender = newGender.map(s => {if(s.id === 1){s.selected = false} return s})
         }
+        if(id === 8){
+            newGender = newGender.map(s => {if(s.id !== 8){s.selected = false} return s})
+          }
+          if(id !== 8){
+            newGender = newGender.map(s => {if(s.id === 8){s.selected = false} return s})
+          }
         
         dispatch(genderActions.setGender({gender: newGender})) 
         dispatch(migrationActions.setMessage({message:''})) 
@@ -230,14 +242,13 @@ export default function SubSchemeForm() {
             value={subSchemeCode}
             onChange={handleSubSchemeCodeChange}
           /> */}
-          <FormControl sx={{ m: 1, minWidth: 80 }}>
+          <FormControl fullWidth>
             <InputLabel id="demo-simple-select-autowidth-label">Sub Scheme Code</InputLabel>
             <Select
-            labelId="demo-simple-select-autowidth-label"
-            id="demo-simple-select-autowidth"
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
             value={subSchemeCode}
             onChange={handleSubSchemeCodeChange}
-            autoWidth
             label="subschemecode"
             >
             {subschemes && subschemes.map(subscheme => {
@@ -257,14 +268,13 @@ export default function SubSchemeForm() {
             value={subSchemeName}
             onChange={handleSubSchemeNameChange}
           /> */}
-          <FormControl sx={{ m: 1, minWidth: 80 }}>
+          <FormControl fullWidth>
             <InputLabel id="demo-simple-select-autowidth-label">Sub Scheme Name</InputLabel>
             <Select
-            labelId="demo-simple-select-autowidth-label"
-            id="demo-simple-select-autowidth"
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
             value={subSchemeName}
             onChange={handleSubSchemeNameChange}
-            autoWidth
             label="subschemename"
             >
             {subschemes && subschemes.map(subscheme => {

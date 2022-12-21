@@ -178,6 +178,7 @@ function IndicatorEditSubSchemeListDeptUser() {
   useEffect(() => {
     dispatch(miggetSubSchemesDataDeptUser(params.id))
     return () => {
+      dispatch(subschemesActions.setSubSchemes({subschemes: []})) 
       dispatch(subschemesActions.setEditNotificationSuccess({editNotificationSuccess:false}))  
       dispatch(subschemesActions.setDeleteNotificationSuccess({deleteNotificationSuccess:false}))  
     }
@@ -190,7 +191,7 @@ function IndicatorEditSubSchemeListDeptUser() {
     }, [updateSubScheme]);
 
   const handleCreateSubScheme = () => {
-    return navigate(`/dashboarddeptuser/pendingsubscheme`);
+    return navigate(`/dashboarddeptuser/pendingsubscheme/${params.id}`);
   }
 
   const handleActionClick = (id) => {

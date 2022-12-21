@@ -218,7 +218,7 @@ const App = () => {
               <Route path='createscheme' element={<DeptUserCreateScheme />}/>
               <Route path='createsubscheme' element={<DeptUserCreateSubScheme />}/>
               <Route path='pendingscheme' element={<PendingScheme />}/>
-              <Route path='pendingsubscheme' element={<PendingSubScheme />}/>
+              <Route path='pendingsubscheme/:id' element={<PendingSubScheme />}/>
               <Route path='pendingsubschemedept/:id' element={<PendingSubSchemeDept />}/>
               <Route path='migrationdivisionreport/:id' element={<MigrationDeptUserDivisionReportDownload />}/>
         </Route>
