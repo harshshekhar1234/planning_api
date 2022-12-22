@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class MigSubSchemeController extends Controller
 {
@@ -551,7 +552,9 @@ class MigSubSchemeController extends Controller
                 ->join('mig_sub_scheme_socials AS ss', 'ss.social_id', '=', 's.id')
                 ->where('ss.subscheme_id', $id)->get();
 
-            $financial_outlay = MigFinancialOutlay::select('state_share', 'center_share')->where('subscheme_id', $id)->get();
+            //$financial_outlay = MigFinancialOutlay::select('state_share', 'center_share')->where('subscheme_id', $id)->get();
+            $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
+            $api_subscheme = $response->json();
 
             $sdg = DB::table('sdg_goals AS s')
                 ->select('s.goal_name', 's.goal_number')
@@ -572,7 +575,8 @@ class MigSubSchemeController extends Controller
                 'achievement_outcomes' => $achievement_outcomes,
                 'genders' => $genders,
                 'socials' => $socials,
-                'financial_outlay' => $financial_outlay[0]->state_share + $financial_outlay[0]->center_share,
+                //'financial_outlay' => $financial_outlay[0]->state_share + $financial_outlay[0]->center_share,
+                'financial_outlay' => $api_subscheme['state_share'] + $api_subscheme['center_share'],
                 'sdg' => $sdg,
                 'remark' => $risk_remarks,
                 'subscheme' => $subscheme
