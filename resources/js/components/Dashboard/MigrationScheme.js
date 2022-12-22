@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import SubSchemeCard from './Utilities/SubSchemeCard'
-import {miggetSubSchemesData} from '../store/subschemes-actions';
+import {miggetSubSchemesDataDeptUser} from '../store/subschemes-actions';
 import {subschemesActions} from '../store/subschemesSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { DataGrid, GridToolbar,GridActionsCellItem } from '@mui/x-data-grid';
@@ -164,7 +164,7 @@ function MigrationScheme() {
     );
 
     useEffect(() => {
-        dispatch(miggetSubSchemesData(params.id));
+        dispatch(miggetSubSchemesDataDeptUser(params.id));
         return () => {
           dispatch(subschemesActions.setSubSchemes({subschemes: []})) 
         }

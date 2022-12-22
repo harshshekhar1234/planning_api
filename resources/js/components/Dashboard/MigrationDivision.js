@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import SchemeCard from './Utilities/SchemeCard'
-import {miggetSchemesData} from '../store/schemes-action';
+import {miggetSchemesDeptData} from '../store/schemes-action';
 import {schemesActions} from '../store/schemesSlice';
 import {divisionsActions} from '../store/divisionsSlice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -149,7 +149,7 @@ function MigrationDivision() {
     };
 
     useEffect(() => {
-        dispatch(miggetSchemesData(params.id));  
+        dispatch(miggetSchemesDeptData(params.id));  
         return () => {
           dispatch(schemesActions.setSchemes({schemes: []})) 
           
