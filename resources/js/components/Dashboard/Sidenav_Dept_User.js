@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useEffect,useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { doc_url } from '../configuration';
+import {getDivisionData} from '../store/divisions-action';
 
 function Sidenav_Dept_User() {
 
+    const dispatch = useDispatch();
+
     const name = useSelector((state) => state.user.name);
     const divisionid = useSelector((state) => state.divisions.divisionId);
+    const division1 = useSelector((state) => state.divisions.division);
+
+    const [division,setDivision] = useState('')
+
+    useEffect(() => {
+        if(divisionid){
+        dispatch(getDivisionData(divisionid));
+        }
+        }, [divisionid]);
+
+    useEffect(() => {
+        if(division1){
+            setDivision(division1);
+        }
+        }, [division1]);
 
   return (
     <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -102,6 +120,10 @@ function Sidenav_Dept_User() {
                 </nav>
             </div> */}
             <div className="sb-sidenav-menu-heading"><span className='white'>Outcome Budget 2023-24</span></div>
+            <Link className="nav-link" to={`/dashboarddeptuser/migrationsummarydept/${divisionid}/${division}`}>
+            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+            <span className='white'>Summary</span>
+            </Link>
             <Link className="nav-link" to='/dashboarddeptuser/entryformdeptuserscheme'>
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Outcome Budget Entry Form</span>

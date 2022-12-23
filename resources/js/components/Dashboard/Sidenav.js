@@ -140,6 +140,10 @@ function Sidenav({clickHandler}) {
                 </nav>
             </div>
             <div className="sb-sidenav-menu-heading"><span className='white'>Outcome Budget 2023-24</span></div>
+            <Link className="nav-link" to='/dashboard/divisionmigrationsummary'>
+            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+            <span className='white'>Summary</span>
+            </Link>
             <Link className="nav-link" to='/dashboard/migrationdepartments'>
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Schemes Report</span>

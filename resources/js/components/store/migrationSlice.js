@@ -23,7 +23,8 @@ const migrationSlice = createSlice({
     entrymessageriskremarks:'',
     updateRemarkSuccess:false,
     createSchemeStatusSuccess:false,
-    createSubSchemeStatusSuccess:false
+    createSubSchemeStatusSuccess:false,
+    report:{}
    },
   reducers: {
     setSchemeId(state, action) {
@@ -34,6 +35,9 @@ const migrationSlice = createSlice({
     },
     setMessage(state, action) {
       state.message = action.payload.message;
+    },
+    setReport(state, action) {
+      state.report = action.payload.report;
     },
     setSchemeStateName(state, action) {
       state.schemeStateName = action.payload.schemeStateName;

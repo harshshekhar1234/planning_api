@@ -111,6 +111,8 @@ import AdminDivisionSubSchemePendingList from './Dashboard/AdminDivisionSubSchem
 import AdminDivisionSchemePendingList from './Dashboard/AdminDivisionSchemePendingList';
 import AdminPendingScheme from './Dashboard/AdminPendingScheme';
 import AdminPendingSubScheme from './Dashboard/AdminPendingSubScheme';
+import MigrationSummaryDivision from './Dashboard/MigrationSummaryDivision';
+import AdminMigrationDivisionSummary from './Dashboard/AdminMigrationDivisionSummary';
 
 
 const App = () => {
@@ -196,6 +198,8 @@ const App = () => {
               <Route path='pendingschemedept/:id' element={<AdminPendingScheme />}/>
               <Route path='divisionpendingsubschemedept' element={<AdminDivisionSubSchemePendingList />}/>
               <Route path='divisionpendingschemedept' element={<AdminDivisionSchemePendingList />}/>
+              <Route path='divisionmigrationsummary' element={<AdminMigrationDivisionSummary />}/>
+              <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivision />}/>
         </Route>
         <Route path='/dashboarddeptuser' element={<Dashboard_Dept_User />}>
               <Route path='main' element={<Main_Dept_User />}/>
@@ -221,6 +225,7 @@ const App = () => {
               <Route path='pendingsubscheme/:id' element={<PendingSubScheme />}/>
               <Route path='pendingsubschemedept/:id' element={<PendingSubSchemeDept />}/>
               <Route path='migrationdivisionreport/:id' element={<MigrationDeptUserDivisionReportDownload />}/>
+              <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivision />}/>
         </Route>
         <Route path='/dashboardverifier' element={<DashboardVerifier />}>
               <Route path='main' element={<Main_Verifier />}/>

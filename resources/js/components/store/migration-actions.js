@@ -118,6 +118,28 @@ import { errorActions } from './errorSlice';
     };
   };
 
+  export const miggetSummaryDeptData = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}mig_division_summary/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.status === 200) {
+            dispatch(migrationActions.setReport({report: res}))  
+          } else {
+            dispatch(errorActions.setError({error:true}))
+          }
+        }).catch((err) => {
+          dispatch(errorActions.setError({error:true}))
+        })
+    };    
+  };
+
   
 
   
