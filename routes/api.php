@@ -469,5 +469,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_subscheme_outlay/{id}', [FinanceApiController::class, 'subscheme_outlay']);
     //Fetch Sub-Scheme header detail by id
     Route::get('/mig_subscheme_header/{id}', [FinanceApiController::class, 'subscheme_header']);
+    //Fetch Scheme Summary
+    Route::get('/mig_division_summary/{id}', [FinanceApiController::class, 'scheme_summary']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });

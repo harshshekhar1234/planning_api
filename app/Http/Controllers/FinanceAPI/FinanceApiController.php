@@ -198,4 +198,44 @@ class FinanceApiController extends Controller
             'expenditure' => 0
         ]);
     }
+
+    public function scheme_summary($id)
+    {
+        $migrated_schemes = $this->migrated_scheme($id);
+        $migrated_schemes = collect($migrated_schemes->getData()->migrated_schemes);
+
+        $local_subschemes = MigSubScheme::select('id', 'subscheme_code', 'name')->where('division_id', $id)->get();
+        $outcome_indicators = DB::table('mig_outcome_indicators')->where('division_id', $id)->get();
+        $output_indicators = DB::table('mig_output_indicators')->where('division_id', $id)->get();
+
+        foreach ($migrated_schemes as $scheme) {
+            foreach ($scheme->subschemes as $subscheme) {
+                $subscheme_exists = $local_subschemes->where('subscheme_code', $subscheme->subscheme_code)->first();
+                if ($subscheme_exists) {
+                    $subscheme->outputindicators_count = $output_indicators->where('subscheme_id', $subscheme_exists->id)->count();
+
+                    $subscheme->outcomeindicators_count = $outcome_indicators->where('subscheme_id', $subscheme_exists->id)->count();
+
+                    $subscheme->genders = DB::table('genders AS g')
+                        ->select('g.name')
+                        ->join('mig_sub_scheme_genders AS sg', 'sg.gender_id', '=', 'g.id')
+                        ->where('sg.subscheme_id', $subscheme_exists->id)->get();
+
+                    $subscheme->socials = DB::table('socials AS s')
+                        ->select('s.name')
+                        ->join('mig_sub_scheme_socials AS ss', 'ss.social_id', '=', 's.id')
+                        ->where('ss.subscheme_id', $subscheme_exists->id)->get();
+                } else {
+                    $subscheme->outputindicators_count = 0;
+                    $subscheme->outcomeindicators_count = 0;
+                    $subscheme->genders = [];
+                    $subscheme->socials = [];
+                }
+            }
+        }
+        return response()->json([
+            'status' => 200,
+            'schemes' => $migrated_schemes->values()->all(),
+        ]);
+    }
 }
