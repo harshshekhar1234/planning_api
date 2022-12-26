@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 
 function MigrationSubSchemeReportDivision({report}) {
 
-  const subschemename = report.sub_scheme[0].name;
-  const subschemecode = report.sub_scheme[0].subscheme_code;
+  const subschemename = report.name;
+  const subschemecode = report.subscheme_code;
 
 
   const [rowofspan, setRowofspan] = useState(1)

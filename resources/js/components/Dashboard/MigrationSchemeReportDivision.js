@@ -96,7 +96,7 @@ function MigrationSchemeReportDivision({report}) {
           <th className=" b--black-80 tc pb3 pr3 reportextcolor b" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Risk Factors/Any Other Remarks</th>
         </tr>
         {report.subschemes.map(report => {
-          if(report.isSubscheme){
+          if(!report.isSubscheme){
             return <NotMigratedSubscheme report={report}/>
           }
           return <MigrationSubschemeReportDivision report={report}/>

@@ -375,7 +375,7 @@ class MigSubSchemeController extends Controller
             $item['division_id'] = $scheme->division_id;
             $item['financial_outlay'] = $item['state_share'] + $item['center_share'];
 
-            $item['subschemes'] = collect($item['subschemes'])->map(function ($sitem, $skey) use ($local_schemes, $local_subschemes) {
+            $item['subschemes'] = collect($item['subschemes'])->map(function ($sitem, $skey) use ($local_schemes, $local_subschemes,$scheme) {
                 $subscheme_exists = $local_subschemes->where('subscheme_code', $sitem['subscheme_code'])->first();
                 if ($subscheme_exists) {
                     $sitem['isSubscheme'] = true;
@@ -490,7 +490,24 @@ class MigSubSchemeController extends Controller
                     $sitem['sub_scheme'] = $sub_scheme;
 
                 } else {
+                    $sub_scheme = DB::table('mig_schemes AS ss')
+                        ->select(
+                            'ss.id',
+                            'ss.division_id',
+                            'ss.department_id',
+                            'dept.id as dept_id',
+                            'dept.name as dept_name',
+                            'div.id as div_id',
+                            'div.name as div_name',
+                            'div.demand_no'
+                        )
+                        ->join('departments AS dept', 'dept.id', '=', 'ss.department_id')
+                        ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
+                        ->where('ss.id', $scheme->id)->get();
+
+                    $sitem['sub_scheme'] = $sub_scheme;
                     $sitem['isSubscheme'] = false;
+                    
                 }
                 return $sitem;
             });
