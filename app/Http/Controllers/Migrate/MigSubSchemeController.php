@@ -516,7 +516,7 @@ class MigSubSchemeController extends Controller
 
         return response()->json([
             'status' => 200,
-            'schemes' => $migrated_schemes,
+            'schemes' => $migrated_schemes->values()->all(),
 
         ]);
     }
