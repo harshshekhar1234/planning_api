@@ -233,10 +233,10 @@ export default function DeptUserCreateSubScheme() {
                The sub-scheme has been created. Please verify the details in the migration section.
               </Typography>
             </React.Fragment>
-          ) : (isLoading && (
+          ) : (
             <React.Fragment>
               {getStepContent(activeStep)}
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+              {!isLoading && <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
                   <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
                     Back
@@ -250,11 +250,11 @@ export default function DeptUserCreateSubScheme() {
                 >
                   {activeStep === steps.length - 1 ? 'Create Sub-Scheme' : 'Next'}
                 </Button>
-              </Box>
+              </Box>}
               <div className='mt2'>
               {message && <Alert severity="error">{message}</Alert>}
               </div>
-            </React.Fragment>)
+            </React.Fragment>
           )}
         </Paper>
       </Container>
