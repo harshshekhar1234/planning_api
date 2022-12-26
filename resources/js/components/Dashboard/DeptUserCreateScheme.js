@@ -93,6 +93,7 @@ export default function DeptUserCreateScheme() {
 
   useEffect(() => {
     if(createSchemeStatusSuccess){
+      dispatch(migrationActions.setCreateSchemeStatusSuccess({createSchemeStatusSuccess:false}))
       setActiveStep(activeStep + 1);
     }
   }, [createSchemeStatusSuccess]);

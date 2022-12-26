@@ -84,6 +84,7 @@ export default function DeptUserCreateSubScheme() {
 
   useEffect(() => {
     if(createSubSchemeStatusSuccess){
+      dispatch(migrationActions.setCreateSubSchemeStatusSuccess({createSubSchemeStatusSuccess:false}))
       setActiveStep(activeStep + 1);
     }
   }, [createSubSchemeStatusSuccess]);
