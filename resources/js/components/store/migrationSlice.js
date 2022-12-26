@@ -24,11 +24,15 @@ const migrationSlice = createSlice({
     updateRemarkSuccess:false,
     createSchemeStatusSuccess:false,
     createSubSchemeStatusSuccess:false,
-    report:{}
+    report:{},
+    isLoading:false
    },
   reducers: {
     setSchemeId(state, action) {
       state.schemeId = action.payload.schemeId;
+    },
+    setIsLoading(state, action) {
+      state.isLoading = action.payload.isLoading;
     },
     setSubSchemes(state, action) {
       state.subschemes = action.payload.subschemes;

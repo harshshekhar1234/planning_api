@@ -66,6 +66,7 @@ export default function DeptUserCreateScheme() {
   const schemeStateCode = useSelector((state) => state.migration.schemeStateCode);
   const createSchemeStatusSuccess = useSelector((state) => state.migration.createSchemeStatusSuccess);
   const updateriskremarks = useSelector((state) => state.migration.riskremarks);
+  const isLoading = useSelector((state) => state.migration.isLoading);
 
 
 
@@ -88,6 +89,7 @@ export default function DeptUserCreateScheme() {
       dispatch(migrationActions.setOutcomes({outcomes:[]}))
       dispatch(migrationActions.setRiskRemarks({riskremarks:''}))
       dispatch(migrationActions.setSubSchemes({subschemes:[]}))
+      dispatch(migrationActions.setIsLoading({isLoading:false}))
     }
   }, []);
 
@@ -274,7 +276,7 @@ export default function DeptUserCreateScheme() {
       outcomes:outcomes,
       riskremarks:updateriskremarks
     }
-    
+    dispatch(migrationActions.setIsLoading({isLoading:true}))
     dispatch(migcreateScheme(scheme))
   }
 
@@ -302,7 +304,7 @@ export default function DeptUserCreateScheme() {
                The scheme has been created. Please verify the details in the migration section.
               </Typography>
             </React.Fragment>
-          ) : (
+          ) : (isLoading && (
             <React.Fragment>
               {getStepContent(activeStep)}
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -323,7 +325,7 @@ export default function DeptUserCreateScheme() {
               <div className='mt2'>
               {message && <Alert severity="error">{message}</Alert>}
               </div>
-            </React.Fragment>
+            </React.Fragment>)
           )}
         </Paper>
       </Container>

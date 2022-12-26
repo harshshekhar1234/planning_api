@@ -19,7 +19,9 @@ import { errorActions } from './errorSlice';
         .then(res => {
             if (res.status === 200) {
                 dispatch(migrationActions.setCreateSchemeStatusSuccess({createSchemeStatusSuccess:true}))
+                dispatch(migrationActions.setIsLoading({isLoading:false}))
               } else if (res.status === 409){
+                dispatch(migrationActions.setIsLoading({isLoading:false}))
                 dispatch(migrationActions.setMessage({message:'Scheme already exists'}))
               } else {
                 dispatch(errorActions.setError({error:true}))
@@ -48,7 +50,9 @@ import { errorActions } from './errorSlice';
         .then(res => {
             if (res.status === 200) {
                 dispatch(migrationActions.setCreateSchemeStatusSuccess({createSchemeStatusSuccess:true}))
+                dispatch(migrationActions.setIsLoading({isLoading:false}))
               } else if (res.status === 409){
+                dispatch(migrationActions.setIsLoading({isLoading:false}))
                 dispatch(migrationActions.setMessage({message:'Scheme already exists'}))
               } else {
                 dispatch(errorActions.setError({error:true}))
@@ -77,7 +81,9 @@ import { errorActions } from './errorSlice';
         .then(res => {
           if (res.status === 200) {
             dispatch(migrationActions.setCreateSubSchemeStatusSuccess({createSubSchemeStatusSuccess:true}))
+            dispatch(migrationActions.setIsLoading({isLoading:false}))
           } else if (res.status === 409){
+            dispatch(migrationActions.setIsLoading({isLoading:false}))
             dispatch(migrationActions.setMessage({message:'Sub-Scheme already exists'}))
           } else {
             dispatch(errorActions.setError({error:true}))
@@ -106,7 +112,9 @@ import { errorActions } from './errorSlice';
         .then(res => {
           if (res.status === 200) {
             dispatch(migrationActions.setCreateSubSchemeStatusSuccess({createSubSchemeStatusSuccess:true}))
+            dispatch(migrationActions.setIsLoading({isLoading:false}))
           } else if (res.status === 409){
+            dispatch(migrationActions.setIsLoading({isLoading:false}))
             dispatch(migrationActions.setMessage({message:'Sub-Scheme already exists'}))
           } else {
             dispatch(errorActions.setError({error:true}))

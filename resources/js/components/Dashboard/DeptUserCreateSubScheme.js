@@ -60,6 +60,7 @@ export default function DeptUserCreateSubScheme() {
   const subSchemeSDG = useSelector((state) => state.migration.subSchemeSDG);
   const createSubSchemeStatusSuccess = useSelector((state) => state.migration.createSubSchemeStatusSuccess);
   const updateriskremarks = useSelector((state) => state.migration.riskremarks);
+  const isLoading = useSelector((state) => state.migration.isLoading);
 
 
 
@@ -79,6 +80,7 @@ export default function DeptUserCreateSubScheme() {
       dispatch(migrationActions.setCreateSubSchemeStatusSuccess({createSubSchemeStatusSuccess:false}))
       dispatch(migrationActions.setRiskRemarks({riskremarks:''}))
       dispatch(migrationActions.setSubSchemes({subschemes:[]}))
+      dispatch(migrationActions.setIsLoading({isLoading:false}))
     }
   }, []);
 
@@ -203,7 +205,7 @@ export default function DeptUserCreateSubScheme() {
       outcomes:outcomes,
       riskremarks:updateriskremarks
     }
-    
+    dispatch(migrationActions.setIsLoading({isLoading:true}))
     dispatch(migcreateSubScheme(subscheme))
   }
 
@@ -231,7 +233,7 @@ export default function DeptUserCreateSubScheme() {
                The sub-scheme has been created. Please verify the details in the migration section.
               </Typography>
             </React.Fragment>
-          ) : (
+          ) : (isLoading && (
             <React.Fragment>
               {getStepContent(activeStep)}
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -252,7 +254,7 @@ export default function DeptUserCreateSubScheme() {
               <div className='mt2'>
               {message && <Alert severity="error">{message}</Alert>}
               </div>
-            </React.Fragment>
+            </React.Fragment>)
           )}
         </Paper>
       </Container>
