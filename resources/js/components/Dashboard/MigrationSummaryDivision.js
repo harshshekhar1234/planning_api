@@ -113,7 +113,7 @@ function MigrationSummaryDivision() {
         loopSubscheme.map(s => {
             total = s.state_share + total
         })
-        return total
+        return parseFloat(total.toFixed(2))
       }
 
     const handleTotalCenterShare = () => {
@@ -121,7 +121,7 @@ function MigrationSummaryDivision() {
         loopSubscheme.map(s => {
             total = s.center_share + total
         })
-        return total
+        return parseFloat(total.toFixed(2))
       }
 
     const handleTotalOutlay = () => {
@@ -129,7 +129,7 @@ function MigrationSummaryDivision() {
         loopSubscheme.map(s => {
             total = s.center_share + total + s.state_share
         })
-        return total
+        return parseFloat(total.toFixed(2))
       }
      
      
