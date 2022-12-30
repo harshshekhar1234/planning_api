@@ -1,118 +1,115 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Yoyo from './Yoyo';
-import Dashboard from './Dashboard/Dashboard';
+const Dashboard = React.lazy(() => import('./Dashboard/Dashboard'));
 import ErrorPage from './ErrorPage';
 import {getUserData} from './store/user-action'
-import Register from './Dashboard/Register';
-import Signin from './Signin';
-import ProductFetch from './ProductFetch';
+const Register = React.lazy(() => import('./Dashboard/Register'));
+const Signin = React.lazy(() => import('./Signin'));
+import Loading from './Loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { userActions } from './store/userSlice';
-import Main from './Dashboard/Main';
-import Departments from './Dashboard/Departments';
-import DepartmentsEntry from './Dashboard/DepartmentsEntry';
-import OutcomeBudgetDashboard from './Dashboard/OutcomeBudgetDashboard';
-import SdgFront from './Dashboard/SdgFront';
-import MainHome from './Home/Pages/MainHome';
-import OutcomeBudget from './Home/Pages/OutcomeBudget';
-import Map from './Map';
-import Home from './Home/Home';
-import Home2 from './Home/Home2';
-import DistrictDetail from './DistrictDetail';
-import AgricultureDept from './Home/Pages/AgricultureDept';
-import DrinkingWaterDept from './Home/Pages/DrinkingWaterDept';
-import FoodDept from './Home/Pages/FoodDept';
-import ForestDept from './Home/Pages/ForestDept';
-import HealthDept from './Home/Pages/HealthDept';
-import HigherEducation from './Home/Pages/HigherEducation';
-import PanchayatiDept from './Home/Pages/PanchayatiDept';
-import RuralDevelopmentDept from './Home/Pages/RuralDevelopmentDept';
-import RuralWorksDept from './Home/Pages/RuralWorksDept';
-import ScheduleDept from './Home/Pages/ScheduleDept';
-import SchoolEducationDept from './Home/Pages/SchoolEducationDept';
-import ContactDetails from './Home/Pages/ContactDetails';
-import About from './Home/Pages/About';
-import HelpDesk from './Home/Pages/HelpDesk';
-import SDGFrontPage from './Home/Pages/SDGFrontPage';
-import UrbanDevelopmentDept from './Home/Pages/UrbanDevelopmentDept';
-import SocialSecurity from './Home/Pages/SocialSecurity';
-import HomeLayout from './Home/Pages/HomeLayout';
-import DepartmentData from './Dashboard/DepartmentData';
-import Department from './Dashboard/Department';
-import Division from './Dashboard/Division';
-import Scheme from './Dashboard/Scheme';
-import SubScheme from './Dashboard/SubScheme';
-import CreateScheme from './Dashboard/CreateScheme';
-import CreateSubScheme from './Dashboard/CreateSubScheme';
-import CreateOutput from './Dashboard/CreateOutput';
-import CreateOutcome from './Dashboard/CreateOutcome';
-import CreateOutputIndicator from './Dashboard/CreateOutputIndicator';
-import CreateOutcomeIndicator from './Dashboard/CreateOutcomeIndicator';
-import CreateOutputTarget from './Dashboard/CreateOutputTarget';
-import CreateOutcomeTarget from './Dashboard/CreateOutcomeTarget';
-import Main_Dept_User from './Dashboard/Main_Dept_User';
-import Dashboard_Dept_User from './Dashboard/Dashboard_Dept_User';
-import OutcomeBudgetDeptUser from './Dashboard/OutcomeBudgetDeptUser';
-import SubSchemeDeptUser from './Dashboard/SubSchemeDeptUser';
-import AchievementEntryForm from './Dashboard/AchievementEntryForm';
-import AorAchievementEntryForm from './Dashboard/Aor_AchivementEntryForm';
-import DeptUserEntryForm from './Dashboard/DeptUserEntryForm';
-import IndicatorEditSchemeListDeptUser from './Dashboard/IndicatorEditSchemeListDeptUser';
-import IndicatorEditSubSchemeListDeptUser from './Dashboard/IndicatorEditSubSchemeListDeptUser';
-import SchemeEntry from './Dashboard/SchemeEntry';
-import DepartmentDataEntry from './Dashboard/DepartmentDataEntry';
-import DivisionEntry from './Dashboard/DivisionEntry';
-import AdminEntryForm from './Dashboard/AdminEntryForm';
-import DivisionReport from './Dashboard/DivisionReport';
-import DivisionReportDownload from './Dashboard/DivisionReportDownload';
-import PublicDashboard from './Home/Pages/PublicDashboard';
-import Users from './Dashboard/Users';
-import ReportSocialCategory from './Dashboard/ReportSocialCategory';
-import DeptUserDivisionReportDownload from './Dashboard/DeptUserDivisionReportDownload';
-import UpdatePasswordDeptUser from './Dashboard/UpdatePasswordDeptUser';
-import Main_Verifier from './Dashboard/Main_Verifier';
-import DashboardVerifier from './Dashboard/DashboardVerifier';
-import SubmitVerification from './Dashboard/SubmitVerification';
-import AorSubmitVerification from './Dashboard/Aor_submitverification';
-import VerifierListPage from './Dashboard/VerifierListPage';
-import AorVerifierListPage from './Dashboard/Aor_VerifierListPage';
-import VerifierSubSchemeDetail from './Dashboard/VerifierSubSchemeDetail';
-import AorVerifierSubSchemeDetail from './Dashboard/Aor_VerifierSubSchemeDetail';
-import QuaterWiseReport from './Dashboard/QuaterWiseReport';
-import AsOnDivisionReportDownload from './Dashboard/Aor_AdminDivisionList';
-import AsOnReportListAdmin from './Dashboard/Aor_AdminAsOnReportList';
-import QuaterReportDivisionDownload from './Dashboard/QuaterReportDivisionDownload';
-import AsOnReportDivisionDownload from './Dashboard/Aor_AsOnReportDivisionDownload';
-import QuaterReportDivisionDownloadVerifier from './Dashboard/QuaterReportDivisionDownloadVerifier';
-import AsOnReportDivisionDownloadVerifier from './Dashboard/Aor_AsOnReportDivisionDownloadVerifier';
-import QuaterWiseReportVerifier from './Dashboard/QuaterWiseReportVerifier';
-import AsOnReportVerifier from './Dashboard/Aor_AsOnReportListVerifier';
-import AsOnReportDeptUser from './Dashboard/Aor_AsOnReportListDeptUser';
-import DivisionReportDownloadQuater from './Dashboard/DivisionReportDownloadQuater';
-import QuaterWiseReportAdmin from './Dashboard/QuaterWiseReportAdmin';
-import AsOnReportDivisionDownloadDeptUser from './Dashboard/Aor_AsOnReportDivisionDownloadDeptUser';
-import BlockEntry from './Dashboard/BlockEntry'
-import DeptUserCreateScheme from './Dashboard/DeptUserCreateScheme'
-import DeptUserCreateSubScheme from './Dashboard/DeptUserCreateSubScheme'
-import MigrationDepartments from './Dashboard/MigrationDepartments';
-import MigrationDepartmentData from './Dashboard/MigrationDepartmentData';
-import MigrationDivision from './Dashboard/MigrationDivision';
-import MigrationScheme from './Dashboard/MigrationScheme';
-import MigrationSubScheme from './Dashboard/MigrationSubScheme';
-import MigrationDivisionReportDownload from './Dashboard/MigrationDivisionReportDownload';
-import MigrationOutcomeBudgetDashboard from './Dashboard/MigrationOutcomeBudgetDashboard';
-import MigrationDeptUserDivisionReportDownload from './Dashboard/MigrationDeptUserDivisionReportDownload';
-import CurrentSubScheme from './Dashboard/CurrentSubScheme';
-import PendingScheme from './Dashboard/PendingScheme';
-import PendingSubScheme from './Dashboard/PendingSubScheme';
-import PendingSubSchemeDept from './Dashboard/PendingSubSchemeDept';
-import AdminDivisionSubSchemePendingList from './Dashboard/AdminDivisionSubSchemePendingList';
-import AdminDivisionSchemePendingList from './Dashboard/AdminDivisionSchemePendingList';
-import AdminPendingScheme from './Dashboard/AdminPendingScheme';
-import AdminPendingSubScheme from './Dashboard/AdminPendingSubScheme';
-import MigrationSummaryDivision from './Dashboard/MigrationSummaryDivision';
-import AdminMigrationDivisionSummary from './Dashboard/AdminMigrationDivisionSummary';
+const Main = React.lazy(() => import('./Dashboard/Main'));
+const Departments = React.lazy(() => import('./Dashboard/Departments'));
+const DepartmentsEntry = React.lazy(() => import('./Dashboard/DepartmentsEntry'));
+const OutcomeBudgetDashboard = React.lazy(() => import('./Dashboard/OutcomeBudgetDashboard'));
+const SdgFront = React.lazy(() => import('./Dashboard/SdgFront'));
+const OutcomeBudget = React.lazy(() => import('./Home/Pages/OutcomeBudget'));
+const Map = React.lazy(() => import('./Map'));
+const Home2 = React.lazy(() => import('./Home/Home2'));
+const DistrictDetail = React.lazy(() => import('./DistrictDetail'));
+const AgricultureDept = React.lazy(() => import('./Home/Pages/AgricultureDept'));
+const DrinkingWaterDept = React.lazy(() => import('./Home/Pages/DrinkingWaterDept'));
+const FoodDept = React.lazy(() => import('./Home/Pages/FoodDept'));
+const ForestDept = React.lazy(() => import('./Home/Pages/ForestDept'));
+const HealthDept = React.lazy(() => import('./Home/Pages/HealthDept'));
+const HigherEducation = React.lazy(() => import('./Home/Pages/HigherEducation'));
+const PanchayatiDept = React.lazy(() => import('./Home/Pages/PanchayatiDept'));
+const RuralDevelopmentDept = React.lazy(() => import('./Home/Pages/RuralDevelopmentDept'));
+const RuralWorksDept = React.lazy(() => import('./Home/Pages/RuralWorksDept'));
+const ScheduleDept = React.lazy(() => import('./Home/Pages/ScheduleDept'));
+const SchoolEducationDept = React.lazy(() => import('./Home/Pages/SchoolEducationDept'));
+const ContactDetails = React.lazy(() => import('./Home/Pages/ContactDetails'));
+const About = React.lazy(() => import('./Home/Pages/About'));
+const HelpDesk = React.lazy(() => import('./Home/Pages/HelpDesk'));
+const SDGFrontPage = React.lazy(() => import('./Home/Pages/SDGFrontPage'));
+const UrbanDevelopmentDept = React.lazy(() => import('./Home/Pages/UrbanDevelopmentDept'));
+const SocialSecurity = React.lazy(() => import('./Home/Pages/SocialSecurity'));
+const HomeLayout = React.lazy(() => import('./Home/Pages/HomeLayout'));
+const DepartmentData = React.lazy(() => import('./Dashboard/DepartmentData'));
+const Department = React.lazy(() => import('./Dashboard/Department'));
+const Division = React.lazy(() => import('./Dashboard/Division'));
+const Scheme = React.lazy(() => import('./Dashboard/Scheme'));
+const SubScheme = React.lazy(() => import('./Dashboard/SubScheme'));
+const CreateScheme = React.lazy(() => import('./Dashboard/CreateScheme'));
+const CreateSubScheme = React.lazy(() => import('./Dashboard/CreateSubScheme'));
+const CreateOutput = React.lazy(() => import('./Dashboard/CreateOutput'));
+const CreateOutcome = React.lazy(() => import('./Dashboard/CreateOutcome'));
+const CreateOutputIndicator = React.lazy(() => import('./Dashboard/CreateOutputIndicator'));
+const CreateOutcomeIndicator = React.lazy(() => import('./Dashboard/CreateOutcomeIndicator'));
+const CreateOutputTarget = React.lazy(() => import('./Dashboard/CreateOutputTarget'));
+const CreateOutcomeTarget = React.lazy(() => import('./Dashboard/CreateOutcomeTarget'));
+const Main_Dept_User = React.lazy(() => import('./Dashboard/Main_Dept_User'));
+const Dashboard_Dept_User = React.lazy(() => import('./Dashboard/Dashboard_Dept_User'));
+const OutcomeBudgetDeptUser = React.lazy(() => import('./Dashboard/OutcomeBudgetDeptUser'));
+const SubSchemeDeptUser = React.lazy(() => import('./Dashboard/SubSchemeDeptUser'));
+const AchievementEntryForm = React.lazy(() => import('./Dashboard/AchievementEntryForm'));
+const AorAchievementEntryForm = React.lazy(() => import('./Dashboard/Aor_AchivementEntryForm'));
+const DeptUserEntryForm = React.lazy(() => import('./Dashboard/DeptUserEntryForm'));
+const IndicatorEditSchemeListDeptUser = React.lazy(() => import('./Dashboard/IndicatorEditSchemeListDeptUser'));
+const IndicatorEditSubSchemeListDeptUser = React.lazy(() => import('./Dashboard/IndicatorEditSubSchemeListDeptUser'));
+const SchemeEntry = React.lazy(() => import('./Dashboard/SchemeEntry'));
+const DepartmentDataEntry = React.lazy(() => import('./Dashboard/DepartmentDataEntry'));
+const DivisionEntry = React.lazy(() => import('./Dashboard/DivisionEntry'));
+const AdminEntryForm = React.lazy(() => import('./Dashboard/AdminEntryForm'));
+const DivisionReport = React.lazy(() => import('./Dashboard/DivisionReport'));
+const DivisionReportDownload = React.lazy(() => import('./Dashboard/DivisionReportDownload'));
+const PublicDashboard = React.lazy(() => import('./Home/Pages/PublicDashboard'));
+const Users = React.lazy(() => import('./Dashboard/Users'));
+const ReportSocialCategory = React.lazy(() => import('./Dashboard/ReportSocialCategory'));
+const DeptUserDivisionReportDownload = React.lazy(() => import('./Dashboard/DeptUserDivisionReportDownload'));
+const UpdatePasswordDeptUser = React.lazy(() => import('./Dashboard/UpdatePasswordDeptUser'));
+const Main_Verifier = React.lazy(() => import('./Dashboard/Main_Verifier'));
+const DashboardVerifier = React.lazy(() => import('./Dashboard/DashboardVerifier'));
+const SubmitVerification = React.lazy(() => import('./Dashboard/SubmitVerification'));
+const AorSubmitVerification = React.lazy(() => import('./Dashboard/Aor_submitverification'));
+const VerifierListPage = React.lazy(() => import('./Dashboard/VerifierListPage'));
+const AorVerifierListPage = React.lazy(() => import('./Dashboard/Aor_VerifierListPage'));
+const VerifierSubSchemeDetail = React.lazy(() => import('./Dashboard/VerifierSubSchemeDetail'));
+const AorVerifierSubSchemeDetail = React.lazy(() => import('./Dashboard/Aor_VerifierSubSchemeDetail'));
+const QuaterWiseReport = React.lazy(() => import('./Dashboard/QuaterWiseReport'));
+const AsOnDivisionReportDownload = React.lazy(() => import('./Dashboard/Aor_AdminDivisionList'));
+const AsOnReportListAdmin = React.lazy(() => import('./Dashboard/Aor_AdminAsOnReportList'));
+const QuaterReportDivisionDownload = React.lazy(() => import('./Dashboard/QuaterReportDivisionDownload'));
+const AsOnReportDivisionDownload = React.lazy(() => import('./Dashboard/Aor_AsOnReportDivisionDownload'));
+const QuaterReportDivisionDownloadVerifier = React.lazy(() => import('./Dashboard/QuaterReportDivisionDownloadVerifier'));
+const AsOnReportDivisionDownloadVerifier = React.lazy(() => import('./Dashboard/Aor_AsOnReportDivisionDownloadVerifier'));
+const QuaterWiseReportVerifier = React.lazy(() => import('./Dashboard/QuaterWiseReportVerifier'));
+const AsOnReportVerifier = React.lazy(() => import('./Dashboard/Aor_AsOnReportListVerifier'));
+const AsOnReportDeptUser = React.lazy(() => import('./Dashboard/Aor_AsOnReportListDeptUser'));
+const DivisionReportDownloadQuater = React.lazy(() => import('./Dashboard/DivisionReportDownloadQuater'));
+const QuaterWiseReportAdmin = React.lazy(() => import('./Dashboard/QuaterWiseReportAdmin'));
+const AsOnReportDivisionDownloadDeptUser = React.lazy(() => import('./Dashboard/Aor_AsOnReportDivisionDownloadDeptUser'));
+const BlockEntry = React.lazy(() => import('./Dashboard/BlockEntry'));
+const DeptUserCreateScheme = React.lazy(() => import('./Dashboard/DeptUserCreateScheme'));
+const DeptUserCreateSubScheme = React.lazy(() => import('./Dashboard/DeptUserCreateSubScheme'));
+const MigrationDepartments = React.lazy(() => import('./Dashboard/MigrationDepartments'));
+const MigrationDepartmentData = React.lazy(() => import('./Dashboard/MigrationDepartmentData'));
+const MigrationDivision = React.lazy(() => import('./Dashboard/MigrationDivision'));
+const MigrationScheme = React.lazy(() => import('./Dashboard/MigrationScheme'));
+const MigrationSubScheme = React.lazy(() => import('./Dashboard/MigrationSubScheme'));
+const MigrationDivisionReportDownload = React.lazy(() => import('./Dashboard/MigrationDivisionReportDownload'));
+const MigrationOutcomeBudgetDashboard = React.lazy(() => import('./Dashboard/MigrationOutcomeBudgetDashboard'));
+const MigrationDeptUserDivisionReportDownload = React.lazy(() => import('./Dashboard/MigrationDeptUserDivisionReportDownload'));
+const CurrentSubScheme = React.lazy(() => import('./Dashboard/CurrentSubScheme'));
+const PendingScheme = React.lazy(() => import('./Dashboard/PendingScheme'));
+const PendingSubScheme = React.lazy(() => import('./Dashboard/PendingSubScheme'));
+const PendingSubSchemeDept = React.lazy(() => import('./Dashboard/PendingSubSchemeDept'));
+const AdminDivisionSubSchemePendingList = React.lazy(() => import('./Dashboard/AdminDivisionSubSchemePendingList'));
+const AdminDivisionSchemePendingList = React.lazy(() => import('./Dashboard/AdminDivisionSchemePendingList'));
+const AdminPendingScheme = React.lazy(() => import('./Dashboard/AdminPendingScheme'));
+const AdminPendingSubScheme = React.lazy(() => import('./Dashboard/AdminPendingSubScheme'));
+const MigrationSummaryDivision = React.lazy(() => import('./Dashboard/MigrationSummaryDivision'));
+const AdminMigrationDivisionSummary = React.lazy(() => import('./Dashboard/AdminMigrationDivisionSummary'));
 
 
 const App = () => {
@@ -125,7 +122,7 @@ const App = () => {
     }, []);
     
     return (
-      
+      <React.Suspense fallback={<><Loading/></>}>
         <BrowserRouter basename={((SITEURL === 'https://outcome.jharkhand.gov.in') || (SITEURL === 'http://localhost:8000')
         || (SITEURL === 'http://127.0.0.1:8000')) ? '' : '/outcome.jharkhand.gov.in/public/'}>
         <Routes>
@@ -151,7 +148,6 @@ const App = () => {
               <Route path='sdgfront' element={<SDGFrontPage />}/>
               <Route path='publicdashboard' element={<PublicDashboard />}/>
         </Route> 
-        <Route path='/testing' exact element={<Yoyo />} />
         <Route path='/dashboard' element={<Dashboard />}>
               <Route path='main' element={<Main />}/>
               <Route path='register' element={<Register />} />
@@ -245,10 +241,9 @@ const App = () => {
         <Route path='/map' element={<Map />} />
         <Route path='/login' element={<Signin />} />
         <Route path='district/:district' element={<DistrictDetail />} />
-        <Route path='/products' element={<ProductFetch />} />
         </Routes>
         </BrowserRouter>
-        
+        </React.Suspense>
     );
 }
 
