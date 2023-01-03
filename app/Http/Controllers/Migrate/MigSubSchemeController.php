@@ -357,12 +357,52 @@ class MigSubSchemeController extends Controller
     {
         $division = Division::find($id);
         $demand_no = $division->demand_no;
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getscheme/' . $demand_no . '/2023-24');
-        $api_schemes = $response->json();
+        $demand_no = sprintf("%02d", $demand_no);
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
+        $api_schemes = json_decode($response);
+        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        $data = [];
+        $map = collect($api_schemes)->map(function ($items) use ($data) {
+            $data['state_name'] = $items->STATESCHEMENAME;
+            $data['center_name'] = $items->GOISCHEMENAME;
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
+            return $data;
+        });
+
+        $api_schemes_unique = collect($map)->unique(function ($item) {
+            return $item['state_code'] . $item['center_code'];
+        });
+
+        $api_schemes_unique = $api_schemes_unique->map(function ($item, $key) use ($map) {
+            $item = collect($item)->forget('subscheme_code')->forget('name');
+            $item['state_share'] = 0;
+            $item['center_share'] = 0;
+
+            $subschemes = collect($map)->filter(function ($value, $skey) use ($item) {
+                return ($value['state_code'] == $item['state_code'] &&  $value['center_code'] == $item['center_code']);
+            });
+
+            $subschemes = collect($subschemes)->map(function ($sitem, $key) use ($item) {
+                $sitem = collect($sitem)->forget('state_name')->forget('center_name')->forget('state_code')->forget('center_code');
+                $item['state_share'] += $sitem['state_share'];
+                $item['center_share'] += $sitem['center_share'];
+                return $sitem;
+            });
+
+            $item['subschemes'] = $subschemes->values()->all();
+
+            return $item;
+        });
+
         $local_schemes = MigScheme::where('division_id', $id)->get();
         $local_subschemes = MigSubScheme::where('division_id', $id)->get();
 
-        $migrated_schemes = collect($api_schemes)->filter(function ($value, $key) use ($local_schemes) {
+        $migrated_schemes = collect($api_schemes_unique)->filter(function ($value, $key) use ($local_schemes) {
             return $local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
                 return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
             });
