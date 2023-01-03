@@ -23,8 +23,8 @@ class FinanceApiController extends Controller
         //dd($api_schemes);exit;
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
-            $data['state_name'] = $items->STATESCHEMENAME;
-            $data['center_name'] = $items->GOISCHEMENAME;
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
             $data['state_code'] = $items->STATESCHEMECODE;
             $data['center_code'] = $items->CPSMSSCHEME_CODE;
             $data['subscheme_code'] = $items->SUB_SCHEMECODE;
@@ -159,8 +159,8 @@ class FinanceApiController extends Controller
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
-            $data['state_name'] = $items->STATESCHEMENAME;
-            $data['center_name'] = $items->GOISCHEMENAME;
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
             $data['state_code'] = $items->STATESCHEMECODE;
             $data['center_code'] = $items->CPSMSSCHEME_CODE;
             $data['subscheme_code'] = $items->SUB_SCHEMECODE;
