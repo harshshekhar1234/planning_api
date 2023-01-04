@@ -415,7 +415,7 @@ class MigSubSchemeController extends Controller
             $item['division_id'] = $scheme->division_id;
             $item['financial_outlay'] = $item['state_share'] + $item['center_share'];
 
-            $item['subschemes'] = collect($item['subschemes'])->map(function ($sitem, $skey) use ($local_schemes, $local_subschemes,$scheme) {
+            $item['subschemes'] = collect($item['subschemes'])->map(function ($sitem, $skey) use ($local_schemes, $local_subschemes, $scheme) {
                 $subscheme_exists = $local_subschemes->where('subscheme_code', $sitem['subscheme_code'])->first();
                 if ($subscheme_exists) {
                     $sitem['isSubscheme'] = true;
@@ -476,24 +476,24 @@ class MigSubSchemeController extends Controller
                             'message' => 'No Outcome Indicator Targets Found'
                         ]);
                     }
-            
+
                     foreach ($outputs as $output) {
                         $output->outputindicatorscount = DB::table('mig_output_indicators')->where('output_id', $output->id)->count();
                     }
                     foreach ($outcomes as $outcome) {
                         $outcome->outcomeindicatorscount = DB::table('mig_outcome_indicators')->where('outcome_id', $outcome->id)->count();
                     }
-            
+
                     $genders = DB::table('genders AS g')
                         ->select('g.name')
                         ->join('mig_sub_scheme_genders AS sg', 'sg.gender_id', '=', 'g.id')
                         ->where('sg.subscheme_id', $subscheme_exists->id)->get();
-            
+
                     $socials = DB::table('socials AS s')
                         ->select('s.name')
                         ->join('mig_sub_scheme_socials AS ss', 'ss.social_id', '=', 's.id')
                         ->where('ss.subscheme_id', $subscheme_exists->id)->get();
-            
+
                     $sdg = DB::table('sdg_goals AS s')
                         ->select('s.goal_name', 's.goal_number')
                         ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
@@ -528,7 +528,6 @@ class MigSubSchemeController extends Controller
                         ->where('ss.id', $subscheme_exists->id)->get();
 
                     $sitem['sub_scheme'] = $sub_scheme;
-
                 } else {
                     $sub_scheme = DB::table('mig_schemes AS ss')
                         ->select(
@@ -547,7 +546,6 @@ class MigSubSchemeController extends Controller
 
                     $sitem['sub_scheme'] = $sub_scheme;
                     $sitem['isSubscheme'] = false;
-                    
                 }
                 return $sitem;
             });
@@ -631,9 +629,11 @@ class MigSubSchemeController extends Controller
                 ->where('ss.subscheme_id', $id)->get();
 
             //$financial_outlay = MigFinancialOutlay::select('state_share', 'center_share')->where('subscheme_id', $id)->get();
-            $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
-            $api_subscheme = $response->json();
-
+            // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
+            // $api_subscheme = $response->json();
+            $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $subscheme->subscheme_code);
+            $api_subscheme = json_decode($response);
+            $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
             $sdg = DB::table('sdg_goals AS s')
                 ->select('s.goal_name', 's.goal_number')
                 ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
@@ -654,7 +654,8 @@ class MigSubSchemeController extends Controller
                 'genders' => $genders,
                 'socials' => $socials,
                 //'financial_outlay' => $financial_outlay[0]->state_share + $financial_outlay[0]->center_share,
-                'financial_outlay' => $api_subscheme['state_share'] + $api_subscheme['center_share'],
+                //'financial_outlay' => $api_subscheme['state_share'] + $api_subscheme['center_share'],
+                'financial_outlay' => ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000,
                 'sdg' => $sdg,
                 'remark' => $risk_remarks,
                 'subscheme' => $subscheme

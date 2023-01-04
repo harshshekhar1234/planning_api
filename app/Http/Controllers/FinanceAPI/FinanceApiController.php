@@ -103,8 +103,26 @@ class FinanceApiController extends Controller
     {
         $division = Division::find($id);
         $demand_no = $division->demand_no;
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubscheme/' . $demand_no . '/2023-24');
-        $api_subschemes = $response->json();
+        $demand_no = sprintf("%02d", $demand_no);
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
+        $api_schemes = json_decode($response);
+        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        $data = [];
+        $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
+            return $data;
+        });
+
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubscheme/' . $demand_no . '/2023-24');
+        // $api_subschemes = $response->json();
+
         $local_schemes = MigScheme::select('id', 'state_code', 'center_code')->where('division_id', $id)->get();
         $local_subschemes = MigSubScheme::select('subscheme_code', 'name')->where('division_id', $id)->get();
         $pending_subschemes = collect($api_subschemes)->reject(function ($value, $key) use ($local_subschemes) {
@@ -134,8 +152,24 @@ class FinanceApiController extends Controller
     public function pending_subscheme($id)
     {
         $scheme = MigScheme::find($id);
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
-        $api_subschemes = $response->json();
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
+        // $api_subschemes = $response->json();
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
+        $api_schemes = json_decode($response);
+        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        $data = [];
+        $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
+            return $data;
+        });
+
         $local_subschemes = MigSubScheme::select('subscheme_code', 'name')->where('scheme_id', $id)->get();
         $pending_subschemes = collect($api_subschemes)->reject(function ($value, $key) use ($local_subschemes) {
             return $local_subschemes->contains(function ($lvalue, $lkey) use ($value, $key) {
@@ -221,8 +255,23 @@ class FinanceApiController extends Controller
     public function migrated_subscheme($id)
     {
         $scheme = MigScheme::find($id);
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
-        $api_subschemes = $response->json();
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
+        // $api_subschemes = $response->json();
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
+        $api_schemes = json_decode($response);
+        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        $data = [];
+        $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
+            return $data;
+        });
         $local_subschemes = MigSubScheme::select('id', 'subscheme_code', 'name')->where('scheme_id', $id)->get();
         $migrated_subschemes = collect($api_subschemes)->filter(function ($value, $key) use ($local_subschemes) {
             return $local_subschemes->contains(function ($lvalue, $lkey) use ($value, $key) {
@@ -249,15 +298,17 @@ class FinanceApiController extends Controller
     public function subscheme_outlay($id)
     {
         $subscheme = MigSubScheme::find($id);
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
-        $api_subscheme = $response->json();
-
-        $SubschemeOutlay = $api_subscheme['state_share'] + $api_subscheme['center_share'];
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
+        // $api_subscheme = $response->json();
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $subscheme->subscheme_code);
+        $api_subscheme = json_decode($response);
+        $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
+        $SubschemeOutlay = ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000;
         return response()->json([
             'status' => 200,
             'result' => $SubschemeOutlay,
-            'state_share' => $api_subscheme['state_share'],
-            'center_share' => $api_subscheme['center_share']
+            'state_share' => $api_subscheme[0]->S_BE / 100000,
+            'center_share' => $api_subscheme[0]->C_BE / 100000
         ]);
     }
 
@@ -282,13 +333,17 @@ class FinanceApiController extends Controller
             ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
             ->where('ss.id', $id)->get();
 
-        $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $sub_scheme[0]->subscheme_code . '/2023-24');
-        $api_subscheme = $response->json();
-        $sub_scheme[0]->name = $api_subscheme['subscheme_name'];
-        $sub_scheme[0]->state_name = $api_subscheme['state_name'];
-        $sub_scheme[0]->state_code = $api_subscheme['state_code'];
-        $sub_scheme[0]->center_name = $api_subscheme['center_name'];
-        $sub_scheme[0]->center_code = $api_subscheme['center_code'];
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $sub_scheme[0]->subscheme_code . '/2023-24');
+        // $api_subscheme = $response->json();
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $sub_scheme[0]->subscheme_code);
+        $api_subscheme = json_decode($response);
+        $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
+
+        $sub_scheme[0]->name = $api_subscheme[0]->SUB_SCHEMEENAME;
+        $sub_scheme[0]->state_name = ($api_subscheme[0]->STATESCHEMENAME == null) ? $api_subscheme[0]->STATESCHEMECODE : $api_subscheme[0]->STATESCHEMENAME;
+        $sub_scheme[0]->state_code = $api_subscheme[0]->STATESCHEMECODE;
+        $sub_scheme[0]->center_name = ($api_subscheme[0]->GOISCHEMENAME == null) ? $api_subscheme[0]->CPSMSSCHEME_CODE : $api_subscheme[0]->GOISCHEMENAME;
+        $sub_scheme[0]->center_code = $api_subscheme[0]->CPSMSSCHEME_CODE;
 
         return response()->json([
             'status' => 200,
