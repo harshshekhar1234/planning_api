@@ -186,9 +186,7 @@ function MigrationSummaryDivision() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "pa4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
-        children: "Scheme-wise list with outlay - 2023-24 (".concat(params.division, ")")
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_html_table_to_excel__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_html_table_to_excel__WEBPACK_IMPORTED_MODULE_3__["default"], {
         id: "test-table-xls-button",
         className: "f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-green",
         table: "table-to-xls",
@@ -218,7 +216,20 @@ function MigrationSummaryDivision() {
                 'textAlign': "center",
                 'verticalAlign': "center"
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tr", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  colSpan: 10,
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Scheme-wise list with outlay - 2023-24 (".concat(params.division, ")")
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
                   className: " b--black-80 tc b reportoutputcolor",
                   style: {

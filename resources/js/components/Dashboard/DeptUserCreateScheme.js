@@ -145,15 +145,15 @@ export default function DeptUserCreateScheme() {
       return
     }
 
-    if (((schemeStateCode !== '') && isNaN(schemeStateCode))){
-      dispatch(migrationActions.setMessage({message:'Scheme State Code should be of 4 numeric characters'}))
-      return
-    }
+    // if (((schemeStateCode !== '') && isNaN(schemeStateCode))){
+    //   dispatch(migrationActions.setMessage({message:'Scheme State Code should be of 4 numeric characters'}))
+    //   return
+    // }
 
-    if (((schemeCenterCode !== '') && isNaN(schemeCenterCode))){
-      dispatch(migrationActions.setMessage({message:'Scheme Center Code should be of 4 numeric characters'}))
-      return
-    }
+    // if (((schemeCenterCode !== '') && isNaN(schemeCenterCode))){
+    //   dispatch(migrationActions.setMessage({message:'Scheme Center Code should be of 4 numeric characters'}))
+    //   return
+    // }
 
     if (((schemeStateCode !== '') && (schemeStateCode.length !== 4))){
       dispatch(migrationActions.setMessage({message:'Scheme State Code should be of 4 numeric characters'}))
@@ -220,10 +220,10 @@ export default function DeptUserCreateScheme() {
       return
     }
 
-    if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
-      dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
-      return
-    }
+    // if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
+    //   dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
+    //   return
+    // }
     
     if (subSchemeSDG === ''){
       dispatch(migrationActions.setMessage({message:'Please select a SDG Goal'}))

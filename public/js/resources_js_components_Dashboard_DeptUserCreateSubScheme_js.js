@@ -20904,14 +20904,11 @@ function DeptUserCreateSubScheme() {
         message: 'Sub-scheme center share (Rs. in Lakhs) should not be less than 0'
       }));
       return;
-    }
+    } // if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
+    //   dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
+    //   return
+    // }
 
-    if (subSchemeCenterShare === 0 && subSchemeStateShare === 0) {
-      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({
-        message: 'Budget Estimate cannot be 0'
-      }));
-      return;
-    }
 
     if (subSchemeSDG === '') {
       dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({

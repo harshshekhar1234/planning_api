@@ -60,6 +60,8 @@ const IndicatorEditSubSchemeListDeptUser = React.lazy(() => import('./Dashboard/
 const SchemeEntry = React.lazy(() => import('./Dashboard/SchemeEntry'));
 const DepartmentDataEntry = React.lazy(() => import('./Dashboard/DepartmentDataEntry'));
 const DivisionEntry = React.lazy(() => import('./Dashboard/DivisionEntry'));
+const MigDivisionSubSchemeInternal = React.lazy(() => import('./Dashboard/MigDivisionSubSchemeInternal'));
+const MigDivisionSchemeInternal = React.lazy(() => import('./Dashboard/MigDivisionSchemeInternal'));
 const AdminEntryForm = React.lazy(() => import('./Dashboard/AdminEntryForm'));
 const DivisionReport = React.lazy(() => import('./Dashboard/DivisionReport'));
 const DivisionReportDownload = React.lazy(() => import('./Dashboard/DivisionReportDownload'));
@@ -93,6 +95,7 @@ const BlockEntry = React.lazy(() => import('./Dashboard/BlockEntry'));
 const DeptUserCreateScheme = React.lazy(() => import('./Dashboard/DeptUserCreateScheme'));
 const DeptUserCreateSubScheme = React.lazy(() => import('./Dashboard/DeptUserCreateSubScheme'));
 const MigrationDepartments = React.lazy(() => import('./Dashboard/MigrationDepartments'));
+const MigDivisionListInternal = React.lazy(() => import('./Dashboard/MigDivisionListInternal'));
 const MigrationDepartmentData = React.lazy(() => import('./Dashboard/MigrationDepartmentData'));
 const MigrationDivision = React.lazy(() => import('./Dashboard/MigrationDivision'));
 const MigrationScheme = React.lazy(() => import('./Dashboard/MigrationScheme'));
@@ -195,6 +198,9 @@ const App = () => {
               <Route path='divisionpendingsubschemedept' element={<AdminDivisionSubSchemePendingList />}/>
               <Route path='divisionpendingschemedept' element={<AdminDivisionSchemePendingList />}/>
               <Route path='divisionmigrationsummary' element={<AdminMigrationDivisionSummary />}/>
+              <Route path='divisionmigrationinternal' element={<MigDivisionListInternal />}/>
+              <Route path='migrationdivisioninternal/:id' element={<MigDivisionSchemeInternal />}/>
+              <Route path='migsubschemeinternal/:id' element={<MigDivisionSubSchemeInternal />}/>
               <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivision />}/>
         </Route>
         <Route path='/dashboarddeptuser' element={<Dashboard_Dept_User />}>

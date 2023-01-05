@@ -136,7 +136,6 @@ function MigrationSummaryDivision() {
   return (
     <>
     <div className="pa4">
-    <h1>{`Scheme-wise list with outlay - 2023-24 (${params.division})`}</h1>
     <ReactHTMLTableToExcel
                     id="test-table-xls-button"
                     className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-green"
@@ -148,6 +147,9 @@ function MigrationSummaryDivision() {
                     <table id='table-to-xls' className='table-bordered' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"center"}}>
   <div className="overflow-auto">
     <table className="f6 w-100 mw8 center ba" cellSpacing="0" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "center"}}>
+        <tr>
+        <th className=" b--black-80 tc b reportoutputcolor" colSpan={10} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Scheme-wise list with outlay - 2023-24 (${params.division})`}</th>
+        </tr>
         <tr>
           <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>State Scheme Name</th>
           <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Center Scheme Name</th>

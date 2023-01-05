@@ -20912,21 +20912,15 @@ function DeptUserCreateScheme() {
         message: 'Scheme Center Code should be of 4 numeric characters'
       }));
       return;
-    }
+    } // if (((schemeStateCode !== '') && isNaN(schemeStateCode))){
+    //   dispatch(migrationActions.setMessage({message:'Scheme State Code should be of 4 numeric characters'}))
+    //   return
+    // }
+    // if (((schemeCenterCode !== '') && isNaN(schemeCenterCode))){
+    //   dispatch(migrationActions.setMessage({message:'Scheme Center Code should be of 4 numeric characters'}))
+    //   return
+    // }
 
-    if (schemeStateCode !== '' && isNaN(schemeStateCode)) {
-      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({
-        message: 'Scheme State Code should be of 4 numeric characters'
-      }));
-      return;
-    }
-
-    if (schemeCenterCode !== '' && isNaN(schemeCenterCode)) {
-      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({
-        message: 'Scheme Center Code should be of 4 numeric characters'
-      }));
-      return;
-    }
 
     if (schemeStateCode !== '' && schemeStateCode.length !== 4) {
       dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({
@@ -21011,14 +21005,11 @@ function DeptUserCreateScheme() {
         message: 'Sub-scheme center share (Rs. in Lakhs) should not be less than 0'
       }));
       return;
-    }
+    } // if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
+    //   dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
+    //   return
+    // }
 
-    if (subSchemeCenterShare === 0 && subSchemeStateShare === 0) {
-      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({
-        message: 'Budget Estimate cannot be 0'
-      }));
-      return;
-    }
 
     if (subSchemeSDG === '') {
       dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_2__.migrationActions.setMessage({

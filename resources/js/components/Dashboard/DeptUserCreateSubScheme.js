@@ -152,10 +152,10 @@ export default function DeptUserCreateSubScheme() {
       return
     }
 
-    if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
-      dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
-      return
-    }
+    // if ((subSchemeCenterShare === 0) && (subSchemeStateShare === 0)){
+    //   dispatch(migrationActions.setMessage({message:'Budget Estimate cannot be 0'}))
+    //   return
+    // }
     
     if (subSchemeSDG === ''){
       dispatch(migrationActions.setMessage({message:'Please select a SDG Goal'}))
