@@ -190,6 +190,7 @@ function IndicatorEditSchemeListDeptUser() {
   useEffect(() => {
       dispatch(miggetSchemesDeptData(divisionid))
       return () => { 
+        dispatch(schemesActions.setSchemes({schemes:[]}))  
         dispatch(schemesActions.setEditNotificationSuccess({editNotificationSuccess:false}))  
         dispatch(schemesActions.setDeleteNotificationSuccess({deleteNotificationSuccess:false}))
       }

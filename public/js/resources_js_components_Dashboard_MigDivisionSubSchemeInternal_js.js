@@ -46844,6 +46844,9 @@ function MigDivisionSubSchemeInternal() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.miggetSubSchemesData)(params.id));
     return function () {
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemes({
+        subschemes: []
+      }));
       dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditNotificationSuccess({
         editNotificationSuccess: false
       }));

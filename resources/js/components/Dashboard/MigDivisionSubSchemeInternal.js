@@ -180,6 +180,7 @@ function MigDivisionSubSchemeInternal() {
     useEffect(() => {
         dispatch(miggetSubSchemesData(params.id));
         return () => {
+          dispatch(subschemesActions.setSubSchemes({subschemes: []})) 
           dispatch(subschemesActions.setEditNotificationSuccess({editNotificationSuccess:false}))  
           dispatch(subschemesActions.setDeleteNotificationSuccess({deleteNotificationSuccess:false}))  
         }

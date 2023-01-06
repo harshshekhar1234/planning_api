@@ -46169,6 +46169,9 @@ function IndicatorEditSchemeListDeptUser() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_3__.miggetSchemesDeptData)(divisionid));
     return function () {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemes({
+        schemes: []
+      }));
       dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setEditNotificationSuccess({
         editNotificationSuccess: false
       }));
