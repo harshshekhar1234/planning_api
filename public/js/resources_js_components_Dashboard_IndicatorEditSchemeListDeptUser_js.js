@@ -46446,19 +46446,15 @@ function IndicatorEditSchemeListDeptUser() {
       headerAlign: 'center',
       cellClassName: 'themecell1',
       renderCell: renderCellExpand
-    }, {
-      field: 'delete',
-      headerName: 'Exclude from Migration',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: function renderCell(params) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Utilities_SchemeDeleteButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          status: params,
-          handleDeleteScheme: handleDeleteScheme
-        });
-      }
-    }, {
+    }, // {
+    //   field: 'delete',
+    //   headerName: 'Exclude from Migration',
+    //   width: 150,
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell1',
+    //   renderCell: (params) => <SchemeDeleteButton status={params} handleDeleteScheme={handleDeleteScheme}/>
+    // },
+    {
       field: 'actions',
       type: 'actions',
       width: 150,

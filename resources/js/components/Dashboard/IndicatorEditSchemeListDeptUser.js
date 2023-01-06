@@ -359,14 +359,14 @@ function IndicatorEditSchemeListDeptUser() {
     { field: 'state_name', headerName: 'State Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
     { field: 'center_code', headerName: 'Center Code',headerAlign: 'center', headerClassName: 'themeheader',cellClassName: 'themecell',flex: 1 },
     { field: 'center_name', headerName: 'Center Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
-    {
-      field: 'delete',
-      headerName: 'Exclude from Migration',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: (params) => <SchemeDeleteButton status={params} handleDeleteScheme={handleDeleteScheme}/>
-    },
+    // {
+    //   field: 'delete',
+    //   headerName: 'Exclude from Migration',
+    //   width: 150,
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell1',
+    //   renderCell: (params) => <SchemeDeleteButton status={params} handleDeleteScheme={handleDeleteScheme}/>
+    // },
     {
       field: 'actions',
       type: 'actions',
