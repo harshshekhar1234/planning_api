@@ -111,7 +111,7 @@ class MigSchemeController extends Controller
             $state_name = $request->state_name;
             $state_code = $request->state_code;
             $center_name = 'NAPL';
-            $center_code = '0000';
+            $center_code = 'NAPL';
         }
         if ($request->has('center_code') && !$request->has('state_code')) {
             $validator = Validator::make($request->all(), [
@@ -124,7 +124,7 @@ class MigSchemeController extends Controller
                     'message' => $validator->errors()
                 ]);
             }
-            $state_name = '0000-';
+            $state_name = '0000';
             $state_code = '0000';
             $center_name = $request->center_name;
             $center_code = $request->center_code;
@@ -221,7 +221,7 @@ class MigSchemeController extends Controller
             $state_name = $request->schemeStateName;
             $state_code = $request->schemeStateCode;
             $center_name = 'NAPL';
-            $center_code = '0000';
+            $center_code = 'NAPL';
         }
         if ($request->schemeStateCode == null && $request->schemeCenterCode != null) {
             $validator = Validator::make($request->all(), [
@@ -234,7 +234,7 @@ class MigSchemeController extends Controller
                     'message' => $validator->errors()
                 ]);
             }
-            $state_name = '0000-';
+            $state_name = '0000';
             $state_code = '0000';
             $center_name = $request->schemeCenterName;
             $center_code = $request->schemeCenterCode;
