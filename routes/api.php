@@ -471,10 +471,13 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_subscheme_header/{id}', [FinanceApiController::class, 'subscheme_header']);
     //Fetch Scheme Summary
     Route::get('/mig_division_summary/{id}', [FinanceApiController::class, 'scheme_summary']);
+
+
     
     
     //For API Testing
     Route::get('/remove_backslash', [FinanceApiController::class, 'remove_backslash']);
     Route::get('/allscheme', [FinanceApiController::class, 'allscheme']);
+    Route::get('/testencrypt', [FinanceApiController::class, 'testencryption']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
 });

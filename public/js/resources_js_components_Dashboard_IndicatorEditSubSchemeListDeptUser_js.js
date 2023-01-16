@@ -46340,7 +46340,7 @@ function IndicatorEditSubSchemeListDeptUser() {
     // },
     {
       field: 'delete',
-      headerName: 'Exclude from migration',
+      headerName: 'Remove Physical Indicators',
       width: 150,
       headerClassName: 'themeheader',
       cellClassName: 'themecell1',

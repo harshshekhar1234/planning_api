@@ -8,6 +8,7 @@ use App\Models\MigScheme;
 use App\Models\MigSubScheme;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Crypt;
 
 class FinanceApiController extends Controller
 {
@@ -460,4 +461,13 @@ class FinanceApiController extends Controller
             'schemes' => $pending_schemes->values()->all(),
         ]);
     }
+
+    public function testencryption()
+    {
+        $encrypted = Crypt::encryptString('demand=50&finyear=2223&statecode=0000&central=0098');
+        return response()->json([
+            'status' => 200,
+            'encrypted' => $encrypted
+        ]);
+   }
 }
