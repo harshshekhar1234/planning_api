@@ -22,6 +22,13 @@ class FinanceApiController extends Controller
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         //dd($api_schemes);exit;
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -108,6 +115,13 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -158,6 +172,13 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -191,7 +212,16 @@ class FinanceApiController extends Controller
         $demand_no = sprintf("%02d", $demand_no);
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
         $api_schemes = json_decode($response);
+        //dd($api_schemes->getOutcomeBudgetOutlayResult);exit;      
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -261,6 +291,13 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $api_subschemes = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -304,6 +341,13 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $subscheme->subscheme_code);
         $api_subscheme = json_decode($response);
         $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
+        if($api_subscheme == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $SubschemeOutlay = ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000;
         return response()->json([
             'status' => 200,
@@ -339,7 +383,13 @@ class FinanceApiController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $sub_scheme[0]->subscheme_code);
         $api_subscheme = json_decode($response);
         $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
-
+        if($api_subscheme == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $sub_scheme[0]->name = $api_subscheme[0]->SUB_SCHEMEENAME;
         $sub_scheme[0]->state_name = ($api_subscheme[0]->STATESCHEMENAME == null) ? $api_subscheme[0]->STATESCHEMECODE : $api_subscheme[0]->STATESCHEMENAME;
         $sub_scheme[0]->state_code = $api_subscheme[0]->STATESCHEMECODE;
@@ -358,8 +408,14 @@ class FinanceApiController extends Controller
     public function scheme_summary($id)
     {
         $migrated_schemes = $this->migrated_scheme($id);
+        if($migrated_schemes->getData()->status ==404)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $migrated_schemes = collect($migrated_schemes->getData()->migrated_schemes);
-
         $local_subschemes = MigSubScheme::select('id', 'subscheme_code', 'name')->where('division_id', $id)->get();
         $outcome_indicators = DB::table('mig_outcome_indicators')->where('division_id', $id)->get();
         $output_indicators = DB::table('mig_output_indicators')->where('division_id', $id)->get();
@@ -401,6 +457,13 @@ class FinanceApiController extends Controller
 
         $api_subscheme = json_decode($response);
         $scheme = json_decode($api_subscheme->getSchemeResult);
+        if($scheme == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
 
         $data = [];
         $map = collect($scheme)->map(function ($items) use ($data) {
@@ -419,18 +482,31 @@ class FinanceApiController extends Controller
         ]);
     }
 
-    public function allscheme()
+    public function allscheme($id)
     {
-        $id=10;
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        //$response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getAllScheme?demand=20');
+        // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getscheme/'. $demand_no .'/2023-24');
+        // $api_schemes = $response->json();
+        // dd($response);exit;
+        // if($response->failed())
+        // {
+        //     return response()->json([
+        //         'status' => 404,
+        //         'error' => "Connection Error",
+        //     ]);
+        // }
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear=2223&statecode=&central=');
         $api_subscheme = json_decode($response);
         $api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
-        //$api_schemes = collect($api_schemes)->groupBy('STATESCHEMECODE', 'SUB_SCHEMECODE');
-        //dd($api_schemes);exit;
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -444,7 +520,8 @@ class FinanceApiController extends Controller
             //$data['name'] = $items->SUB_SCHEMEENAME.' / '.$items->SUB_SCHEMEHNAME;
             return $data;
         });
-
+        /*
+        scheme
         $api_schemes_unique = collect($map)->unique(function ($item) {
             return $item['state_code'] . $item['center_code'];
         });
@@ -454,11 +531,19 @@ class FinanceApiController extends Controller
                 return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
             });
         });
+        */
+        //sub-scheme
+        $local_subschemes = MigSubScheme::where('division_id', $id)->get();
+        $pending_subschemes = collect($local_subschemes)->reject(function ($value, $key) use ($map) {
+            return $map->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return ($lvalue['subscheme_code'] == $value['subscheme_code']);
+            });
+        });
         
         return response()->json([
             'status' => 200,
             'division' => $division->name,
-            'schemes' => $pending_schemes->values()->all(),
+            'schemes' => $pending_subschemes->values()->all(),
         ]);
     }
 
@@ -469,5 +554,5 @@ class FinanceApiController extends Controller
             'status' => 200,
             'encrypted' => $encrypted
         ]);
-   }
+    }
 }

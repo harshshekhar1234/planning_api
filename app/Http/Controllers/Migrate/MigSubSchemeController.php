@@ -361,6 +361,13 @@ class MigSubSchemeController extends Controller
         $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
         $data = [];
         $map = collect($api_schemes)->map(function ($items) use ($data) {
             $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
@@ -634,6 +641,13 @@ class MigSubSchemeController extends Controller
             $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $subscheme->subscheme_code);
             $api_subscheme = json_decode($response);
             $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
+            if($api_subscheme == null)
+            {
+                return response()->json([
+                    'status' => 404,
+                    'error' => "Connection Error",
+                ]);
+            }
             $sdg = DB::table('sdg_goals AS s')
                 ->select('s.goal_name', 's.goal_number')
                 ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
