@@ -14229,9 +14229,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "img_url": () => (/* binding */ img_url),
 /* harmony export */   "doc_url": () => (/* binding */ doc_url)
 /* harmony export */ });
-var laravel_api = "/api/";
-var img_url = "/images/";
-var doc_url = "/documents/";
+var laravel_api = "".concat(SITEURL === "http://planningapi-production.up.railway.app/" ? "https://planningapi-production.up.railway.app/" : SITEURL, "/api/");
+var img_url = "".concat(SITEURL === "http://planningapi-production.up.railway.app/" ? "https://planningapi-production.up.railway.app/" : SITEURL, "/images/");
+var doc_url = "".concat(SITEURL === "http://planningapi-production.up.railway.app/" ? "https://planningapi-production.up.railway.app/" : SITEURL, "/documents/");
 
 /***/ }),
 
