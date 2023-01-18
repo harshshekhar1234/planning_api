@@ -24,7 +24,7 @@
     </head>
     <body>
     <div id="example"></div>
-    <script>var SITEURL = "{{ url('/') }}";
+    <script>var SITEURL = "https://planningapi-production.up.railway.app";
     </script>
     <script src="{{ secure_asset('js/app.js') }}"></script>
     </body>
