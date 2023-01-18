@@ -126,10 +126,8 @@ const App = () => {
     
     return (
       <React.Suspense fallback={<><Loading/></>}>
-        <BrowserRouter 
-      //   basename={((SITEURL === 'https://outcome.jharkhand.gov.in') || (SITEURL === 'http://localhost:8000')
-      //   || (SITEURL === 'http://127.0.0.1:8000')) ? '' : '/outcome.jharkhand.gov.in/public/'}
-        >
+        <BrowserRouter basename={((SITEURL === 'https://outcome.jharkhand.gov.in') || (SITEURL === 'http://localhost:8000')
+        || (SITEURL === 'http://127.0.0.1:8000')) ? '' : '/outcome.jharkhand.gov.in/public/'}>
         <Routes>
         <Route path='/' element={<Home2 />}/>
         <Route path='/home' element={<HomeLayout />}>
