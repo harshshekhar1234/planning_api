@@ -122,7 +122,7 @@ export const getSchemesData = (id) => {
         })
         .then(response => response.json())
         .then(res => {
-          if (res.length !== 0) {
+          if (res.status === 200) {
             dispatch(schemesActions.setUpateScheme({updateScheme: false})) 
             dispatch(schemesActions.setSchemes({schemes: res.migrated_schemes}))  
           } else {

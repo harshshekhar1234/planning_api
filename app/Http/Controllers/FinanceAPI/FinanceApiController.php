@@ -555,8 +555,8 @@ class FinanceApiController extends Controller
         $method = 'AES-128-CBC';
         $iv = 'ba7e0bb79b61f82d';
 
-        $cipher  =   openssl_encrypt($plaintext, $method, $key, $options=OPENSSL_RAW_DATA,$iv );
-        $body=       base64_encode($cipher);
+        $cipher = openssl_encrypt($plaintext, $method, $key, $options=OPENSSL_RAW_DATA,$iv );
+        $body = base64_encode($cipher);
 
         $decrypted = openssl_decrypt($cipher, $method, $key, OPENSSL_RAW_DATA, $iv);
 

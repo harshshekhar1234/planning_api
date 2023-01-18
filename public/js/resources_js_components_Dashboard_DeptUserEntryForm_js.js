@@ -25432,7 +25432,7 @@ var miggetSchemesDeptData = function miggetSchemesDeptData(id) {
     }).then(function (response) {
       return response.json();
     }).then(function (res) {
-      if (res.length !== 0) {
+      if (res.status === 200) {
         dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
           updateScheme: false
         }));
