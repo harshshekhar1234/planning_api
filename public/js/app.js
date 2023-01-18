@@ -13737,9 +13737,8 @@ var App = function App() {
     fallback: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     }),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter //   basename={((SITEURL === 'https://outcome.jharkhand.gov.in') || (SITEURL === 'http://localhost:8000')
-    //   || (SITEURL === 'http://127.0.0.1:8000')) ? '' : '/outcome.jharkhand.gov.in/public/'}
-    , {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.BrowserRouter, {
+      basename: SITEURL === 'https://outcome.jharkhand.gov.in' || SITEURL === 'http://localhost:8000' || SITEURL === 'http://127.0.0.1:8000' ? '' : '/outcome.jharkhand.gov.in/public/',
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
           path: "/",
@@ -14229,9 +14228,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "img_url": () => (/* binding */ img_url),
 /* harmony export */   "doc_url": () => (/* binding */ doc_url)
 /* harmony export */ });
-var laravel_api = "https://planningapi-production.up.railway.app/api/";
-var img_url = "https://planningapi-production.up.railway.app/images/";
-var doc_url = "https://planningapi-production.up.railway.app/documents/";
+var laravel_api = "".concat(SITEURL, "/api/");
+var img_url = "".concat(SITEURL, "/images/");
+var doc_url = "".concat(SITEURL, "/documents/");
 
 /***/ }),
 
