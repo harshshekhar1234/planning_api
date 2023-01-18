@@ -464,10 +464,20 @@ class FinanceApiController extends Controller
 
     public function testencryption()
     {
-        $encrypted = Crypt::encryptString('demand=50&finyear=2223&statecode=0000&central=0098');
+        $plaintext = 'Haha';
+        $key = '3d756227f8be6f85';
+        // CBC has an IV and thus needs randomness every time a message is encrypted
+        $method = 'AES-128-CBC';
+        $iv = 'ba7e0bb79b61f82d';
+
+        $cipher  =   openssl_encrypt($plaintext, $method, $key, $options=OPENSSL_RAW_DATA,$iv );
+        $body=       base64_encode($cipher);
+
+        $decrypted = openssl_decrypt($cipher, $method, $key, OPENSSL_RAW_DATA, $iv);
+
         return response()->json([
             'status' => 200,
-            'encrypted' => $encrypted
+            'encrypted' => $body
         ]);
    }
 }
