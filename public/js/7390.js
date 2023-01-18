@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[7390],{7390:(e,r,s)=>{s.r(r),s.d(r,{default:()=>t});s(7294);var n=s(5893);const t=function(){return(0,n.jsx)("h1",{children:"Entry is blocked for this year"})}}}]);

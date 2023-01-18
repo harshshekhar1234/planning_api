@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[6807],{6807:(e,n,s)=>{s.r(n),s.d(n,{default:()=>r});s(7294);var i=s(5893);const r=function(){return(0,i.jsx)("div",{children:"DivisionReport"})}}}]);
