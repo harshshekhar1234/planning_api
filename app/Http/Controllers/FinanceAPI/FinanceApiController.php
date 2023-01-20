@@ -549,7 +549,7 @@ class FinanceApiController extends Controller
 
     public function testencryption()
     {
-        $plaintext = 'Haha';
+        $plaintext = 'demand=20&finyear=2223&statecode=&central=';
         $key = '3d756227f8be6f85';
         // CBC has an IV and thus needs randomness every time a message is encrypted
         $method = 'AES-128-CBC';
