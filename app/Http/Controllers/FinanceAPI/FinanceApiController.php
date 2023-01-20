@@ -9,6 +9,7 @@ use App\Models\MigSubScheme;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Http\Request;
 
 class FinanceApiController extends Controller
 {
@@ -564,5 +565,83 @@ class FinanceApiController extends Controller
             'status' => 200,
             'encrypted' => $body
         ]);
+    }
+
+    public function subscheme_report(Request $request)
+    {
+        if($request->finyear !== "23-24") {
+            return response()->json([
+                'status' => 404,
+                'response' => "No data Found.",
+            ]);
+        }
+        $subscheme_code = (int) $request->subscheme_code;
+        $subscheme = MigSubScheme::where('subscheme_code', $request->subscheme_code)->first();
+        if($subscheme == NULL) {
+            return response()->json([
+                'status' => 200,
+                'response' => "No Physical Indicatiors set. Sub-Scheme not included in Outcome Budget.",
+            ]);
+        }
+        else {
+            $scheme = MigScheme::where('id', $subscheme->scheme_id)->first();
+            $data = [];
+            $data['subscheme_code'] = $subscheme->subscheme_code;
+            $data['scheme_state_code'] = $scheme->state_code;
+            $data['scheme_center_code'] = $scheme->center_code;
+            $genders = DB::table('genders AS g')
+                ->select('g.name')
+                ->join('mig_sub_scheme_genders AS sg', 'sg.gender_id', '=', 'g.id')
+                ->where('sg.subscheme_id', $subscheme->id)->get();
+            $data['genders'] = $genders->pluck('name');
+            $socials = DB::table('socials AS s')
+                ->select('s.name')
+                ->join('mig_sub_scheme_socials AS ss', 'ss.social_id', '=', 's.id')
+                ->where('ss.subscheme_id', $subscheme->id)->get();
+            $data['socials'] = $socials->pluck('name');
+            $s_outputs = DB::table('mig_outputs')->where('subscheme_id', $subscheme->id)->orderBy('id')->get();
+            $output_data = [];
+            $data['outputs'] = $s_outputs->map(function ($items) {
+                $output_data['output'] = $items->name;
+                $s_output_indicators = DB::table('mig_output_indicators AS oi')
+                ->join('mig_output_indicator_targets AS oit', 'oit.outputindicator_id', '=', 'oi.id')
+                ->select(
+                    "oi.name as output_indicator",
+                    "oit.value as target",
+                    "oit.measurement as unit_of_measurement",
+                )
+                ->where('oi.output_id', $items->id)
+                ->orderby('oi.id')->get();
+                $output_data['output_indicators'] = $s_output_indicators;
+                return $output_data;
+            });
+            $s_outcomes = DB::table('mig_outcomes')->where('subscheme_id', $subscheme->id)->orderBy('id')->get();
+            $outcome_data = [];
+            $data['outcomes'] = $s_outcomes->map(function ($items) {
+                $outcome_data['outcome'] = $items->name;
+                $s_outcome_indicators = DB::table('mig_outcome_indicators AS oi')
+                ->join('mig_outcome_indicator_targets AS oit', 'oit.outcomeindicator_id', '=', 'oi.id')
+                ->select(
+                    "oi.name as outcome_indicator",
+                    "oit.value as target",
+                    "oit.measurement as unit_of_measurement",
+                )
+                ->where('oi.outcome_id', $items->id)
+                ->orderby('oi.id')->get();
+                $outcome_data['outcome_indicators'] = $s_outcome_indicators;
+                return $outcome_data;
+            });
+            $sdg = DB::table('sdg_goals AS s')
+                ->select('s.goal_name', 's.goal_number')
+                ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
+                ->where('ss.subscheme_id', $subscheme->id)->first();
+            $data['sdg_goal'] = $sdg->goal_number;
+            $data['sdg'] = $sdg->goal_name;
+            $data['initial_reamrks'] = $scheme->initial_reamrks;
+            return response()->json([
+                'status' => 200,
+                'response' => $data,
+            ]);
+        }
     }
 }

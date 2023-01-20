@@ -41,6 +41,7 @@ use App\Http\Controllers\Migrate\MigSubSchemeGenderController;
 use App\Http\Controllers\Migrate\MigSubSchemeSocialController;
 use App\Http\Controllers\Migrate\MigSubSchemeSdgController;
 use App\Http\Controllers\FinanceAPI\FinanceApiController;
+use App\Http\Controllers\DBAdmin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -478,4 +479,17 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/allscheme/{id}', [FinanceApiController::class, 'allscheme']);
     Route::get('/testencrypt', [FinanceApiController::class, 'testencryption']);
     /*------------------------- End of API Integration in Outcome Budget Migration Module ----------------------------*/
+
+    /*--------------------------------- Start of Data Base Administration Module ------------------------------------*/
+    //Change Scheme Id in all tables - Current
+    Route::post('/change_scheme_id', [AdminController::class, 'change_scheme_id']);
+    //Change Scheme Id in all tables - Migration Tables
+    Route::post('/change_mig_scheme_id', [AdminController::class, 'change_mig_scheme_id']);
+
+    /*---------------------------------- End of Data Base Administration Module -------------------------------------*/
 });
+
+
+
+//Excel Report - For a Sub-Scheme
+Route::get('/subscheme_details/{subscheme_code}/{finyear}', [FinanceApiController::class, 'subscheme_report']);
