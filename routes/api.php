@@ -482,10 +482,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     /*--------------------------------- Start of Data Base Administration Module ------------------------------------*/
     //Change Scheme Id in all tables - Current
-    Route::post('/change_scheme_id', [AdminController::class, 'change_scheme_id']);
+    Route::post('/change_scheme_id', [AdminController::class, 'change_scheme_id'])->middleware(['can:isAdmin']);
     //Change Scheme Id in all tables - Migration Tables
-    Route::post('/change_mig_scheme_id', [AdminController::class, 'change_mig_scheme_id']);
-
+    Route::post('/change_mig_scheme_id', [AdminController::class, 'change_mig_scheme_id'])->middleware(['can:isAdmin']);
     /*---------------------------------- End of Data Base Administration Module -------------------------------------*/
 });
 
