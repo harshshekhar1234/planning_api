@@ -492,3 +492,4 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 //Excel Report - For a Sub-Scheme
 Route::get('/subscheme_details/{subscheme_code}/{finyear}', [FinanceApiController::class, 'subscheme_report']);
+Route::get('/subscheme_details/{subscheme_code}/{finyear}/outputs', [FinanceApiController::class, 'api_subscheme_output']);

@@ -644,4 +644,49 @@ class FinanceApiController extends Controller
             ]);
         }
     }
+
+    public function api_subscheme_output(Request $request)
+    {
+        if($request->finyear !== "23-24") {
+            return response()->json([
+                'status' => 404,
+                'response' => "No data Found.",
+            ]);
+        }
+        $subscheme_code = (int) $request->subscheme_code;
+        $subscheme = MigSubScheme::where('subscheme_code', $request->subscheme_code)->first();
+        if($subscheme == NULL) {
+            return response()->json([
+                'status' => 200,
+                'response' => "No Physical Indicatiors set. Sub-Scheme not included in Outcome Budget.",
+            ]);
+        }
+        else {
+            $scheme = MigScheme::where('id', $subscheme->scheme_id)->first();
+            $data = [];
+            $data['subscheme_code'] = $subscheme->subscheme_code;
+            $data['scheme_state_code'] = $scheme->state_code;
+            $data['scheme_center_code'] = $scheme->center_code;
+            $s_outputs = DB::table('mig_outputs')->where('subscheme_id', $subscheme->id)->orderBy('id')->get();
+            $output_data = [];
+            $data['outputs'] = $s_outputs->map(function ($items) {
+                $output_data['output'] = $items->name;
+                $s_output_indicators = DB::table('mig_output_indicators AS oi')
+                ->join('mig_output_indicator_targets AS oit', 'oit.outputindicator_id', '=', 'oi.id')
+                ->select(
+                    "oi.name as output_indicator",
+                    "oit.value as target",
+                    "oit.measurement as unit_of_measurement",
+                )
+                ->where('oi.output_id', $items->id)
+                ->orderby('oi.id')->get();
+                $output_data['output_indicators'] = $s_output_indicators;
+                return $output_data;
+            });
+            return response()->json([
+                'status' => 200,
+                'response' => $data,
+            ]);
+        }
+    }
 }
