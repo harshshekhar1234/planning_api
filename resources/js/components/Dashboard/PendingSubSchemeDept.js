@@ -313,8 +313,8 @@ function PendingSubSchemeDept() {
     () => [
       { field: 'subscheme_code', hideable: false, headerName: 'Sub Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
     { field: 'name', headerName: 'Sub Scheme Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
-    { field: 'state_code', hideable: false, headerName: 'State Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
-    { field: 'center_code', hideable: false, headerName: 'Center Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
+    { field: 'state_code', hideable: false, headerName: 'State Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
+    { field: 'center_code', hideable: false, headerName: 'Center Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
     // {
     //   field: 'edit',
     //   headerName: 'Edit',

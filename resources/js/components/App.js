@@ -8,6 +8,9 @@ const Signin = React.lazy(() => import('./Signin'));
 import Loading from './Loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { userActions } from './store/userSlice';
+const PoliciesAndDisclaimer = React.lazy(() => import('./Home/Pages/PoliciesAndDisclaimer'));
+const Privacy = React.lazy(() => import('./Home/Pages/Privacy'));
+const TermsOfUse = React.lazy(() => import('./Home/Pages/TermsOfUse'));
 const Main = React.lazy(() => import('./Dashboard/Main'));
 const Departments = React.lazy(() => import('./Dashboard/Departments'));
 const DepartmentsEntry = React.lazy(() => import('./Dashboard/DepartmentsEntry'));
@@ -147,6 +150,9 @@ const App = () => {
               <Route path='socialsecurity' element={<SocialSecurity />}/>
               <Route path='contactdetails' element={<ContactDetails />}/>
               <Route path='about' element={<About />}/>
+              <Route path='termsofuse' element={<TermsOfUse />}/>
+              <Route path='policyanddisclaimer' element={<PoliciesAndDisclaimer />}/>
+              <Route path='privacy' element={<Privacy />}/>
               <Route path='helpdesk' element={<HelpDesk />}/>
               <Route path='sdgfront' element={<SDGFrontPage />}/>
               <Route path='publicdashboard' element={<PublicDashboard />}/>

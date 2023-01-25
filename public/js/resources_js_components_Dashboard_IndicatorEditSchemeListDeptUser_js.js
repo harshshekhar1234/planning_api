@@ -46421,14 +46421,14 @@ function IndicatorEditSchemeListDeptUser() {
     return [{
       field: 'state_code',
       hideable: false,
-      headerName: 'State Code',
+      headerName: 'State Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
       flex: 1
     }, {
       field: 'state_name',
-      headerName: 'State Name',
+      headerName: 'State Scheme Name',
       flex: 2,
       headerClassName: 'themeheader',
       headerAlign: 'center',
@@ -46436,14 +46436,14 @@ function IndicatorEditSchemeListDeptUser() {
       renderCell: renderCellExpand
     }, {
       field: 'center_code',
-      headerName: 'Center Code',
+      headerName: 'Center Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
       flex: 1
     }, {
       field: 'center_name',
-      headerName: 'Center Name',
+      headerName: 'Center Scheme Name',
       flex: 2,
       headerClassName: 'themeheader',
       headerAlign: 'center',
