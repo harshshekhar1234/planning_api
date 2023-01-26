@@ -364,10 +364,10 @@ function AdminPendingScheme() {
 
   const columns = React.useMemo(
     () => [
-      { field: 'state_code', hideable: false, headerName: 'State Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
-    { field: 'state_name', headerName: 'State Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
-    { field: 'center_code', headerName: 'Center Code',headerAlign: 'center', headerClassName: 'themeheader',cellClassName: 'themecell',flex: 1 },
-    { field: 'center_name', headerName: 'Center Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
+      { field: 'state_code', hideable: false, headerName: 'State Scheme Code', headerAlign: 'center',headerClassName: 'themeheader',cellClassName: 'themecell', flex: 1},
+    { field: 'state_name', headerName: 'State Scheme Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
+    { field: 'center_code', headerName: 'Center Scheme Code',headerAlign: 'center', headerClassName: 'themeheader',cellClassName: 'themecell',flex: 1 },
+    { field: 'center_name', headerName: 'Center Scheme Name',flex: 2, headerClassName: 'themeheader',headerAlign: 'center',cellClassName: 'themecell1',renderCell: renderCellExpand },
     // {
     //   field: 'actions',
     //   type: 'actions',

@@ -47070,7 +47070,7 @@ function AdminPendingSubScheme() {
     }, {
       field: 'state_code',
       hideable: false,
-      headerName: 'State Code',
+      headerName: 'State Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
@@ -47078,7 +47078,7 @@ function AdminPendingSubScheme() {
     }, {
       field: 'center_code',
       hideable: false,
-      headerName: 'Center Code',
+      headerName: 'Center Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
