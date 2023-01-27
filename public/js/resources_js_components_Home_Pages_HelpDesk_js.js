@@ -47,31 +47,6 @@ function HelpDesk() {
           className: "pl3 flex-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             className: "f6 db black-70 b",
-            children: "Shri Sanjiv Kumar Besra(IAS)"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "f6 db black-70",
-            children: "Joint Secretary(Nodal Officer)"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "f6 db black-70",
-            children: "Department of Planning and Development"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "tel:",
-            className: "f6 link blue hover-dark-gray",
-            children: "0651-2490800"
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
-        className: "flex items-center lh-copy pa3 ph0-l bb b--black-10",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          src: "".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.img_url, "avatar.png"),
-          className: "w2 h2 w3-ns h3-ns br-100",
-          alt: "Avatar"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "pl3 flex-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "f6 db black-70 b",
             children: "Shri Samir Kumar Sinha"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             className: "f6 db black-70",
@@ -82,28 +57,6 @@ function HelpDesk() {
             href: "tel:",
             className: "f6 link blue hover-dark-gray",
             children: "+91 9334734632"
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
-        className: "flex items-center lh-copy pa3 ph0-l bb b--black-10",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          src: "".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.img_url, "avatar.png"),
-          className: "w2 h2 w3-ns h3-ns br-100",
-          alt: "Avatar"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "pl3 flex-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "f6 db black-70 b",
-            children: "Shri Robert Anthony"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "f6 db black-70",
-            children: "Program Support"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-            href: "tel:",
-            className: "f6 link blue hover-dark-gray",
-            children: "+91 9931249718"
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {

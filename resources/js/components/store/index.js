@@ -30,7 +30,7 @@ import departmentVerifierSlice from './departmentVerifierSlice';
 import quaterReportSlice from './quaterReportSlice';
 import migrationSlice from './migrationSlice';
 import errorSlice from './errorSlice';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 
 
 
@@ -69,7 +69,7 @@ const store = configureStore({
     migration:migrationSlice.reducer,
     error:errorSlice.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 
 });
 

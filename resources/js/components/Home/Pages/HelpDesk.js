@@ -12,7 +12,7 @@ function HelpDesk() {
     <a href="mailto:outcomebudgetjharkhand@gmail.com" className="f6 link black hover-dark-gray">Email: outcomebudgetjharkhand@gmail.com</a>
     </div>
     <ul className="list pl0 mt2 measure center">
-    <li
+    {/* <li
     className="flex items-center lh-copy pa3 ph0-l bb b--black-10">
       <img src={`${img_url}avatar.png`} className="w2 h2 w3-ns h3-ns br-100" alt="Avatar" />
       <div className="pl3 flex-auto">
@@ -23,7 +23,7 @@ function HelpDesk() {
       <div>
         <a href="tel:" className="f6 link blue hover-dark-gray">0651-2490800</a>
       </div>
-  </li>
+  </li> */}
   <li
     className="flex items-center lh-copy pa3 ph0-l bb b--black-10">
       <img src={`${img_url}avatar.png`} className="w2 h2 w3-ns h3-ns br-100" alt="Avatar" />
@@ -35,7 +35,7 @@ function HelpDesk() {
         <a href="tel:" className="f6 link blue hover-dark-gray">+91 9334734632</a>
       </div>
   </li>
-  <li
+  {/* <li
     className="flex items-center lh-copy pa3 ph0-l bb b--black-10">
       <img src={`${img_url}avatar.png`} className="w2 h2 w3-ns h3-ns br-100" alt="Avatar" />
       <div className="pl3 flex-auto">
@@ -45,7 +45,7 @@ function HelpDesk() {
       <div>
         <a href="tel:" className="f6 link blue hover-dark-gray">+91 9931249718</a>
       </div>
-  </li>
+  </li> */}
   <li
     className="flex items-center lh-copy pa3 ph0-l bb b--black-10">
       <img src={`${img_url}avatar.png`} className="w2 h2 w3-ns h3-ns br-100" alt="Avatar" />
