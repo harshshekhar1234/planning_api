@@ -394,7 +394,7 @@ const handleFinalSubmit = () => {
   const fromDateConv = new Date(fromDate)
   const toDateConv = new Date(toDate)
   const fromChech = new Date("1 april 2022");
-  const toChech = new Date("1 april 2023");
+  const toChech = new Date();
   if(toDateConv.getTime() > toChech.getTime()){
     setReportSubmitMessage('Please select a valid date range')
     return

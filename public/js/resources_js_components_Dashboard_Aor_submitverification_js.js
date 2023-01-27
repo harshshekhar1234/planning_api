@@ -46449,7 +46449,7 @@ var AorSubmitVerification = function AorSubmitVerification() {
     var fromDateConv = new Date(fromDate);
     var toDateConv = new Date(toDate);
     var fromChech = new Date("1 april 2022");
-    var toChech = new Date("1 april 2023");
+    var toChech = new Date();
 
     if (toDateConv.getTime() > toChech.getTime()) {
       setReportSubmitMessage('Please select a valid date range');
