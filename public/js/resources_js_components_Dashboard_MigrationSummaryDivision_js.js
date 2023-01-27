@@ -624,7 +624,7 @@ function MigrationSummaryDivision() {
                       'textAlign': "center",
                       'verticalAlign': "middle"
                     },
-                    children: "Total - Outcome Budget Schemes"
+                    children: "Total - Outcome Budget Schemes (".concat(report.schemes ? report.schemes.length : 0, ")")
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
                     className: "pv3 pr3 b b--black-80",
                     style: {

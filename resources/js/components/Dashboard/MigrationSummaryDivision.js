@@ -310,7 +310,7 @@ function MigrationSummaryDivision() {
         })
         }
         <tr>
-        <td className="pv3 pr3 b b--black-80" colSpan={3} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Total - Outcome Budget Schemes</td>
+        <td className="pv3 pr3 b b--black-80" colSpan={3} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Total - Outcome Budget Schemes (${report.schemes ? report.schemes.length : 0})`}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{handleTotalOutputCount()}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{handleTotalOutcomeCount()}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}></td>
