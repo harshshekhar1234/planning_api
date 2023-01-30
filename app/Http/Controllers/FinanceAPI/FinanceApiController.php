@@ -747,10 +747,21 @@ class FinanceApiController extends Controller
             $data['center_share'] = $items->C_BE / 100000;
             return $data;
         });
-        $local_subschemes = MigSubScheme::where('division_id', $id)->get();
+        //$local_subschemes = MigSubScheme::where('division_id', $id)->get();
+        $local_subschemes = DB::table('mig_sub_schemes AS ss')
+            ->select(
+                'ss.*',
+                's.id',
+                's.state_name',
+                's.state_code',
+                's.center_name',
+                's.center_code'
+            )
+            ->join('mig_schemes AS s', 's.id', '=', 'ss.scheme_id')
+            ->where('ss.division_id', $id)->get();
         $extra_subschemes = collect($local_subschemes)->reject(function ($value, $key) use ($map) {
             return $map->contains(function ($lvalue, $lkey) use ($value, $key) {
-                return ($lvalue['subscheme_code'] == $value['subscheme_code']);
+                return ($lvalue['subscheme_code'] == $value->subscheme_code);
             });
         });
         
