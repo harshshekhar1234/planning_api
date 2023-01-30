@@ -8,6 +8,10 @@ const Signin = React.lazy(() => import('./Signin'));
 import Loading from './Loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { userActions } from './store/userSlice';
+const MigrationDivisionExtraSubSchemeInternal = React.lazy(() => import('./Dashboard/MigrationDivisionExtraSubSchemeInternal'));
+const MigDivisionExtraSubSchemeListInternal = React.lazy(() => import('./Dashboard/MigDivisionInternalExtraSubScheme'));
+const MigDivisionExtraSchemeInternal = React.lazy(() => import('./Dashboard/MigDivisionExtraSchemeInternal'));
+const MigDivisionExtraSchemeListInternal = React.lazy(() => import('./Dashboard/MigDivisionInternalExtraScheme'));
 const PoliciesAndDisclaimer = React.lazy(() => import('./Home/Pages/PoliciesAndDisclaimer'));
 const Privacy = React.lazy(() => import('./Home/Pages/Privacy'));
 const TermsOfUse = React.lazy(() => import('./Home/Pages/TermsOfUse'));
@@ -208,6 +212,10 @@ const App = () => {
               <Route path='migrationdivisioninternal/:id' element={<MigDivisionSchemeInternal />}/>
               <Route path='migsubschemeinternal/:id' element={<MigDivisionSubSchemeInternal />}/>
               <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivision />}/>
+              <Route path='migrationdivisionextrascheme' element={<MigDivisionExtraSchemeListInternal />}/>
+              <Route path='migrationdivisionextrasubscheme' element={<MigDivisionExtraSubSchemeListInternal />}/>
+              <Route path='migschemeinternalextra/:id' element={<MigDivisionExtraSchemeInternal />}/>
+              <Route path='migsubschemeinternalextra/:id' element={<MigrationDivisionExtraSubSchemeInternal />}/>
         </Route>
         <Route path='/dashboarddeptuser' element={<Dashboard_Dept_User />}>
               <Route path='main' element={<Main_Dept_User />}/>

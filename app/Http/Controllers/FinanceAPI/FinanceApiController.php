@@ -757,7 +757,7 @@ class FinanceApiController extends Controller
         return response()->json([
             'status' => 200,
             'division' => $division->name,
-            'schemes' => $extra_subschemes->values()->all(),
+            'subschemes' => $extra_subschemes->values()->all(),
         ]);
     }
 

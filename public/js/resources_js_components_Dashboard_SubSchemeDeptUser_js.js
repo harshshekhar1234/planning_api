@@ -44684,6 +44684,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "miggetSubSchemesData": () => (/* binding */ miggetSubSchemesData),
 /* harmony export */   "miggetPendingSubSchemesData": () => (/* binding */ miggetPendingSubSchemesData),
 /* harmony export */   "miggetPendingSubSchemesDeptData": () => (/* binding */ miggetPendingSubSchemesDeptData),
+/* harmony export */   "miggetExtraSubSchemesDeptData": () => (/* binding */ miggetExtraSubSchemesDeptData),
 /* harmony export */   "getSubSchemesDataDeptUser": () => (/* binding */ getSubSchemesDataDeptUser),
 /* harmony export */   "miggetSubSchemesDataDeptUser": () => (/* binding */ miggetSubSchemesDataDeptUser),
 /* harmony export */   "storeSubSchemeData": () => (/* binding */ storeSubSchemeData),
@@ -44854,6 +44855,47 @@ var miggetPendingSubSchemesDeptData = function miggetPendingSubSchemesDeptData(i
         }));
         dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setPendingSubSchemes({
           pendingSubSchemes: res.pending_subschemes
+        }));
+      } else {
+        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
+          updateSubScheme: false
+        }));
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+          error: true
+        }));
+        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+          message: 'Sorry something went wrong!!'
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
+        updateSubScheme: false
+      }));
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        error: true
+      }));
+      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        message: 'Sorry something went wrong!!'
+      }));
+    });
+  };
+};
+var miggetExtraSubSchemesDeptData = function miggetExtraSubSchemesDeptData(id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "extra_subscheme/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.status === 200) {
+        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
+          updateSubScheme: false
+        }));
+        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setPendingSubSchemes({
+          pendingSubSchemes: res.subschemes
         }));
       } else {
         dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({

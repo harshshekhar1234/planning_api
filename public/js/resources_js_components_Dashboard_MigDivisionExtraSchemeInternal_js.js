@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_SchemeEntry_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_MigDivisionExtraSchemeInternal_js"],{
 
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
@@ -46652,10 +46652,10 @@ const wrapWithWarningOnCall = (method, message) => {
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/SchemeEntry.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/Dashboard/SchemeEntry.js ***!
-  \**********************************************************/
+/***/ "./resources/js/components/Dashboard/MigDivisionExtraSchemeInternal.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigDivisionExtraSchemeInternal.js ***!
+  \*****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -46664,35 +46664,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
-/* harmony import */ var _Utilities_SubSchemeCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Utilities/SubSchemeCard */ "./resources/js/components/Dashboard/Utilities/SubSchemeCard.js");
-/* harmony import */ var _store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/subschemes-actions */ "./resources/js/components/store/subschemes-actions.js");
-/* harmony import */ var _store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/subschemesSlice */ "./resources/js/components/store/subschemesSlice.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var _Utilities_SchemeCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Utilities/SchemeCard */ "./resources/js/components/Dashboard/Utilities/SchemeCard.js");
+/* harmony import */ var _store_schemes_action__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/schemes-action */ "./resources/js/components/store/schemes-action.js");
+/* harmony import */ var _store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/schemesSlice */ "./resources/js/components/store/schemesSlice.js");
 /* harmony import */ var _store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/divisionsSlice */ "./resources/js/components/store/divisionsSlice.js");
-/* harmony import */ var _store_departmentSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/departmentSlice */ "./resources/js/components/store/departmentSlice.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Utilities_SubSchemeEditButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utilities/SubSchemeEditButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeEditButton.js");
-/* harmony import */ var _Utilities_SubSchemeDeleteButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utilities/SubSchemeDeleteButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeDeleteButton.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/cell/GridActionsCellItem.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/DataGrid/DataGrid.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/toolbar/GridToolbar.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material/Typography */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material_Modal__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @mui/material/Modal */ "./node_modules/@mui/material/Modal/Modal.js");
-/* harmony import */ var _mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material/Snackbar */ "./node_modules/@mui/material/Snackbar/Snackbar.js");
-/* harmony import */ var _mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/Pageview */ "./node_modules/@mui/icons-material/Pageview.js");
-/* harmony import */ var _mui_material_Paper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material/Paper */ "./node_modules/@mui/material/Paper/Paper.js");
-/* harmony import */ var _mui_material_Popper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material/Popper */ "./node_modules/@mui/material/Popper/Popper.js");
-/* harmony import */ var _mui_material_Alert__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/Alert */ "./node_modules/@mui/material/Alert/Alert.js");
-/* harmony import */ var _mui_material_Dialog__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material/Dialog */ "./node_modules/@mui/material/Dialog/Dialog.js");
-/* harmony import */ var _mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @mui/material/DialogActions */ "./node_modules/@mui/material/DialogActions/DialogActions.js");
-/* harmony import */ var _mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material/DialogContent */ "./node_modules/@mui/material/DialogContent/DialogContent.js");
-/* harmony import */ var _mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @mui/material/DialogContentText */ "./node_modules/@mui/material/DialogContentText/DialogContentText.js");
-/* harmony import */ var _mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material/DialogTitle */ "./node_modules/@mui/material/DialogTitle/DialogTitle.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Utilities_SchemeEditButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utilities/SchemeEditButton */ "./resources/js/components/Dashboard/Utilities/SchemeEditButton.js");
+/* harmony import */ var _Utilities_SchemeDeleteButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utilities/SchemeDeleteButton */ "./resources/js/components/Dashboard/Utilities/SchemeDeleteButton.js");
+/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/cell/GridActionsCellItem.js");
+/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/DataGrid/DataGrid.js");
+/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/toolbar/GridToolbar.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material/Typography */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material_Modal__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @mui/material/Modal */ "./node_modules/@mui/material/Modal/Modal.js");
+/* harmony import */ var _mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material/Snackbar */ "./node_modules/@mui/material/Snackbar/Snackbar.js");
+/* harmony import */ var _mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/icons-material/Pageview */ "./node_modules/@mui/icons-material/Pageview.js");
+/* harmony import */ var _mui_material_Paper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material/Paper */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_material_Popper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/Popper */ "./node_modules/@mui/material/Popper/Popper.js");
+/* harmony import */ var _mui_material_Alert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/Alert */ "./node_modules/@mui/material/Alert/Alert.js");
+/* harmony import */ var _mui_material_Dialog__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material/Dialog */ "./node_modules/@mui/material/Dialog/Dialog.js");
+/* harmony import */ var _mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @mui/material/DialogActions */ "./node_modules/@mui/material/DialogActions/DialogActions.js");
+/* harmony import */ var _mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material/DialogContent */ "./node_modules/@mui/material/DialogContent/DialogContent.js");
+/* harmony import */ var _mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material/DialogContentText */ "./node_modules/@mui/material/DialogContentText/DialogContentText.js");
+/* harmony import */ var _mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material/DialogTitle */ "./node_modules/@mui/material/DialogTitle/DialogTitle.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -46740,9 +46739,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var Alert = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function Alert(props, ref) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Alert__WEBPACK_IMPORTED_MODULE_10__["default"], _objectSpread({
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Alert__WEBPACK_IMPORTED_MODULE_9__["default"], _objectSpread({
     elevation: 6,
     ref: ref,
     variant: "filled"
@@ -46803,7 +46801,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [setShowFullCell, showFullCell]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
     ref: wrapper,
     onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave,
@@ -46815,7 +46813,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
       position: 'relative',
       display: 'flex'
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
       ref: cellDiv,
       sx: {
         height: 1,
@@ -46824,7 +46822,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
         position: 'absolute',
         top: 0
       }
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
       ref: cellValue,
       sx: {
         whiteSpace: 'nowrap',
@@ -46832,19 +46830,19 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
         textOverflow: 'ellipsis'
       },
       children: value
-    }), showPopper && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Popper__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    }), showPopper && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Popper__WEBPACK_IMPORTED_MODULE_11__["default"], {
       open: showFullCell && anchorEl !== null,
       anchorEl: anchorEl,
       style: {
         width: width,
         marginLeft: -17
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_12__["default"], {
         elevation: 1,
         style: {
           minHeight: wrapper.current.offsetHeight - 3
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           variant: "body2",
           style: {
             padding: 8
@@ -46868,12 +46866,12 @@ var style = {
   p: 4
 };
 GridCellExpand.propTypes = {
-  value: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().string.isRequired),
-  width: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().number.isRequired)
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string.isRequired),
+  width: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().number.isRequired)
 };
 
 function renderCellExpand(params) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(GridCellExpand, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(GridCellExpand, {
     value: params.value || '',
     width: params.colDef.computedWidth
   });
@@ -46883,83 +46881,96 @@ renderCellExpand.propTypes = {
   /**
    * The column of the row that the current cell belongs to.
    */
-  colDef: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().object.isRequired),
+  colDef: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object.isRequired),
 
   /**
    * The cell value, but if the column has valueGetter, use getValue.
    */
-  value: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().string.isRequired)
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string.isRequired)
 };
+var VISIBLE_FIELDS = ['State Code', 'State Name', 'Center Code', 'Center Name'];
 
-function SchemeEntry() {
-  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_16__.useParams)();
-  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_16__.useNavigate)();
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useDispatch)();
-  var subschemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.subschemes;
+function MigDivisionExtraSchemeInternal() {
+  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_15__.useParams)();
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_15__.useNavigate)();
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useDispatch)();
+  var schemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.schemes;
   });
-  var editSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.editSubSchemeId;
+  var editSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editSchemeId;
   });
-  var editSubSchemeName = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.editSubSchemeName;
+  var deleteSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.deleteSchemeId;
   });
-  var editSubSchemeCode = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.editSubSchemeCode;
+  var editSchemeStateName = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editSchemeStateName;
   });
-  var editmessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.editmessage;
+  var editSchemeCenterName = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editSchemeCenterName;
   });
-  var editNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.editNotificationSuccess;
+  var editSchemeCenterCode = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editSchemeCenterCode;
   });
-  var deleteNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.deleteNotificationSuccess;
+  var editSchemeStateCode = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editSchemeStateCode;
   });
-  var updateSubScheme = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.updateSubScheme;
+  var editmessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editmessage;
   });
-  var deleteSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.deleteSubSchemeId;
+  var editNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.editNotificationSuccess;
   });
+  var deleteNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.deleteNotificationSuccess;
+  });
+  var updateScheme = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.schemes.updateScheme;
+  });
+  var _dataSet$visibleField = {
+    dataSet: schemes,
+    visibleFields: VISIBLE_FIELDS,
+    rowLength: 100
+  },
+      data = _dataSet$visibleField.data;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.miggetExtraSchemesData)(params.id));
+    dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionId({
+      divisionId: params.id
+    }));
     return function () {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemes({
-        subschemes: []
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setSchemes({
+        schemes: []
       }));
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditNotificationSuccess({
+      dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisions({
+        divisions: []
+      }));
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditNotificationSuccess({
         editNotificationSuccess: false
       }));
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteNotificationSuccess({
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setDeleteNotificationSuccess({
         deleteNotificationSuccess: false
       }));
     };
   }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (updateSubScheme) {
-      dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+    if (updateScheme) {
+      dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.miggetExtraSchemesData)(params.id));
     }
-  }, [updateSubScheme]);
-
-  var handleCreateSubScheme = function handleCreateSubScheme() {
-    return navigate("/dashboard/createsubscheme");
-  };
+  }, [updateScheme]);
 
   var handleActionClick = function handleActionClick(id) {
-    var subschemeselected = subschemes.filter(function (subscheme) {
-      return subscheme.id === id;
+    var selectedScheme = schemes.filter(function (scheme) {
+      return scheme.id === id;
     });
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemeSearch({
-      subschemeSearch: subschemeselected[0]
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setSchemeSearch({
+      schemeSearch: selectedScheme[0]
     }));
-    dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionId({
-      divisionId: subschemeselected[0].division_id
-    }));
-    dispatch(_store_departmentSlice__WEBPACK_IMPORTED_MODULE_5__.departmentActions.setDepartmentId({
-      departmentId: subschemeselected[0].department_id
-    }));
-    return navigate("/dashboard/admindataentry/".concat(id));
+    return navigate("/dashboard/migsubschemeinternal/".concat(id));
+  };
+
+  var handleCreateScheme = function handleCreateScheme() {
+    return navigate("/dashboard/createscheme");
   };
 
   var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
@@ -46967,40 +46978,163 @@ function SchemeEntry() {
       open1 = _React$useState8[0],
       setOpen1 = _React$useState8[1];
 
-  var handleOpen1 = function handleOpen1(subscheme) {
+  var handleOpen1 = function handleOpen1(scheme) {
     setOpen1(true);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeId({
-      editSubSchemeId: subscheme.id
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeId({
+      editSchemeId: scheme.id
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
-      editSubSchemeName: subscheme.name
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateName({
+      editSchemeStateName: scheme.state_name
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
-      editSubSchemeCode: subscheme.subscheme_code
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterName({
+      editSchemeCenterName: scheme.center_name
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterCode({
+      editSchemeCenterCode: scheme.center_code
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateCode({
+      editSchemeStateCode: scheme.state_code
     }));
   };
 
   var handleClose1 = function handleClose1() {
     setOpen1(false);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeId({
-      editSubSchemeId: ''
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeId({
+      editSchemeId: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
-      editSubSchemeName: ''
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateName({
+      editSchemeStateName: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
-      editSubSchemeCode: ''
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterName({
+      editSchemeCenterName: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterCode({
+      editSchemeCenterCode: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateCode({
+      editSchemeStateCode: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
       editmessage: ''
     }));
   };
 
-  var handleEditSubScheme = function handleEditSubScheme(subscheme) {
-    handleOpen1(subscheme);
+  var handleEditScheme = function handleEditScheme(scheme) {
+    handleOpen1(scheme);
   };
 
-  var handleDeleteSubScheme = function handleDeleteSubScheme(id) {
+  var handleEditSchemeStateNameChange = function handleEditSchemeStateNameChange(event) {
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+      editmessage: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateName({
+      editSchemeStateName: event.target.value
+    }));
+  };
+
+  var handleEditSchemeCenterNameChange = function handleEditSchemeCenterNameChange(event) {
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+      editmessage: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterName({
+      editSchemeCenterName: event.target.value
+    }));
+  };
+
+  var handleEditSchemeStateCodeChange = function handleEditSchemeStateCodeChange(event) {
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+      editmessage: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeStateCode({
+      editSchemeStateCode: event.target.value
+    }));
+  };
+
+  var handleEditSchemeCenterCodeChange = function handleEditSchemeCenterCodeChange(event) {
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+      editmessage: ''
+    }));
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditSchemeCenterCode({
+      editSchemeCenterCode: event.target.value
+    }));
+  };
+
+  var onSubmitUpdateScheme = function onSubmitUpdateScheme() {
+    if (editSchemeStateName === '' && editSchemeCenterName === '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please enter a Scheme Name'
+      }));
+      return;
+    }
+
+    if (editSchemeCenterCode === '' && editSchemeStateCode === '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please enter a Scheme Code'
+      }));
+      return;
+    }
+
+    if (editSchemeStateCode !== '' && editSchemeStateName === '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please check Scheme State Details entry'
+      }));
+      return;
+    }
+
+    if (editSchemeStateCode !== '' && editSchemeStateCode.length !== 4) {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Scheme State Code should be of 4 digits'
+      }));
+      return;
+    }
+
+    if (editSchemeStateCode !== '' && editSchemeStateCode.includes(".")) {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Scheme State Code should be of 4 digits'
+      }));
+      return;
+    }
+
+    if (editSchemeCenterCode !== '' && editSchemeCenterName === '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please check Scheme Center Details entry'
+      }));
+      return;
+    }
+
+    if (editSchemeCenterCode !== '' && editSchemeCenterCode.length !== 4) {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Scheme Center Code should be of 4 digits'
+      }));
+      return;
+    }
+
+    if (editSchemeCenterCode !== '' && editSchemeCenterCode.includes(".")) {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Scheme Center Code should be of 4 digits'
+      }));
+      return;
+    }
+
+    if (editSchemeStateCode === '' && editSchemeStateName !== '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please check Scheme State Details entry'
+      }));
+      return;
+    }
+
+    if (editSchemeCenterCode === '' && editSchemeCenterName !== '') {
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditMessage({
+        editmessage: 'Please check Scheme Center Details entry'
+      }));
+      return;
+    }
+
+    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.migupdateSchemeData)(editSchemeId, editSchemeStateName, editSchemeCenterName, editSchemeStateCode, editSchemeCenterCode));
+    handleClose1();
+  };
+
+  var handleDeleteScheme = function handleDeleteScheme(id) {
     handleOpen18(id);
   };
 
@@ -47011,100 +47145,64 @@ function SchemeEntry() {
 
   var _React$useState11 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
       _React$useState12 = _slicedToArray(_React$useState11, 2),
-      allowDeleteSubScheme = _React$useState12[0],
-      setAllowDeleteSubScheme = _React$useState12[1];
+      allowDeleteScheme = _React$useState12[0],
+      setAllowDeleteScheme = _React$useState12[1];
 
   var handleOpen18 = function handleOpen18(id) {
     setOpen18(true);
-    var count = subschemes.length;
+    var count = schemes.length;
 
     if (count === 1) {
-      setAllowDeleteSubScheme(false);
+      setAllowDeleteScheme(false);
       return;
     }
 
-    setAllowDeleteSubScheme(true);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteSubSchemeId({
-      deleteSubSchemeId: id
+    setAllowDeleteScheme(true);
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setDeleteSchemeId({
+      deleteSchemeId: id
     }));
   };
 
   var handleClose18 = function handleClose18() {
     setOpen18(false);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteSubSchemeId({
-      deleteSubSchemeId: ''
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setDeleteSchemeId({
+      deleteSchemeId: ''
     }));
-    setAllowDeleteSubScheme(false);
+    setAllowDeleteScheme(false);
   };
 
-  var handleSubSchemeDelete = function handleSubSchemeDelete() {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.deleteSubSchemeData)(deleteSubSchemeId));
+  var handleSchemeDelete = function handleSchemeDelete() {
+    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.migdeleteSchemeData)(deleteSchemeId));
     handleClose18();
-  };
-
-  var handleEditSubSchemeNameChange = function handleEditSubSchemeNameChange(event) {
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-      editmessage: ''
-    }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
-      editSubSchemeName: event.target.value
-    }));
-  };
-
-  var handleEditSubSchemeCodeChange = function handleEditSubSchemeCodeChange(event) {
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-      editmessage: ''
-    }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
-      editSubSchemeCode: event.target.value
-    }));
-  };
-
-  var onSubmitUpdateSubScheme = function onSubmitUpdateSubScheme() {
-    if (editSubSchemeName === '') {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-        editmessage: 'Please enter a Sub-Scheme Name'
-      }));
-      return;
-    }
-
-    if (editSubSchemeCode === '') {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-        editmessage: 'Please enter a Sub-Scheme Code'
-      }));
-      return;
-    }
-
-    if (isNaN(editSubSchemeCode)) {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-        editmessage: 'Please enter a numeric value for sub-scheme code'
-      }));
-      return;
-    }
-
-    if (editSubSchemeCode.length !== 8 || editSubSchemeCode.includes(".")) {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
-        editmessage: 'Sub-scheme code should be of 8 characters'
-      }));
-      return;
-    }
-
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.updateSubSchemeData)(editSubSchemeId, editSubSchemeName, editSubSchemeCode));
-    handleClose1();
   };
 
   var columns = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(function () {
     return [{
-      field: 'subscheme_code',
+      field: 'state_code',
       hideable: false,
-      headerName: 'Sub Scheme Code',
+      headerName: 'State Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
       flex: 1
     }, {
-      field: 'name',
-      headerName: 'Sub Scheme Name',
+      field: 'state_name',
+      headerName: 'State Scheme Name',
+      flex: 2,
+      headerClassName: 'themeheader',
+      headerAlign: 'center',
+      cellClassName: 'themecell1',
+      renderCell: renderCellExpand
+    }, {
+      field: 'center_code',
+      headerName: 'Center Scheme Code',
+      headerAlign: 'center',
+      headerClassName: 'themeheader',
+      cellClassName: 'themecell',
+      flex: 1
+    }, {
+      field: 'center_name',
+      headerName: 'Center Scheme Name',
       flex: 2,
       headerClassName: 'themeheader',
       headerAlign: 'center',
@@ -47117,9 +47215,9 @@ function SchemeEntry() {
       headerClassName: 'themeheader',
       cellClassName: 'themecell1',
       renderCell: function renderCell(params) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Utilities_SubSchemeEditButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Utilities_SchemeEditButton__WEBPACK_IMPORTED_MODULE_6__["default"], {
           status: params,
-          handleEditSubScheme: handleEditSubScheme
+          handleEditScheme: handleEditScheme
         });
       }
     }, {
@@ -47129,9 +47227,9 @@ function SchemeEntry() {
       headerClassName: 'themeheader',
       cellClassName: 'themecell1',
       renderCell: function renderCell(params) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Utilities_SubSchemeDeleteButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Utilities_SchemeDeleteButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
           status: params,
-          handleDeleteSubScheme: handleDeleteSubScheme
+          handleDeleteScheme: handleDeleteScheme
         });
       }
     }, {
@@ -47143,12 +47241,12 @@ function SchemeEntry() {
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
       getActions: function getActions(params) {
-        return [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_17__.GridActionsCellItem, {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        return [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_16__.GridActionsCellItem, {
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "f6",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_18__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_17__["default"], {
               color: "actions"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
               className: "ml2 b",
               children: "View Details"
             })]
@@ -47162,155 +47260,173 @@ function SchemeEntry() {
     }];
   }, [handleActionClick]);
 
-  var handleEditSubSchemeNotificationSuccess = function handleEditSubSchemeNotificationSuccess(event, reason) {
+  var handleEditSchemeNotificationSuccess = function handleEditSchemeNotificationSuccess(event, reason) {
     if (reason === 'clickaway') {
       return;
     }
 
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditNotificationSuccess({
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setEditNotificationSuccess({
       editNotificationSuccess: false
     }));
   };
 
-  var handleDeleteSubSchemeNotificationSuccess = function handleDeleteSubSchemeNotificationSuccess(event, reason) {
+  var handleDeleteSchemeNotificationSuccess = function handleDeleteSchemeNotificationSuccess(event, reason) {
     if (reason === 'clickaway') {
       return;
     }
 
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteNotificationSuccess({
+    dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setDeleteNotificationSuccess({
       deleteNotificationSuccess: false
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__["default"], {
-      open: deleteNotificationSuccess,
-      autoHideDuration: 4000,
-      onClose: handleDeleteSubSchemeNotificationSuccess,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Alert, {
-        onClose: handleDeleteSubSchemeNotificationSuccess,
-        severity: "success",
-        sx: {
-          width: '100%'
-        },
-        children: "Sub-Scheme deleted successfully!"
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_18__["default"], {
       open: editNotificationSuccess,
       autoHideDuration: 4000,
-      onClose: handleEditSubSchemeNotificationSuccess,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Alert, {
-        onClose: handleEditSubSchemeNotificationSuccess,
+      onClose: handleEditSchemeNotificationSuccess,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Alert, {
+        onClose: handleEditSchemeNotificationSuccess,
         severity: "success",
         sx: {
           width: '100%'
         },
-        children: "Sub-Scheme updated successfully!"
+        children: "Scheme updated successfully!"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Dialog__WEBPACK_IMPORTED_MODULE_20__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      open: deleteNotificationSuccess,
+      autoHideDuration: 4000,
+      onClose: handleDeleteSchemeNotificationSuccess,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Alert, {
+        onClose: handleDeleteSchemeNotificationSuccess,
+        severity: "success",
+        sx: {
+          width: '100%'
+        },
+        children: "Scheme deleted successfully!"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Dialog__WEBPACK_IMPORTED_MODULE_19__["default"], {
       open: open18,
       onClose: handleClose18,
       "aria-labelledby": "alert-dialog-title",
       "aria-describedby": "alert-dialog-description",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_21__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_20__["default"], {
         id: "alert-dialog-title",
-        children: "Confirm Sub-Scheme Delete"
-      }), allowDeleteSubScheme ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__["default"], {
+        children: "Confirm Scheme Delete"
+      }), allowDeleteScheme ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_21__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_22__["default"], {
           id: "alert-dialog-description",
-          children: "Are you sure you want to delete this sub-scheme?"
+          children: "Are you sure you want to delete this scheme?"
         })
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__["default"], {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_21__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_22__["default"], {
           id: "alert-dialog-description",
-          children: "Please edit the Sub-Scheme as Sub-Schemes cannot be empty!!"
+          children: "Please edit the Scheme as Schemes cannot be empty!!"
         })
-      }), allowDeleteSubScheme && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_24__["default"], {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_25__["default"], {
+      }), allowDeleteScheme && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_23__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_24__["default"], {
           onClick: handleClose18,
           children: "Disagree"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_25__["default"], {
-          onClick: handleSubSchemeDelete,
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_24__["default"], {
+          onClick: handleSchemeDelete,
           autoFocus: true,
           children: "Agree"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Modal__WEBPACK_IMPORTED_MODULE_26__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Modal__WEBPACK_IMPORTED_MODULE_25__["default"], {
       open: open1,
       onClose: handleClose1,
       "aria-labelledby": "modal-modal-title",
       "aria-describedby": "modal-modal-description",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
         sx: style,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           id: "modal-modal-title",
           variant: "h6",
           component: "h2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
             className: "b nunito",
-            children: "Edit Sub-Scheme"
+            children: "Edit Scheme"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           id: "modal-modal-description",
           sx: {
             mt: 2
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "pa4 black-80",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
-              children: "Edit Sub-Scheme Code"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
-              id: "name",
-              className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
-              type: "number",
-              "aria-describedby": "name-desc",
-              onChange: handleEditSubSchemeCodeChange,
-              value: editSubSchemeCode
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
-              htmlFor: "name",
-              className: "f6 b db mb2 nunito",
-              children: "Edit Sub-Scheme Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
+              children: "Edit Scheme State Code"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              onChange: handleEditSubSchemeNameChange,
-              value: editSubSchemeName
-            }), editmessage !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              onChange: handleEditSchemeStateCodeChange,
+              value: editSchemeStateCode
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+              htmlFor: "name",
+              className: "f6 b db mb2 nunito",
+              children: "Edit Scheme State Name"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+              id: "name",
+              className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
+              type: "text",
+              "aria-describedby": "name-desc",
+              onChange: handleEditSchemeStateNameChange,
+              value: editSchemeStateName
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+              htmlFor: "name",
+              className: "f6 b db mb2 nunito",
+              children: "Edit Scheme Center Code"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+              id: "name",
+              className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
+              type: "text",
+              "aria-describedby": "name-desc",
+              onChange: handleEditSchemeCenterCodeChange,
+              value: editSchemeCenterCode
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+              htmlFor: "name",
+              className: "f6 b db mb2 nunito",
+              children: "Edit Scheme Center Name"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+              id: "name",
+              className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
+              type: "text",
+              "aria-describedby": "name-desc",
+              onChange: handleEditSchemeCenterNameChange,
+              value: editSchemeCenterName
+            }), editmessage !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
               className: "f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito",
               children: editmessage
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
               className: "flex justify-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                 className: "f6 link dim br3 ph3 pv2 mb2 mt2 white bg-dark-green w5 tc pointer",
-                onClick: onSubmitUpdateSubScheme,
+                onClick: onSubmitUpdateScheme,
                 children: "Update"
               })
             })]
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-      className: "f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer",
-      onClick: handleCreateSubScheme,
-      children: "+ Create New Sub-Scheme"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       style: {
         display: 'flex',
         height: '100%'
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
         style: {
           flexGrow: 1
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__.DataGrid, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_26__.DataGrid, {
           columns: columns,
-          rows: subschemes,
+          rows: schemes,
           components: {
-            Toolbar: _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_28__.GridToolbar
+            Toolbar: _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__.GridToolbar
           }
         })
       })
@@ -47318,14 +47434,14 @@ function SchemeEntry() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SchemeEntry);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigDivisionExtraSchemeInternal);
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/Utilities/SubSchemeCard.js":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/Dashboard/Utilities/SubSchemeCard.js ***!
-  \**********************************************************************/
+/***/ "./resources/js/components/Dashboard/Utilities/SchemeCard.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Dashboard/Utilities/SchemeCard.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -47341,41 +47457,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function SubSchemeCard(_ref) {
-  var subscheme = _ref.subscheme;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("article", {
-    className: "center mw5 mw6-ns br3 ba b--black-10 mv4 shadow-2",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-      to: "/dashboard/subscheme/".concat(subscheme.id),
-      className: "no-underline",
-      style: {
-        textDecoration: 'none'
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-        className: "f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3",
-        children: subscheme.name
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "pa3 bt b--black-10",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "f6 f5-ns lh-copy measure",
-          children: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "f6 grow no-underline ph3 pv2 mb2 dib dark-blue dim",
-          children: "View Details"
+function SchemeCard(_ref) {
+  var scheme = _ref.scheme;
+  return (
+    /*#__PURE__*/
+    //     <article className="center mw5 mw5-ns ba mv4 shadow-2">
+    //     <Link to={`/dashboard/scheme/${scheme.id}`} className='no-underline' style={{ textDecoration: 'none' }}>
+    //   <h1 className="f4 bg-near-black white mv0 pv2 ph3">{scheme.name}</h1>
+    //   <div className="pa3 bt">
+    //     <p className="f6 f5-ns lh-copy measure mv0 black">
+    //       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    //       tempor invidunt ut labore et dolore magna aliquyam erat
+    //     </p>
+    //   </div>
+    //   <p className="f6 grow no-underline ph3 pv2 mb2 dib dark-blue dim">View Details</p>
+    //   </Link>
+    // </article>
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("article", {
+      className: "center mw5 mw6-ns br3 ba b--black-10 mv4 shadow-2",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+        to: "/dashboard/scheme/".concat(scheme.id),
+        className: "no-underline",
+        style: {
+          textDecoration: 'none'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h1", {
+          className: "f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3",
+          children: ["State Name: ", scheme.state_name]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h1", {
+          className: "f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3",
+          children: ["Center Name: ", scheme.center_name]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "pa3 bt b--black-10",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            className: "f6 f5-ns lh-copy measure",
+            children: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            className: "f6 grow no-underline ph3 pv2 mb2 dib dark-blue dim",
+            children: "View Details"
+          })]
         })]
-      })]
+      })
     })
-  });
+  );
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubSchemeCard);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SchemeCard);
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/Utilities/SubSchemeDeleteButton.js":
-/*!******************************************************************************!*\
-  !*** ./resources/js/components/Dashboard/Utilities/SubSchemeDeleteButton.js ***!
-  \******************************************************************************/
+/***/ "./resources/js/components/Dashboard/Utilities/SchemeDeleteButton.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/Utilities/SchemeDeleteButton.js ***!
+  \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -47391,11 +47525,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var SubSchemeDeleteButton = function SubSchemeDeleteButton(params) {
+var SchemeDeleteButton = function SchemeDeleteButton(params) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: "f6 pointer",
     onClick: function onClick() {
-      return params.handleDeleteSubScheme(params.status.row.id);
+      return params.handleDeleteScheme(params.status.row.id);
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_2__["default"], {
       color: "actions"
@@ -47406,14 +47540,14 @@ var SubSchemeDeleteButton = function SubSchemeDeleteButton(params) {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubSchemeDeleteButton);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SchemeDeleteButton);
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/Utilities/SubSchemeEditButton.js":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/Dashboard/Utilities/SubSchemeEditButton.js ***!
-  \****************************************************************************/
+/***/ "./resources/js/components/Dashboard/Utilities/SchemeEditButton.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/Utilities/SchemeEditButton.js ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -47429,11 +47563,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var SubSchemeEditButton = function SubSchemeEditButton(params) {
+var SchemeEditButton = function SchemeEditButton(params) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: "f6 pointer",
     onClick: function onClick() {
-      return params.handleEditSubScheme(params.status.row);
+      return params.handleEditScheme(params.status.row);
     },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_2__["default"], {
       color: "actions"
@@ -47444,58 +47578,44 @@ var SubSchemeEditButton = function SubSchemeEditButton(params) {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubSchemeEditButton);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SchemeEditButton);
 
 /***/ }),
 
-/***/ "./resources/js/components/store/subschemes-actions.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/store/subschemes-actions.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/store/schemes-action.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/store/schemes-action.js ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getSubSchemesData": () => (/* binding */ getSubSchemesData),
-/* harmony export */   "miggetSubSchemesData": () => (/* binding */ miggetSubSchemesData),
-/* harmony export */   "miggetPendingSubSchemesData": () => (/* binding */ miggetPendingSubSchemesData),
-/* harmony export */   "miggetPendingSubSchemesDeptData": () => (/* binding */ miggetPendingSubSchemesDeptData),
-/* harmony export */   "miggetExtraSubSchemesDeptData": () => (/* binding */ miggetExtraSubSchemesDeptData),
-/* harmony export */   "getSubSchemesDataDeptUser": () => (/* binding */ getSubSchemesDataDeptUser),
-/* harmony export */   "miggetSubSchemesDataDeptUser": () => (/* binding */ miggetSubSchemesDataDeptUser),
-/* harmony export */   "storeSubSchemeData": () => (/* binding */ storeSubSchemeData),
-/* harmony export */   "searchSubSchemesName": () => (/* binding */ searchSubSchemesName),
-/* harmony export */   "searchSubSchemesCode": () => (/* binding */ searchSubSchemesCode),
-/* harmony export */   "getSubSchemesReport": () => (/* binding */ getSubSchemesReport),
-/* harmony export */   "getCurrentSubSchemesReport": () => (/* binding */ getCurrentSubSchemesReport),
-/* harmony export */   "miggetSubSchemesReport": () => (/* binding */ miggetSubSchemesReport),
-/* harmony export */   "getSubSchemesReportVerifier": () => (/* binding */ getSubSchemesReportVerifier),
-/* harmony export */   "aorgetSubSchemesReportVerifier": () => (/* binding */ aorgetSubSchemesReportVerifier),
-/* harmony export */   "getSubSchemesHeaderReport": () => (/* binding */ getSubSchemesHeaderReport),
-/* harmony export */   "getCurrentSubSchemesHeaderReport": () => (/* binding */ getCurrentSubSchemesHeaderReport),
-/* harmony export */   "miggetSubSchemesHeaderReport": () => (/* binding */ miggetSubSchemesHeaderReport),
-/* harmony export */   "aorgetSubSchemesHeaderReport": () => (/* binding */ aorgetSubSchemesHeaderReport),
-/* harmony export */   "getSubSchemesHeaderReportVerifier": () => (/* binding */ getSubSchemesHeaderReportVerifier),
-/* harmony export */   "aorgetSubSchemesHeaderReportVerifier": () => (/* binding */ aorgetSubSchemesHeaderReportVerifier),
-/* harmony export */   "updateSubSchemeData": () => (/* binding */ updateSubSchemeData),
-/* harmony export */   "migupdateSubSchemeData": () => (/* binding */ migupdateSubSchemeData),
-/* harmony export */   "deleteSubSchemeData": () => (/* binding */ deleteSubSchemeData),
-/* harmony export */   "migdeleteSubSchemeData": () => (/* binding */ migdeleteSubSchemeData)
+/* harmony export */   "getSchemesData": () => (/* binding */ getSchemesData),
+/* harmony export */   "miggetSchemesData": () => (/* binding */ miggetSchemesData),
+/* harmony export */   "miggetExtraSchemesData": () => (/* binding */ miggetExtraSchemesData),
+/* harmony export */   "miggetPendingSchemesData": () => (/* binding */ miggetPendingSchemesData),
+/* harmony export */   "getSchemesDeptData": () => (/* binding */ getSchemesDeptData),
+/* harmony export */   "miggetSchemesDeptData": () => (/* binding */ miggetSchemesDeptData),
+/* harmony export */   "storeSchemeData": () => (/* binding */ storeSchemeData),
+/* harmony export */   "searchSchemesStateName": () => (/* binding */ searchSchemesStateName),
+/* harmony export */   "searchSchemesCenterName": () => (/* binding */ searchSchemesCenterName),
+/* harmony export */   "searchSchemesStateCode": () => (/* binding */ searchSchemesStateCode),
+/* harmony export */   "searchSchemesCenterCode": () => (/* binding */ searchSchemesCenterCode),
+/* harmony export */   "updateSchemeData": () => (/* binding */ updateSchemeData),
+/* harmony export */   "migupdateSchemeData": () => (/* binding */ migupdateSchemeData),
+/* harmony export */   "deleteSchemeData": () => (/* binding */ deleteSchemeData),
+/* harmony export */   "migdeleteSchemeData": () => (/* binding */ migdeleteSchemeData)
 /* harmony export */ });
-/* harmony import */ var _subschemesSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subschemesSlice */ "./resources/js/components/store/subschemesSlice.js");
-/* harmony import */ var _schemesSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./schemesSlice */ "./resources/js/components/store/schemesSlice.js");
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../configuration */ "./resources/js/components/configuration.js");
-/* harmony import */ var _outlaySlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./outlaySlice */ "./resources/js/components/store/outlaySlice.js");
-/* harmony import */ var _errorSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./errorSlice */ "./resources/js/components/store/errorSlice.js");
+/* harmony import */ var _schemesSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./schemesSlice */ "./resources/js/components/store/schemesSlice.js");
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ "./resources/js/components/configuration.js");
+/* harmony import */ var _errorSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errorSlice */ "./resources/js/components/store/errorSlice.js");
 
 
 
-
-
-var getSubSchemesData = function getSubSchemesData(id) {
+var getSchemesData = function getSchemesData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemes/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47504,39 +47624,39 @@ var getSubSchemesData = function getSubSchemesData(id) {
       return response.json();
     }).then(function (res) {
       if (res.length !== 0) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemes({
-          subschemes: res
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var miggetSubSchemesData = function miggetSubSchemesData(id) {
+var miggetSchemesData = function miggetSchemesData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_subschemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_schemes/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47545,39 +47665,39 @@ var miggetSubSchemesData = function miggetSubSchemesData(id) {
       return response.json();
     }).then(function (res) {
       if (res.length !== 0) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemes({
-          subschemes: res
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var miggetPendingSubSchemesData = function miggetPendingSubSchemesData(id) {
+var miggetExtraSchemesData = function miggetExtraSchemesData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_pendingsubschemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "extra_scheme/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47586,39 +47706,39 @@ var miggetPendingSubSchemesData = function miggetPendingSubSchemesData(id) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setPendingSubSchemes({
-          pendingSubSchemes: res.pending_subschemes
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res.schemes
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var miggetPendingSubSchemesDeptData = function miggetPendingSubSchemesDeptData(id) {
+var miggetPendingSchemesData = function miggetPendingSchemesData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_pendingsubschemesdept/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_pendingschemes/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47627,80 +47747,39 @@ var miggetPendingSubSchemesDeptData = function miggetPendingSubSchemesDeptData(i
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setPendingSubSchemes({
-          pendingSubSchemes: res.pending_subschemes
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setPendingScheme({
+          pendingSchemes: res.pending_schemes
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var miggetExtraSubSchemesDeptData = function miggetExtraSubSchemesDeptData(id) {
+var getSchemesDeptData = function getSchemesDeptData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "extra_subscheme/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setPendingSubSchemes({
-          pendingSubSchemes: res.subschemes
-        }));
-      } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
-        }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
-      }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
-      }));
-    });
-  };
-};
-var getSubSchemesDataDeptUser = function getSubSchemesDataDeptUser(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemesdeptuser/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemesdept/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47709,39 +47788,39 @@ var getSubSchemesDataDeptUser = function getSubSchemesDataDeptUser(id) {
       return response.json();
     }).then(function (res) {
       if (res.length !== 0) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemes({
-          subschemes: res
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var miggetSubSchemesDataDeptUser = function miggetSubSchemesDataDeptUser(id) {
+var miggetSchemesDeptData = function miggetSchemesDeptData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_subschemesdeptuser/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_schemesdept/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47750,48 +47829,49 @@ var miggetSubSchemesDataDeptUser = function miggetSubSchemesDataDeptUser(id) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemes({
-          subschemes: res.migrated_subschemes
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res.migrated_schemes
         }));
       } else {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: false
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
         }));
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-        updateSubScheme: false
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
       }));
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
         message: 'Sorry something went wrong!!'
       }));
     });
   };
 };
-var storeSubSchemeData = function storeSubSchemeData(departmentId, divisionId, schemeId, name, code) {
+var storeSchemeData = function storeSchemeData(departmentId, divisionId, schemeStateName, schemeCenterName, schemeStateCode, schemeCenterCode) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme"), {
       method: 'post',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token')),
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        subscheme_code: code,
-        scheme_id: schemeId,
+        state_name: schemeStateName,
+        center_name: schemeCenterName,
+        state_code: schemeStateCode,
+        center_code: schemeCenterCode,
         division_id: divisionId,
         department_id: departmentId
       })
@@ -47799,102 +47879,83 @@ var storeSubSchemeData = function storeSubSchemeData(departmentId, divisionId, s
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeStateName({
           schemeStateName: ''
         }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeCenterName({
           schemeCenterName: ''
         }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeCenterCode({
           schemeCenterCode: ''
         }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeStateCode({
           schemeStateCode: ''
         }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearch({
-          schemeSearch: []
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearchMessage({
-          searchMessage: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sub Scheme created successfully'
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
+          message: 'Scheme created successfully'
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: ''
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: ''
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: ''
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: ''
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearch({
-          schemeSearch: []
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearchMessage({
-          searchMessage: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: ''
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
           message: 'Sorry something went wrong!!'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-        schemeStateName: ''
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
+        message: 'Sorry something went wrong!!'
       }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-        schemeCenterName: ''
+    });
+  };
+};
+var searchSchemesStateName = function searchSchemesStateName(name, id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/searchstatename/").concat(name, "/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.result !== "No Data not found") {
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+          searchMessage: ''
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: res
+        }));
+      } else {
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+          error: true
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: []
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+          searchMessage: 'Nothing Found'
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+        error: true
       }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-        schemeCenterCode: ''
-      }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-        schemeStateCode: ''
-      }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearch({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
         schemeSearch: []
       }));
-      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeSearchMessage({
-        searchMessage: ''
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-        subschemename: ''
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-        subschemecode: ''
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+        searchMessage: 'Nothing Found'
       }));
     });
   };
 };
-var searchSubSchemesName = function searchSubSchemesName(name, id) {
+var searchSchemesCenterName = function searchSchemesCenterName(name, id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme/searchname/").concat(name, "/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/searchcentername/").concat(name, "/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47903,39 +47964,39 @@ var searchSubSchemesName = function searchSubSchemesName(name, id) {
       return response.json();
     }).then(function (res) {
       if (res.result !== "No Data not found") {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
           searchMessage: ''
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-          subschemeSearch: res
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: res
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-          subschemeSearch: []
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: []
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
           searchMessage: 'Nothing Found'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-        subschemeSearch: []
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+        schemeSearch: []
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
         searchMessage: 'Nothing Found'
       }));
     });
   };
 };
-var searchSubSchemesCode = function searchSubSchemesCode(code, id) {
+var searchSchemesStateCode = function searchSchemesStateCode(name, id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme/searchcode/").concat(code, "/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/searchstatecode/").concat(name, "/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47944,39 +48005,39 @@ var searchSubSchemesCode = function searchSubSchemesCode(code, id) {
       return response.json();
     }).then(function (res) {
       if (res.result !== "No Data not found") {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
           searchMessage: ''
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-          subschemeSearch: res
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: res
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-          subschemeSearch: []
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: []
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
           searchMessage: 'Nothing Found'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeSearch({
-        subschemeSearch: []
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+        schemeSearch: []
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSearchMessage({
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
         searchMessage: 'Nothing Found'
       }));
     });
   };
 };
-var getSubSchemesReport = function getSubSchemesReport(id) {
+var searchSchemesCenterCode = function searchSchemesCenterCode(name, id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "reportsubscheme/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/searchcentercode/").concat(name, "/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47984,653 +48045,112 @@ var getSubSchemesReport = function getSubSchemesReport(id) {
     }).then(function (response) {
       return response.json();
     }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeReport({
-          report: res
+      if (res.result !== "No Data not found") {
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+          searchMessage: ''
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: res
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+          schemeSearch: []
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+          searchMessage: 'Nothing Found'
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearch({
+        schemeSearch: []
+      }));
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemeSearchMessage({
+        searchMessage: 'Nothing Found'
       }));
     });
   };
 };
-var getCurrentSubSchemesReport = function getCurrentSubSchemesReport(id) {
+var updateSchemeData = function updateSchemeData(id, schemeStateName, schemeCenterName, schemeStateCode, schemeCenterCode) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "cur_reportsubscheme/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeReport({
-          report: res
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
-      }));
-    });
-  };
-};
-var miggetSubSchemesReport = function miggetSubSchemesReport(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_reportsubscheme/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeReport({
-          report: res
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
-      }));
-    });
-  };
-};
-var getSubSchemesReportVerifier = function getSubSchemesReportVerifier(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "verification/reportsubscheme/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeReport({
-          report: res
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
-      }));
-    });
-  };
-};
-var aorgetSubSchemesReportVerifier = function aorgetSubSchemesReportVerifier(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "aor_verification/reportsubscheme/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeReport({
-          report: res
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-          message: 'Sorry something went wrong!!'
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-      dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setMessage({
-        message: 'Sorry something went wrong!!'
-      }));
-    });
-  };
-};
-var getSubSchemesHeaderReport = function getSubSchemesHeaderReport(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var getCurrentSubSchemesHeaderReport = function getCurrentSubSchemesHeaderReport(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "cur_subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var miggetSubSchemesHeaderReport = function miggetSubSchemesHeaderReport(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var aorgetSubSchemesHeaderReport = function aorgetSubSchemesHeaderReport(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].aor_fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].aor_verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].aor_submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var getSubSchemesHeaderReportVerifier = function getSubSchemesHeaderReportVerifier(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "verification/subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var aorgetSubSchemesHeaderReportVerifier = function aorgetSubSchemesHeaderReportVerifier(id) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "aor_verification/subscheme_header/").concat(id), {
-      method: 'GET',
-      headers: {
-        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
-      }
-    }).then(function (response) {
-      return response.json();
-    }).then(function (res) {
-      if (res.status === 200) {
-        dispatch(_outlaySlice__WEBPACK_IMPORTED_MODULE_3__.outlayActions.setUpdateOutlay({
-          updateOutlay: false
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeName({
-          subschemename: res.sub_scheme[0].name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubSchemeCode({
-          subschemecode: res.sub_scheme[0].subscheme_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateName({
-          schemeStateName: res.sub_scheme[0].state_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterName({
-          schemeCenterName: res.sub_scheme[0].center_name
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeCenterCode({
-          schemeCenterCode: res.sub_scheme[0].center_code
-        }));
-        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemeStateCode({
-          schemeStateCode: res.sub_scheme[0].state_code
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDemandNo({
-          demand_no: res.sub_scheme[0].demand_no
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDepartmentName({
-          department_name: res.sub_scheme[0].dept_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setAllotment({
-          allotment: res.allotment
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDivisionName({
-          division_name: res.sub_scheme[0].div_name
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setExpenditure({
-          expenditure: res.expenditure
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSanction({
-          sanction: res.sanction
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setFinAddBtn({
-          finAddBtn: res.sub_scheme[0].aor_fin_add_btn_flag
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setVerifiedStatusSS({
-          verified_status_ss: res.sub_scheme[0].aor_verified_status
-        }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setSubmittedStatusSS({
-          submitted_status_ss: res.sub_scheme[0].aor_submitted_status
-        }));
-      } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-          error: true
-        }));
-      }
-    })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
-        error: true
-      }));
-    });
-  };
-};
-var updateSubSchemeData = function updateSubSchemeData(id, SubSchemeName, SubSchemeCode) {
-  return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme/edit/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/edit/").concat(id), {
       method: 'post',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token')),
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: SubSchemeName,
-        subscheme_code: parseInt(SubSchemeCode)
+        state_name: schemeStateName,
+        center_name: schemeCenterName,
+        state_code: schemeStateCode,
+        center_code: schemeCenterCode
       })
     }).then(function (response) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: true
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setEditNotificationSuccess({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setEditNotificationSuccess({
           editNotificationSuccess: true
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
     });
   };
 };
-var migupdateSubSchemeData = function migupdateSubSchemeData(id, SubSchemeName, SubSchemeCode) {
+var migupdateSchemeData = function migupdateSchemeData(id, schemeStateName, schemeCenterName, schemeStateCode, schemeCenterCode) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_subscheme/edit/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_scheme/edit/").concat(id), {
       method: 'post',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token')),
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: SubSchemeName,
-        subscheme_code: parseInt(SubSchemeCode)
+        state_name: schemeStateName,
+        center_name: schemeCenterName,
+        state_code: schemeStateCode,
+        center_code: schemeCenterCode
       })
     }).then(function (response) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: true
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setEditNotificationSuccess({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setEditNotificationSuccess({
           editNotificationSuccess: true
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
     });
   };
 };
-var deleteSubSchemeData = function deleteSubSchemeData(id) {
+var deleteSchemeData = function deleteSchemeData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subscheme/delete/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "scheme/delete/").concat(id), {
       method: 'DELETE',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -48639,27 +48159,27 @@ var deleteSubSchemeData = function deleteSubSchemeData(id) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDeleteNotificationSuccess({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setDeleteNotificationSuccess({
           deleteNotificationSuccess: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: true
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: true
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
     });
   };
 };
-var migdeleteSubSchemeData = function migdeleteSubSchemeData(id) {
+var migdeleteSchemeData = function migdeleteSchemeData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "mig_subscheme/delete/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_scheme/delete/").concat(id), {
       method: 'DELETE',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -48668,19 +48188,19 @@ var migdeleteSubSchemeData = function migdeleteSubSchemeData(id) {
       return response.json();
     }).then(function (res) {
       if (res.status === 200) {
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setDeleteNotificationSuccess({
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setDeleteNotificationSuccess({
           deleteNotificationSuccess: true
         }));
-        dispatch(_subschemesSlice__WEBPACK_IMPORTED_MODULE_0__.subschemesActions.setUpateSubScheme({
-          updateSubScheme: true
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: true
         }));
       } else {
-        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
       }
     })["catch"](function (err) {
-      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_4__.errorActions.setError({
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
     });

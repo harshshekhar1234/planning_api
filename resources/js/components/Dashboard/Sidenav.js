@@ -156,6 +156,14 @@ function Sidenav({clickHandler}) {
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Directorate Internal Scheme</span>
             </Link>
+            <Link className="nav-link" to='/dashboard/migrationdivisionextrascheme'>
+            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+            <span className='white'>Directorate Internal Extra Scheme</span>
+            </Link>
+            <Link className="nav-link" to='/dashboard/migrationdivisionextrasubscheme'>
+            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+            <span className='white'>Directorate Internal Extra Sub-Scheme</span>
+            </Link>
             <Link className="nav-link" to='/dashboard/divisionpendingschemedept'>
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Directorate Pending Scheme</span>

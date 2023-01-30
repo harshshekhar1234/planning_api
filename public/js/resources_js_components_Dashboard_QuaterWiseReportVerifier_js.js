@@ -44900,6 +44900,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getSchemesData": () => (/* binding */ getSchemesData),
 /* harmony export */   "miggetSchemesData": () => (/* binding */ miggetSchemesData),
+/* harmony export */   "miggetExtraSchemesData": () => (/* binding */ miggetExtraSchemesData),
 /* harmony export */   "miggetPendingSchemesData": () => (/* binding */ miggetPendingSchemesData),
 /* harmony export */   "getSchemesDeptData": () => (/* binding */ getSchemesDeptData),
 /* harmony export */   "miggetSchemesDeptData": () => (/* binding */ miggetSchemesDeptData),
@@ -44976,6 +44977,47 @@ var miggetSchemesData = function miggetSchemesData(id) {
         }));
         dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
           schemes: res
+        }));
+      } else {
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
+        }));
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+          error: true
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
+          message: 'Sorry something went wrong!!'
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+        updateScheme: false
+      }));
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+        error: true
+      }));
+      dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setMessage({
+        message: 'Sorry something went wrong!!'
+      }));
+    });
+  };
+};
+var miggetExtraSchemesData = function miggetExtraSchemesData(id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "extra_scheme/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.status === 200) {
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({
+          updateScheme: false
+        }));
+        dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setSchemes({
+          schemes: res.schemes
         }));
       } else {
         dispatch(_schemesSlice__WEBPACK_IMPORTED_MODULE_0__.schemesActions.setUpateScheme({

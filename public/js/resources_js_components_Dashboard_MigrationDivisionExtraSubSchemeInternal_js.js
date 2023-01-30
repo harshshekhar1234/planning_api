@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_SchemeEntry_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_MigrationDivisionExtraSubSchemeInternal_js"],{
 
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
@@ -28545,85 +28545,6 @@ const renderActionsCell = params => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_I
 
 /***/ }),
 
-/***/ "./node_modules/@mui/x-data-grid/components/cell/GridActionsCellItem.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@mui/x-data-grid/components/cell/GridActionsCellItem.js ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "GridActionsCellItem": () => (/* binding */ GridActionsCellItem)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/IconButton/IconButton.js");
-/* harmony import */ var _mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/MenuItem */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
-/* harmony import */ var _mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/ListItemIcon */ "./node_modules/@mui/material/ListItemIcon/ListItemIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-const _excluded = ["label", "icon", "showInMenu", "onClick"];
-
-
-
-
-
-
-
-
-const GridActionsCellItem = props => {
-  const {
-    label,
-    icon,
-    showInMenu,
-    onClick
-  } = props,
-        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
-
-  const handleClick = event => {
-    if (onClick) {
-      onClick(event);
-    }
-  };
-
-  if (!showInMenu) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      size: "small",
-      "aria-label": label
-    }, other, {
-      onClick: handleClick,
-      children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.cloneElement(icon, {
-        fontSize: 'small'
-      })
-    }));
-  }
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, other, {
-    onClick: onClick,
-    children: [icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      children: icon
-    }), label]
-  }));
-};
-
- true ? GridActionsCellItem.propTypes = {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // | To update them edit the TypeScript types and run "yarn proptypes"  |
-  // ----------------------------------------------------------------------
-  icon: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().element),
-  label: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().string.isRequired),
-  showInMenu: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool)
-} : 0;
-
-
-/***/ }),
-
 /***/ "./node_modules/@mui/x-data-grid/components/cell/GridBooleanCell.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/@mui/x-data-grid/components/cell/GridBooleanCell.js ***!
@@ -46652,10 +46573,10 @@ const wrapWithWarningOnCall = (method, message) => {
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/SchemeEntry.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/Dashboard/SchemeEntry.js ***!
-  \**********************************************************/
+/***/ "./resources/js/components/Dashboard/MigrationDivisionExtraSubSchemeInternal.js":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigrationDivisionExtraSubSchemeInternal.js ***!
+  \**************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -46664,35 +46585,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
-/* harmony import */ var _Utilities_SubSchemeCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Utilities/SubSchemeCard */ "./resources/js/components/Dashboard/Utilities/SubSchemeCard.js");
-/* harmony import */ var _store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/subschemes-actions */ "./resources/js/components/store/subschemes-actions.js");
-/* harmony import */ var _store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/subschemesSlice */ "./resources/js/components/store/subschemesSlice.js");
-/* harmony import */ var _store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/divisionsSlice */ "./resources/js/components/store/divisionsSlice.js");
-/* harmony import */ var _store_departmentSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/departmentSlice */ "./resources/js/components/store/departmentSlice.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Utilities_SubSchemeEditButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utilities/SubSchemeEditButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeEditButton.js");
-/* harmony import */ var _Utilities_SubSchemeDeleteButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utilities/SubSchemeDeleteButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeDeleteButton.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/cell/GridActionsCellItem.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/DataGrid/DataGrid.js");
-/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/toolbar/GridToolbar.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material/Typography */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_material_Modal__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @mui/material/Modal */ "./node_modules/@mui/material/Modal/Modal.js");
-/* harmony import */ var _mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material/Snackbar */ "./node_modules/@mui/material/Snackbar/Snackbar.js");
-/* harmony import */ var _mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/icons-material/Pageview */ "./node_modules/@mui/icons-material/Pageview.js");
-/* harmony import */ var _mui_material_Paper__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material/Paper */ "./node_modules/@mui/material/Paper/Paper.js");
-/* harmony import */ var _mui_material_Popper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material/Popper */ "./node_modules/@mui/material/Popper/Popper.js");
-/* harmony import */ var _mui_material_Alert__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/Alert */ "./node_modules/@mui/material/Alert/Alert.js");
-/* harmony import */ var _mui_material_Dialog__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material/Dialog */ "./node_modules/@mui/material/Dialog/Dialog.js");
-/* harmony import */ var _mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @mui/material/DialogActions */ "./node_modules/@mui/material/DialogActions/DialogActions.js");
-/* harmony import */ var _mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material/DialogContent */ "./node_modules/@mui/material/DialogContent/DialogContent.js");
-/* harmony import */ var _mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @mui/material/DialogContentText */ "./node_modules/@mui/material/DialogContentText/DialogContentText.js");
-/* harmony import */ var _mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material/DialogTitle */ "./node_modules/@mui/material/DialogTitle/DialogTitle.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/DataGrid/DataGrid.js");
+/* harmony import */ var _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @mui/x-data-grid */ "./node_modules/@mui/x-data-grid/components/toolbar/GridToolbar.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var _store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/subschemesSlice */ "./resources/js/components/store/subschemesSlice.js");
+/* harmony import */ var _store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/schemesSlice */ "./resources/js/components/store/schemesSlice.js");
+/* harmony import */ var _store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/migrationSlice */ "./resources/js/components/store/migrationSlice.js");
+/* harmony import */ var _store_subschemes_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/subschemes-actions */ "./resources/js/components/store/subschemes-actions.js");
+/* harmony import */ var _Utilities_SubSchemeEditButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utilities/SubSchemeEditButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeEditButton.js");
+/* harmony import */ var _Utilities_SubSchemeDeleteButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utilities/SubSchemeDeleteButton */ "./resources/js/components/Dashboard/Utilities/SubSchemeDeleteButton.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material/Typography */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material_Paper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material/Paper */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_material_Popper__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material/Popper */ "./node_modules/@mui/material/Popper/Popper.js");
+/* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material_Modal__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @mui/material/Modal */ "./node_modules/@mui/material/Modal/Modal.js");
+/* harmony import */ var _mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material/Snackbar */ "./node_modules/@mui/material/Snackbar/Snackbar.js");
+/* harmony import */ var _mui_material_Alert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/Alert */ "./node_modules/@mui/material/Alert/Alert.js");
+/* harmony import */ var _mui_material_Dialog__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material/Dialog */ "./node_modules/@mui/material/Dialog/Dialog.js");
+/* harmony import */ var _mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material/DialogActions */ "./node_modules/@mui/material/DialogActions/DialogActions.js");
+/* harmony import */ var _mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material/DialogContent */ "./node_modules/@mui/material/DialogContent/DialogContent.js");
+/* harmony import */ var _mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material/DialogContentText */ "./node_modules/@mui/material/DialogContentText/DialogContentText.js");
+/* harmony import */ var _mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material/DialogTitle */ "./node_modules/@mui/material/DialogTitle/DialogTitle.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -46740,9 +46658,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
 var Alert = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function Alert(props, ref) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Alert__WEBPACK_IMPORTED_MODULE_10__["default"], _objectSpread({
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Alert__WEBPACK_IMPORTED_MODULE_9__["default"], _objectSpread({
     elevation: 6,
     ref: ref,
     variant: "filled"
@@ -46803,7 +46720,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [setShowFullCell, showFullCell]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
     ref: wrapper,
     onMouseEnter: handleMouseEnter,
     onMouseLeave: handleMouseLeave,
@@ -46815,7 +46732,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
       position: 'relative',
       display: 'flex'
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
       ref: cellDiv,
       sx: {
         height: 1,
@@ -46824,7 +46741,7 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
         position: 'absolute',
         top: 0
       }
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
       ref: cellValue,
       sx: {
         whiteSpace: 'nowrap',
@@ -46832,19 +46749,19 @@ var GridCellExpand = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(functi
         textOverflow: 'ellipsis'
       },
       children: value
-    }), showPopper && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Popper__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    }), showPopper && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Popper__WEBPACK_IMPORTED_MODULE_11__["default"], {
       open: showFullCell && anchorEl !== null,
       anchorEl: anchorEl,
       style: {
         width: width,
         marginLeft: -17
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_12__["default"], {
         elevation: 1,
         style: {
           minHeight: wrapper.current.offsetHeight - 3
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           variant: "body2",
           style: {
             padding: 8
@@ -46868,12 +46785,12 @@ var style = {
   p: 4
 };
 GridCellExpand.propTypes = {
-  value: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().string.isRequired),
-  width: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().number.isRequired)
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string.isRequired),
+  width: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().number.isRequired)
 };
 
 function renderCellExpand(params) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(GridCellExpand, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(GridCellExpand, {
     value: params.value || '',
     width: params.colDef.computedWidth
   });
@@ -46883,83 +46800,126 @@ renderCellExpand.propTypes = {
   /**
    * The column of the row that the current cell belongs to.
    */
-  colDef: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().object.isRequired),
+  colDef: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object.isRequired),
 
   /**
    * The cell value, but if the column has valueGetter, use getValue.
    */
-  value: (prop_types__WEBPACK_IMPORTED_MODULE_15___default().string.isRequired)
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string.isRequired)
 };
 
-function SchemeEntry() {
-  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_16__.useParams)();
-  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_16__.useNavigate)();
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useDispatch)();
-  var subschemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
-    return state.subschemes.subschemes;
+function MigrationDivisionExtraSubSchemeInternal() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_15__.useParams)();
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_15__.useNavigate)();
+  var subschemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.subschemes.pendingSubSchemes;
   });
-  var editSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var editSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.editSubSchemeId;
   });
-  var editSubSchemeName = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var editSubSchemeName = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.editSubSchemeName;
   });
-  var editSubSchemeCode = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var editSubSchemeCode = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.editSubSchemeCode;
   });
-  var editmessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var editmessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.editmessage;
   });
-  var editNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var editNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.editNotificationSuccess;
   });
-  var deleteNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var deleteNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.deleteNotificationSuccess;
   });
-  var updateSubScheme = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var updateSubScheme = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.updateSubScheme;
   });
-  var deleteSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+  var deleteSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.subschemes.deleteSubSchemeId;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_5__.miggetExtraSubSchemesDeptData)(params.id));
     return function () {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemes({
-        subschemes: []
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setPendingSubSchemes({
+        pendingSubSchemes: []
       }));
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditNotificationSuccess({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditNotificationSuccess({
         editNotificationSuccess: false
       }));
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteNotificationSuccess({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setDeleteNotificationSuccess({
         deleteNotificationSuccess: false
       }));
     };
   }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (updateSubScheme) {
-      dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+      dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_5__.miggetExtraSubSchemesDeptData)(params.id));
     }
   }, [updateSubScheme]);
 
   var handleCreateSubScheme = function handleCreateSubScheme() {
-    return navigate("/dashboard/createsubscheme");
+    return navigate("/dashboarddeptuser/createsubscheme");
   };
 
-  var handleActionClick = function handleActionClick(id) {
-    var subschemeselected = subschemes.filter(function (subscheme) {
-      return subscheme.id === id;
-    });
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemeSearch({
-      subschemeSearch: subschemeselected[0]
+  var handleActionClick = function handleActionClick(params) {
+    var subscheme = [];
+    subscheme.push(_objectSpread({}, params.row));
+
+    if (params.row.isScheme === "Y") {
+      var scheme = {
+        id: params.row.scheme_id
+      };
+      dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setSchemeSearch({
+        schemeSearch: scheme
+      }));
+      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeName({
+        subSchemeName: params.row.name
+      }));
+      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeCode({
+        subSchemeCode: params.row.subscheme_code
+      }));
+      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeStateShare({
+        subSchemeStateShare: params.row.state_share
+      }));
+      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeCenterShare({
+        subSchemeCenterShare: params.row.center_share
+      }));
+      dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemes({
+        subschemes: subscheme
+      }));
+      return navigate("/dashboarddeptuser/createsubscheme");
+    }
+
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSchemeStateName({
+      schemeStateName: params.row.state_name
     }));
-    dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionId({
-      divisionId: subschemeselected[0].division_id
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSchemeCenterName({
+      schemeCenterName: params.row.center_name
     }));
-    dispatch(_store_departmentSlice__WEBPACK_IMPORTED_MODULE_5__.departmentActions.setDepartmentId({
-      departmentId: subschemeselected[0].department_id
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSchemeStateCode({
+      schemeStateCode: params.row.state_code
     }));
-    return navigate("/dashboard/admindataentry/".concat(id));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSchemeCenterCode({
+      schemeCenterCode: params.row.center_code
+    }));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemes({
+      subschemes: subscheme
+    }));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeName({
+      subSchemeName: params.row.name
+    }));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeCode({
+      subSchemeCode: params.row.subscheme_code
+    }));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeStateShare({
+      subSchemeStateShare: params.row.state_share
+    }));
+    dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_4__.migrationActions.setSubSchemeCenterShare({
+      subSchemeCenterShare: params.row.center_share
+    }));
+    return navigate("/dashboarddeptuser/createscheme");
   };
 
   var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0__.useState(false),
@@ -46969,29 +46929,29 @@ function SchemeEntry() {
 
   var handleOpen1 = function handleOpen1(subscheme) {
     setOpen1(true);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeId({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeId({
       editSubSchemeId: subscheme.id
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeName({
       editSubSchemeName: subscheme.name
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeCode({
       editSubSchemeCode: subscheme.subscheme_code
     }));
   };
 
   var handleClose1 = function handleClose1() {
     setOpen1(false);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeId({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeId({
       editSubSchemeId: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeName({
       editSubSchemeName: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeCode({
       editSubSchemeCode: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
       editmessage: ''
     }));
   };
@@ -47024,72 +46984,72 @@ function SchemeEntry() {
     }
 
     setAllowDeleteSubScheme(true);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteSubSchemeId({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setDeleteSubSchemeId({
       deleteSubSchemeId: id
     }));
   };
 
   var handleClose18 = function handleClose18() {
     setOpen18(false);
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteSubSchemeId({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setDeleteSubSchemeId({
       deleteSubSchemeId: ''
     }));
     setAllowDeleteSubScheme(false);
   };
 
   var handleSubSchemeDelete = function handleSubSchemeDelete() {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.deleteSubSchemeData)(deleteSubSchemeId));
+    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_5__.migdeleteSubSchemeData)(deleteSubSchemeId));
     handleClose18();
   };
 
   var handleEditSubSchemeNameChange = function handleEditSubSchemeNameChange(event) {
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
       editmessage: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeName({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeName({
       editSubSchemeName: event.target.value
     }));
   };
 
   var handleEditSubSchemeCodeChange = function handleEditSubSchemeCodeChange(event) {
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
       editmessage: ''
     }));
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditSubSchemeCode({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditSubSchemeCode({
       editSubSchemeCode: event.target.value
     }));
   };
 
   var onSubmitUpdateSubScheme = function onSubmitUpdateSubScheme() {
     if (editSubSchemeName === '') {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
         editmessage: 'Please enter a Sub-Scheme Name'
       }));
       return;
     }
 
     if (editSubSchemeCode === '') {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
         editmessage: 'Please enter a Sub-Scheme Code'
       }));
       return;
     }
 
     if (isNaN(editSubSchemeCode)) {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
         editmessage: 'Please enter a numeric value for sub-scheme code'
       }));
       return;
     }
 
     if (editSubSchemeCode.length !== 8 || editSubSchemeCode.includes(".")) {
-      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditMessage({
+      dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditMessage({
         editmessage: 'Sub-scheme code should be of 8 characters'
       }));
       return;
     }
 
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.updateSubSchemeData)(editSubSchemeId, editSubSchemeName, editSubSchemeCode));
+    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_5__.migupdateSubSchemeData)(editSubSchemeId, editSubSchemeName, editSubSchemeCode));
     handleClose1();
   };
 
@@ -47111,63 +47071,63 @@ function SchemeEntry() {
       cellClassName: 'themecell1',
       renderCell: renderCellExpand
     }, {
-      field: 'edit',
-      headerName: 'Edit',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: function renderCell(params) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Utilities_SubSchemeEditButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          status: params,
-          handleEditSubScheme: handleEditSubScheme
-        });
-      }
-    }, {
-      field: 'delete',
-      headerName: 'Delete',
-      width: 150,
-      headerClassName: 'themeheader',
-      cellClassName: 'themecell1',
-      renderCell: function renderCell(params) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Utilities_SubSchemeDeleteButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
-          status: params,
-          handleDeleteSubScheme: handleDeleteSubScheme
-        });
-      }
-    }, {
-      field: 'actions',
-      type: 'actions',
-      width: 150,
-      headerName: 'Actions',
+      field: 'state_code',
+      hideable: false,
+      headerName: 'State Scheme Code',
       headerAlign: 'center',
       headerClassName: 'themeheader',
       cellClassName: 'themecell',
-      getActions: function getActions(params) {
-        return [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_17__.GridActionsCellItem, {
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "f6",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_icons_material_Pageview__WEBPACK_IMPORTED_MODULE_18__["default"], {
-              color: "actions"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-              className: "ml2 b",
-              children: "View Details"
-            })]
-          }),
-          label: "Delete",
-          onClick: function onClick() {
-            return handleActionClick(params.id);
-          }
-        })];
-      }
-    }];
-  }, [handleActionClick]);
+      flex: 1
+    }, {
+      field: 'center_code',
+      hideable: false,
+      headerName: 'Center Scheme Code',
+      headerAlign: 'center',
+      headerClassName: 'themeheader',
+      cellClassName: 'themecell',
+      flex: 1
+    } // {
+    //   field: 'edit',
+    //   headerName: 'Edit',
+    //   width: 150,
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell1',
+    //   renderCell: (params) => <SubSchemeEditButton status={params} handleEditSubScheme={handleEditSubScheme}/>
+    // },
+    // {
+    //   field: 'delete',
+    //   headerName: 'Exclude from migration',
+    //   width: 150,
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell1',
+    //   renderCell: (params) => <SubSchemeDeleteButton status={params} handleDeleteSubScheme={handleDeleteSubScheme}/>
+    // },
+    // {
+    //   field: 'actions',
+    //   type: 'actions',
+    //   width: 150,
+    //   headerName: 'Actions',
+    //   headerAlign: 'center', 
+    //   headerClassName: 'themeheader',
+    //   cellClassName: 'themecell',
+    //   getActions: (params) => [
+    //     <GridActionsCellItem
+    //       icon={<div className='f6'><PageviewIcon color="actions"/><span className='ml2 b'>Migrate</span></div>}
+    //       label="Delete"
+    //       onClick={() => handleActionClick(params)}
+    //     />,
+    //   ],
+    // },
+    ];
+  } //   [handleActionClick],
+  );
 
   var handleEditSubSchemeNotificationSuccess = function handleEditSubSchemeNotificationSuccess(event, reason) {
     if (reason === 'clickaway') {
       return;
     }
 
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setEditNotificationSuccess({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setEditNotificationSuccess({
       editNotificationSuccess: false
     }));
   };
@@ -47177,17 +47137,17 @@ function SchemeEntry() {
       return;
     }
 
-    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setDeleteNotificationSuccess({
+    dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_2__.subschemesActions.setDeleteNotificationSuccess({
       deleteNotificationSuccess: false
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
       open: deleteNotificationSuccess,
       autoHideDuration: 4000,
       onClose: handleDeleteSubSchemeNotificationSuccess,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Alert, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Alert, {
         onClose: handleDeleteSubSchemeNotificationSuccess,
         severity: "success",
         sx: {
@@ -47195,11 +47155,11 @@ function SchemeEntry() {
         },
         children: "Sub-Scheme deleted successfully!"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_19__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Snackbar__WEBPACK_IMPORTED_MODULE_16__["default"], {
       open: editNotificationSuccess,
       autoHideDuration: 4000,
       onClose: handleEditSubSchemeNotificationSuccess,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(Alert, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Alert, {
         onClose: handleEditSubSchemeNotificationSuccess,
         severity: "success",
         sx: {
@@ -47207,84 +47167,84 @@ function SchemeEntry() {
         },
         children: "Sub-Scheme updated successfully!"
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Dialog__WEBPACK_IMPORTED_MODULE_20__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Dialog__WEBPACK_IMPORTED_MODULE_17__["default"], {
       open: open18,
       onClose: handleClose18,
       "aria-labelledby": "alert-dialog-title",
       "aria-describedby": "alert-dialog-description",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_21__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_18__["default"], {
         id: "alert-dialog-title",
         children: "Confirm Sub-Scheme Delete"
-      }), allowDeleteSubScheme ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__["default"], {
+      }), allowDeleteSubScheme ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_20__["default"], {
           id: "alert-dialog-description",
           children: "Are you sure you want to delete this sub-scheme?"
         })
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__["default"], {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__["default"], {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_20__["default"], {
           id: "alert-dialog-description",
           children: "Please edit the Sub-Scheme as Sub-Schemes cannot be empty!!"
         })
-      }), allowDeleteSubScheme && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_24__["default"], {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_25__["default"], {
+      }), allowDeleteSubScheme && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_21__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_22__["default"], {
           onClick: handleClose18,
           children: "Disagree"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_25__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Button__WEBPACK_IMPORTED_MODULE_22__["default"], {
           onClick: handleSubSchemeDelete,
           autoFocus: true,
           children: "Agree"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Modal__WEBPACK_IMPORTED_MODULE_26__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Modal__WEBPACK_IMPORTED_MODULE_23__["default"], {
       open: open1,
       onClose: handleClose1,
       "aria-labelledby": "modal-modal-title",
       "aria-describedby": "modal-modal-description",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
         sx: style,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           id: "modal-modal-title",
           variant: "h6",
           component: "h2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
             className: "b nunito",
             children: "Edit Sub-Scheme"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_13__["default"], {
           id: "modal-modal-description",
           sx: {
             mt: 2
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "pa4 black-80",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
               children: "Edit Sub-Scheme Code"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "number",
               "aria-describedby": "name-desc",
               onChange: handleEditSubSchemeCodeChange,
               value: editSubSchemeCode
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("label", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
               children: "Edit Sub-Scheme Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
               onChange: handleEditSubSchemeNameChange,
               value: editSubSchemeName
-            }), editmessage !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            }), editmessage !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
               className: "f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito",
               children: editmessage
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
               className: "flex justify-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
                 className: "f6 link dim br3 ph3 pv2 mb2 mt2 white bg-dark-green w5 tc pointer",
                 onClick: onSubmitUpdateSubScheme,
                 children: "Update"
@@ -47293,24 +47253,23 @@ function SchemeEntry() {
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
-      className: "f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer",
-      onClick: handleCreateSubScheme,
-      children: "+ Create New Sub-Scheme"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       style: {
         display: 'flex',
         height: '100%'
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
         style: {
           flexGrow: 1
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_27__.DataGrid, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_x_data_grid__WEBPACK_IMPORTED_MODULE_24__.DataGrid, {
           columns: columns,
           rows: subschemes,
+          getRowId: function getRowId(row) {
+            return row.subscheme_code;
+          },
           components: {
-            Toolbar: _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_28__.GridToolbar
+            Toolbar: _mui_x_data_grid__WEBPACK_IMPORTED_MODULE_25__.GridToolbar
           }
         })
       })
@@ -47318,57 +47277,7 @@ function SchemeEntry() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SchemeEntry);
-
-/***/ }),
-
-/***/ "./resources/js/components/Dashboard/Utilities/SubSchemeCard.js":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/Dashboard/Utilities/SubSchemeCard.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-function SubSchemeCard(_ref) {
-  var subscheme = _ref.subscheme;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("article", {
-    className: "center mw5 mw6-ns br3 ba b--black-10 mv4 shadow-2",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-      to: "/dashboard/subscheme/".concat(subscheme.id),
-      className: "no-underline",
-      style: {
-        textDecoration: 'none'
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-        className: "f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3",
-        children: subscheme.name
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "pa3 bt b--black-10",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "f6 f5-ns lh-copy measure",
-          children: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "f6 grow no-underline ph3 pv2 mb2 dib dark-blue dim",
-          children: "View Details"
-        })]
-      })]
-    })
-  });
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubSchemeCard);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationDivisionExtraSubSchemeInternal);
 
 /***/ }),
 

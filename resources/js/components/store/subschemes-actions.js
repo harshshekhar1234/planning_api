@@ -113,6 +113,34 @@ export const getSubSchemesData = (id) => {
     };
   };
 
+  export const miggetExtraSubSchemesDeptData = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}extra_subscheme/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.status === 200) {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(subschemesActions.setPendingSubSchemes({pendingSubSchemes: res.subschemes})) 
+          } else {
+            dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+            dispatch(errorActions.setError({error:true}))
+            dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+          }
+        }).catch((err) => {
+          dispatch(subschemesActions.setUpateSubScheme({updateSubScheme: false})) 
+          dispatch(errorActions.setError({error:true}))
+          dispatch(subschemesActions.setMessage({message:'Sorry something went wrong!!'}))
+        })
+    };
+  };
+
+
   export const getSubSchemesDataDeptUser = (id) => {
   
     return (dispatch) => {
