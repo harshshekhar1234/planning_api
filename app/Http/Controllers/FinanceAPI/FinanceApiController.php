@@ -706,7 +706,7 @@ class FinanceApiController extends Controller
         $api_schemes_unique = collect($map)->unique(function ($item) {
             return $item['state_code'] . $item['center_code'];
         });
-        $local_schemes = MigScheme::select('id', 'state_code', 'center_code', 'division_id')->where('division_id', $id)->get();
+        $local_schemes = MigScheme::where('division_id', $id)->get();
         $extra_schemes = collect($local_schemes)->reject(function ($value, $key) use ($api_schemes_unique) {
             return $api_schemes_unique->contains(function ($lvalue, $lkey) use ($value, $key) {
                 return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
