@@ -19,7 +19,7 @@ class FinanceApiController extends Controller
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
         //dd($demand_no);exit;
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         //dd($api_schemes);exit;
@@ -113,7 +113,7 @@ class FinanceApiController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
@@ -170,7 +170,8 @@ class FinanceApiController extends Controller
         $scheme = MigScheme::find($id);
         // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
         // $api_subschemes = $response->json();
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
+        
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
@@ -211,7 +212,7 @@ class FinanceApiController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_schemes = json_decode($response);
         //dd($api_schemes->getOutcomeBudgetOutlayResult);exit;      
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
@@ -289,7 +290,7 @@ class FinanceApiController extends Controller
         $scheme = MigScheme::find($id);
         // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
         // $api_subschemes = $response->json();
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear=2223&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code);
         $api_schemes = json_decode($response);
         $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
@@ -339,7 +340,7 @@ class FinanceApiController extends Controller
         $subscheme = MigSubScheme::find($id);
         // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
         // $api_subscheme = $response->json();
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $subscheme->subscheme_code);
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&subscheme=' . $subscheme->subscheme_code);
         $api_subscheme = json_decode($response);
         $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
         if($api_subscheme == null)
@@ -381,7 +382,7 @@ class FinanceApiController extends Controller
 
         // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $sub_scheme[0]->subscheme_code . '/2023-24');
         // $api_subscheme = $response->json();
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear=2223&subscheme=' . $sub_scheme[0]->subscheme_code);
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&subscheme=' . $sub_scheme[0]->subscheme_code);
         $api_subscheme = json_decode($response);
         $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
         if($api_subscheme == null)
@@ -680,7 +681,7 @@ class FinanceApiController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_subscheme = json_decode($response);
         $api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
@@ -724,7 +725,7 @@ class FinanceApiController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_subscheme = json_decode($response);
         $api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
@@ -806,7 +807,7 @@ class FinanceApiController extends Controller
         //         'error' => "Connection Error",
         //     ]);
         // }
-        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear=2223&statecode=&central=');
+        $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudget/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='. $demand_no .'&finyear='.$this->api_fin_year.'&statecode=&central=');
         $api_subscheme = json_decode($response);
         $api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)

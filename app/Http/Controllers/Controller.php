@@ -9,5 +9,6 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+    public $api_fin_year = "2223";
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
