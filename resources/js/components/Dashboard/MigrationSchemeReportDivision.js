@@ -25,28 +25,28 @@ function MigrationSchemeReportDivision({report}) {
       </tr>
       <tbody className="lh-copy">
       <tr className="stripe-dark table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid'}}>
-          <td className="pa3 tl table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left", fontWeight: 'bold'}}>Financial Year</td>
-          <td className="pa3 tl table-bordered" colSpan='12' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>2023-24</td>
+          <td className="pa3 tl table-bordered" colSpan='2' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left", fontWeight: 'bold'}}>Financial Year</td>
+          <td className="pa3 tl table-bordered" colSpan='11' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>2023-24</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of secretariat department</td>
-          <td className="pa3 tl" colSpan='12'>{`${demand_no}-${department_name}(${division_name})`}</td>
+          <td className="pa3 tl" colSpan='2' style={{fontWeight: 'bold'}}>Name of secretariat department</td>
+          <td className="pa3 tl" colSpan='11'>{`${demand_no}-${department_name}(${division_name})`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the state scheme</td>
-          <td className="pa3 tl" colSpan='12'>{`${schemeStateCode ? schemeStateCode : '0000'}-${schemeStateName ? schemeStateName : '0000' }`}</td>
+          <td className="pa3 tl" colSpan='2' style={{fontWeight: 'bold'}}>Name of the state scheme</td>
+          <td className="pa3 tl" colSpan='11'>{`${schemeStateCode ? schemeStateCode : '0000'}-${schemeStateName ? schemeStateName : '0000' }`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the center scheme</td>
-          <td className="pa3 tl" colSpan='12'>{`${schemeCenterCode ? schemeCenterCode : 'NAPL'}-${schemeCenterName ? schemeCenterName : 'NAPL'}`}</td>
+          <td className="pa3 tl" colSpan='2' style={{fontWeight: 'bold'}}>Name of the center scheme</td>
+          <td className="pa3 tl" colSpan='11'>{`${schemeCenterCode ? schemeCenterCode : 'NAPL'}-${schemeCenterName ? schemeCenterName : 'NAPL'}`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>Budget Estimate (in Lakhs)</td>
-          <td className="pa3 tl" colSpan='12'>{report.financial_outlay}</td>
+          <td className="pa3 tl b" colSpan='2' style={{fontWeight: 'bold'}}>Budget Estimate (in Lakhs)</td>
+          <td className="pa3 tl" colSpan='11'>{report.financial_outlay}</td>
           
         </tr>
       </tbody>

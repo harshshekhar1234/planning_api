@@ -80,8 +80,12 @@ function MigrationSubSchemeReportDivision({report}) {
     <>
       <tbody className="lh-copy">
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the sub-scheme</td>
-          <td className="pa3 tl" colSpan='11'>{`${subschemecode}-${subschemename}`}</td>
+          <td className="pa3 tl" colSpan='2' rowSpan='2' style={{fontWeight: 'bold'}}>Name of the sub-scheme</td>
+          <td className="pa3 tl" colSpan='11' rowSpan='2'>{`${subschemecode}-${subschemename}`}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
         </tr>
     {/* <table className="f6 w-100 mw8 center mb3" cellspacing="0">
       <thead>

@@ -102,33 +102,33 @@ function MigrationOutcomeBudgetDashboard() {
               var i = 0;
               var sheet = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.table_to_sheet(document.getElementById(s.id));
               var wscols = [{
-                wpx: 200
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
               }, {
                 wpx: 150
               }, {
                 wpx: 150
               }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
                 wpx: 150
+              }, {
+                wpx: 150
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
               }, {
                 wpx: 100
               }, {
                 wpx: 150
               }, {
-                wpx: 150
-              }, {
                 wpx: 100
-              }, {
-                wpx: 100
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
               }, {
                 wpx: 150
               }];
@@ -138,7 +138,7 @@ function MigrationOutcomeBudgetDashboard() {
                 if (_typeof(sheet[i]) != "object") continue;
                 var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.decode_cell(i);
                 var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'B7', 'C7', 'D7', 'E7', 'F7', 'G7', 'H7', 'I7', 'J7', 'K7', 'L7', 'M7', 'N7', 'O7'];
-                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'B2', 'B3', 'B4', 'B5', 'B6'];
+                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'C2', 'C3', 'C4', 'C5', 'C6'];
 
                 var t = _l.filter(function (h) {
                   return h === i;
@@ -298,6 +298,7 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl table-bordered",
+                  colSpan: "2",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -308,7 +309,7 @@ function MigrationSchemeReportDivision(_ref) {
                   children: "Financial Year"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl table-bordered",
-                  colSpan: "12",
+                  colSpan: "11",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -327,13 +328,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "2",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of secretariat department"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "12",
+                  colSpan: "11",
                   children: "".concat(demand_no, "-").concat(department_name, "(").concat(division_name, ")")
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -346,13 +348,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "2",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the state scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "12",
+                  colSpan: "11",
                   children: "".concat(schemeStateCode ? schemeStateCode : '0000', "-").concat(schemeStateName ? schemeStateName : '0000')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -365,13 +368,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "2",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the center scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "12",
+                  colSpan: "11",
                   children: "".concat(schemeCenterCode ? schemeCenterCode : 'NAPL', "-").concat(schemeCenterName ? schemeCenterName : 'NAPL')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -384,13 +388,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "2",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Budget Estimate (in Lakhs)"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "12",
+                  colSpan: "11",
                   children: report.financial_outlay
                 })]
               })]
@@ -692,6 +697,8 @@ function MigrationSubSchemeReportDivision(_ref) {
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
+          colSpan: "2",
+          rowSpan: "2",
           style: {
             fontWeight: 'bold'
           },
@@ -699,8 +706,11 @@ function MigrationSubSchemeReportDivision(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
           colSpan: "11",
+          rowSpan: "2",
           children: "".concat(subschemecode, "-").concat(subschemename)
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
       }), toDisplay === 'outputindicators' && report.status === 200 && report.outputindicators.map(function (indicator, i) {
         var handleloop = function handleloop(i) {
           if (i === 0) {
@@ -1475,6 +1485,8 @@ function NotMigratedSubScheme(_ref) {
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
+          colSpan: "2",
+          rowSpan: "2",
           style: {
             fontWeight: 'bold'
           },
@@ -1482,12 +1494,15 @@ function NotMigratedSubScheme(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
           colSpan: "11",
+          rowSpan: "2",
           children: "".concat(subschemecode, "-").concat(subschemename)
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pv3 pr3 reportextcolor b--black-80",
-          rowSpan: rowofspan,
+          rowSpan: "2",
           style: {
             "borderWidth": "1px",
             'borderColor': "#000000",
@@ -1499,6 +1514,7 @@ function NotMigratedSubScheme(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pv3 pr3 reportextcolor b--black-80",
           colSpan: 12,
+          rowSpan: "2",
           style: {
             "borderWidth": "1px",
             'borderColor': "#000000",
@@ -1508,6 +1524,8 @@ function NotMigratedSubScheme(_ref) {
           },
           children: "Sub-Scheme not migrated in outcome budget"
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
       })]
     })
   });
