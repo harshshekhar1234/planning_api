@@ -108,17 +108,9 @@ function MigrationOutcomeBudgetDashboard() {
               }, {
                 wpx: 75
               }, {
-                wpx: 150
+                wpx: 100
               }, {
-                wpx: 150
-              }, {
-                wpx: 75
-              }, {
-                wpx: 75
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
+                wpx: 100
               }, {
                 wpx: 75
               }, {
@@ -126,11 +118,15 @@ function MigrationOutcomeBudgetDashboard() {
               }, {
                 wpx: 100
               }, {
-                wpx: 150
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
               }, {
                 wpx: 100
               }, {
-                wpx: 150
+                wpx: 100
               }];
               sheet['!cols'] = wscols;
 

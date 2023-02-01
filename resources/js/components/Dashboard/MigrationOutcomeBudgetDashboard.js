@@ -41,7 +41,7 @@ const j = divisionreport.schemes.map((s) => {
   let i = 0
   const sheet = XLSX.utils.table_to_sheet(document.getElementById(s.id));
   const wscols = [
-    {wpx: 100},{wpx: 75},{wpx: 75},{wpx: 150},{wpx: 150},{wpx: 75},{wpx: 75},{wpx: 150},{wpx: 150},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 150},{wpx: 100},{wpx: 150}
+    {wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100}
 ];
 sheet['!cols'] = wscols;
   for (i in sheet) {
