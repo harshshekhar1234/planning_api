@@ -95,6 +95,21 @@ function MigrationSchemeReportDivision({report}) {
           <th className=" b--black-80 tc reportextcolor b" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sustainable Development Goals</th>
           <th className=" b--black-80 tc pb3 pr3 reportextcolor b" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Risk Factors/Any Other Remarks</th>
         </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+        </tr>
         {report.subschemes.map(report => {
           if(!report.isSubscheme){
             return <NotMigratedSubscheme report={report}/>
