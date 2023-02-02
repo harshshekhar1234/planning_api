@@ -54,7 +54,7 @@ sheet['!cols'] = wscols;
     sheet[i].s = { // styling for all cells
         font: {
             name: "arial",
-            sz: 10,
+            sz: 11,
             bold: t.length
         },
         alignment: {
