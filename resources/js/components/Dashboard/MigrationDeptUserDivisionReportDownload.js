@@ -48,13 +48,13 @@ sheet['!cols'] = wscols;
     if (typeof(sheet[i]) != "object") continue;
     let cell = XLSX.utils.decode_cell(i);
     const l = ['A1','A2','A3','A4','A5','A6','A7','B7','C7','D7','E7','F7','G7','H7','I7','J7','K7','L7','M7','N7','O7']
-    const k = ['A2','A3','A4','A5','A6','C2','C3','C4','C5','C6']
+    const k = ['A2','A3','A4','A5','A6','D2','D3','D4','D5','D6']
     const t = l.filter(h => h === i)
     const m = k.filter(d => d === i)
     sheet[i].s = { // styling for all cells
         font: {
             name: "arial",
-            sz: 10,
+            sz: 11,
             bold: t.length
         },
         alignment: {

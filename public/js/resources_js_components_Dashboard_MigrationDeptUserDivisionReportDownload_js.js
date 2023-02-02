@@ -134,7 +134,7 @@ function MigrationDeptUserDivisionReportDownload() {
                 if (_typeof(sheet[i]) != "object") continue;
                 var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.decode_cell(i);
                 var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'B7', 'C7', 'D7', 'E7', 'F7', 'G7', 'H7', 'I7', 'J7', 'K7', 'L7', 'M7', 'N7', 'O7'];
-                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'C2', 'C3', 'C4', 'C5', 'C6'];
+                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'D2', 'D3', 'D4', 'D5', 'D6'];
 
                 var t = _l.filter(function (h) {
                   return h === i;
@@ -147,7 +147,7 @@ function MigrationDeptUserDivisionReportDownload() {
                   // styling for all cells
                   font: {
                     name: "arial",
-                    sz: 10,
+                    sz: 11,
                     bold: t.length
                   },
                   alignment: {

@@ -433,6 +433,7 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl table-bordered",
+                  colSpan: "3",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -443,7 +444,7 @@ function SubSchemeReportDivisionAsOn(_ref) {
                   children: "Financial Year"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl table-bordered",
-                  colSpan: "14",
+                  colSpan: "12",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -462,13 +463,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of secretariat department"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: "".concat(demand_no, "-").concat(department_name, "(").concat(division_name, ")")
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -481,13 +483,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the state scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: "".concat(schemeStateCode ? schemeStateCode : '0000', "-").concat(schemeStateName ? schemeStateName : '0000')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -500,13 +503,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the center scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: "".concat(schemeCenterCode ? schemeCenterCode : 'NAPL', "-").concat(schemeCenterName ? schemeCenterName : 'NAPL')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -519,13 +523,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the sub-scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: "".concat(subschemecode, "-").concat(subschemename)
                 })]
               })]
@@ -545,13 +550,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Budget Estimate (in Lakhs)"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: report.financial_outlay
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -564,13 +570,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Sanction"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: parseFloat(sanction)
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -583,13 +590,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Allotment"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: parseFloat(allotment)
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -602,13 +610,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Expenditure"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: parseFloat(expenditure)
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -621,13 +630,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "% Expenditure against Sanction"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: calculatepercentexpendituresanction(expenditure, sanction)
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
@@ -640,13 +650,14 @@ function SubSchemeReportDivisionAsOn(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl b",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "% Expenditure against Allotment"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "14",
+                  colSpan: "12",
                   children: calculatepercentexpenditureallotment(expenditure, allotment)
                 })]
               })]
@@ -815,6 +826,38 @@ function SubSchemeReportDivisionAsOn(_ref) {
                     'verticalAlign': "middle"
                   },
                   children: "Risk Factors/Any Other Remarks"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "1"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "2"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "3"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "4"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "5"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "6"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "7"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "8"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "9"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "10"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "11"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "12"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "13"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "14"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  children: "15"
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
                 className: "lh-copy ba",

@@ -113,28 +113,28 @@ function SubSchemeReportDivisionAsOn({report,fromDate,toDate}) {
       </tr>
       <tbody className="lh-copy">
       <tr className="stripe-dark table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid'}}>
-          <td className="pa3 tl table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left", fontWeight: 'bold'}}>Financial Year</td>
-          <td className="pa3 tl table-bordered" colSpan='14' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>2022-23</td>
+          <td className="pa3 tl table-bordered" colSpan='3' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left", fontWeight: 'bold'}}>Financial Year</td>
+          <td className="pa3 tl table-bordered" colSpan='12' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>2022-23</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of secretariat department</td>
-          <td className="pa3 tl" colSpan='14'>{`${demand_no}-${department_name}(${division_name})`}</td>
+          <td className="pa3 tl" colSpan='3' style={{fontWeight: 'bold'}}>Name of secretariat department</td>
+          <td className="pa3 tl" colSpan='12'>{`${demand_no}-${department_name}(${division_name})`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the state scheme</td>
-          <td className="pa3 tl" colSpan='14'>{`${schemeStateCode ? schemeStateCode : '0000'}-${schemeStateName ? schemeStateName : '0000' }`}</td>
+          <td className="pa3 tl" colSpan='3' style={{fontWeight: 'bold'}}>Name of the state scheme</td>
+          <td className="pa3 tl" colSpan='12'>{`${schemeStateCode ? schemeStateCode : '0000'}-${schemeStateName ? schemeStateName : '0000' }`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the center scheme</td>
-          <td className="pa3 tl" colSpan='14'>{`${schemeCenterCode ? schemeCenterCode : 'NAPL'}-${schemeCenterName ? schemeCenterName : 'NAPL'}`}</td>
+          <td className="pa3 tl" colSpan='3' style={{fontWeight: 'bold'}}>Name of the center scheme</td>
+          <td className="pa3 tl" colSpan='12'>{`${schemeCenterCode ? schemeCenterCode : 'NAPL'}-${schemeCenterName ? schemeCenterName : 'NAPL'}`}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl" style={{fontWeight: 'bold'}}>Name of the sub-scheme</td>
-          <td className="pa3 tl" colSpan='14'>{`${subschemecode}-${subschemename}`}</td>
+          <td className="pa3 tl" colSpan='3' style={{fontWeight: 'bold'}}>Name of the sub-scheme</td>
+          <td className="pa3 tl" colSpan='12'>{`${subschemecode}-${subschemename}`}</td>
         
         </tr>
       </tbody>
@@ -144,33 +144,33 @@ function SubSchemeReportDivisionAsOn({report,fromDate,toDate}) {
       
       <tbody claclassNamess="lh-copy">
       <tr className="bg-light-yellow" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>Budget Estimate (in Lakhs)</td>
-          <td className="pa3 tl" colSpan='14'>{report.financial_outlay}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>Budget Estimate (in Lakhs)</td>
+          <td className="pa3 tl" colSpan='12'>{report.financial_outlay}</td>
           
         </tr>
         <tr className="bg-lightest-blue" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>Sanction</td>
-          <td className="pa3 tl" colSpan='14'>{parseFloat(sanction)}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>Sanction</td>
+          <td className="pa3 tl" colSpan='12'>{parseFloat(sanction)}</td>
           
         </tr>
         <tr className="bg-light-yellow" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>Allotment</td>
-          <td className="pa3 tl" colSpan='14'>{parseFloat(allotment)}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>Allotment</td>
+          <td className="pa3 tl" colSpan='12'>{parseFloat(allotment)}</td>
           
         </tr>
         
         <tr className="bg-lightest-blue" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>Expenditure</td>
-          <td className="pa3 tl" colSpan='14'>{parseFloat(expenditure)}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>Expenditure</td>
+          <td className="pa3 tl" colSpan='12'>{parseFloat(expenditure)}</td>
           
         </tr>
         <tr className="bg-light-yellow" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>% Expenditure against Sanction</td>
-          <td className="pa3 tl" colSpan='14'>{calculatepercentexpendituresanction(expenditure,sanction)}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>% Expenditure against Sanction</td>
+          <td className="pa3 tl" colSpan='12'>{calculatepercentexpendituresanction(expenditure,sanction)}</td>
         </tr>
         <tr className="bg-lightest-blue" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>
-          <td className="pa3 tl b" style={{fontWeight: 'bold'}}>% Expenditure against Allotment</td>
-          <td className="pa3 tl" colSpan='14'>{calculatepercentexpenditureallotment(expenditure,allotment)}</td>
+          <td className="pa3 tl b" colSpan='3' style={{fontWeight: 'bold'}}>% Expenditure against Allotment</td>
+          <td className="pa3 tl" colSpan='12'>{calculatepercentexpenditureallotment(expenditure,allotment)}</td>
         </tr>
       </tbody>
     </table>
@@ -219,6 +219,23 @@ function SubSchemeReportDivisionAsOn({report,fromDate,toDate}) {
           <th className=" b--black-80 tc b reportoutcomeachcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>% Achievement</th>
           <th className=" b--black-80 tc reportextcolor b" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sustainable Development Goals</th>
           <th className=" b--black-80 tc pb3 pr3 reportextcolor b" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Risk Factors/Any Other Remarks</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
         </tr>
       <tbody className="lh-copy ba">
         {(toDisplay === 'outputindicators') && (report.status === 200) && report.outputindicators.map((indicator,i) => {
