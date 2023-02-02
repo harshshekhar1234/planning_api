@@ -294,7 +294,7 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl table-bordered",
-                  colSpan: "2",
+                  colSpan: "3",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -305,7 +305,7 @@ function MigrationSchemeReportDivision(_ref) {
                   children: "Financial Year"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl table-bordered",
-                  colSpan: "11",
+                  colSpan: "10",
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -324,14 +324,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "2",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of secretariat department"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "11",
+                  colSpan: "10",
                   children: "".concat(demand_no, "-").concat(department_name, "(").concat(division_name, ")")
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -344,14 +344,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "2",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the state scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "11",
+                  colSpan: "10",
                   children: "".concat(schemeStateCode ? schemeStateCode : '0000', "-").concat(schemeStateName ? schemeStateName : '0000')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -364,14 +364,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "2",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Name of the center scheme"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "11",
+                  colSpan: "10",
                   children: "".concat(schemeCenterCode ? schemeCenterCode : 'NAPL', "-").concat(schemeCenterName ? schemeCenterName : 'NAPL')
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
@@ -384,14 +384,14 @@ function MigrationSchemeReportDivision(_ref) {
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl b",
-                  colSpan: "2",
+                  colSpan: "3",
                   style: {
                     fontWeight: 'bold'
                   },
                   children: "Budget Estimate (in Lakhs)"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
                   className: "pa3 tl",
-                  colSpan: "11",
+                  colSpan: "10",
                   children: report.financial_outlay
                 })]
               })]
@@ -721,7 +721,7 @@ function MigrationSubSchemeReportDivision(_ref) {
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
-          colSpan: "2",
+          colSpan: "3",
           rowSpan: "2",
           style: {
             fontWeight: 'bold'
@@ -729,7 +729,7 @@ function MigrationSubSchemeReportDivision(_ref) {
           children: "Name of the sub-scheme"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
-          colSpan: "11",
+          colSpan: "10",
           rowSpan: "2",
           children: "".concat(subschemecode, "-").concat(subschemename)
         })]
@@ -1509,7 +1509,7 @@ function NotMigratedSubScheme(_ref) {
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
-          colSpan: "2",
+          colSpan: "3",
           rowSpan: "2",
           style: {
             fontWeight: 'bold'
@@ -1517,7 +1517,7 @@ function NotMigratedSubScheme(_ref) {
           children: "Name of the sub-scheme"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
           className: "pa3 tl",
-          colSpan: "11",
+          colSpan: "10",
           rowSpan: "2",
           children: "".concat(subschemecode, "-").concat(subschemename)
         })]
