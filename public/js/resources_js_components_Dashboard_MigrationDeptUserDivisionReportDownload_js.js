@@ -102,35 +102,31 @@ function MigrationDeptUserDivisionReportDownload() {
               var i = 0;
               var sheet = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.table_to_sheet(document.getElementById(s.id));
               var wscols = [{
-                wpx: 200
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
                 wpx: 100
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
               }, {
                 wpx: 100
               }, {
                 wpx: 100
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 100
               }, {
-                wpx: 150
+                wpx: 100
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
+              }, {
+                wpx: 100
+              }, {
+                wpx: 100
               }];
               sheet['!cols'] = wscols;
 
@@ -138,7 +134,7 @@ function MigrationDeptUserDivisionReportDownload() {
                 if (_typeof(sheet[i]) != "object") continue;
                 var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.decode_cell(i);
                 var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'B7', 'C7', 'D7', 'E7', 'F7', 'G7', 'H7', 'I7', 'J7', 'K7', 'L7', 'M7', 'N7', 'O7'];
-                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'B2', 'B3', 'B4', 'B5', 'B6'];
+                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'C2', 'C3', 'C4', 'C5', 'C6'];
 
                 var t = _l.filter(function (h) {
                   return h === i;

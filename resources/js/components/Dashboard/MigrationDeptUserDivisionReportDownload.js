@@ -41,14 +41,14 @@ const j = divisionreport.schemes.map((s) => {
   let i = 0
   const sheet = XLSX.utils.table_to_sheet(document.getElementById(s.id));
   const wscols = [
-    {wpx: 200},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 100},{wpx: 150},{wpx: 150},{wpx: 100},{wpx: 100},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150}
+    {wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100}
 ];
 sheet['!cols'] = wscols;
   for (i in sheet) {
     if (typeof(sheet[i]) != "object") continue;
     let cell = XLSX.utils.decode_cell(i);
     const l = ['A1','A2','A3','A4','A5','A6','A7','B7','C7','D7','E7','F7','G7','H7','I7','J7','K7','L7','M7','N7','O7']
-    const k = ['A2','A3','A4','A5','A6','B2','B3','B4','B5','B6']
+    const k = ['A2','A3','A4','A5','A6','C2','C3','C4','C5','C6']
     const t = l.filter(h => h === i)
     const m = k.filter(d => d === i)
     sheet[i].s = { // styling for all cells
