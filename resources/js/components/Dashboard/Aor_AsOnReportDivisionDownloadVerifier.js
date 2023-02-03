@@ -47,14 +47,14 @@ const j = divisionreport.subschemes.map((s) => {
   let i = 0
   const sheet = XLSX.utils.table_to_sheet(document.getElementById(s.subscheme_code));
   const wscols = [
-    {wpx: 200},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 100},{wpx: 150},{wpx: 150},{wpx: 100},{wpx: 100},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150},{wpx: 150}
+    {wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100},{wpx: 75},{wpx: 75},{wpx: 75},{wpx: 100},{wpx: 100}
 ];
 sheet['!cols'] = wscols;
   for (i in sheet) {
     if (typeof(sheet[i]) != "object") continue;
     let cell = XLSX.utils.decode_cell(i);
     const l = ['A1','A2','A3','A4','A5','A6','A7','A8','A9','A10','A11','A12','A13','B13','C13','D13','E13','F13','G13','H13','I13','J13','K13','L13','M13','N13','O13']
-    const k = ['A2','A3','A4','A5','A6','A7','A8','A9','A10','A11','A12','B2','B3','B4','B5','B6','B7','B8','B9','B10','B11','B12']
+    const k = ['A2','A3','A4','A5','A6','A7','A8','A9','A10','A11','A12','D2','D3','D4','D5','D6','D7','D8','D9','D10','D11','D12']
     const t = l.filter(h => h === i)
     const m = k.filter(d => d === i)
     sheet[i].s = { // styling for all cells

@@ -118,35 +118,35 @@ function AsOnReportDivisionDownloadVerifier() {
               var i = 0;
               var sheet = xlsx_js_style__WEBPACK_IMPORTED_MODULE_7___default().utils.table_to_sheet(document.getElementById(s.subscheme_code));
               var wscols = [{
-                wpx: 200
+                wpx: 75
               }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 100
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
+                wpx: 75
               }, {
                 wpx: 100
               }, {
                 wpx: 100
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 75
               }, {
-                wpx: 150
+                wpx: 100
               }, {
-                wpx: 150
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
+                wpx: 100
+              }, {
+                wpx: 100
               }];
               sheet['!cols'] = wscols;
 
@@ -154,7 +154,7 @@ function AsOnReportDivisionDownloadVerifier() {
                 if (_typeof(sheet[i]) != "object") continue;
                 var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_7___default().utils.decode_cell(i);
                 var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'B13', 'C13', 'D13', 'E13', 'F13', 'G13', 'H13', 'I13', 'J13', 'K13', 'L13', 'M13', 'N13', 'O13'];
-                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10', 'B11', 'B12'];
+                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'D10', 'D11', 'D12'];
 
                 var t = _l.filter(function (h) {
                   return h === i;
