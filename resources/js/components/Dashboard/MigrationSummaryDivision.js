@@ -56,6 +56,7 @@ function MigrationSummaryDivision() {
      let outputloop1 = 0
      let outputloopcount1 = 1
      let outputlooprow1 = 1
+     let slcount = 1
      let outputindicatorloop = report.status === 200 ? report.schemes[0].subschemes : []
     //  let outcomeloop1 = 0
     //  let outcomeloopcount1 = 1
@@ -148,9 +149,10 @@ function MigrationSummaryDivision() {
   <div className="overflow-auto">
     <table className="f6 w-100 mw8 center ba" cellSpacing="0" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "center"}}>
         <tr>
-        <th className=" b--black-80 tc b reportoutputcolor" colSpan={10} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Scheme-wise list with outlay - 2023-24 (${params.division})`}</th>
+        <th className=" b--black-80 tc b reportoutputcolor" colSpan={11} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Scheme-wise list with outlay - 2023-24 (${params.division})`}</th>
         </tr>
         <tr>
+        <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sl no.</th>
           <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>State Scheme Name</th>
           <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Center Scheme Name</th>
           <th className=" b--black-80 tc b reportoutputcolor" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sub Scheme Name</th>
@@ -168,6 +170,7 @@ function MigrationSummaryDivision() {
             if(i === 0){
              (outputloop1 = report.schemes[0].subschemes.length);
              (outputlooprow1 = i + outputloop1);
+             (slcount = 1 + slcount);
             }
      
             if(i === outputlooprow1){
@@ -175,6 +178,7 @@ function MigrationSummaryDivision() {
              (outputindicatorloop = outputindicatorloop.concat(report.schemes[outputloopcount1].subschemes));
              (outputloopcount1 = (outputloopcount1 + 1 ));
              (outputlooprow1 = (outputlooprow1 + outputloop1));
+             (slcount = 1 + slcount);
             }
            }
 
@@ -292,6 +296,8 @@ function MigrationSummaryDivision() {
 
           return (
             <tr>
+              {((i === 0) ? <td className="pv3 pr3 reportoutputcolor b--black-80" rowSpan={report.schemes[0].subschemes.length} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{slcount}</td> : null)}
+              {((i === outputlooprow1) ? <td className="pv3 pr3 reportoutputcolor b--black-80" rowSpan={report.schemes[outputloopcount1].subschemes.length} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{slcount}</td> : null)}
               {((i === 0) ? <td className="pv3 pr3 reportoutputcolor b--black-80" rowSpan={report.schemes[0].subschemes.length} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`${report.schemes[0].state_code}-${report.schemes[0].state_name}`}</td> : null)}
               {((i === outputlooprow1) ? <td className="pv3 pr3 reportoutputcolor b--black-80" rowSpan={report.schemes[outputloopcount1].subschemes.length} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`${report.schemes[outputloopcount1].state_code}-${report.schemes[outputloopcount1].state_name}`}</td> : null)}
               {((i === 0) ? <td className="pv3 pr3 reportoutputcolor b--black-80" rowSpan={report.schemes[0].subschemes.length} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`${report.schemes[0].center_code}-${report.schemes[0].center_name}`}</td> : null)}
@@ -310,7 +316,7 @@ function MigrationSummaryDivision() {
         })
         }
         <tr>
-        <td className="pv3 pr3 b b--black-80" colSpan={3} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Total - Outcome Budget Schemes (${report.schemes ? report.schemes.length : 0})`}</td>
+        <td className="pv3 pr3 b b--black-80" colSpan={4} style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{`Total - Outcome Budget Schemes (${report.schemes ? report.schemes.length : 0})`}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{handleTotalOutputCount()}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{handleTotalOutcomeCount()}</td>
         <td className="pv3 pr3 b b--black-80" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}></td>

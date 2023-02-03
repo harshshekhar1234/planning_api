@@ -103,6 +103,7 @@ function MigrationSummaryDivision() {
   var outputloop1 = 0;
   var outputloopcount1 = 1;
   var outputlooprow1 = 1;
+  var slcount = 1;
   var outputindicatorloop = report.status === 200 ? report.schemes[0].subschemes : []; //  let outcomeloop1 = 0
   //  let outcomeloopcount1 = 1
   //  let outcomelooprow1 = 1
@@ -219,7 +220,7 @@ function MigrationSummaryDivision() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tr", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
                   className: " b--black-80 tc b reportoutputcolor",
-                  colSpan: 10,
+                  colSpan: 11,
                   style: {
                     "borderWidth": "1px",
                     'borderColor': "#000000",
@@ -231,6 +232,16 @@ function MigrationSummaryDivision() {
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Sl no."
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
                   className: " b--black-80 tc b reportoutputcolor",
                   style: {
                     "borderWidth": "1px",
@@ -338,6 +349,7 @@ function MigrationSummaryDivision() {
                     if (i === 0) {
                       outputloop1 = report.schemes[0].subschemes.length;
                       outputlooprow1 = i + outputloop1;
+                      slcount = 1 + slcount;
                     }
 
                     if (i === outputlooprow1) {
@@ -345,6 +357,7 @@ function MigrationSummaryDivision() {
                       outputindicatorloop = outputindicatorloop.concat(report.schemes[outputloopcount1].subschemes);
                       outputloopcount1 = outputloopcount1 + 1;
                       outputlooprow1 = outputlooprow1 + outputloop1;
+                      slcount = 1 + slcount;
                     }
                   };
 
@@ -497,6 +510,28 @@ function MigrationSummaryDivision() {
                         'textAlign': "center",
                         'verticalAlign': "middle"
                       },
+                      children: slcount
+                    }) : null, i === outputlooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                      className: "pv3 pr3 reportoutputcolor b--black-80",
+                      rowSpan: report.schemes[outputloopcount1].subschemes.length,
+                      style: {
+                        "borderWidth": "1px",
+                        'borderColor': "#000000",
+                        'borderStyle': 'solid',
+                        'textAlign': "center",
+                        'verticalAlign': "middle"
+                      },
+                      children: slcount
+                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+                      className: "pv3 pr3 reportoutputcolor b--black-80",
+                      rowSpan: report.schemes[0].subschemes.length,
+                      style: {
+                        "borderWidth": "1px",
+                        'borderColor': "#000000",
+                        'borderStyle': 'solid',
+                        'textAlign': "center",
+                        'verticalAlign': "middle"
+                      },
                       children: "".concat(report.schemes[0].state_code, "-").concat(report.schemes[0].state_name)
                     }) : null, i === outputlooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
                       className: "pv3 pr3 reportoutputcolor b--black-80",
@@ -616,7 +651,7 @@ function MigrationSummaryDivision() {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
                     className: "pv3 pr3 b b--black-80",
-                    colSpan: 3,
+                    colSpan: 4,
                     style: {
                       "borderWidth": "1px",
                       'borderColor': "#000000",
