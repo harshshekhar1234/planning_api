@@ -959,14 +959,14 @@ useEffect(() => {
       let year = d.getFullYear();
       const d1 = new Date(timeEdit);
       let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
-        return
-      }
+      // if(year !== yearToCheck){
+      //   dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
+      //   return
+      // }
+      // if(d1 > d){
+      //   dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
+      //   return
+      // }
       
 
       if(!outputConfirmEditAgree && ((parseFloat(valueEdit)) > parseFloat(valueTargetEdit))){
@@ -1001,14 +1001,14 @@ useEffect(() => {
       let year = d.getFullYear();
       const d1 = new Date(timeoutcomeEdit);
       let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Future dates are not allowed'}))
-        return
-      }
+      // if(year !== yearToCheck){
+      //   dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Please enter a valid date'}))
+      //   return
+      // }
+      // if(d1 > d){
+      //   dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Future dates are not allowed'}))
+      //   return
+      // }
       if(!outcomeConfirmEditAgree && ((parseFloat(valueoutcomeEdit)) > parseFloat(valueOutcomeTargetEdit))){
         handleOpenOutcomeEditConfirm()
         return
@@ -1191,14 +1191,14 @@ useEffect(() => {
       let year = d.getFullYear();
       const d1 = new Date(outlaytimeedit);
       let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
-        return
-      }
+      // if(year !== yearToCheck){
+      //   dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
+      //   return
+      // }
+      // if(d1 > d){
+      //   dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
+      //   return
+      // }
       
       dispatch(aorupdateFinancialData(sanctionedEdit,allotmentEdit,expenditureEdit,outlaytimeedit,finEditId));
       handleClose10();
