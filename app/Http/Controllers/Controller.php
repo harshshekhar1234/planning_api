@@ -10,5 +10,7 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     public $api_fin_year = "2324";
+    public $api_user = 'ZypYy7SsrPwss54wDOdGWQ';
+    public $api_password = 'X7+eLUWw4BIUNnKzxP1l2A==';
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
