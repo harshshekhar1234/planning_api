@@ -258,12 +258,12 @@ class MigSchemeController extends Controller
             $center_code = $request->schemeCenterCode;
         }
 
-        if ($request->subSchemeStateShare == null && $request->subSchemeCenterShare == null) {
-            return response()->json([
-                'status' => 401,
-                'message' => 'Budget Estimate for a sub-scheme cannot be zero.'
-            ]);
-        }
+        // if ($request->subSchemeStateShare == null && $request->subSchemeCenterShare == null) {
+        //     return response()->json([
+        //         'status' => 401,
+        //         'message' => 'Budget Estimate for a sub-scheme cannot be zero.'
+        //     ]);
+        // }
 
         $scheme = MigScheme::where('state_code', $state_code)
             ->where('center_code', $center_code)
