@@ -358,10 +358,9 @@ class MigSubSchemeController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getCurrentScheme?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
+        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
         $api_schemes = json_decode($response);
-        // $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
-        $api_schemes = json_decode($api_schemes->getCurrentSchemeResult);
+        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
         if($api_schemes == null)
         {
             return response()->json([
@@ -377,10 +376,8 @@ class MigSubSchemeController extends Controller
             $data['center_code'] = $items->CPSMSSCHEME_CODE;
             $data['subscheme_code'] = $items->SUB_SCHEMECODE;
             $data['name'] = $items->SUB_SCHEMEENAME;
-            // $data['state_share'] = $items->S_BE / 100000;
-            // $data['center_share'] = $items->C_BE / 100000;
-            $data['state_share'] = 0.0;
-            $data['center_share'] = 0.0;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
             return $data;
         });
 
@@ -641,16 +638,16 @@ class MigSubSchemeController extends Controller
             //$financial_outlay = MigFinancialOutlay::select('state_share', 'center_share')->where('subscheme_id', $id)->get();
             // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getstatecentersharebysubschemecode/' . $subscheme->subscheme_code . '/2023-24');
             // $api_subscheme = $response->json();
-            // $response = Http::acceptJson()->get('http://jkuberuat.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&subscheme=' . $subscheme->subscheme_code.'&pwd='.$this->api_password);
-            // $api_subscheme = json_decode($response);
-            // $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
-            // if($api_subscheme == null)
-            // {
-            //     return response()->json([
-            //         'status' => 404,
-            //         'error' => "Connection Error",
-            //     ]);
-            // }
+            $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand=&finyear='.$this->api_fin_year.'&subscheme=' . $subscheme->subscheme_code.'&pwd='.$this->api_password);
+            $api_subscheme = json_decode($response);
+            $api_subscheme = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
+            if($api_subscheme == null)
+            {
+                return response()->json([
+                    'status' => 404,
+                    'error' => "Connection Error",
+                ]);
+            }
             $sdg = DB::table('sdg_goals AS s')
                 ->select('s.goal_name', 's.goal_number')
                 ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
@@ -672,8 +669,7 @@ class MigSubSchemeController extends Controller
                 'socials' => $socials,
                 //'financial_outlay' => $financial_outlay[0]->state_share + $financial_outlay[0]->center_share,
                 //'financial_outlay' => $api_subscheme['state_share'] + $api_subscheme['center_share'],
-                // 'financial_outlay' => ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000,
-                'financial_outlay' => 0.0,
+                'financial_outlay' => ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000,
                 'sdg' => $sdg,
                 'remark' => $risk_remarks,
                 'subscheme' => $subscheme
