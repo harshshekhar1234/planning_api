@@ -358,9 +358,225 @@ class MigSubSchemeController extends Controller
         $division = Division::find($id);
         $demand_no = $division->demand_no;
         $demand_no = sprintf("%02d", $demand_no);
-        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
+        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getCurrentScheme?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
         $api_schemes = json_decode($response);
-        $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        // $api_schemes = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+        $api_schemes = json_decode($api_schemes->getCurrentSchemeResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
+        $data = [];
+        $map = collect($api_schemes)->map(function ($items) use ($data) {
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            // $data['state_share'] = $items->S_BE / 100000;
+            // $data['center_share'] = $items->C_BE / 100000;
+            $data['state_share'] = 0.0;
+            $data['center_share'] = 0.0;
+            return $data;
+        });
+
+        $api_schemes_unique = collect($map)->unique(function ($item) {
+            return $item['state_code'] . $item['center_code'];
+        });
+
+        $api_schemes_unique = $api_schemes_unique->map(function ($item, $key) use ($map) {
+            $item = collect($item)->forget('subscheme_code')->forget('name');
+            $item['state_share'] = 0;
+            $item['center_share'] = 0;
+
+            $subschemes = collect($map)->filter(function ($value, $skey) use ($item) {
+                return ($value['state_code'] == $item['state_code'] &&  $value['center_code'] == $item['center_code']);
+            });
+
+            $subschemes = collect($subschemes)->map(function ($sitem, $key) use ($item) {
+                $sitem = collect($sitem)->forget('state_name')->forget('center_name')->forget('state_code')->forget('center_code');
+                $item['state_share'] += $sitem['state_share'];
+                $item['center_share'] += $sitem['center_share'];
+                return $sitem;
+            });
+
+            $item['subschemes'] = $subschemes->values()->all();
+
+            return $item;
+        });
+
+        $local_schemes = MigScheme::where('division_id', $id)->get();
+        $local_subschemes = MigSubScheme::where('division_id', $id)->get();
+
+        $migrated_schemes = collect($api_schemes_unique)->filter(function ($value, $key) use ($local_schemes) {
+            return $local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
+            });
+        });
+
+        $migrated_schemes = $migrated_schemes->map(function ($item, $key) use ($local_schemes, $local_subschemes) {
+            $scheme = $local_schemes->where('state_code', $item['state_code'])->where('center_code', $item['center_code'])->first();
+            $item['id'] = $scheme->id;
+            $item['department_id'] = $scheme->department_id;
+            $item['division_id'] = $scheme->division_id;
+            $item['financial_outlay'] = $item['state_share'] + $item['center_share'];
+
+            $item['subschemes'] = collect($item['subschemes'])->map(function ($sitem, $skey) use ($local_schemes, $local_subschemes, $scheme) {
+                $subscheme_exists = $local_subschemes->where('subscheme_code', $sitem['subscheme_code'])->first();
+                if ($subscheme_exists) {
+                    $sitem['isSubscheme'] = true;
+                    $sitem['id'] = $subscheme_exists->id;
+                    $sitem['scheme_id'] = $subscheme_exists->scheme_id;
+                    $sitem['division_id'] = $subscheme_exists->division_id;
+                    $sitem['department_id'] = $subscheme_exists->department_id;
+                    $sitem['risk_remarks'] = $subscheme_exists->risk_remarks;
+                    $sitem['initial_remarks'] = $subscheme_exists->initial_remarks;
+                    $sitem['status'] = 200;
+                    $sitem['achievement_outputs'] = [];
+                    $sitem['achievement_outcomes'] = [];
+                    $sitem['sanction'] = 0;
+                    $sitem['allotment'] = 0;
+                    $sitem['expenditure'] = 0;
+                    $sitem['remark'] = 0;
+                    $sitem['financial_outlay'] = $sitem['state_share'] + $sitem['center_share'];
+
+                    $outputs = DB::table('mig_outputs')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($outputs) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Output Found'
+                        ]);
+                    }
+                    $outputindicators = DB::table('mig_output_indicators')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($outputindicators) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Output Indicators Found'
+                        ]);
+                    }
+                    $outcomes = DB::table('mig_outcomes')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($outcomes) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Outcome Found'
+                        ]);
+                    }
+                    $outcomeindicators = DB::table('mig_outcome_indicators')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($outcomeindicators) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Output Indicators Found'
+                        ]);
+                    }
+                    $target_outputs = DB::table('mig_output_indicator_targets')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($target_outputs) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Output Indicator Targets Found'
+                        ]);
+                    }
+                    $target_outcomes = DB::table('mig_outcome_indicator_targets')->where('subscheme_id', $subscheme_exists->id)->orderBy('id')->get();
+                    if (sizeof($target_outcomes) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'No Outcome Indicator Targets Found'
+                        ]);
+                    }
+
+                    foreach ($outputs as $output) {
+                        $output->outputindicatorscount = DB::table('mig_output_indicators')->where('output_id', $output->id)->count();
+                    }
+                    foreach ($outcomes as $outcome) {
+                        $outcome->outcomeindicatorscount = DB::table('mig_outcome_indicators')->where('outcome_id', $outcome->id)->count();
+                    }
+
+                    $genders = DB::table('genders AS g')
+                        ->select('g.name')
+                        ->join('mig_sub_scheme_genders AS sg', 'sg.gender_id', '=', 'g.id')
+                        ->where('sg.subscheme_id', $subscheme_exists->id)->get();
+
+                    $socials = DB::table('socials AS s')
+                        ->select('s.name')
+                        ->join('mig_sub_scheme_socials AS ss', 'ss.social_id', '=', 's.id')
+                        ->where('ss.subscheme_id', $subscheme_exists->id)->get();
+
+                    $sdg = DB::table('sdg_goals AS s')
+                        ->select('s.goal_name', 's.goal_number')
+                        ->join('mig_sub_scheme_sdgs AS ss', 'ss.sdg_id', '=', 's.id')
+                        ->where('ss.subscheme_id', $subscheme_exists->id)->get();
+
+                    $sitem['outputs'] = $outputs;
+                    $sitem['outcomes'] = $outcomes;
+                    $sitem['outputindicators'] = $outputindicators;
+                    $sitem['outcomeindicators'] = $outcomeindicators;
+                    $sitem['target_outputs'] = $target_outputs;
+                    $sitem['target_outcomes'] = $target_outcomes;
+                    $sitem['genders'] = $genders;
+                    $sitem['socials'] = $socials;
+                    $sitem['sdg'] = $sdg;
+
+                    $sub_scheme = DB::table('mig_sub_schemes AS ss')
+                        ->select(
+                            'ss.id',
+                            'ss.subscheme_code',
+                            'ss.division_id',
+                            'ss.department_id',
+                            'ss.risk_remarks',
+                            'ss.initial_remarks',
+                            'dept.id as dept_id',
+                            'dept.name as dept_name',
+                            'div.id as div_id',
+                            'div.name as div_name',
+                            'div.demand_no'
+                        )
+                        ->join('departments AS dept', 'dept.id', '=', 'ss.department_id')
+                        ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
+                        ->where('ss.id', $subscheme_exists->id)->get();
+
+                    $sitem['sub_scheme'] = $sub_scheme;
+                } else {
+                    $sub_scheme = DB::table('mig_schemes AS ss')
+                        ->select(
+                            'ss.id',
+                            'ss.division_id',
+                            'ss.department_id',
+                            'dept.id as dept_id',
+                            'dept.name as dept_name',
+                            'div.id as div_id',
+                            'div.name as div_name',
+                            'div.demand_no'
+                        )
+                        ->join('departments AS dept', 'dept.id', '=', 'ss.department_id')
+                        ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
+                        ->where('ss.id', $scheme->id)->get();
+
+                    $sitem['sub_scheme'] = $sub_scheme;
+                    $sitem['isSubscheme'] = false;
+                }
+                return $sitem;
+            });
+            return $item;
+        });
+
+        return response()->json([
+            'status' => 200,
+            'schemes' => $migrated_schemes->values()->all(),
+
+        ]);
+    }
+
+    public function report_subscheme_division_admin($id)
+    {
+        $division = Division::find($id);
+        $demand_no = $division->demand_no;
+        $demand_no = sprintf("%02d", $demand_no);
+        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand='.$demand_no.'&finyear='.$this->api_fin_year.'&subscheme=&pwd='.$this->api_password);
+        $api_schemes = json_decode($response);
+        $api_schemes = json_decode($api_schemes->getSubschemeWiseOutcomeBudgetOutlayResult);
         if($api_schemes == null)
         {
             return response()->json([
@@ -566,6 +782,7 @@ class MigSubSchemeController extends Controller
         ]);
     }
 
+
     public function report_subscheme($id)
     {
         $user = Auth::user();
@@ -670,6 +887,7 @@ class MigSubSchemeController extends Controller
                 //'financial_outlay' => $financial_outlay[0]->state_share + $financial_outlay[0]->center_share,
                 //'financial_outlay' => $api_subscheme['state_share'] + $api_subscheme['center_share'],
                 'financial_outlay' => ($api_subscheme[0]->S_BE + $api_subscheme[0]->C_BE) / 100000,
+                // 'financial_outlay' => 0.0,
                 'sdg' => $sdg,
                 'remark' => $risk_remarks,
                 'subscheme' => $subscheme

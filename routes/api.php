@@ -441,6 +441,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_schemes/{id}', [MigSchemeController::class, 'index']);
     //Excel Report - Division Wise
     Route::get('/mig_reportsubschemedivision/{id}', [MigSubSchemeController::class, 'report_subscheme_division']);
+    Route::get('/mig_reportsubschemedivision_admin/{id}', [MigSubSchemeController::class, 'report_subscheme_division_admin']);
     //List of Sub-Scheme for a scheme
     Route::get('/mig_subschemes/{id}', [MigSubSchemeController::class, 'index']);
     //Excel Report - For a Sub-Scheme
@@ -472,6 +473,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/mig_subscheme_header/{id}', [FinanceApiController::class, 'subscheme_header']);
     //Fetch Scheme Summary
     Route::get('/mig_division_summary/{id}', [FinanceApiController::class, 'scheme_summary']);
+    Route::get('/mig_division_summary_admin/{id}', [FinanceApiController::class, 'scheme_summary_admin']);
     //Division wise Extra Schemes in planning DataBase
     Route::get('/extra_scheme/{id}', [FinanceApiController::class, 'extra_scheme']);
     //Division wise Extra Sub-Schemes in planning DataBase
@@ -501,3 +503,5 @@ Route::get('/subscheme_details/{subscheme_code}/{finyear}/gender', [FinanceApiCo
 Route::get('/subscheme_details/{subscheme_code}/{finyear}/social', [FinanceApiController::class, 'api_subscheme_social']);
 Route::get('/subscheme_details/{subscheme_code}/{finyear}/sdg', [FinanceApiController::class, 'api_subscheme_sdg']);
 Route::get('/subscheme_details/{subscheme_code}/{finyear}/risk_remarks', [FinanceApiController::class, 'api_subscheme_remarks']);
+
+Route::get('/testreport/{demand}', [FinanceApiController::class, 'testReport']);

@@ -1,10 +1,10 @@
 "use strict";
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_MigrationSummaryDivision_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_MigrationSummaryDivisionAdmin_js"],{
 
-/***/ "./resources/js/components/Dashboard/MigrationSummaryDivision.js":
-/*!***********************************************************************!*\
-  !*** ./resources/js/components/Dashboard/MigrationSummaryDivision.js ***!
-  \***********************************************************************/
+/***/ "./resources/js/components/Dashboard/MigrationSummaryDivisionAdmin.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigrationSummaryDivisionAdmin.js ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -48,7 +48,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function MigrationSummaryDivision() {
+function MigrationSummaryDivisionAdmin() {
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
   var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)();
   var report = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
@@ -66,7 +66,7 @@ function MigrationSummaryDivision() {
       setToDisplay = _useState4[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_migration_actions__WEBPACK_IMPORTED_MODULE_4__.miggetSummaryDeptData)(params.id)); // dispatch(getSubSchemesHeaderReport(params.id));
+    dispatch((0,_store_migration_actions__WEBPACK_IMPORTED_MODULE_4__.miggetSummaryDeptDataAdmin)(params.id)); // dispatch(getSubSchemesHeaderReport(params.id));
 
     return function () {
       dispatch(_store_migrationSlice__WEBPACK_IMPORTED_MODULE_1__.migrationActions.setReport({
@@ -739,7 +739,7 @@ function MigrationSummaryDivision() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationSummaryDivision);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationSummaryDivisionAdmin);
 
 /***/ }),
 

@@ -24926,7 +24926,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "migcreateScheme": () => (/* binding */ migcreateScheme),
 /* harmony export */   "createSubScheme": () => (/* binding */ createSubScheme),
 /* harmony export */   "migcreateSubScheme": () => (/* binding */ migcreateSubScheme),
-/* harmony export */   "miggetSummaryDeptData": () => (/* binding */ miggetSummaryDeptData)
+/* harmony export */   "miggetSummaryDeptData": () => (/* binding */ miggetSummaryDeptData),
+/* harmony export */   "miggetSummaryDeptDataAdmin": () => (/* binding */ miggetSummaryDeptDataAdmin)
 /* harmony export */ });
 /* harmony import */ var _migrationSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./migrationSlice */ "./resources/js/components/store/migrationSlice.js");
 /* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ "./resources/js/components/configuration.js");
@@ -25095,6 +25096,32 @@ var migcreateSubScheme = function migcreateSubScheme(subscheme) {
 var miggetSummaryDeptData = function miggetSummaryDeptData(id) {
   return function (dispatch) {
     fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_division_summary/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.status === 200) {
+        dispatch(_migrationSlice__WEBPACK_IMPORTED_MODULE_0__.migrationActions.setReport({
+          report: res
+        }));
+      } else {
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+          error: true
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+        error: true
+      }));
+    });
+  };
+};
+var miggetSummaryDeptDataAdmin = function miggetSummaryDeptDataAdmin(id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_division_summary_admin/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

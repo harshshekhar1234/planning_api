@@ -8,6 +8,8 @@ const Signin = React.lazy(() => import('./Signin'));
 import Loading from './Loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { userActions } from './store/userSlice';
+const MigrationSummaryDivisionAdmin = React.lazy(() => import('./Dashboard/MigrationSummaryDivisionAdmin'));
+const MigrationOutcomeBudgetDashboardAdmin = React.lazy(() => import('./Dashboard/MigrationOutcomeBudgetDashboardAdmin'));
 const MigrationDivisionExtraSubSchemeInternal = React.lazy(() => import('./Dashboard/MigrationDivisionExtraSubSchemeInternal'));
 const MigDivisionExtraSubSchemeListInternal = React.lazy(() => import('./Dashboard/MigDivisionInternalExtraSubScheme'));
 const MigDivisionExtraSchemeInternal = React.lazy(() => import('./Dashboard/MigDivisionExtraSchemeInternal'));
@@ -172,7 +174,7 @@ const App = () => {
               <Route path='departmentdataentry/:id' element={<DepartmentDataEntry />}/>
               <Route path='admindataentry/:id' element={<AdminEntryForm />}/>
               <Route path='outcomebudget/:id' element={<OutcomeBudgetDashboard />}/>
-              <Route path='migrationoutcomebudget/:id' element={<MigrationOutcomeBudgetDashboard />}/>
+              <Route path='migrationoutcomebudget/:id' element={<MigrationOutcomeBudgetDashboardAdmin />}/>
               <Route path='department/:id' element={<Department />}/>
               <Route path='divisionreportdownload' element={<DivisionReportDownload />}/>
               <Route path='migrationdivisionreportdownload' element={<MigrationDivisionReportDownload/>}/>
@@ -211,7 +213,7 @@ const App = () => {
               <Route path='divisionmigrationinternal' element={<MigDivisionListInternal />}/>
               <Route path='migrationdivisioninternal/:id' element={<MigDivisionSchemeInternal />}/>
               <Route path='migsubschemeinternal/:id' element={<MigDivisionSubSchemeInternal />}/>
-              <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivision />}/>
+              <Route path='migrationsummarydept/:id/:division' element={<MigrationSummaryDivisionAdmin />}/>
               <Route path='migrationdivisionextrascheme' element={<MigDivisionExtraSchemeListInternal />}/>
               <Route path='migrationdivisionextrasubscheme' element={<MigDivisionExtraSubSchemeListInternal />}/>
               <Route path='migschemeinternalextra/:id' element={<MigDivisionExtraSchemeInternal />}/>

@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_OutcomeBudgetDashboard_js"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Dashboard_MigrationOutcomeBudgetDashboardAdmin_js"],{
 
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
@@ -11,10 +11,591 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/CurrentSubschemeReportDivision.js":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/Dashboard/CurrentSubschemeReportDivision.js ***!
-  \*****************************************************************************/
+/***/ "./resources/js/components/Dashboard/MigrationOutcomeBudgetDashboardAdmin.js":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigrationOutcomeBudgetDashboardAdmin.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var _store_divisions_action__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/divisions-action */ "./resources/js/components/store/divisions-action.js");
+/* harmony import */ var _store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/divisionsSlice */ "./resources/js/components/store/divisionsSlice.js");
+/* harmony import */ var _MigrationSchemeReportDivision__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MigrationSchemeReportDivision */ "./resources/js/components/Dashboard/MigrationSchemeReportDivision.js");
+/* harmony import */ var xlsx_js_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! xlsx-js-style */ "./node_modules/xlsx-js-style/dist/xlsx.min.js");
+/* harmony import */ var xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(xlsx_js_style__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/LinearProgress */ "./node_modules/@mui/material/LinearProgress/LinearProgress.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function MigrationOutcomeBudgetDashboardAdmin() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useParams)();
+  var divisionreport = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.divisions.divisionReport;
+  });
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.miggetSubSchemesDivisionReportAdmin)(params.id));
+    return function () {
+      dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionReport({
+        divisionReport: {}
+      }));
+    };
+  }, []);
+  var xport = react__WEBPACK_IMPORTED_MODULE_1__.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    var workbook, c, j, l;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            /* Create worksheet from HTML DOM TABLE */
+            // const table = document.getElementById("table-to-xls");
+            // const wb = utils.table_to_book(table);
+
+            /* Export to file (start a download) */
+            // writeFileXLSX(wb, "SheetJSTable.xlsx");
+
+            /* create new workbook */
+            workbook = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.book_new();
+            c = [];
+            j = divisionreport.schemes.map(function (s) {
+              var i = 0;
+              var sheet = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.table_to_sheet(document.getElementById(s.id));
+              var wscols = [{
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
+                wpx: 100
+              }, {
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
+                wpx: 100
+              }, {
+                wpx: 100
+              }, {
+                wpx: 75
+              }, {
+                wpx: 75
+              }, {
+                wpx: 100
+              }, {
+                wpx: 100
+              }];
+              sheet['!cols'] = wscols;
+
+              for (i in sheet) {
+                if (_typeof(sheet[i]) != "object") continue;
+                var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.decode_cell(i);
+                var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'B7', 'C7', 'D7', 'E7', 'F7', 'G7', 'H7', 'I7', 'J7', 'K7', 'L7', 'M7', 'N7', 'O7'];
+                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'D2', 'D3', 'D4', 'D5', 'D6'];
+
+                var t = _l.filter(function (h) {
+                  return h === i;
+                });
+
+                var m = k.filter(function (d) {
+                  return d === i;
+                });
+                sheet[i].s = {
+                  // styling for all cells
+                  font: {
+                    name: "arial",
+                    sz: 11,
+                    bold: t.length
+                  },
+                  alignment: {
+                    vertical: "center",
+                    horizontal: "".concat(m.length ? "left" : "center"),
+                    wrapText: '1' // any truthy value here
+
+                  }
+                };
+              }
+
+              c = [].concat(_toConsumableArray(c), [sheet]);
+              return c;
+            });
+            l = j.map(function (d, i) {
+              xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.book_append_sheet(workbook, d[i], "Sheet".concat(i + 1));
+            });
+            /* convert table "table1" to worksheet named "Sheet1" */
+            // var sheet1 = utils.table_to_sheet(document.getElementById("table-to-xls"));
+            // console.log(sheet1)
+            // utils.book_append_sheet(workbook, sheet1, "Sheet1");
+
+            /* convert table "table2" to worksheet named "Sheet2" */
+            // var sheet2 = utils.table_to_sheet(document.getElementById("table-to-xls"));
+            // console.log(sheet2)
+            // utils.book_append_sheet(workbook, sheet2, "Sheet2");
+
+            xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().writeFile(workbook, "".concat(divisionreport.schemes[0].subschemes[0].sub_scheme[0].demand_no, ".xlsx"));
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  })));
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [divisionreport.status === 200 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      className: "mt7 center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+        onClick: xport,
+        className: "f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-green",
+        children: "Export to Excel"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
+        className: "tc mt2 b",
+        children: "Report Generated"
+      })]
+    }), divisionreport.status === 200 ? divisionreport.schemes.map(function (report) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_MigrationSchemeReportDivision__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        report: report
+      });
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        sx: {
+          width: '100%'
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_10__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
+        className: "tc mt2 b",
+        children: "Generating Report"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationOutcomeBudgetDashboardAdmin);
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard/MigrationSchemeReportDivision.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigrationSchemeReportDivision.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _MigrationSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MigrationSubschemeReportDivision */ "./resources/js/components/Dashboard/MigrationSubschemeReportDivision.js");
+/* harmony import */ var _NotMigratedSubscheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NotMigratedSubscheme */ "./resources/js/components/Dashboard/NotMigratedSubscheme.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+function MigrationSchemeReportDivision(_ref) {
+  var report = _ref.report;
+  var schemeStateName = report.state_name;
+  var schemeCenterName = report.center_name;
+  var schemeCenterCode = report.center_code;
+  var schemeStateCode = report.state_code;
+  var demand_no = report.subschemes[0].sub_scheme[0].demand_no;
+  var department_name = report.subschemes[0].sub_scheme[0].dept_name;
+  var division_name = report.subschemes[0].sub_scheme[0].div_name;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "pa4 hidden",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "overflow-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
+          id: "".concat(report.id),
+          className: "table-bordered",
+          style: {
+            "borderWidth": "1px",
+            'borderColor': "#000000",
+            'borderStyle': 'solid',
+            textAlign: "center"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
+            className: "f6 w-100 center mb3 ba",
+            cellSpacing: "0",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tr", {
+              style: {
+                "borderWidth": "1px",
+                'borderColor': "#000000",
+                'borderStyle': 'solid',
+                textAlign: "center"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                colSpan: "13",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid',
+                  textAlign: "center",
+                  fontWeight: 'bold'
+                },
+                children: "Detailed Report"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tbody", {
+              className: "lh-copy",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                className: "stripe-dark table-bordered",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid'
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl table-bordered",
+                  colSpan: "3",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    textAlign: "left",
+                    fontWeight: 'bold'
+                  },
+                  children: "Financial Year"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl table-bordered",
+                  colSpan: "10",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    textAlign: "left"
+                  },
+                  children: "2023-24"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                className: "stripe-dark ba",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid',
+                  textAlign: "left"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "3",
+                  style: {
+                    fontWeight: 'bold'
+                  },
+                  children: "Name of secretariat department"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "10",
+                  children: "".concat(demand_no, "-").concat(department_name, "(").concat(division_name, ")")
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                className: "stripe-dark ba",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid',
+                  textAlign: "left"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "3",
+                  style: {
+                    fontWeight: 'bold'
+                  },
+                  children: "Name of the state scheme"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "10",
+                  children: "".concat(schemeStateCode ? schemeStateCode : '0000', "-").concat(schemeStateName ? schemeStateName : '0000')
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                className: "stripe-dark ba",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid',
+                  textAlign: "left"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "3",
+                  style: {
+                    fontWeight: 'bold'
+                  },
+                  children: "Name of the center scheme"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "10",
+                  children: "".concat(schemeCenterCode ? schemeCenterCode : 'NAPL', "-").concat(schemeCenterName ? schemeCenterName : 'NAPL')
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                className: "stripe-dark ba",
+                style: {
+                  "borderWidth": "1px",
+                  'borderColor': "#000000",
+                  'borderStyle': 'solid',
+                  textAlign: "left"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl b",
+                  colSpan: "3",
+                  style: {
+                    fontWeight: 'bold'
+                  },
+                  children: "Budget Estimate (in Lakhs)"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  className: "pa3 tl",
+                  colSpan: "10",
+                  children: report.financial_outlay
+                })]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "overflow-auto",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
+              id: "table-to-xls1",
+              className: "f6 w-100 mw8 center ba",
+              cellSpacing: "0",
+              style: {
+                "borderWidth": "1px",
+                'borderColor': "#000000",
+                'borderStyle': 'solid',
+                'textAlign': "center",
+                'verticalAlign': "center"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc pb3 pr3 b reportextcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Financial Outlay(Rs. in Lakhs)"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc pb3 pr3 b reportextcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Social Category"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportextcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Gender Category"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Output"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Output Indicators"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Target"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Unit of measurement"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutcomecolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Outcome"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutcomecolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Outcome Indicators"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutcomecolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Targets"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc b reportoutputcolor",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Unit of measurement"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc reportextcolor b",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Sustainable Development Goals"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                  className: " b--black-80 tc pb3 pr3 reportextcolor b",
+                  style: {
+                    "borderWidth": "1px",
+                    'borderColor': "#000000",
+                    'borderStyle': 'solid',
+                    'textAlign': "center",
+                    'verticalAlign': "middle"
+                  },
+                  children: "Risk Factors/Any Other Remarks"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "1"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "2"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "3"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "4"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "5"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "6"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "7"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "8"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "9"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "10"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "11"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "12"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+                  children: "13"
+                })]
+              }), report.subschemes.map(function (report) {
+                if (!report.isSubscheme) {
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_NotMigratedSubscheme__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                    report: report
+                  });
+                }
+
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_MigrationSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                  report: report
+                });
+              })]
+            })
+          })]
+        })
+      })
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationSchemeReportDivision);
+
+/***/ }),
+
+/***/ "./resources/js/components/Dashboard/MigrationSubschemeReportDivision.js":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Dashboard/MigrationSubschemeReportDivision.js ***!
+  \*******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -41,20 +622,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function CurrentSubSchemeReportDivision(_ref) {
+function MigrationSubSchemeReportDivision(_ref) {
   var report = _ref.report;
-  var subschemename = report.sub_scheme[0].name;
-  var subschemecode = report.sub_scheme[0].subscheme_code;
-  var schemeStateName = report.sub_scheme[0].state_name;
-  var schemeCenterName = report.sub_scheme[0].center_name;
-  var schemeCenterCode = report.sub_scheme[0].center_code;
-  var schemeStateCode = report.sub_scheme[0].state_code;
-  var demand_no = report.sub_scheme[0].demand_no;
-  var department_name = report.sub_scheme[0].dept_name;
-  var division_name = report.sub_scheme[0].div_name;
-  var sanction = report.sanction;
-  var allotment = report.allotment;
-  var expenditure = report.expenditure;
+  var subschemename = report.name;
+  var subschemecode = report.subscheme_code;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
       _useState2 = _slicedToArray(_useState, 2),
@@ -138,1012 +709,757 @@ function CurrentSubSchemeReportDivision(_ref) {
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "pa4 hidden",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "overflow-auto",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-          id: "".concat(subschemecode),
-          className: "table-bordered",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+      className: "lh-copy",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        className: "stripe-dark ba",
+        style: {
+          "borderWidth": "1px",
+          'borderColor': "#000000",
+          'borderStyle': 'solid',
+          textAlign: "left"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pa3 tl",
+          colSpan: "3",
+          rowSpan: "2",
           style: {
-            "borderWidth": "1px",
-            'borderColor': "#000000",
-            'borderStyle': 'solid',
-            textAlign: "center"
+            fontWeight: 'bold'
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-            className: "f6 w-100 center mb3 ba",
-            cellSpacing: "0",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tr", {
-              style: {
-                "borderWidth": "1px",
-                'borderColor': "#000000",
-                'borderStyle': 'solid',
-                textAlign: "center"
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                colSpan: "12",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "center",
-                  fontWeight: 'bold'
-                },
-                children: "Detailed Report"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
-              className: "lh-copy",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark table-bordered",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid'
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl table-bordered",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    textAlign: "left",
-                    fontWeight: 'bold'
-                  },
-                  children: "Financial Year"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl table-bordered",
-                  colSpan: "11",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    textAlign: "left"
-                  },
-                  children: "2022-23"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark ba",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "left"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  style: {
-                    fontWeight: 'bold'
-                  },
-                  children: "Name of secretariat department"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  colSpan: "11",
-                  children: "".concat(demand_no, "-").concat(department_name, "(").concat(division_name, ")")
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark ba",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "left"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  style: {
-                    fontWeight: 'bold'
-                  },
-                  children: "Name of the state scheme"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  colSpan: "11",
-                  children: "".concat(schemeStateCode ? schemeStateCode : '0000', "-").concat(schemeStateName ? schemeStateName : '0000')
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark ba",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "left"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  style: {
-                    fontWeight: 'bold'
-                  },
-                  children: "Name of the center scheme"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  colSpan: "11",
-                  children: "".concat(schemeCenterCode ? schemeCenterCode : 'NAPL', "-").concat(schemeCenterName ? schemeCenterName : 'NAPL')
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark ba",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "left"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  style: {
-                    fontWeight: 'bold'
-                  },
-                  children: "Name of the sub-scheme"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  colSpan: "11",
-                  children: "".concat(subschemecode, "-").concat(subschemename)
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                className: "stripe-dark ba",
-                style: {
-                  "borderWidth": "1px",
-                  'borderColor': "#000000",
-                  'borderStyle': 'solid',
-                  textAlign: "left"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl b",
-                  style: {
-                    fontWeight: 'bold'
-                  },
-                  children: "Budget Estimate (in Lakhs)"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                  className: "pa3 tl",
-                  colSpan: "11",
-                  children: report.financial_outlay
-                })]
-              })]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "overflow-auto",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-              id: "table-to-xls1",
-              className: "f6 w-100 mw8 center ba",
-              cellSpacing: "0",
-              style: {
-                "borderWidth": "1px",
-                'borderColor': "#000000",
-                'borderStyle': 'solid',
-                'textAlign': "center",
-                'verticalAlign': "center"
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc pb3 pr3 b reportextcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Social Category"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportextcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Gender Category"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutputcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Output"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutputcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Output Indicators"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutputcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Target"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutputcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Unit of measurement"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutcomecolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Outcome"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutcomecolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Outcome Indicators"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutcomecolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Targets"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc b reportoutputcolor",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Unit of measurement"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc reportextcolor b",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Sustainable Development Goals"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-                  className: " b--black-80 tc pb3 pr3 reportextcolor b",
-                  style: {
-                    "borderWidth": "1px",
-                    'borderColor': "#000000",
-                    'borderStyle': 'solid',
-                    'textAlign': "center",
-                    'verticalAlign': "middle"
-                  },
-                  children: "Risk Factors/Any Other Remarks"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
-                className: "lh-copy ba",
-                children: [toDisplay === 'outputindicators' && report.status === 200 && report.outputindicators.map(function (indicator, i) {
-                  var handleloop = function handleloop(i) {
-                    if (i === 0) {
-                      outputloop1 = report.outputs[0].outputindicatorscount;
-                      outputlooprow1 = i + outputloop1;
-                    }
+          children: "Name of the sub-scheme"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pa3 tl",
+          colSpan: "10",
+          rowSpan: "2",
+          children: "".concat(subschemecode, "-").concat(subschemename)
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
+      }), toDisplay === 'outputindicators' && report.status === 200 && report.outputindicators.map(function (indicator, i) {
+        var handleloop = function handleloop(i) {
+          if (i === 0) {
+            outputloop1 = report.outputs[0].outputindicatorscount;
+            outputlooprow1 = i + outputloop1;
+          }
 
-                    if (i === outputlooprow1) {
-                      outputloop1 = report.outputs[outputloopcount1].outputindicatorscount;
-                      outputindicatorloop = outputindicatorloop.concat(report.outputindicators.filter(function (indicator) {
-                        return indicator.output_id === report.outputs[outputloopcount1].id;
-                      }));
-                      outputloopcount1 = outputloopcount1 + 1;
-                      outputlooprow1 = outputlooprow1 + outputloop1;
-                    }
-                  };
+          if (i === outputlooprow1) {
+            outputloop1 = report.outputs[outputloopcount1].outputindicatorscount;
+            outputindicatorloop = outputindicatorloop.concat(report.outputindicators.filter(function (indicator) {
+              return indicator.output_id === report.outputs[outputloopcount1].id;
+            }));
+            outputloopcount1 = outputloopcount1 + 1;
+            outputlooprow1 = outputlooprow1 + outputloop1;
+          }
+        };
 
-                  var handleoutcomeloop = function handleoutcomeloop(i) {
-                    if (i === 0) {
-                      outcomeloop1 = report.outcomes[0].outcomeindicatorscount;
-                      outcomelooprow1 = i + outcomeloop1;
-                    }
+        var handleoutcomeloop = function handleoutcomeloop(i) {
+          if (i === 0) {
+            outcomeloop1 = report.outcomes[0].outcomeindicatorscount;
+            outcomelooprow1 = i + outcomeloop1;
+          }
 
-                    if (i === outcomelooprow1) {
-                      outcomeloop1 = report.outcomes[outcomeloopcount1] ? report.outcomes[outcomeloopcount1].outcomeindicatorscount : 100;
-                      outcomeindicatorloop = report.outcomes[outcomeloopcount1] ? outcomeindicatorloop.concat(report.outcomeindicators.filter(function (indicator) {
-                        return indicator.outcome_id === report.outcomes[outcomeloopcount1].id;
-                      })) : [];
-                      outcomeloopcount1 = outcomeloopcount1 + 1;
-                      outcomelooprow1 = outcomelooprow1 + outcomeloop1;
-                    }
-                  };
+          if (i === outcomelooprow1) {
+            outcomeloop1 = report.outcomes[outcomeloopcount1] ? report.outcomes[outcomeloopcount1].outcomeindicatorscount : 100;
+            outcomeindicatorloop = report.outcomes[outcomeloopcount1] ? outcomeindicatorloop.concat(report.outcomeindicators.filter(function (indicator) {
+              return indicator.outcome_id === report.outcomes[outcomeloopcount1].id;
+            })) : [];
+            outcomeloopcount1 = outcomeloopcount1 + 1;
+            outcomelooprow1 = outcomelooprow1 + outcomeloop1;
+          }
+        };
 
-                  var handleOutputTarget = function handleOutputTarget(id) {
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    return parseFloat(target[0].value);
-                  };
+        var handleOutputTarget = function handleOutputTarget(id) {
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          return parseFloat(target[0].value);
+        };
 
-                  var handleOutputAchievement = function handleOutputAchievement(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outputs.filter(function (achievement) {
-                      return achievement.outputindicator_id === id;
-                    });
-                    return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
-                  };
+        var handleOutputAchievement = function handleOutputAchievement(id) {
+          var achievement = '';
+          achievement = report.achievement_outputs.filter(function (achievement) {
+            return achievement.outputindicator_id === id;
+          });
+          return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
+        };
 
-                  var handleOutputAchievementPercent = function handleOutputAchievementPercent(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outputs.filter(function (achievement) {
-                      return achievement.outputindicator_id === id;
-                    });
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    var percent = '';
+        var handleOutputAchievementPercent = function handleOutputAchievementPercent(id) {
+          var achievement = '';
+          achievement = report.achievement_outputs.filter(function (achievement) {
+            return achievement.outputindicator_id === id;
+          });
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          var percent = '';
 
-                    if (achievement.length !== 0 && target.length !== 0) {
-                      if (parseFloat(target[0].value) === 0) {
-                        return percent = 0;
-                      }
+          if (achievement.length !== 0 && target.length !== 0) {
+            if (parseFloat(target[0].value) === 0) {
+              return percent = 0;
+            }
 
-                      percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
-                    }
+            percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
+          }
 
-                    if (achievement.length === 0 && target.length !== 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length !== 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length !== 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length !== 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length === 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    return percent;
-                  };
+          return percent;
+        };
 
-                  var handleOutcomeTarget = function handleOutcomeTarget(id) {
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    return target.length !== 0 ? parseFloat(target[0].value) : null;
-                  };
+        var handleOutcomeTarget = function handleOutcomeTarget(id) {
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          return target.length !== 0 ? parseFloat(target[0].value) : null;
+        };
 
-                  var handleOutcomeAchievement = function handleOutcomeAchievement(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outcomes.filter(function (achievement) {
-                      return achievement.outcomeindicator_id === id;
-                    });
-                    return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
-                  };
+        var handleOutcomeAchievement = function handleOutcomeAchievement(id) {
+          var achievement = '';
+          achievement = report.achievement_outcomes.filter(function (achievement) {
+            return achievement.outcomeindicator_id === id;
+          });
+          return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
+        };
 
-                  var handleOutcomeAchievementPercent = function handleOutcomeAchievementPercent(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outcomes.filter(function (achievement) {
-                      return achievement.outcomeindicator_id === id;
-                    });
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    var percent = '';
+        var handleOutcomeAchievementPercent = function handleOutcomeAchievementPercent(id) {
+          var achievement = '';
+          achievement = report.achievement_outcomes.filter(function (achievement) {
+            return achievement.outcomeindicator_id === id;
+          });
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          var percent = '';
 
-                    if (achievement.length !== 0 && target.length !== 0) {
-                      if (parseFloat(target[0].value) === 0) {
-                        return percent = 0;
-                      }
+          if (achievement.length !== 0 && target.length !== 0) {
+            if (parseFloat(target[0].value) === 0) {
+              return percent = 0;
+            }
 
-                      percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
-                    }
+            percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
+          }
 
-                    if (achievement.length === 0 && target.length !== 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length !== 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length !== 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length !== 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length === 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    return percent;
-                  };
+          return percent;
+        };
 
-                  var handleOutputMeasurement = function handleOutputMeasurement(id) {
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    return target[0].measurement;
-                  };
+        var handleOutputMeasurement = function handleOutputMeasurement(id) {
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          return target[0].measurement;
+        };
 
-                  var handleOutcomeMeasurement = function handleOutcomeMeasurement(id) {
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    return target.length !== 0 ? target[0].measurement : null;
-                  };
+        var handleOutcomeMeasurement = function handleOutcomeMeasurement(id) {
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          return target.length !== 0 ? target[0].measurement : null;
+        };
 
-                  var socialcategory = function socialcategory() {
-                    var social = report.socials.map(function (social) {
-                      return social['name'];
-                    });
-                    return social.toString();
-                  };
+        var socialcategory = function socialcategory() {
+          var social = report.socials.map(function (social) {
+            return social['name'];
+          });
+          return social.toString();
+        };
 
-                  var gendercategory = function gendercategory() {
-                    var gender = report.genders.map(function (gender) {
-                      return gender['name'];
-                    });
-                    return gender.toString();
-                  };
+        var gendercategory = function gendercategory() {
+          var gender = report.genders.map(function (gender) {
+            return gender['name'];
+          });
+          return gender.toString();
+        };
 
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                    children: [i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: socialcategory()
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: gendercategory()
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      rowSpan: report.outputs[0].outputindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outputs[0].name
-                    }) : null, i === outputlooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      rowSpan: report.outputs[outputloopcount1].outputindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outputs[outputloopcount1].name
-                    }) : null, handleloop(i), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: outputindicatorloop[i].name
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutputTarget(outputindicatorloop[i].id)
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutputMeasurement(outputindicatorloop[i].id)
-                    }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      rowSpan: report.outcomes[0].outcomeindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outcomes[0].name
-                    }) : null, i === outcomelooprow1 && report.outcomes[outcomeloopcount1] ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      rowSpan: report.outcomes[outcomeloopcount1].outcomeindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outcomes[outcomeloopcount1].name
-                    }) : null, handleoutcomeloop(i), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: outcomeindicatorloop[i].name
-                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: ''
-                    }), outcomeindicatorloop[i] !== undefined ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: ''
-                    }), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutcomeTarget(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
-                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: ''
-                    }), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutcomeMeasurement(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
-                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3  b--black-80 reportoutcomecolor",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: ''
-                    }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: "Goal ".concat(report.sdg[0].goal_number, ": ").concat(report.sdg[0].goal_name)
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.initial_remarks ? report.initial_remarks.split('\n').map(function (item) {
-                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-                          children: [item, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
-                        });
-                      }) : '-'
-                    }) : null]
-                  });
-                }), toDisplay === 'outcomeindicators' && report.status === 200 && report.outcomeindicators.map(function (indicator, i) {
-                  var handleloop = function handleloop(i) {
-                    if (i === 0) {
-                      outcomeloop1 = report.outcomes[0].outcomeindicatorscount;
-                      outcomelooprow1 = i + outcomeloop1;
-                    }
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.financial_outlay
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: socialcategory()
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: gendercategory()
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            rowSpan: report.outputs[0].outputindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outputs[0].name
+          }) : null, i === outputlooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            rowSpan: report.outputs[outputloopcount1].outputindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outputs[outputloopcount1].name
+          }) : null, handleloop(i), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: outputindicatorloop[i].name
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutputTarget(outputindicatorloop[i].id)
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutputMeasurement(outputindicatorloop[i].id)
+          }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            rowSpan: report.outcomes[0].outcomeindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outcomes[0].name
+          }) : null, i === outcomelooprow1 && report.outcomes[outcomeloopcount1] ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            rowSpan: report.outcomes[outcomeloopcount1].outcomeindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outcomes[outcomeloopcount1].name
+          }) : null, handleoutcomeloop(i), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: outcomeindicatorloop[i].name
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: ''
+          }), outcomeindicatorloop[i] !== undefined ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: ''
+          }), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutcomeTarget(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: ''
+          }), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutcomeMeasurement(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3  b--black-80 reportoutcomecolor",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: ''
+          }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: "Goal ".concat(report.sdg[0].goal_number, ": ").concat(report.sdg[0].goal_name)
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.initial_remarks ? report.initial_remarks.split('\n').map(function (item) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+                children: [item, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+              });
+            }) : '-'
+          }) : null]
+        });
+      }), toDisplay === 'outcomeindicators' && report.status === 200 && report.outcomeindicators.map(function (indicator, i) {
+        var handleloop = function handleloop(i) {
+          if (i === 0) {
+            outcomeloop1 = report.outcomes[0].outcomeindicatorscount;
+            outcomelooprow1 = i + outcomeloop1;
+          }
 
-                    if (i === outcomelooprow1) {
-                      outcomeloop1 = report.outcomes[outcomeloopcount1].outcomeindicatorscount;
-                      outcomeindicatorloop = outcomeindicatorloop.concat(report.outcomeindicators.filter(function (indicator) {
-                        return indicator.outcome_id === report.outcomes[outcomeloopcount1].id;
-                      }));
-                      outcomeloopcount1 = outcomeloopcount1 + 1;
-                      outcomelooprow1 = outcomelooprow1 + outcomeloop1;
-                    }
-                  };
+          if (i === outcomelooprow1) {
+            outcomeloop1 = report.outcomes[outcomeloopcount1].outcomeindicatorscount;
+            outcomeindicatorloop = outcomeindicatorloop.concat(report.outcomeindicators.filter(function (indicator) {
+              return indicator.outcome_id === report.outcomes[outcomeloopcount1].id;
+            }));
+            outcomeloopcount1 = outcomeloopcount1 + 1;
+            outcomelooprow1 = outcomelooprow1 + outcomeloop1;
+          }
+        };
 
-                  var handleoutputloop = function handleoutputloop(i) {
-                    if (i === 0) {
-                      outputloop1 = report.outputs[0].outputindicatorscount;
-                      outputlooprow1 = i + outputloop1;
-                    }
+        var handleoutputloop = function handleoutputloop(i) {
+          if (i === 0) {
+            outputloop1 = report.outputs[0].outputindicatorscount;
+            outputlooprow1 = i + outputloop1;
+          }
 
-                    if (i === outputlooprow1) {
-                      outputloop1 = report.outputs[outputloopcount1] ? report.outputs[outputloopcount1].outputindicatorscount : 100;
-                      outputindicatorloop = report.outputs[outputloopcount1] ? outputindicatorloop.concat(report.outputindicators.filter(function (indicator) {
-                        return indicator.output_id === report.outputs[outputloopcount1].id;
-                      })) : [];
-                      outputloopcount1 = outputloopcount1 + 1;
-                      outputlooprow1 = outputlooprow1 + outputloop1;
-                    }
-                  };
+          if (i === outputlooprow1) {
+            outputloop1 = report.outputs[outputloopcount1] ? report.outputs[outputloopcount1].outputindicatorscount : 100;
+            outputindicatorloop = report.outputs[outputloopcount1] ? outputindicatorloop.concat(report.outputindicators.filter(function (indicator) {
+              return indicator.output_id === report.outputs[outputloopcount1].id;
+            })) : [];
+            outputloopcount1 = outputloopcount1 + 1;
+            outputlooprow1 = outputlooprow1 + outputloop1;
+          }
+        };
 
-                  var handleOutcomeTarget = function handleOutcomeTarget(id) {
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    return parseFloat(target[0].value);
-                  };
+        var handleOutcomeTarget = function handleOutcomeTarget(id) {
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          return parseFloat(target[0].value);
+        };
 
-                  var handleOutputTarget = function handleOutputTarget(id) {
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    return target.length !== 0 ? parseFloat(target[0].value) : '';
-                  };
+        var handleOutputTarget = function handleOutputTarget(id) {
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          return target.length !== 0 ? parseFloat(target[0].value) : '';
+        };
 
-                  var handleOutputAchievement = function handleOutputAchievement(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outputs.filter(function (achievement) {
-                      return achievement.outputindicator_id === id;
-                    });
-                    return achievement.length !== 0 ? parseFloat(achievement[0].value) : id === 10000 ? '' : 0;
-                  };
+        var handleOutcomeMeasurement = function handleOutcomeMeasurement(id) {
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          return target[0].measurement;
+        };
 
-                  var handleOutcomeAchievement = function handleOutcomeAchievement(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outcomes.filter(function (achievement) {
-                      return achievement.outcomeindicator_id === id;
-                    });
-                    return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
-                  };
+        var handleOutputAchievement = function handleOutputAchievement(id) {
+          var achievement = '';
+          achievement = report.achievement_outputs.filter(function (achievement) {
+            return achievement.outputindicator_id === id;
+          });
+          return achievement.length !== 0 ? parseFloat(achievement[0].value) : id === 10000 ? '' : 0;
+        };
 
-                  var handleOutcomeAchievementPercent = function handleOutcomeAchievementPercent(id) {
-                    var achievement = '';
-                    achievement = report.achievement_outcomes.filter(function (achievement) {
-                      return achievement.outcomeindicator_id === id;
-                    });
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    var percent = '';
+        var handleOutcomeAchievement = function handleOutcomeAchievement(id) {
+          var achievement = '';
+          achievement = report.achievement_outcomes.filter(function (achievement) {
+            return achievement.outcomeindicator_id === id;
+          });
+          return achievement.length !== 0 ? parseFloat(achievement[0].value) : 0;
+        };
 
-                    if (achievement.length !== 0 && target.length !== 0) {
-                      if (parseFloat(target[0].value) === 0) {
-                        return percent = 0;
-                      }
+        var handleOutcomeAchievementPercent = function handleOutcomeAchievementPercent(id) {
+          var achievement = '';
+          achievement = report.achievement_outcomes.filter(function (achievement) {
+            return achievement.outcomeindicator_id === id;
+          });
+          var target = '';
+          target = report.target_outcomes.filter(function (target) {
+            return target.outcomeindicator_id === id;
+          });
+          var percent = '';
 
-                      percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
-                    }
+          if (achievement.length !== 0 && target.length !== 0) {
+            if (parseFloat(target[0].value) === 0) {
+              return percent = 0;
+            }
 
-                    if (achievement.length === 0 && target.length !== 0) {
-                      percent = 0;
-                    }
+            percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
+          }
 
-                    if (achievement.length !== 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length !== 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length === 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length !== 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    return percent;
-                  };
+          if (achievement.length === 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                  var handleOutputAchievementPercent = function handleOutputAchievementPercent(id) {
-                    if (id === 10000) {
-                      return '';
-                    }
+          return percent;
+        };
 
-                    var achievement = '';
-                    achievement = report.achievement_outputs.filter(function (achievement) {
-                      return achievement.outputindicator_id === id;
-                    });
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    var percent = '';
+        var handleOutputAchievementPercent = function handleOutputAchievementPercent(id) {
+          if (id === 10000) {
+            return '';
+          }
 
-                    if (achievement.length !== 0 && target.length !== 0) {
-                      if (parseFloat(target[0].value) === 0) {
-                        return percent = 0;
-                      }
+          var achievement = '';
+          achievement = report.achievement_outputs.filter(function (achievement) {
+            return achievement.outputindicator_id === id;
+          });
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          var percent = '';
 
-                      percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
-                    }
+          if (achievement.length !== 0 && target.length !== 0) {
+            if (parseFloat(target[0].value) === 0) {
+              return percent = 0;
+            }
 
-                    if (achievement.length === 0 && target.length !== 0) {
-                      percent = 0;
-                    }
+            percent = Math.round(parseFloat(achievement[0].value) / parseFloat(target[0].value) * 100);
+          }
 
-                    if (achievement.length !== 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length === 0 && target.length !== 0) {
+            percent = 0;
+          }
 
-                    if (achievement.length === 0 && target.length === 0) {
-                      percent = 0;
-                    }
+          if (achievement.length !== 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                    return percent;
-                  };
+          if (achievement.length === 0 && target.length === 0) {
+            percent = 0;
+          }
 
-                  var handleOutputMeasurement = function handleOutputMeasurement(id) {
-                    var target = '';
-                    target = report.target_outputs.filter(function (target) {
-                      return target.outputindicator_id === id;
-                    });
-                    return target.length !== 0 ? target[0].measurement : '';
-                  };
+          return percent;
+        };
 
-                  var handleOutcomeMeasurement = function handleOutcomeMeasurement(id) {
-                    var target = '';
-                    target = report.target_outcomes.filter(function (target) {
-                      return target.outcomeindicator_id === id;
-                    });
-                    return target[0].measurement;
-                  };
+        var handleOutputMeasurement = function handleOutputMeasurement(id) {
+          var target = '';
+          target = report.target_outputs.filter(function (target) {
+            return target.outputindicator_id === id;
+          });
+          return target.length !== 0 ? target[0].measurement : '';
+        };
 
-                  var socialcategory = function socialcategory() {
-                    var social = report.socials.map(function (social) {
-                      return social['name'];
-                    });
-                    return social.toString();
-                  };
+        var socialcategory = function socialcategory() {
+          var social = report.socials.map(function (social) {
+            return social['name'];
+          });
+          return social.toString();
+        };
 
-                  var gendercategory = function gendercategory() {
-                    var gender = report.genders.map(function (gender) {
-                      return gender['name'];
-                    });
-                    return gender.toString();
-                  };
+        var gendercategory = function gendercategory() {
+          var gender = report.genders.map(function (gender) {
+            return gender['name'];
+          });
+          return gender.toString();
+        };
 
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-                    children: [i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: socialcategory()
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: gendercategory()
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      rowSpan: report.outputs[0].outputindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outputs[0].name
-                    }) : null, i === outputlooprow1 && report.outputs[outputloopcount1] ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      rowSpan: report.outputs[outputloopcount1].outputindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outputs[outputloopcount1].name
-                    }) : null, i >= report.outputindicators.length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: ''
-                    }) : null, handleoutputloop(i), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: outputindicatorloop[i] !== undefined ? outputindicatorloop[i].name : ''
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutputTarget(outputindicatorloop[i] ? outputindicatorloop[i].id : 10000)
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutputcolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutputMeasurement(outputindicatorloop[i] !== undefined ? outputindicatorloop[i].id : 10000)
-                    }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      rowSpan: report.outcomes[0].outcomeindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outcomes[0].name
-                    }) : null, i === outcomelooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      rowSpan: report.outcomes[outcomeloopcount1].outcomeindicatorscount,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.outcomes[outcomeloopcount1].name
-                    }) : null, handleloop(i), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: outcomeindicatorloop[i].name
-                    }) : null, outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutcomeTarget(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
-                    }) : null, outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportoutcomecolor b--black-80",
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: handleOutcomeMeasurement(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: "Goal ".concat(report.sdg[0].goal_number, ": ").concat(report.sdg[0].goal_name)
-                    }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                      className: "pv3 pr3 reportextcolor b--black-80",
-                      rowSpan: rowofspan,
-                      style: {
-                        "borderWidth": "1px",
-                        'borderColor': "#000000",
-                        'borderStyle': 'solid',
-                        'textAlign': "center",
-                        'verticalAlign': "middle"
-                      },
-                      children: report.initial_remarks ? report.initial_remarks.split('\n').map(function (item) {
-                        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
-                          children: [item, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
-                        });
-                      }) : '-'
-                    }) : null]
-                  });
-                })]
-              })]
-            })
-          })]
-        })
-      })
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+          children: [i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.financial_outlay
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: socialcategory()
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: gendercategory()
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            rowSpan: report.outputs[0].outputindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outputs[0].name
+          }) : null, i === outputlooprow1 && report.outputs[outputloopcount1] ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            rowSpan: report.outputs[outputloopcount1].outputindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outputs[outputloopcount1].name
+          }) : null, i >= report.outputindicators.length ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: ''
+          }) : null, handleoutputloop(i), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: outputindicatorloop[i] !== undefined ? outputindicatorloop[i].name : ''
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutputTarget(outputindicatorloop[i] ? outputindicatorloop[i].id : 10000)
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutputcolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutputMeasurement(outputindicatorloop[i] !== undefined ? outputindicatorloop[i].id : 10000)
+          }), i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            rowSpan: report.outcomes[0].outcomeindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outcomes[0].name
+          }) : null, i === outcomelooprow1 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            rowSpan: report.outcomes[outcomeloopcount1].outcomeindicatorscount,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.outcomes[outcomeloopcount1].name
+          }) : null, handleloop(i), outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: outcomeindicatorloop[i].name
+          }) : null, outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutcomeTarget(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
+          }) : null, outcomeindicatorloop[i] !== undefined ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportoutcomecolor b--black-80",
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: handleOutcomeMeasurement(outcomeindicatorloop[i] ? outcomeindicatorloop[i].id : 10000)
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: "Goal ".concat(report.sdg[0].goal_number, ": ").concat(report.sdg[0].goal_name)
+          }) : null, i === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+            className: "pv3 pr3 reportextcolor b--black-80",
+            rowSpan: rowofspan,
+            style: {
+              "borderWidth": "1px",
+              'borderColor': "#000000",
+              'borderStyle': 'solid',
+              'textAlign': "center",
+              'verticalAlign': "middle"
+            },
+            children: report.initial_remarks ? report.initial_remarks.split('\n').map(function (item) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+                children: [item, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+              });
+            }) : '-'
+          }) : null]
+        });
+      })]
     })
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CurrentSubSchemeReportDivision);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MigrationSubSchemeReportDivision);
 
 /***/ }),
 
-/***/ "./resources/js/components/Dashboard/OutcomeBudgetDashboard.js":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/Dashboard/OutcomeBudgetDashboard.js ***!
-  \*********************************************************************/
+/***/ "./resources/js/components/Dashboard/NotMigratedSubscheme.js":
+/*!*******************************************************************!*\
+  !*** ./resources/js/components/Dashboard/NotMigratedSubscheme.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1151,202 +1467,95 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
-/* harmony import */ var _store_divisions_action__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/divisions-action */ "./resources/js/components/store/divisions-action.js");
-/* harmony import */ var _store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/divisionsSlice */ "./resources/js/components/store/divisionsSlice.js");
-/* harmony import */ var _CurrentSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CurrentSubschemeReportDivision */ "./resources/js/components/Dashboard/CurrentSubschemeReportDivision.js");
-/* harmony import */ var xlsx_js_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! xlsx-js-style */ "./node_modules/xlsx-js-style/dist/xlsx.min.js");
-/* harmony import */ var xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(xlsx_js_style__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/LinearProgress */ "./node_modules/@mui/material/LinearProgress/LinearProgress.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
 
+function NotMigratedSubScheme(_ref) {
+  var report = _ref.report;
+  var subschemename = report.name;
+  var subschemecode = report.subscheme_code;
 
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+      _useState2 = _slicedToArray(_useState, 2),
+      rowofspan = _useState2[0],
+      setRowofspan = _useState2[1];
 
-
-
-
-
-
-
-function OutcomeBudgetDashboard() {
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
-  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useParams)();
-  var divisionreport = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
-    return state.divisions.divisionReport;
-  });
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getCurrentSubSchemesDivisionReport)(params.id));
-    return function () {
-      dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionReport({
-        divisionReport: {}
-      }));
-    };
-  }, []);
-  var xport = react__WEBPACK_IMPORTED_MODULE_1__.useCallback( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-    var workbook, c, j, l;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            /* Create worksheet from HTML DOM TABLE */
-            // const table = document.getElementById("table-to-xls");
-            // const wb = utils.table_to_book(table);
-
-            /* Export to file (start a download) */
-            // writeFileXLSX(wb, "SheetJSTable.xlsx");
-
-            /* create new workbook */
-            workbook = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.book_new();
-            c = [];
-            j = divisionreport.subschemes.map(function (s) {
-              var i = 0;
-              var sheet = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.table_to_sheet(document.getElementById(s.subscheme_code));
-              var wscols = [{
-                wpx: 200
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 100
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 100
-              }, {
-                wpx: 100
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }, {
-                wpx: 150
-              }];
-              sheet['!cols'] = wscols;
-
-              for (i in sheet) {
-                if (_typeof(sheet[i]) != "object") continue;
-                var cell = xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.decode_cell(i);
-                var _l = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'A13', 'B13', 'C13', 'D13', 'E13', 'F13', 'G13', 'H13', 'I13', 'J13', 'K13', 'L13', 'M13', 'N13', 'O13'];
-                var k = ['A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10', 'B11', 'B12'];
-
-                var t = _l.filter(function (h) {
-                  return h === i;
-                });
-
-                var m = k.filter(function (d) {
-                  return d === i;
-                });
-                sheet[i].s = {
-                  // styling for all cells
-                  font: {
-                    name: "arial",
-                    sz: 10,
-                    bold: t.length
-                  },
-                  alignment: {
-                    vertical: "center",
-                    horizontal: "".concat(m.length ? "left" : "center"),
-                    wrapText: '1' // any truthy value here
-
-                  }
-                };
-              }
-
-              c = [].concat(_toConsumableArray(c), [sheet]);
-              return c;
-            });
-            l = j.map(function (d, i) {
-              xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().utils.book_append_sheet(workbook, d[i], "".concat(divisionreport.subschemes[i].sub_scheme[0].demand_no, "-").concat(divisionreport.subschemes[i].sub_scheme[0].subscheme_code));
-            });
-            /* convert table "table1" to worksheet named "Sheet1" */
-            // var sheet1 = utils.table_to_sheet(document.getElementById("table-to-xls"));
-            // console.log(sheet1)
-            // utils.book_append_sheet(workbook, sheet1, "Sheet1");
-
-            /* convert table "table2" to worksheet named "Sheet2" */
-            // var sheet2 = utils.table_to_sheet(document.getElementById("table-to-xls"));
-            // console.log(sheet2)
-            // utils.book_append_sheet(workbook, sheet2, "Sheet2");
-
-            xlsx_js_style__WEBPACK_IMPORTED_MODULE_6___default().writeFile(workbook, "".concat(divisionreport.subschemes[0].sub_scheme[0].demand_no, ".xlsx"));
-
-          case 5:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  })));
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
-    children: [divisionreport.status === 200 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-      className: "mt7 center",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-        onClick: xport,
-        className: "f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-dark-green",
-        children: "Export to Excel"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
-        className: "tc mt2 b",
-        children: "Report Generated"
-      })]
-    }), divisionreport.status === 200 ? divisionreport.subschemes.map(function (report) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_CurrentSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        report: report
-      });
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        sx: {
-          width: '100%'
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tbody", {
+      className: "lh-copy",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        className: "stripe-dark ba",
+        style: {
+          "borderWidth": "1px",
+          'borderColor': "#000000",
+          'borderStyle': 'solid',
+          textAlign: "left"
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_10__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
-        className: "tc mt2 b",
-        children: "Generating Report"
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pa3 tl",
+          colSpan: "3",
+          rowSpan: "2",
+          style: {
+            fontWeight: 'bold'
+          },
+          children: "Name of the sub-scheme"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pa3 tl",
+          colSpan: "10",
+          rowSpan: "2",
+          children: "".concat(subschemecode, "-").concat(subschemename)
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pv3 pr3 reportextcolor b--black-80",
+          rowSpan: "2",
+          style: {
+            "borderWidth": "1px",
+            'borderColor': "#000000",
+            'borderStyle': 'solid',
+            'textAlign': "center",
+            'verticalAlign': "middle"
+          },
+          children: report.center_share + report.state_share
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+          className: "pv3 pr3 reportextcolor b--black-80",
+          colSpan: 12,
+          rowSpan: "2",
+          style: {
+            "borderWidth": "1px",
+            'borderColor': "#000000",
+            'borderStyle': 'solid',
+            'textAlign': "center",
+            'verticalAlign': "middle"
+          },
+          children: "Sub-Scheme not included in outcome budget"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
       })]
-    })]
+    })
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OutcomeBudgetDashboard);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NotMigratedSubScheme);
 
 /***/ }),
 

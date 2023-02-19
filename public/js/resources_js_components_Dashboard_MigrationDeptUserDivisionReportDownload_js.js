@@ -1546,7 +1546,7 @@ function NotMigratedSubScheme(_ref) {
             'textAlign': "center",
             'verticalAlign': "middle"
           },
-          children: "Sub-Scheme not migrated in outcome budget"
+          children: "Sub-Scheme not included in outcome budget"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {})]
@@ -1574,6 +1574,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getSubSchemesDivisionReport": () => (/* binding */ getSubSchemesDivisionReport),
 /* harmony export */   "getCurrentSubSchemesDivisionReport": () => (/* binding */ getCurrentSubSchemesDivisionReport),
 /* harmony export */   "miggetSubSchemesDivisionReport": () => (/* binding */ miggetSubSchemesDivisionReport),
+/* harmony export */   "miggetSubSchemesDivisionReportAdmin": () => (/* binding */ miggetSubSchemesDivisionReportAdmin),
 /* harmony export */   "getDivisionAll": () => (/* binding */ getDivisionAll)
 /* harmony export */ });
 /* harmony import */ var _divisionsSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./divisionsSlice */ "./resources/js/components/store/divisionsSlice.js");
@@ -1745,6 +1746,38 @@ var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionRe
 var miggetSubSchemesDivisionReport = function miggetSubSchemesDivisionReport(id) {
   return function (dispatch) {
     fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_reportsubschemedivision/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.status === 200) {
+        dispatch(_divisionsSlice__WEBPACK_IMPORTED_MODULE_0__.divisionsActions.setDivisionReport({
+          divisionReport: res
+        }));
+      } else {
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+          error: true
+        }));
+        dispatch(_divisionsSlice__WEBPACK_IMPORTED_MODULE_0__.divisionsActions.setMessage({
+          message: 'Sorry something went wrong!!'
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+        error: true
+      }));
+      dispatch(_divisionsSlice__WEBPACK_IMPORTED_MODULE_0__.divisionsActions.setMessage({
+        message: 'Sorry something went wrong!!'
+      }));
+    });
+  };
+};
+var miggetSubSchemesDivisionReportAdmin = function miggetSubSchemesDivisionReportAdmin(id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "mig_reportsubschemedivision_admin/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

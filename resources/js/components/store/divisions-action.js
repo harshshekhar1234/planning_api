@@ -153,6 +153,31 @@ export const getDivisionsData = (id) => {
     };
   };
 
+  export const miggetSubSchemesDivisionReportAdmin = (id) => {
+  
+    return (dispatch) => {
+        fetch(`${laravel_api}mig_reportsubschemedivision_admin/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          }
+        })
+        .then(response => response.json())
+        .then(res => {
+          if (res.status === 200) {
+            
+            dispatch(divisionsActions.setDivisionReport({divisionReport: res})) 
+          } else {
+            dispatch(errorActions.setError({error:true}))
+            dispatch(divisionsActions.setMessage({message:'Sorry something went wrong!!'}))
+          }
+        }).catch((err) => {
+          dispatch(errorActions.setError({error:true}))
+          dispatch(divisionsActions.setMessage({message:'Sorry something went wrong!!'}))
+        })
+    };
+  };
+
   export const getDivisionAll = () => {
   
     return (dispatch) => {

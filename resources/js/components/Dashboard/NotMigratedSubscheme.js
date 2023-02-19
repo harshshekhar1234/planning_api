@@ -21,7 +21,7 @@ function NotMigratedSubScheme({report}) {
         </tr>
             <tr>
             <td className="pv3 pr3 reportextcolor b--black-80" rowSpan='2' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>{report.center_share + report.state_share}</td>
-            <td className="pv3 pr3 reportextcolor b--black-80" colSpan={12} rowSpan='2' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sub-Scheme not migrated in outcome budget</td>
+            <td className="pv3 pr3 reportextcolor b--black-80" colSpan={12} rowSpan='2' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', 'textAlign':"center", 'verticalAlign': "middle"}}>Sub-Scheme not included in outcome budget</td>
           </tr>
           <tr>
           <td></td>
