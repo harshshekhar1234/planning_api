@@ -289,7 +289,10 @@ class FinanceApiController extends Controller
     public function migrated_subscheme($id)
     {
         $scheme = MigScheme::find($id);
-        $demand_no='';
+        $division = Division::where('id', $scheme->division_id)->first();
+        $demand_no = $division->demand_no;
+        $demand_no = sprintf("%02d", $demand_no);
+        //$demand_no='';
         // $response = Http::acceptJson()->get('https://fantastic-bat-tux.cyclic.app/getsubschemebystatecentercode/' . $scheme->state_code . '/' . $scheme->center_code . '/2023-24');
         // $api_subschemes = $response->json();
         $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand='.$demand_no.'&finyear='.$this->api_fin_year.'&statecode=' . $scheme->state_code . '&central=' . $scheme->center_code.'&pwd='.$this->api_password);
