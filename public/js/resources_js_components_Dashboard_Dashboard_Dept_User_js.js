@@ -284,15 +284,20 @@ function Sidenav_Dept_User() {
   var division1 = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.divisions.division;
   });
+  var blockSetting = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.setting.blockSetting;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
       division = _useState2[0],
       setDivision = _useState2[1];
 
+  dispatch(getOutcomeEntrySetting(id));
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (divisionid) {
       dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getDivisionData)(divisionid));
+      dispatch(getOutcomeEntrySetting(divisionid));
     }
   }, [divisionid]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -506,7 +511,7 @@ function Sidenav_Dept_User() {
             className: "white",
             children: "Summary"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+        }), blockSetting.indexOf('entry') !== -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
           className: "nav-link",
           to: "/dashboarddeptuser/entryformdeptuserscheme",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -530,7 +535,7 @@ function Sidenav_Dept_User() {
             className: "white",
             children: "Directorate Report Download"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+        }), blockSetting.indexOf('pending') !== -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
           className: "nav-link",
           to: "/dashboarddeptuser/pendingsubschemedept/".concat(divisionid),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {

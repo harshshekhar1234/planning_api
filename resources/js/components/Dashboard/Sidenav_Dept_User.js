@@ -11,12 +11,15 @@ function Sidenav_Dept_User() {
     const name = useSelector((state) => state.user.name);
     const divisionid = useSelector((state) => state.divisions.divisionId);
     const division1 = useSelector((state) => state.divisions.division);
+    const blockSetting = useSelector((state) => state.setting.blockSetting);
 
     const [division,setDivision] = useState('')
+    dispatch(getOutcomeEntrySetting(id))
 
     useEffect(() => {
         if(divisionid){
         dispatch(getDivisionData(divisionid));
+        dispatch(getOutcomeEntrySetting(divisionid))
         }
         }, [divisionid]);
 
@@ -124,18 +127,23 @@ function Sidenav_Dept_User() {
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Summary</span>
             </Link>
-            <Link className="nav-link" to='/dashboarddeptuser/entryformdeptuserscheme'>
-            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
-            <span className='white'>Outcome Budget Entry Form</span>
-            </Link>
+            {(blockSetting.indexOf('entry') !== -1) &&
+                <Link className="nav-link" to='/dashboarddeptuser/entryformdeptuserscheme'>
+                <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+                <span className='white'>Outcome Budget Entry Form</span>
+                </Link>
+            }
             <Link className="nav-link" to={`/dashboarddeptuser/migrationdivisionreport/${divisionid}`}>
             <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
             <span className='white'>Directorate Report Download</span>
             </Link>
-            <Link className="nav-link" to={`/dashboarddeptuser/pendingsubschemedept/${divisionid}`}>
-            <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
-            <span className='white'>Pending Sub-Scheme List</span>
-            </Link>
+            {   (blockSetting.indexOf('pending') !== -1) &&
+                <Link className="nav-link" to={`/dashboarddeptuser/pendingsubschemedept/${divisionid}`}>
+                <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+                <span className='white'>Pending Sub-Scheme List</span>
+                </Link>
+            }
+            
             {/* <Link className="nav-link" to='/dashboard/departmentdata'>
                 <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
                 <span className='white'>Department Data</span>
