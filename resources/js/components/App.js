@@ -8,6 +8,7 @@ const Signin = React.lazy(() => import('./Signin'));
 import Loading from './Loading';
 import { useSelector, useDispatch } from 'react-redux';
 import { userActions } from './store/userSlice';
+const Setting = React.lazy(() => import('./Dashboard/Setting'));
 const MigrationSummaryDivisionAdmin = React.lazy(() => import('./Dashboard/MigrationSummaryDivisionAdmin'));
 const MigrationOutcomeBudgetDashboardAdmin = React.lazy(() => import('./Dashboard/MigrationOutcomeBudgetDashboardAdmin'));
 const MigrationDivisionExtraSubSchemeInternal = React.lazy(() => import('./Dashboard/MigrationDivisionExtraSubSchemeInternal'));
@@ -166,6 +167,7 @@ const App = () => {
         <Route path='/dashboard' element={<Dashboard />}>
               <Route path='main' element={<Main />}/>
               <Route path='register' element={<Register />} />
+              <Route path='setting' element={<Setting />} />
               <Route path='departments' element={<Departments />}/>
               <Route path='migrationdepartments' element={<MigrationDepartments />}/>
               <Route path='departmentsentry' element={<DepartmentsEntry />}/>

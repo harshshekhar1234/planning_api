@@ -20,6 +20,10 @@ function Sidenav({clickHandler}) {
                 <div className="sb-nav-link-icon" ><i className="fas fa-tachometer-alt"></i></div>
                 <span className='white'>Users</span>
             </Link>
+            <Link className="nav-link" to='/dashboard/setting'>
+                <div className="sb-nav-link-icon" ><i className="fas fa-tachometer-alt"></i></div>
+                <span className='white'>Settings</span>
+            </Link>
             {/* <div className="sb-sidenav-menu-heading"><span className='white'>SDG</span></div>
             <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                 <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>

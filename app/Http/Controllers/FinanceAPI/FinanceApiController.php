@@ -956,6 +956,26 @@ class FinanceApiController extends Controller
         ]);
     }
 
+    // public function testReport($id)
+    // {
+        
+    //     $demand_no = $id;
+    //     $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getOutcomeBudgetOutlay?demand=' . $demand_no . '&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
+    //     $api_schemes = json_decode($response);
+    //     //dd($api_schemes->getOutcomeBudgetOutlayResult);exit;      
+    //     $api_schemesOutlay = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
+    //     $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getCurrentScheme?demand='. $demand_no .'&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
+    //     $api_subscheme = json_decode($response);
+    //     //$api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
+    //     $api_schemesCurrent = json_decode($api_subscheme->getCurrentSchemeResult);
+
+    //     return response()->json([
+    //         'status' => 200,
+    //         'current' => $api_schemesOutlay,
+    //         'outlay' => $api_schemesCurrent
+    //     ]);
+    // }
+
     public function testReport($id)
     {
         
@@ -964,10 +984,10 @@ class FinanceApiController extends Controller
         $api_schemes = json_decode($response);
         //dd($api_schemes->getOutcomeBudgetOutlayResult);exit;      
         $api_schemesOutlay = json_decode($api_schemes->getOutcomeBudgetOutlayResult);
-        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getCurrentScheme?demand='. $demand_no .'&finyear='.$this->api_fin_year.'&statecode=&central=&pwd='.$this->api_password);
+        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand='.$demand_no.'&finyear='.$this->api_fin_year.'&subscheme=&pwd='.$this->api_password);
         $api_subscheme = json_decode($response);
         //$api_schemes = json_decode($api_subscheme->getOutcomeBudgetOutlayResult);
-        $api_schemesCurrent = json_decode($api_subscheme->getCurrentSchemeResult);
+        $api_schemesCurrent = json_decode($api_subscheme->getSubschemeWiseOutcomeBudgetOutlayResult);
 
         return response()->json([
             'status' => 200,

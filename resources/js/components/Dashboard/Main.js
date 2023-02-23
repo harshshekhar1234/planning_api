@@ -69,8 +69,8 @@ function Main() {
                   <div className="card-body f3 h4">
                   {/* <p>Total Departments 
                   <p className='f2'>{countIndicator ? countIndicator.departments : 0}</p></p> */}
-                  <p>Total Schemes 
-                  <p className='f2'>{countIndicator ? countIndicator.schemes : 0}</p></p>
+                  Total Schemes
+                  <p className='f2'>{countIndicator ? countIndicator.schemes : 0}</p>
                   {/* <p>Total Sub Schemes 
                   <p className='f2'>{countIndicator ? countIndicator.subschemes : 0}</p></p> */}
                   </div>
@@ -146,7 +146,7 @@ function Main() {
             </tr>
         </thead>
         <tbody>
-            {status.length && status.map((status,i) => {
+            {status.length ? status.map((status,i) => {
                 return(
                 <tr key={i}>
                     <td className='tl b'>{status.dept_name}</td>
@@ -159,7 +159,7 @@ function Main() {
                     <td>{status.outcome_updated}</td>
                     <td>{status.outcome_indicator - status.outcome_updated}</td>
                 </tr>)
-            })
+            }) : null
             }
         </tbody>
     </table>

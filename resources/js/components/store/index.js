@@ -29,8 +29,9 @@ import departmentMakerSlice from './departmentMakerSlice';
 import departmentVerifierSlice from './departmentVerifierSlice';
 import quaterReportSlice from './quaterReportSlice';
 import migrationSlice from './migrationSlice';
+import settingSlice from './settingSlice';
 import errorSlice from './errorSlice';
-// import logger from 'redux-logger';
+import logger from 'redux-logger';
 
 
 
@@ -67,9 +68,10 @@ const store = configureStore({
     verifier:departmentVerifierSlice.reducer,
     quaterreport:quaterReportSlice.reducer,
     migration:migrationSlice.reducer,
+    setting:settingSlice.reducer,
     error:errorSlice.reducer,
   },
-  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 
 });
 

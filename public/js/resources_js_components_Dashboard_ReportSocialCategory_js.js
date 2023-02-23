@@ -22222,7 +22222,7 @@ var ReportSocialCategory = function ReportSocialCategory() {
           children: "Social Category"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_FormGroup__WEBPACK_IMPORTED_MODULE_22__["default"], {
           row: true,
-          children: socialList && socialList.map(function (social) {
+          children: socialList && socialList.map(function (social, i) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_23__["default"], {
               control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_Checkbox__WEBPACK_IMPORTED_MODULE_24__["default"], {
                 checked: social.selected,
@@ -22231,7 +22231,7 @@ var ReportSocialCategory = function ReportSocialCategory() {
                 }
               }),
               label: "".concat(social.name.toUpperCase())
-            });
+            }, i);
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material_FormControl__WEBPACK_IMPORTED_MODULE_20__["default"], {
@@ -22245,7 +22245,7 @@ var ReportSocialCategory = function ReportSocialCategory() {
           children: "Gender Category"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_FormGroup__WEBPACK_IMPORTED_MODULE_22__["default"], {
           row: true,
-          children: genderList && genderList.map(function (gender) {
+          children: genderList && genderList.map(function (gender, i) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_23__["default"], {
               control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material_Checkbox__WEBPACK_IMPORTED_MODULE_24__["default"], {
                 checked: gender.selected,
@@ -22254,7 +22254,7 @@ var ReportSocialCategory = function ReportSocialCategory() {
                 }
               }),
               label: "".concat(gender.name.toUpperCase())
-            });
+            }, i);
           })
         })]
       })]

@@ -413,8 +413,8 @@ const ReportSocialCategory = () => {
     <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend">Social Category</FormLabel>
     <FormGroup row>
-      {socialList && socialList.map(social => {
-        return <FormControlLabel control={<Checkbox checked={social.selected}
+      {socialList && socialList.map((social,i) => {
+        return <FormControlLabel key={i} control={<Checkbox checked={social.selected}
         onChange={() => handleChangeSocial(social.id)}
         />} label={`${social.name.toUpperCase()}`} />
       })
@@ -424,8 +424,8 @@ const ReportSocialCategory = () => {
     <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
       <FormLabel component="legend">Gender Category</FormLabel>
     <FormGroup row>
-      {genderList && genderList.map(gender => {
-        return <FormControlLabel control={<Checkbox checked={gender.selected}
+      {genderList && genderList.map((gender,i) => {
+        return <FormControlLabel key={i} control={<Checkbox checked={gender.selected}
         onChange={() => handleChangeGender(gender.id)}
          />} label={`${gender.name.toUpperCase()}`} />
       })
