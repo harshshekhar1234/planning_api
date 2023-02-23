@@ -1416,34 +1416,6 @@ function isHostComponent(element) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/Bluetooth.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@mui/icons-material/Bluetooth.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
-
-var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M17.71 7.71 12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88z"
-}), 'Bluetooth');
-
-exports["default"] = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/Drafts.js":
 /*!****************************************************!*\
   !*** ./node_modules/@mui/icons-material/Drafts.js ***!
@@ -1528,6 +1500,34 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/Feed.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@mui/icons-material/Feed.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M16 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8l-5-5zM7 7h5v2H7V7zm10 10H7v-2h10v2zm0-4H7v-2h10v2zm-2-4V5l4 4h-4z"
+}), 'Feed');
+
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/MoveToInbox.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@mui/icons-material/MoveToInbox.js ***!
@@ -1551,6 +1551,34 @@ var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/r
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "M19 3H4.99c-1.11 0-1.98.9-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"
 }), 'MoveToInbox');
+
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/PendingActions.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@mui/icons-material/PendingActions.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M17 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L16.5 17.2V14h1v2.79l1.85 1.85-.7.71zM18 3h-3.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H6c-1.1 0-2 .9-2 2v15c0 1.1.9 2 2 2h6.11c-.59-.57-1.07-1.25-1.42-2H6V5h2v3h8V5h2v5.08c.71.1 1.38.31 2 .6V5c0-1.1-.9-2-2-2zm-6 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+}), 'PendingActions');
 
 exports["default"] = _default;
 
@@ -1607,34 +1635,6 @@ var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/r
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "m22 9.24-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
 }), 'StarBorder');
-
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/@mui/icons-material/Wifi.js":
-/*!**************************************************!*\
-  !*** ./node_modules/@mui/icons-material/Wifi.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
-
-var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "m1 9 2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8 3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4 2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"
-}), 'Wifi');
 
 exports["default"] = _default;
 
@@ -9452,8 +9452,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material_Grid__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material/Grid */ "./node_modules/@mui/material/Grid/Grid.js");
 /* harmony import */ var _mui_material_ListItem__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/ListItem */ "./node_modules/@mui/material/ListItem/ListItem.js");
 /* harmony import */ var _mui_material_Switch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material/Switch */ "./node_modules/@mui/material/Switch/Switch.js");
-/* harmony import */ var _mui_icons_material_Wifi__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material/Wifi */ "./node_modules/@mui/icons-material/Wifi.js");
-/* harmony import */ var _mui_icons_material_Bluetooth__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/icons-material/Bluetooth */ "./node_modules/@mui/icons-material/Bluetooth.js");
+/* harmony import */ var _mui_icons_material_Feed__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material/Feed */ "./node_modules/@mui/icons-material/Feed.js");
+/* harmony import */ var _mui_icons_material_PendingActions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/icons-material/PendingActions */ "./node_modules/@mui/icons-material/PendingActions.js");
 /* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/Box */ "./node_modules/@mui/material/Box/Box.js");
 /* harmony import */ var _mui_material_Button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material/Button */ "./node_modules/@mui/material/Button/Button.js");
 /* harmony import */ var _mui_material_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/Modal */ "./node_modules/@mui/material/Modal/Modal.js");
@@ -9595,6 +9595,7 @@ function NestedList() {
     dispatch(_store_settingSlice__WEBPACK_IMPORTED_MODULE_3__.settingActions.setDivisionId({
       divisionId: id
     }));
+    dispatch((0,_store_setting_action__WEBPACK_IMPORTED_MODULE_4__.getOutcomeEntrySetting)(id));
     handleOpen12();
   };
 
@@ -9625,7 +9626,7 @@ function NestedList() {
           }),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_10__["default"], {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_11__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material_Wifi__WEBPACK_IMPORTED_MODULE_12__["default"], {})
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material_Feed__WEBPACK_IMPORTED_MODULE_12__["default"], {})
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_13__["default"], {
               id: "switch-list-label-wifi",
               primary: "Outcome Budget Entry"
@@ -9639,7 +9640,7 @@ function NestedList() {
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material_ListItem__WEBPACK_IMPORTED_MODULE_10__["default"], {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_ListItemIcon__WEBPACK_IMPORTED_MODULE_11__["default"], {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material_Bluetooth__WEBPACK_IMPORTED_MODULE_15__["default"], {})
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material_PendingActions__WEBPACK_IMPORTED_MODULE_15__["default"], {})
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_ListItemText__WEBPACK_IMPORTED_MODULE_13__["default"], {
               id: "switch-list-label-bluetooth",
               primary: "Pending Migration"
@@ -10025,11 +10026,24 @@ var getDivisionAll = function getDivisionAll() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "divisionOutcomeEntry": () => (/* binding */ divisionOutcomeEntry)
+/* harmony export */   "divisionOutcomeEntry": () => (/* binding */ divisionOutcomeEntry),
+/* harmony export */   "getOutcomeEntrySetting": () => (/* binding */ getOutcomeEntrySetting)
 /* harmony export */ });
 /* harmony import */ var _settingSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./settingSlice */ "./resources/js/components/store/settingSlice.js");
 /* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../configuration */ "./resources/js/components/configuration.js");
 /* harmony import */ var _errorSlice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errorSlice */ "./resources/js/components/store/errorSlice.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 
 
@@ -10059,10 +10073,10 @@ var divisionOutcomeEntry = function divisionOutcomeEntry(id, entry, pending) {
         dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
         }));
-        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setEmail({
+        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setDivisionId({
           divisionId: ''
         }));
-        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setPassword({
+        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setBlockSetting({
           blockSetting: []
         }));
       }
@@ -10070,11 +10084,47 @@ var divisionOutcomeEntry = function divisionOutcomeEntry(id, entry, pending) {
       dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
         error: true
       }));
-      dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setEmail({
+      dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setDivisionId({
         divisionId: ''
       }));
-      dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setPassword({
+      dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setBlockSetting({
         blockSetting: []
+      }));
+    });
+  };
+};
+var getOutcomeEntrySetting = function getOutcomeEntrySetting(id) {
+  return function (dispatch) {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "outcomeentry/").concat(id), {
+      method: 'GET',
+      headers: {
+        'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
+      }
+    }).then(function (response) {
+      return response.json();
+    }).then(function (res) {
+      if (res.status === 200) {
+        var b = [];
+
+        if (res.entry === 1) {
+          b = [].concat(_toConsumableArray(b), ['entry']);
+        }
+
+        if (res.pending === 1) {
+          b = [].concat(_toConsumableArray(b), ['pending']);
+        }
+
+        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setBlockSetting({
+          blockSetting: b
+        }));
+      } else {
+        dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+          error: true
+        }));
+      }
+    })["catch"](function (err) {
+      dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
+        error: true
       }));
     });
   };

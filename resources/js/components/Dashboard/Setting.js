@@ -15,8 +15,8 @@ import StarBorder from '@mui/icons-material/StarBorder';
 import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import Switch from '@mui/material/Switch';
-import WifiIcon from '@mui/icons-material/Wifi';
-import BluetoothIcon from '@mui/icons-material/Bluetooth';
+import FeedIcon from '@mui/icons-material/Feed';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -24,7 +24,7 @@ import Modal from '@mui/material/Modal';
 import {getDivisionAll} from '../store/divisions-action';
 import { useSelector, useDispatch } from 'react-redux';
 import { settingActions } from '../store/settingSlice';
-import {divisionOutcomeEntry} from '../store/setting-action';
+import {divisionOutcomeEntry,getOutcomeEntrySetting} from '../store/setting-action';
 
 const style = {
   position: 'absolute',
@@ -86,6 +86,7 @@ export default function NestedList() {
 
   const handleClick1 = (id) => {
     dispatch(settingActions.setDivisionId({divisionId:id}))
+    dispatch(getOutcomeEntrySetting(id))
     handleOpen12()
   };
 
@@ -110,7 +111,7 @@ export default function NestedList() {
     >
       <ListItem>
         <ListItemIcon>
-          <WifiIcon />
+          <FeedIcon />
         </ListItemIcon>
         <ListItemText id="switch-list-label-wifi" primary="Outcome Budget Entry" />
         <Switch
@@ -124,7 +125,7 @@ export default function NestedList() {
       </ListItem>
       <ListItem>
         <ListItemIcon>
-          <BluetoothIcon />
+          <PendingActionsIcon />
         </ListItemIcon>
         <ListItemText id="switch-list-label-bluetooth" primary="Pending Migration" />
         <Switch
