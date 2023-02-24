@@ -224,7 +224,10 @@ class BudgetEntrySettingController extends Controller
         if (is_null($div_budget_entry_settings)) {
             return $this->sendError('No Budget Entry Settings found for the Divison.');
         }
-        return response()->json($div_budget_entry_settings, 200);
+        return response()->json([
+            'status' => 200,
+            'div_budget_entry_settings' => $div_budget_entry_settings
+        ]);
     }
 
     /**
