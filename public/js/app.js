@@ -16149,7 +16149,9 @@ var settingSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)
   name: 'setting',
   initialState: {
     divisionId: '',
-    blockSetting: []
+    blockSetting: [],
+    openBudgetEditSuccess: false,
+    openBudgetEditFailure: false
   },
   reducers: {
     setDivisionId: function setDivisionId(state, action) {
@@ -16157,6 +16159,12 @@ var settingSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)
     },
     setBlockSetting: function setBlockSetting(state, action) {
       state.blockSetting = action.payload.blockSetting;
+    },
+    setOpenBudgetEditSuccess: function setOpenBudgetEditSuccess(state, action) {
+      state.openBudgetEditSuccess = action.payload.openBudgetEditSuccess;
+    },
+    setOpenBudgetEditFailure: function setOpenBudgetEditFailure(state, action) {
+      state.openBudgetEditFailure = action.payload.openBudgetEditFailure;
     }
   }
 });

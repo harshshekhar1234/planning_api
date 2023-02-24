@@ -21,6 +21,7 @@ export const divisionOutcomeEntry = (id,entry,pending) => {
           if(res.status === 200){
             dispatch(settingActions.setDivisionId({divisionId:''}))
             dispatch(settingActions.setBlockSetting({blockSetting:[]}))
+            dispatch(settingActions.setOpenBudgetEditSuccess({openBudgetEditSuccess:true}))
           } else {
             dispatch(errorActions.setError({error:true}))
             dispatch(settingActions.setDivisionId({divisionId:''}))

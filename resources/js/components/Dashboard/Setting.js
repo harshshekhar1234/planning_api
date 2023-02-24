@@ -26,6 +26,9 @@ import {divisionsActions} from '../store/divisionsSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { settingActions } from '../store/settingSlice';
 import {divisionOutcomeEntry,getOutcomeEntrySetting} from '../store/setting-action';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 const style = {
   position: 'absolute',
@@ -40,15 +43,25 @@ const style = {
   p: 4,
 };
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 export default function NestedList() {
 
   const dispatch = useDispatch();
   const divisions = useSelector((state) => state.divisions.divisionAll);
   const blockSetting = useSelector((state) => state.setting.blockSetting);
   const divisionId = useSelector((state) => state.setting.divisionId);
+  const openBudgetEditSuccess = useSelector((state) => state.setting.openBudgetEditSuccess);
+  const openBudgetEditFailure = useSelector((state) => state.setting.openBudgetEditFailure);
 
   const [open, setOpen] = React.useState(false);
   const [open12, setOpen12] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   const handleToggle = (value) => () => {
     const currentIndex = blockSetting.indexOf(value);
@@ -81,10 +94,6 @@ export default function NestedList() {
       dispatch(settingActions.setBlockSetting({blockSetting: []}))
     };
 
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
   const handleClick1 = (id) => {
     dispatch(settingActions.setDivisionId({divisionId:id}))
     dispatch(getOutcomeEntrySetting(id))
@@ -95,10 +104,35 @@ export default function NestedList() {
     dispatch(getDivisionAll());
     return () => { 
       dispatch(divisionsActions.setDivisionAll({divisionAll: []})) 
+      dispatch(settingActions.setOpenBudgetEditSuccess({openBudgetEditSuccess:false}))
     }
     }, []);
 
+  const handleCloseBudgetEditSuccess = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    dispatch(settingActions.setOpenBudgetEditSuccess({openBudgetEditSuccess:false}))
+  };
+
+  const handleCloseBudgetEditFailue = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    dispatch(settingActions.setOpenBudgetEditFailure({openBudgetEditFailure:false}))
+  };
+
   return (<>
+  <Snackbar open={openBudgetEditSuccess} autoHideDuration={4000} onClose={handleCloseBudgetEditSuccess}>
+        <Alert onClose={handleCloseBudgetEditSuccess} severity="success" sx={{ width: '100%' }}>
+          Setting updated successfully!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={openBudgetEditFailure} autoHideDuration={4000} onClose={handleCloseBudgetEditFailue}>
+        <Alert onClose={handleCloseBudgetEditFailue} severity="error" sx={{ width: '100%' }}>
+        Something went wrong!
+        </Alert>
+      </Snackbar>
   <Modal
         open={open12}
         onClose={handleClose12}

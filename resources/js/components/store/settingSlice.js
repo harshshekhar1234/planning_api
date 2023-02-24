@@ -4,7 +4,10 @@ const settingSlice = createSlice({
   name: 'setting',
   initialState: { 
     divisionId: '',
-    blockSetting: []
+    blockSetting: [],
+    openBudgetEditSuccess:false,
+    openBudgetEditFailure:false
+
    },
   reducers: {
     setDivisionId(state, action) {
@@ -12,6 +15,12 @@ const settingSlice = createSlice({
     },
     setBlockSetting(state, action) {
       state.blockSetting = action.payload.blockSetting;
+    },
+    setOpenBudgetEditSuccess(state, action) {
+      state.openBudgetEditSuccess = action.payload.openBudgetEditSuccess;
+    },
+    setOpenBudgetEditFailure(state, action) {
+      state.openBudgetEditFailure = action.payload.openBudgetEditFailure;
     }
   },
 });

@@ -898,6 +898,9 @@ var divisionOutcomeEntry = function divisionOutcomeEntry(id, entry, pending) {
         dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setBlockSetting({
           blockSetting: []
         }));
+        dispatch(_settingSlice__WEBPACK_IMPORTED_MODULE_0__.settingActions.setOpenBudgetEditSuccess({
+          openBudgetEditSuccess: true
+        }));
       } else {
         dispatch(_errorSlice__WEBPACK_IMPORTED_MODULE_2__.errorActions.setError({
           error: true
