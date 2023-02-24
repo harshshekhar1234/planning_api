@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { doc_url } from '../configuration';
 import {getDivisionData} from '../store/divisions-action';
+import {getOutcomeEntrySetting} from '../store/setting-action';
 
 function Sidenav_Dept_User() {
 
@@ -14,7 +15,7 @@ function Sidenav_Dept_User() {
     const blockSetting = useSelector((state) => state.setting.blockSetting);
 
     const [division,setDivision] = useState('')
-    dispatch(getOutcomeEntrySetting(id))
+    
 
     useEffect(() => {
         if(divisionid){

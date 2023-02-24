@@ -5,11 +5,13 @@ import { errorActions } from './errorSlice';
 export const divisionOutcomeEntry = (id,entry,pending) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}setting/outcomeentry`, {
+        fetch(`${laravel_api}budget_entry_setting/update`, {
         method: 'post',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+          'Content-Type': 'application/json'},
         body: JSON.stringify({
-          id:id,
+          division_id:id,
           entry:entry,
           pending:pending
         })
@@ -35,7 +37,7 @@ export const divisionOutcomeEntry = (id,entry,pending) => {
   export const getOutcomeEntrySetting = (id) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}outcomeentry/${id}`, {
+        fetch(`${laravel_api}budget_entry_setting/${id}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -45,10 +47,10 @@ export const divisionOutcomeEntry = (id,entry,pending) => {
         .then(res => {
           if (res.status === 200) {
             let b = []
-            if(res.entry === 1){
+            if(res.div_budget_entry_settings.entry === true){
                 b = [...b,'entry']
             }
-            if(res.pending === 1){
+            if(res.div_budget_entry_settings.pending === true){
                 b = [...b,'pending']
             }
             dispatch(settingActions.setBlockSetting({blockSetting: b}))

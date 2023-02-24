@@ -22,6 +22,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import {getDivisionAll} from '../store/divisions-action';
+import {divisionsActions} from '../store/divisionsSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { settingActions } from '../store/settingSlice';
 import {divisionOutcomeEntry,getOutcomeEntrySetting} from '../store/setting-action';

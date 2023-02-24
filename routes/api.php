@@ -494,7 +494,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Initial Setting of Budget Entry Settings for all directorates
     Route::post('/budget_entry_setting', [BudgetEntrySettingController::class, 'store'])->middleware(['can:isAdmin']);
     //Get Budget Entry Settings for a specific division
-    Route::get('/budget_entry_setting/{id}', [BudgetEntrySettingController::class, 'show'])->middleware(['can:isAdmin']);
+    Route::get('/budget_entry_setting/{id}', [BudgetEntrySettingController::class, 'show']);
     //Update Budget Entry Settings for a specific division
     Route::post('/budget_entry_setting/update', [BudgetEntrySettingController::class, 'update'])->middleware(['can:isAdmin']);
     
