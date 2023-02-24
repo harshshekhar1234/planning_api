@@ -15006,6 +15006,36 @@ var errorActions = errorSlice.actions;
 
 /***/ }),
 
+/***/ "./resources/js/components/store/finYearSlice.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/store/finYearSlice.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "finYearActions": () => (/* binding */ finYearActions),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+
+var finYearSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
+  name: 'finYear',
+  initialState: {
+    finYear: '2324'
+  },
+  reducers: {
+    setFinYear: function setFinYear(state, action) {
+      state.finYear = action.payload.finYear;
+    }
+  }
+});
+var finYearActions = finYearSlice.actions;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (finYearSlice);
+
+/***/ }),
+
 /***/ "./resources/js/components/store/genderSlice.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/store/genderSlice.js ***!
@@ -15055,7 +15085,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
 /* harmony import */ var _productSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./productSlice */ "./resources/js/components/store/productSlice.js");
 /* harmony import */ var _registerSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./registerSlice */ "./resources/js/components/store/registerSlice.js");
 /* harmony import */ var _language__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./language */ "./resources/js/components/store/language.js");
@@ -15086,9 +15116,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _quaterReportSlice__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./quaterReportSlice */ "./resources/js/components/store/quaterReportSlice.js");
 /* harmony import */ var _migrationSlice__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./migrationSlice */ "./resources/js/components/store/migrationSlice.js");
 /* harmony import */ var _settingSlice__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./settingSlice */ "./resources/js/components/store/settingSlice.js");
-/* harmony import */ var _errorSlice__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./errorSlice */ "./resources/js/components/store/errorSlice.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _finYearSlice__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./finYearSlice */ "./resources/js/components/store/finYearSlice.js");
+/* harmony import */ var _errorSlice__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./errorSlice */ "./resources/js/components/store/errorSlice.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_32__);
 
 
 
@@ -15122,7 +15153,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_32__.configureStore)({
+
+var store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_33__.configureStore)({
   reducer: {
     product: _productSlice__WEBPACK_IMPORTED_MODULE_0__["default"].reducer,
     register: _registerSlice__WEBPACK_IMPORTED_MODULE_1__["default"].reducer,
@@ -15154,10 +15186,11 @@ var store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_32__.configureStore)({
     quaterreport: _quaterReportSlice__WEBPACK_IMPORTED_MODULE_27__["default"].reducer,
     migration: _migrationSlice__WEBPACK_IMPORTED_MODULE_28__["default"].reducer,
     setting: _settingSlice__WEBPACK_IMPORTED_MODULE_29__["default"].reducer,
-    error: _errorSlice__WEBPACK_IMPORTED_MODULE_30__["default"].reducer
+    finYear: _finYearSlice__WEBPACK_IMPORTED_MODULE_30__["default"].reducer,
+    error: _errorSlice__WEBPACK_IMPORTED_MODULE_31__["default"].reducer
   },
   middleware: function middleware(getDefaultMiddleware) {
-    return getDefaultMiddleware().concat((redux_logger__WEBPACK_IMPORTED_MODULE_31___default()));
+    return getDefaultMiddleware().concat((redux_logger__WEBPACK_IMPORTED_MODULE_32___default()));
   }
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);

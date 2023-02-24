@@ -30,6 +30,7 @@ import departmentVerifierSlice from './departmentVerifierSlice';
 import quaterReportSlice from './quaterReportSlice';
 import migrationSlice from './migrationSlice';
 import settingSlice from './settingSlice';
+import finYearSlice from './finYearSlice';
 import errorSlice from './errorSlice';
 import logger from 'redux-logger';
 
@@ -69,6 +70,7 @@ const store = configureStore({
     quaterreport:quaterReportSlice.reducer,
     migration:migrationSlice.reducer,
     setting:settingSlice.reducer,
+    finYear:finYearSlice.reducer,
     error:errorSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),

@@ -6,6 +6,11 @@ import { useNavigate } from "react-router-dom";
 import Header from './Home/Component/Header';
 import Footer from './Home/Component/Footer';
 import {errorActions} from './store/errorSlice';
+import {finYearActions} from './store/finYearSlice';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 
 const Signin = () => {
@@ -16,6 +21,7 @@ const Signin = () => {
     const message = useSelector((state) => state.signin.message);
     const role = useSelector((state) => state.user.role);
     const isSignedIn = useSelector((state) => state.user.isSignedIn);
+    const finYear = useSelector((state) => state.finYear.finYear);
     const error = useSelector((state) => state.error.error);
     // const [email, setEmail] = useState('');
     // const [password, setPassword] = useState('');
@@ -29,6 +35,10 @@ const Signin = () => {
       dispatch(signinActions.setPassword({password:event.target.value}))
       
     } 
+
+    const handleChangeFinYear = (event) => {
+      dispatch(finYearActions.setFinYear({finYear:event.target.value}))
+    }
 
     const onSubmitHandler = () => {
       
@@ -82,6 +92,21 @@ const Signin = () => {
     <label htmlFor="exampleInputPassword1" className='b'>Password</label>
     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value={password} onChange={onPasswordChangeHandler}/>
   </div>
+  <div className="form-group mt3">
+  <FormControl sx={{mt: 1, minWidth: 200 }} size="small">
+      <InputLabel id="demo-select-small">Financial Year</InputLabel>
+      <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={finYear}
+        label="Financial Year"
+        onChange={handleChangeFinYear}
+      >
+        <MenuItem value={2324}>2023-24</MenuItem>
+        <MenuItem value={2223}>2022-23</MenuItem>
+      </Select>
+    </FormControl>
+    </div>
   <button type="submit" className="btn btn-primary mb4 mt3" onClick={onSubmitHandler}>Submit</button>
   {message && <p className='alert alert-primary'>{message}</p>}
 </div>
