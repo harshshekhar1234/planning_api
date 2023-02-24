@@ -42,6 +42,7 @@ use App\Http\Controllers\Migrate\MigSubSchemeSocialController;
 use App\Http\Controllers\Migrate\MigSubSchemeSdgController;
 use App\Http\Controllers\FinanceAPI\FinanceApiController;
 use App\Http\Controllers\DBAdmin\AdminController;
+use App\Http\Controllers\DBAdmin\BudgetEntrySettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -490,7 +491,16 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/change_scheme_id', [AdminController::class, 'change_scheme_id'])->middleware(['can:isAdmin']);
     //Change Scheme Id in all tables - Migration Tables
     Route::post('/change_mig_scheme_id', [AdminController::class, 'change_mig_scheme_id'])->middleware(['can:isAdmin']);
+    //Initial Setting of Budget Entry Settings for all directorates
+    Route::post('/budget_entry_setting', [BudgetEntrySettingController::class, 'store'])->middleware(['can:isAdmin']);
+    //Get Budget Entry Settings for a specific division
+    Route::get('/budget_entry_setting/{id}', [BudgetEntrySettingController::class, 'show'])->middleware(['can:isAdmin']);
+    //Update Budget Entry Settings for a specific division
+    Route::post('/budget_entry_setting/update', [BudgetEntrySettingController::class, 'update'])->middleware(['can:isAdmin']);
+    
     /*---------------------------------- End of Data Base Administration Module -------------------------------------*/
+
+    
 });
 
 
