@@ -170,9 +170,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentsData = function getDepartmentsData(id) {
+var getDepartmentsData = function getDepartmentsData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "dept_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "dept_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

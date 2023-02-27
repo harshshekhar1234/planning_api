@@ -47547,9 +47547,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSchemesData = function getSchemesData(id) {
+var getSchemesData = function getSchemesData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemes/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

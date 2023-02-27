@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getDepartmentData = (id) => {
+export const getDepartmentData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}department/${id}`, {
+        fetch(`${laravel_api}department/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getSchemesData = (id) => {
+export const getSchemesData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}schemes/${id}`, {
+        fetch(`${laravel_api}schemes/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

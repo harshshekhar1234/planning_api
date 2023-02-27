@@ -10,10 +10,11 @@ function DepartmentsEntry() {
   const dispatch = useDispatch();
 
   const departments = useSelector((state) => state.departments.departments);
+  const finYear = useSelector((state) => state.finYear.finYear);
   const message = useSelector((state) => state.departments.message);    
 
     useEffect(() => {
-      dispatch(getDepartmentsData());
+      dispatch(getDepartmentsData(finYear));
     }, []);
 
     if(departments.length === 0){

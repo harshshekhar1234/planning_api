@@ -10,11 +10,12 @@ function DepartmentEntry({id, name}) {
 
     const dispatch = useDispatch();
     const divisions = useSelector((state) => state.divisions.divisions);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
    
 
     useEffect(() => {
-        dispatch(getDivisionsData(id));
+        dispatch(getDivisionsData(id,finYear));
         }, []);
 
     if(divisions.length === 0){

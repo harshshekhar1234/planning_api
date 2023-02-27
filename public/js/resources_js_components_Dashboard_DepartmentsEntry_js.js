@@ -32,11 +32,14 @@ function DepartmentsEntry() {
   var departments = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.departments.departments;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   var message = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.departments.message;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentsData)());
+    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentsData)(finYear));
   }, []);
 
   if (departments.length === 0) {
@@ -172,9 +175,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentsData = function getDepartmentsData(id) {
+var getDepartmentsData = function getDepartmentsData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "dept_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "dept_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

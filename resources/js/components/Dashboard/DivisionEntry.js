@@ -178,6 +178,7 @@ function DivisionEntry() {
     const editNotificationSuccess = useSelector((state) => state.schemes.editNotificationSuccess);
     const deleteNotificationSuccess = useSelector((state) => state.schemes.deleteNotificationSuccess);
     const updateScheme = useSelector((state) => state.schemes.updateScheme);
+    const finYear = useSelector((state) => state.finYear.finYear);
     
 
     const { data } = {
@@ -187,7 +188,7 @@ function DivisionEntry() {
     };
 
     useEffect(() => {
-        dispatch(getSchemesData(params.id));  
+        dispatch(getSchemesData(params.id,finYear));  
         dispatch(divisionsActions.setDivisionId({divisionId: params.id})) 
         return () => {
           dispatch(schemesActions.setSchemes({schemes: []})) 
@@ -199,7 +200,7 @@ function DivisionEntry() {
 
     useEffect(() => {
         if(updateScheme){
-        dispatch(getSchemesData(params.id));  
+        dispatch(getSchemesData(params.id,finYear));  
         }
         }, [updateScheme]);
 

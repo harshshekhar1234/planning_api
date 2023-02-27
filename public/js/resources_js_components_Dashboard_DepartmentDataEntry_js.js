@@ -33,11 +33,14 @@ function DepartmentDataEntry() {
   var departmentName = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.department.name;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   var departmentMessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.department.message;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_department_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentData)(params.id));
+    dispatch((0,_store_department_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentData)(params.id, finYear));
     dispatch(_store_departmentSlice__WEBPACK_IMPORTED_MODULE_2__.departmentActions.setDepartmentId({
       departmentId: params.id
     }));
@@ -90,8 +93,11 @@ function DepartmentEntry(_ref) {
   var divisions = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
     return state.divisions.divisions;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_2__.getDivisionsData)(id));
+    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_2__.getDivisionsData)(id, finYear));
   }, []);
 
   if (divisions.length === 0) {
@@ -231,9 +237,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentData = function getDepartmentData(id) {
+var getDepartmentData = function getDepartmentData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "department/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "department/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -327,9 +333,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDivisionsData = function getDivisionsData(id) {
+var getDivisionsData = function getDivisionsData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "div_dashboard/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "div_dashboard/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

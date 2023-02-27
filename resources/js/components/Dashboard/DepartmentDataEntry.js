@@ -10,11 +10,12 @@ function DepartmentDataEntry() {
     let params = useParams();
     const dispatch = useDispatch();
     const departmentName = useSelector((state) => state.department.name);
+    const finYear = useSelector((state) => state.finYear.finYear);
     const departmentMessage = useSelector((state) => state.department.message);
 
 
     useEffect(() => {
-        dispatch(getDepartmentData(params.id));
+        dispatch(getDepartmentData(params.id,finYear));
         dispatch(departmentActions.setDepartmentId({departmentId:params.id}))
         }, []);
 
