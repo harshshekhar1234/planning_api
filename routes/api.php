@@ -165,7 +165,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/department_count_indicators/{id}', [DashboardController::class, 'indicator_by_department']);
     Route::get('/status_update', [SubSchemeController::class, 'status_update']);
     Route::get('/count_for_dashboard', [DashboardController::class, 'count_for_dashboard']);
-    Route::get('/dept_dashboard', [DepartmentController::class, 'dept_dashboard'])->middleware(['can:isAdmin']);
+    Route::get('/dept_dashboard/{fin_year}', [DepartmentController::class, 'dept_dashboard'])->middleware(['can:isAdmin']);
     Route::get('/div_dashboard/{id}', [DivisionController::class, 'div_dashboard'])->middleware(['can:isAdmin']);
 
     Route::post('/subscheme_expenditure', [SubSchemeExpenditureController::class, 'store']);

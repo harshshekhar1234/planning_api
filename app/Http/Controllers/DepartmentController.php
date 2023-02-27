@@ -43,19 +43,19 @@ class DepartmentController extends Controller
     }
     return response()->json($department, 200);
   }
-  public function dept_dashboard()
+  public function dept_dashboard($fin_year)
   {
     $departments = Department::orderBy('name')->get();
     foreach ($departments as $department) {
-      $state_share = FinancialOutlay::where('department_id', $department->id)->sum('state_share');
-      $center_share = FinancialOutlay::where('department_id', $department->id)->sum('center_share');
+      $state_share = FinancialOutlay::where(['department_id' => $department->id, 'fin_year' => $fin_year])->sum('state_share');
+      $center_share = FinancialOutlay::where(['department_id' => $department->id, 'fin_year' => $fin_year])->sum('center_share');
       $department->outlay = ($state_share + $center_share) / 100;
-      $department->scheme = Scheme::where('department_id', $department->id)->count();
-      $department->subscheme = SubScheme::where('department_id', $department->id)->count();
-      $department->output = Output::where('department_id', $department->id)->count();
-      $department->outcome = Outcome::where('department_id', $department->id)->count();
-      $department->output_indicator = OutputIndicator::where('department_id', $department->id)->count();
-      $department->outcome_indicator = OutcomeIndicator::where('department_id', $department->id)->count();
+      $department->scheme = Scheme::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
+      $department->subscheme = SubScheme::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
+      $department->output = Output::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
+      $department->outcome = Outcome::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
+      $department->output_indicator = OutputIndicator::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
+      $department->outcome_indicator = OutcomeIndicator::where(['department_id' => $department->id, 'fin_year' => $fin_year])->count();
     }
     return response()->json($departments, 200);
   }
