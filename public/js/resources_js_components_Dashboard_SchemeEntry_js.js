@@ -46922,8 +46922,11 @@ function SchemeEntry() {
   var deleteSubSchemeId = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
     return state.subschemes.deleteSubSchemeId;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_6__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id, finYear));
     return function () {
       dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemes({
         subschemes: []
@@ -46938,7 +46941,7 @@ function SchemeEntry() {
   }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (updateSubScheme) {
-      dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+      dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id, finYear));
     }
   }, [updateSubScheme]);
 
@@ -47493,9 +47496,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSubSchemesData = function getSubSchemesData(id) {
+var getSubSchemesData = function getSubSchemesData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemes/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

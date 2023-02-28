@@ -176,9 +176,10 @@ function SchemeEntry() {
     const deleteNotificationSuccess = useSelector((state) => state.subschemes.deleteNotificationSuccess);
     const updateSubScheme = useSelector((state) => state.subschemes.updateSubScheme);
     const deleteSubSchemeId = useSelector((state) => state.subschemes.deleteSubSchemeId);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
     useEffect(() => {
-        dispatch(getSubSchemesData(params.id));
+        dispatch(getSubSchemesData(params.id,finYear));
         return () => {
           dispatch(subschemesActions.setSubSchemes({subschemes: []})) 
           dispatch(subschemesActions.setEditNotificationSuccess({editNotificationSuccess:false}))  
@@ -188,7 +189,7 @@ function SchemeEntry() {
 
      useEffect(() => {
         if(updateSubScheme){
-          dispatch(getSubSchemesData(params.id));  
+          dispatch(getSubSchemesData(params.id,finYear));  
         }
         }, [updateSubScheme]);
 

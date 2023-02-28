@@ -5,10 +5,10 @@ import { outlayActions } from './outlaySlice';
 import { errorActions } from './errorSlice';
 
 
-export const getSubSchemesData = (id) => {
+export const getSubSchemesData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}subschemes/${id}`, {
+        fetch(`${laravel_api}subschemes/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

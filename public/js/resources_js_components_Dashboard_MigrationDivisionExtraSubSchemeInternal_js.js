@@ -47402,9 +47402,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSubSchemesData = function getSubSchemesData(id) {
+var getSubSchemesData = function getSubSchemesData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemes/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_2__.laravel_api, "subschemes/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
