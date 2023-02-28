@@ -2037,9 +2037,9 @@ class SubSchemeController extends Controller
         }
     }
 
-    public function cur_report_subscheme_division($id)
+    public function cur_report_subscheme_division($id, $fin_year)
     {
-        $subschemes = DB::table('sub_schemes')->where('division_id', $id)->orderBy('id')->get();
+        $subschemes = DB::table('sub_schemes')->where(['division_id' => $id, 'fin_year' => $fin_year])->orderBy('id')->get();
 
         foreach ($subschemes as $subscheme) {
             $sub_scheme = DB::table('sub_schemes AS ss')

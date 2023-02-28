@@ -360,7 +360,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Initial Excel Report - For a Sub-Scheme
     Route::get('/cur_reportsubscheme/{id}', [SubSchemeController::class, 'cur_report_subscheme']);
     //Initial Excel Report - Division Wise
-    Route::get('/cur_reportsubschemedivision/{id}', [SubSchemeController::class, 'cur_report_subscheme_division']);
+    Route::get('/cur_reportsubschemedivision/{id}/{fin_year}', [SubSchemeController::class, 'cur_report_subscheme_division']);
     /*--------------------------------- End of Initial Budget Report Download ------------------------------------*/
 
     /*--------------------------------- Start of Outcome Budget Migration Module ------------------------------------*/
