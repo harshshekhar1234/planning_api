@@ -219,7 +219,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/update_ss_fin_exp_value/{id}', [SubSchemeExpenditureController::class, 'update_ss_fin_exp_value']);
     Route::get('/ss_fin_exp/{code}', [SubSchemeExpenditureController::class, 'ss_fin_exp'])->middleware(['can:isAdmin']);
 
-    Route::get('/report_for_dynmc_dashboard', [SubSchemeController::class, 'report_for_dynmc_dashboard'])->middleware(['can:isAdmin']);
+    Route::get('/report_for_dynmc_dashboard/{fin_year}', [SubSchemeController::class, 'report_for_dynmc_dashboard'])->middleware(['can:isAdmin']);
 
     //Listing of all Users
     Route::get('/all_users', [UserController::class, 'all_users'])->middleware(['can:isAdmin']);

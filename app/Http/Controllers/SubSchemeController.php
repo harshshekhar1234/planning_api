@@ -967,7 +967,7 @@ class SubSchemeController extends Controller
     }
 
 
-    public function report_for_dynmc_dashboard()
+    public function report_for_dynmc_dashboard($fin_year)
     {
         $subschemes = DB::table('sub_schemes AS ss')
             ->join('divisions AS div', 'div.id', '=', 'ss.division_id')
@@ -993,6 +993,7 @@ class SubSchemeController extends Controller
                 "fin.state_share as StateShare",
                 "fin.center_share as CenterShare"
             )
+            ->where('ss.fin_year', $fin_year)
             ->orderby('ss.id')->get();
 
         foreach ($subschemes as $subscheme) {
