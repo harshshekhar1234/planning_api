@@ -44593,6 +44593,9 @@ function Scheme() {
   var subschemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
     return state.subschemes.subschemes;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   var columns = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(function () {
     return [{
       field: 'subscheme_code',
@@ -44638,7 +44641,7 @@ function Scheme() {
     }];
   }, [handleActionClick]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id));
+    dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_2__.getSubSchemesData)(params.id, finYear));
     return function () {
       dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_3__.subschemesActions.setSubSchemes({
         subschemes: []

@@ -36,8 +36,11 @@ function Departments() {
   var message = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.departments.message;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentsData)());
+    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentsData)(finYear));
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: departments.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {

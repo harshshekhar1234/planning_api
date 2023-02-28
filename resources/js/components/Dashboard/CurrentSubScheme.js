@@ -24,6 +24,7 @@ function CurrentSubScheme() {
   const sanction = useSelector((state) => state.subschemes.sanction);
   const allotment = useSelector((state) => state.subschemes.allotment);
   const expenditure = useSelector((state) => state.subschemes.expenditure);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   const [rowofspan, setRowofspan] = useState(1)
   const [toDisplay, setToDisplay] = useState('outputindicators')
@@ -97,6 +98,15 @@ function CurrentSubScheme() {
        return parseFloat(percent.toFixed(2))
      }
 
+     const getFinYear = () => {
+      if(finYear === 2324){
+        return '2023-24'
+      }
+      if(finYear === 2223){
+        return '2022-23'
+      }
+    }
+
      const calculatepercentexpenditureallotment = (expenditure,allotment) => {
       let percent = 0;
       if(parseFloat(expenditure) === 0){
@@ -130,7 +140,7 @@ function CurrentSubScheme() {
       <tbody className="lh-copy">
       <tr className="stripe-dark table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid'}}>
           <td className="pa3 tl table-bordered" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left", fontWeight: 'bold'}}>Financial Year</td>
-          <td className="pa3 tl table-bordered" colSpan='11' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>2022-23</td>
+          <td className="pa3 tl table-bordered" colSpan='11' style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>{getFinYear()}</td>
           
         </tr>
         <tr className="stripe-dark ba" style={{"borderWidth":"1px", 'borderColor':"#000000", 'borderStyle':'solid', textAlign:"left"}}>

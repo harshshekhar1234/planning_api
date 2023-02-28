@@ -44596,6 +44596,9 @@ function Division() {
   var schemes = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
     return state.schemes.schemes;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   var _dataSet$visibleField = {
     dataSet: schemes,
     visibleFields: VISIBLE_FIELDS,
@@ -44603,7 +44606,7 @@ function Division() {
   },
       data = _dataSet$visibleField.data;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.getSchemesData)(params.id));
+    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_2__.getSchemesData)(params.id, finYear));
     return function () {
       dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_3__.schemesActions.setSchemes({
         schemes: []

@@ -84,6 +84,9 @@ function CurrentSubScheme() {
   var expenditure = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
     return state.subschemes.expenditure;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
       _useState2 = _slicedToArray(_useState, 2),
@@ -187,6 +190,16 @@ function CurrentSubScheme() {
     return parseFloat(percent.toFixed(2));
   };
 
+  var getFinYear = function getFinYear() {
+    if (finYear === 2324) {
+      return '2023-24';
+    }
+
+    if (finYear === 2223) {
+      return '2022-23';
+    }
+  };
+
   var calculatepercentexpenditureallotment = function calculatepercentexpenditureallotment(expenditure, allotment) {
     var percent = 0;
 
@@ -272,7 +285,7 @@ function CurrentSubScheme() {
                     'borderStyle': 'solid',
                     textAlign: "left"
                   },
-                  children: "2022-23"
+                  children: getFinYear()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
                 className: "stripe-dark ba",

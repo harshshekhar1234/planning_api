@@ -42,7 +42,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function CurrentSubSchemeReportDivision(_ref) {
-  var report = _ref.report;
+  var report = _ref.report,
+      finYear = _ref.finYear;
   var subschemename = report.sub_scheme[0].name;
   var subschemecode = report.sub_scheme[0].subscheme_code;
   var schemeStateName = report.sub_scheme[0].state_name;
@@ -120,6 +121,16 @@ function CurrentSubSchemeReportDivision(_ref) {
 
     percent = parseFloat(expenditure) / parseFloat(sanction) * 100;
     return parseFloat(percent.toFixed(2));
+  };
+
+  var getFinYear = function getFinYear() {
+    if (finYear === 2324) {
+      return '2023-24';
+    }
+
+    if (finYear === 2223) {
+      return '2022-23';
+    }
   };
 
   var calculatepercentexpenditureallotment = function calculatepercentexpenditureallotment(expenditure, allotment) {
@@ -200,7 +211,7 @@ function CurrentSubSchemeReportDivision(_ref) {
                     'borderStyle': 'solid',
                     textAlign: "left"
                   },
-                  children: "2022-23"
+                  children: getFinYear()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
                 className: "stripe-dark ba",
@@ -1203,8 +1214,11 @@ function OutcomeBudgetDashboard() {
   var divisionreport = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.divisions.divisionReport;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getCurrentSubSchemesDivisionReport)(params.id));
+    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getCurrentSubSchemesDivisionReport)(params.id, finYear));
     return function () {
       dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionReport({
         divisionReport: {}
@@ -1330,7 +1344,8 @@ function OutcomeBudgetDashboard() {
       })]
     }), divisionreport.status === 200 ? divisionreport.subschemes.map(function (report) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_CurrentSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        report: report
+        report: report,
+        finYear: finYear
       });
     }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1502,9 +1517,9 @@ var getSubSchemesDivisionReport = function getSubSchemesDivisionReport(id) {
     });
   };
 };
-var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id) {
+var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

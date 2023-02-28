@@ -138,6 +138,7 @@ function Scheme() {
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const subschemes = useSelector((state) => state.subschemes.subschemes);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
     const columns = React.useMemo(
       () => [
@@ -164,7 +165,7 @@ function Scheme() {
     );
 
     useEffect(() => {
-        dispatch(getSubSchemesData(params.id));
+        dispatch(getSubSchemesData(params.id,finYear));
         return () => {
           dispatch(subschemesActions.setSubSchemes({subschemes: []})) 
         }

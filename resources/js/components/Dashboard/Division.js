@@ -140,6 +140,7 @@ function Division() {
     let navigate = useNavigate();
     const dispatch = useDispatch();
     const schemes = useSelector((state) => state.schemes.schemes);
+    const finYear = useSelector((state) => state.finYear.finYear);
     
 
     const { data } = {
@@ -149,7 +150,7 @@ function Division() {
     };
 
     useEffect(() => {
-        dispatch(getSchemesData(params.id));  
+        dispatch(getSchemesData(params.id,finYear));  
         return () => {
           dispatch(schemesActions.setSchemes({schemes: []})) 
           

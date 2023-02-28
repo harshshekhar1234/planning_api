@@ -21858,11 +21858,11 @@ var ReportSocialCategory = function ReportSocialCategory() {
   };
 
   var getFinYear = function getFinYear() {
-    if (finYear === '2324') {
+    if (finYear === 2324) {
       return '2023-24';
     }
 
-    if (finYear === '2223') {
+    if (finYear === 2223) {
       return '2022-23';
     }
   };
@@ -22849,9 +22849,9 @@ var getSubSchemesDivisionReport = function getSubSchemesDivisionReport(id) {
     });
   };
 };
-var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id) {
+var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

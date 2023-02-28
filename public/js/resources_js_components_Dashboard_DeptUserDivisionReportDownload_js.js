@@ -42,7 +42,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function CurrentSubSchemeReportDivision(_ref) {
-  var report = _ref.report;
+  var report = _ref.report,
+      finYear = _ref.finYear;
   var subschemename = report.sub_scheme[0].name;
   var subschemecode = report.sub_scheme[0].subscheme_code;
   var schemeStateName = report.sub_scheme[0].state_name;
@@ -120,6 +121,16 @@ function CurrentSubSchemeReportDivision(_ref) {
 
     percent = parseFloat(expenditure) / parseFloat(sanction) * 100;
     return parseFloat(percent.toFixed(2));
+  };
+
+  var getFinYear = function getFinYear() {
+    if (finYear === 2324) {
+      return '2023-24';
+    }
+
+    if (finYear === 2223) {
+      return '2022-23';
+    }
   };
 
   var calculatepercentexpenditureallotment = function calculatepercentexpenditureallotment(expenditure, allotment) {
@@ -200,7 +211,7 @@ function CurrentSubSchemeReportDivision(_ref) {
                     'borderStyle': 'solid',
                     textAlign: "left"
                   },
-                  children: "2022-23"
+                  children: getFinYear()
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
                 className: "stripe-dark ba",
@@ -1502,9 +1513,9 @@ var getSubSchemesDivisionReport = function getSubSchemesDivisionReport(id) {
     });
   };
 };
-var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id) {
+var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

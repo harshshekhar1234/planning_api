@@ -103,10 +103,10 @@ export const getDivisionsData = (id,finYear) => {
     };
   };
 
-  export const getCurrentSubSchemesDivisionReport = (id) => {
+  export const getCurrentSubSchemesDivisionReport = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}cur_reportsubschemedivision/${id}`, {
+        fetch(`${laravel_api}cur_reportsubschemedivision/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

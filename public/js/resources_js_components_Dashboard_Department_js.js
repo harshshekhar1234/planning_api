@@ -37,8 +37,11 @@ function Department(_ref) {
   var divisions = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
     return state.divisions.divisions;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_2__.getDivisionsData)(id));
+    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_2__.getDivisionsData)(id, finYear));
     return function () {
       dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_3__.divisionsActions.setDivisions({
         divisions: []
@@ -317,9 +320,9 @@ var getSubSchemesDivisionReport = function getSubSchemesDivisionReport(id) {
     });
   };
 };
-var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id) {
+var getCurrentSubSchemesDivisionReport = function getCurrentSubSchemesDivisionReport(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "cur_reportsubschemedivision/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
