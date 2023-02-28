@@ -22,9 +22,9 @@ use Illuminate\Support\Facades\DB;
 
 class SchemeController extends Controller
 {
-    public function index($id)
+    public function index($id, $fin_year)
     {
-        $schemes = DB::table('schemes')->where('division_id', $id)->orderBy('state_name')->get();
+        $schemes = DB::table('schemes')->where(['division_id' => $id, 'fin_year' => $fin_year])->orderBy('state_name')->get();
         return response()->json($schemes, 200);
     }
 

@@ -104,19 +104,19 @@ class DivisionController extends Controller
         return response()->json($division, 200);
     }
 
-    public function div_dashboard($id)
+    public function div_dashboard($id, $fin_year)
     {
         $divisions = Division::where('department_id', $id)->orderBy('name')->get();
         foreach ($divisions as $division) {
-            $state_share = FinancialOutlay::where('division_id', $division->id)->sum('state_share');
-            $center_share = FinancialOutlay::where('division_id', $division->id)->sum('center_share');
+            $state_share = FinancialOutlay::where(['division_id' => $division->id, 'fin_year' => $fin_year])->sum('state_share');
+            $center_share = FinancialOutlay::where(['division_id' => $division->id, 'fin_year' => $fin_year])->sum('center_share');
             $division->outlay = ($state_share + $center_share) / 100;
-            $division->scheme = Scheme::where('division_id', $division->id)->count();
-            $division->subscheme = SubScheme::where('division_id', $division->id)->count();
-            $division->output = Output::where('division_id', $division->id)->count();
-            $division->outcome = Outcome::where('division_id', $division->id)->count();
-            $division->output_indicator = OutputIndicator::where('division_id', $division->id)->count();
-            $division->outcome_indicator = OutcomeIndicator::where('division_id', $division->id)->count();
+            $division->scheme = Scheme::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
+            $division->subscheme = SubScheme::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
+            $division->output = Output::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
+            $division->outcome = Outcome::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
+            $division->output_indicator = OutputIndicator::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
+            $division->outcome_indicator = OutcomeIndicator::where(['division_id' => $division->id, 'fin_year' => $fin_year])->count();
         }
         return response()->json($divisions, 200);
     }

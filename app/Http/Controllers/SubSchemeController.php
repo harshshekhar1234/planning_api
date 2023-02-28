@@ -28,9 +28,9 @@ use Exception;
 
 class SubSchemeController extends Controller
 {
-    public function index($id)
+    public function index($id, $fin_year)
     {
-        $subschemes = DB::table('sub_schemes')->where('scheme_id', $id)->orderBy('id')->get();
+        $subschemes = DB::table('sub_schemes')->where(['scheme_id' => $id, 'fin_year' => $fin_year])->orderBy('id')->get();
         return response()->json($subschemes, 200);
     }
 

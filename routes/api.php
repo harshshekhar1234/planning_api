@@ -94,7 +94,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/division', [DivisionController::class, 'store'])->middleware(['can:isAdmin']);
     Route::get('/division/{id}', [DivisionController::class, 'show']);
 
-    Route::get('/schemes/{id}', [SchemeController::class, 'index'])->middleware(['can:isAdmin']);
+    Route::get('/schemes/{id}/{fin_year}', [SchemeController::class, 'index'])->middleware(['can:isAdmin']);
     Route::post('/scheme', [SchemeController::class, 'store'])->middleware(['can:isAdmin']);
     Route::get('/scheme/{id}', [SchemeController::class, 'show'])->middleware(['can:isAdmin']);
     Route::get('/scheme/searchstatename/{name}/{id}', [SchemeController::class, 'searchByStateName']);
@@ -108,7 +108,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Create Scheme - with sub-scheme, output, outcome, indicators and targets
     Route::post('/scheme/create', [SchemeController::class, 'create_scheme']);
 
-    Route::get('/subschemes/{id}', [SubSchemeController::class, 'index'])->middleware(['can:isAdmin']);
+    Route::get('/subschemes/{id}/{fin_year}', [SubSchemeController::class, 'index'])->middleware(['can:isAdmin']);
     Route::post('/subscheme', [SubSchemeController::class, 'store'])->middleware(['can:isAdmin']);
     Route::get('/subscheme/{id}', [SubSchemeController::class, 'show'])->middleware(['can:isAdmin']);
     Route::get('/subscheme/searchname/{name}/{id}', [SubSchemeController::class, 'searchByName']);
@@ -166,7 +166,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/status_update', [SubSchemeController::class, 'status_update']);
     Route::get('/count_for_dashboard', [DashboardController::class, 'count_for_dashboard']);
     Route::get('/dept_dashboard/{fin_year}', [DepartmentController::class, 'dept_dashboard'])->middleware(['can:isAdmin']);
-    Route::get('/div_dashboard/{id}', [DivisionController::class, 'div_dashboard'])->middleware(['can:isAdmin']);
+    Route::get('/div_dashboard/{id}/{fin_year}', [DivisionController::class, 'div_dashboard'])->middleware(['can:isAdmin']);
 
     Route::post('/subscheme_expenditure', [SubSchemeExpenditureController::class, 'store']);
     Route::get('/subscheme_expenditure/{id}', [SubSchemeExpenditureController::class, 'index']);
