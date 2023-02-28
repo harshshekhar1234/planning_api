@@ -21573,6 +21573,9 @@ var ReportSocialCategory = function ReportSocialCategory() {
   var divisions = (0,react_redux__WEBPACK_IMPORTED_MODULE_14__.useSelector)(function (state) {
     return state.divisions.divisions;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_14__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -21685,11 +21688,11 @@ var ReportSocialCategory = function ReportSocialCategory() {
       setOptionsCenter = _React$useState12[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_reportCategory_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemesCategoryData)());
+    dispatch((0,_store_reportCategory_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemesCategoryData)(finYear));
     dispatch((0,_store_gender_actions__WEBPACK_IMPORTED_MODULE_2__.getGenderData)());
     dispatch((0,_store_social_actions__WEBPACK_IMPORTED_MODULE_3__.getSocialData)());
     dispatch((0,_store_sdgsubscheme_actions__WEBPACK_IMPORTED_MODULE_4__.getSdgsubschemeData)());
-    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_5__.getDepartmentsData)());
+    dispatch((0,_store_departments_action__WEBPACK_IMPORTED_MODULE_5__.getDepartmentsData)(finYear));
     return function () {
       setGender([]);
       setSocial([]);
@@ -21852,6 +21855,16 @@ var ReportSocialCategory = function ReportSocialCategory() {
 
   var handleDivisionChange = function handleDivisionChange(event) {
     setDivisionId(event.target.value);
+  };
+
+  var getFinYear = function getFinYear() {
+    if (finYear === '2324') {
+      return '2023-24';
+    }
+
+    if (finYear === '2223') {
+      return '2022-23';
+    }
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -22136,7 +22149,7 @@ var ReportSocialCategory = function ReportSocialCategory() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("h2", {
       className: "b tc f2",
-      children: "Financial Reports (FY:- 2022-23)"
+      children: "Financial Reports (FY:- ".concat(getFinYear(), ")")
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
       className: "flex flex-wrap justify-around",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
@@ -23162,9 +23175,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSubschemesCategoryData = function getSubschemesCategoryData() {
+var getSubschemesCategoryData = function getSubschemesCategoryData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "report_for_dynmc_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "report_for_dynmc_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getSubschemesCategoryData = () => {
+export const getSubschemesCategoryData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}report_for_dynmc_dashboard`, {
+        fetch(`${laravel_api}report_for_dynmc_dashboard/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

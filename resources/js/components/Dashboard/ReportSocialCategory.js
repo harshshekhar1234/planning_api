@@ -40,6 +40,7 @@ const ReportSocialCategory = () => {
     const sdgList = useSelector((state) => state.sdgsubscheme.sdgsubscheme);
     const departments = useSelector((state) => state.departments.departments);
     const divisions = useSelector((state) => state.divisions.divisions);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
     const [filteredsubschemes, setFilteredSubschemes] = useState([])
     const [paginatedResult, setPaginatedResult] = useState([])
@@ -65,11 +66,11 @@ const ReportSocialCategory = () => {
     const [optionsCenter, setOptionsCenter] = React.useState([]);
 
     useEffect(() => {
-        dispatch(getSubschemesCategoryData());
+        dispatch(getSubschemesCategoryData(finYear));
         dispatch(getGenderData());
         dispatch(getSocialData());
         dispatch(getSdgsubschemeData());
-        dispatch(getDepartmentsData());
+        dispatch(getDepartmentsData(finYear));
         return () => {
             setGender([])
             setSocial([])
@@ -171,6 +172,15 @@ const ReportSocialCategory = () => {
     
       const handleDivisionChange = (event) => {
         setDivisionId(event.target.value)
+      }
+
+      const getFinYear = () => {
+        if(finYear === '2324'){
+          return '2023-24'
+        }
+        if(finYear === '2223'){
+          return '2022-23'
+        }
       }
 
       useEffect(() => {
@@ -379,7 +389,7 @@ const ReportSocialCategory = () => {
 
   return (
     <>
-    <h2 className='b tc f2'>Financial Reports (FY:- 2022-23)</h2>
+    <h2 className='b tc f2'>{`Financial Reports (FY:- ${getFinYear()})`}</h2>
     <div className='flex flex-wrap justify-around'>
     <div className='mt2 w-30'>
     <PieChart total={total} filtered={filtered}/>
