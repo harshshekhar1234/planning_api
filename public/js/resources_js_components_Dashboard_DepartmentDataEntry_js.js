@@ -33,14 +33,11 @@ function DepartmentDataEntry() {
   var departmentName = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.department.name;
   });
-  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
-    return state.finYear.finYear;
-  });
   var departmentMessage = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.department.message;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_department_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentData)(params.id, finYear));
+    dispatch((0,_store_department_action__WEBPACK_IMPORTED_MODULE_1__.getDepartmentData)(params.id));
     dispatch(_store_departmentSlice__WEBPACK_IMPORTED_MODULE_2__.departmentActions.setDepartmentId({
       departmentId: params.id
     }));
@@ -237,9 +234,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentData = function getDepartmentData(id, finYear) {
+var getDepartmentData = function getDepartmentData(id) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "department/").concat(id, "/").concat(finYear), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "department/").concat(id), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
