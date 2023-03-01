@@ -141,10 +141,10 @@ export const getSubSchemesData = (id,finYear) => {
   };
 
 
-  export const getSubSchemesDataDeptUser = (id) => {
+  export const getSubSchemesDataDeptUser = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}subschemesdeptuser/${id}`, {
+        fetch(`${laravel_api}subschemesdeptuser/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

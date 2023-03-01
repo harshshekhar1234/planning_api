@@ -138,9 +138,10 @@ function SubSchemeDeptUser() {
   let navigate = useNavigate();
 
   const subschemes = useSelector((state) => state.subschemes.subschemes);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   useEffect(() => {
-    dispatch(getSubSchemesDataDeptUser(params.id))
+    dispatch(getSubSchemesDataDeptUser(params.id,finYear))
     return () => {
       dispatch(subschemesActions.setSubSchemes({subschemes:[]}))
     }

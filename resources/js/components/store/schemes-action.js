@@ -111,10 +111,10 @@ export const getSchemesData = (id,finYear) => {
     };    
   };
 
-  export const getSchemesDeptData = (id) => {
+  export const getSchemesDeptData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}schemesdept/${id}`, {
+        fetch(`${laravel_api}schemesdept/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

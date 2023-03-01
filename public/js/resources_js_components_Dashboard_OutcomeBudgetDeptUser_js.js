@@ -44596,6 +44596,9 @@ function OutcomeBudgetDeptUser() {
   var divisionid = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.divisions.divisionId;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   var _dataSet$visibleField = {
     dataSet: schemes,
     visibleFields: VISIBLE_FIELDS,
@@ -44603,7 +44606,7 @@ function OutcomeBudgetDeptUser() {
   },
       data = _dataSet$visibleField.data;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_3__.getSchemesDeptData)(divisionid));
+    dispatch((0,_store_schemes_action__WEBPACK_IMPORTED_MODULE_3__.getSchemesDeptData)(divisionid, finYear));
     return function () {
       dispatch(_store_schemesSlice__WEBPACK_IMPORTED_MODULE_1__.schemesActions.setSchemes({
         schemes: []
@@ -44893,9 +44896,9 @@ var miggetPendingSchemesData = function miggetPendingSchemesData(id) {
     });
   };
 };
-var getSchemesDeptData = function getSchemesDeptData(id) {
+var getSchemesDeptData = function getSchemesDeptData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemesdept/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemesdept/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

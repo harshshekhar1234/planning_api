@@ -279,6 +279,9 @@ function Main_Dept_User() {
   var department = (0,react_redux__WEBPACK_IMPORTED_MODULE_8__.useSelector)(function (state) {
     return state.department.name;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_8__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_user_action__WEBPACK_IMPORTED_MODULE_1__.getUserData)());
     return function () {
@@ -299,7 +302,7 @@ function Main_Dept_User() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (divisionID) {
       dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_4__.getDivisionData)(divisionID));
-      dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDivisionIndicatorCountData)(divisionID));
+      dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDivisionIndicatorCountData)(divisionID, finYear));
     }
   }, [divisionID]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -322,12 +325,22 @@ function Main_Dept_User() {
     });
   }
 
+  var getFinYear = function getFinYear() {
+    if (finYear === 2324) {
+      return '2023-24';
+    }
+
+    if (finYear === 2223) {
+      return '2022-23';
+    }
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("main", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
       className: "container-fluid px-4",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("h1", {
         className: "mt-4 b",
-        children: "Department of ".concat(department, " (").concat(division, " Division) (FY:- 2022-23)")
+        children: "Department of ".concat(department, " (").concat(division, " Division) (FY:- ").concat(getFinYear(), ")")
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
         className: "row",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
@@ -855,9 +868,9 @@ var getDepartmentIndicatorCountData = function getDepartmentIndicatorCountData(f
     });
   };
 };
-var getDivisionIndicatorCountData = function getDivisionIndicatorCountData(id) {
+var getDivisionIndicatorCountData = function getDivisionIndicatorCountData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_div_dashboard/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_div_dashboard/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

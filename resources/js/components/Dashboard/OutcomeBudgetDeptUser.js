@@ -141,7 +141,8 @@ function OutcomeBudgetDeptUser() {
 
   const schemes = useSelector((state) => state.schemes.schemes);
   const departmentid = useSelector((state) => state.department.departmentId);
-    const divisionid = useSelector((state) => state.divisions.divisionId);
+  const divisionid = useSelector((state) => state.divisions.divisionId);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
     const { data } = {
     dataSet: schemes,
@@ -150,7 +151,7 @@ function OutcomeBudgetDeptUser() {
   };
 
   useEffect(() => {
-      dispatch(getSchemesDeptData(divisionid))
+      dispatch(getSchemesDeptData(divisionid,finYear))
       return () => {
         dispatch(schemesActions.setSchemes({schemes:[]}))
       }

@@ -45083,9 +45083,9 @@ var miggetPendingSchemesData = function miggetPendingSchemesData(id) {
     });
   };
 };
-var getSchemesDeptData = function getSchemesDeptData(id) {
+var getSchemesDeptData = function getSchemesDeptData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemesdept/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "schemesdept/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

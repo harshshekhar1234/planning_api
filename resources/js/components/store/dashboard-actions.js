@@ -28,10 +28,10 @@ export const getDepartmentIndicatorCountData = (finYear) => {
     };
   };
 
-  export const getDivisionIndicatorCountData = (id) => {
+  export const getDivisionIndicatorCountData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}count_for_div_dashboard/${id}`, {
+        fetch(`${laravel_api}count_for_div_dashboard/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
