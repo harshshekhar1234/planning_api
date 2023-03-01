@@ -464,9 +464,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentIndicatorCountData = function getDepartmentIndicatorCountData() {
+var getDepartmentIndicatorCountData = function getDepartmentIndicatorCountData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_indicators"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_indicators/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -528,9 +528,9 @@ var getDivisionIndicatorCountData = function getDivisionIndicatorCountData(id) {
     });
   };
 };
-var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData() {
+var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "status_update"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "status_update/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -560,9 +560,9 @@ var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData() {
     });
   };
 };
-var getCountStatusData = function getCountStatusData() {
+var getCountStatusData = function getCountStatusData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

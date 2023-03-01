@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getDepartmentIndicatorCountData = () => {
+export const getDepartmentIndicatorCountData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}count_indicators`, {
+        fetch(`${laravel_api}count_indicators/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -53,10 +53,10 @@ export const getDepartmentIndicatorCountData = () => {
     };
   };
 
-  export const getDivisionIndicatorStatusData = () => {
+  export const getDivisionIndicatorStatusData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}status_update`, {
+        fetch(`${laravel_api}status_update/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -78,10 +78,10 @@ export const getDepartmentIndicatorCountData = () => {
     };
   };
 
-  export const getCountStatusData = () => {
+  export const getCountStatusData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}count_for_dashboard`, {
+        fetch(`${laravel_api}count_for_dashboard/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

@@ -14,13 +14,23 @@ function Main() {
     const departments = useSelector((state) => state.dashboard.departmentIndicatorCount);
     const status = useSelector((state) => state.dashboard.statusUpdate);
     const countIndicator = useSelector((state) => state.dashboard.countIndicators);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
     useEffect(() => {
-        dispatch(getCountStatusData())
-        dispatch(getDepartmentIndicatorCountData())
-        dispatch(getDivisionIndicatorStatusData())
+        dispatch(getCountStatusData(finYear))
+        dispatch(getDepartmentIndicatorCountData(finYear))
+        dispatch(getDivisionIndicatorStatusData(finYear))
         
       }, []);
+
+    const getFinYear = () => {
+      if(finYear === 2324){
+        return '2023-24'
+      }
+      if(finYear === 2223){
+        return '2022-23'
+      }
+    }
 
     const getQuater = (quater) => {
         if(quater === '0'){
@@ -46,7 +56,7 @@ function Main() {
 
   return <main>
   <div className="container-fluid px-4">
-      <h1 className="mt-4 b f1">Outcome Budget Dashboard for 13 Departments (FY:- 2022-23)</h1>
+      <h1 className="mt-4 b f1">{`Outcome Budget Dashboard for 13 Departments (FY:- ${getFinYear()})`}</h1>
       {/* <ol className="breadcrumb mb-4">
           <li className="breadcrumb-item active">Dashboard</li>
       </ol> */}

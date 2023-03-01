@@ -251,11 +251,24 @@ function Main() {
   var countIndicator = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.dashboard.countIndicators;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getCountStatusData)());
-    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDepartmentIndicatorCountData)());
-    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDivisionIndicatorStatusData)());
+    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getCountStatusData)(finYear));
+    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDepartmentIndicatorCountData)(finYear));
+    dispatch((0,_store_dashboard_actions__WEBPACK_IMPORTED_MODULE_2__.getDivisionIndicatorStatusData)(finYear));
   }, []);
+
+  var getFinYear = function getFinYear() {
+    if (finYear === 2324) {
+      return '2023-24';
+    }
+
+    if (finYear === 2223) {
+      return '2022-23';
+    }
+  };
 
   var getQuater = function getQuater(quater) {
     if (quater === '0') {
@@ -284,7 +297,7 @@ function Main() {
       className: "container-fluid px-4",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
         className: "mt-4 b f1",
-        children: "Outcome Budget Dashboard for 13 Departments (FY:- 2022-23)"
+        children: "Outcome Budget Dashboard for 13 Departments (FY:- ".concat(getFinYear(), ")")
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "row",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -558,9 +571,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getDepartmentIndicatorCountData = function getDepartmentIndicatorCountData() {
+var getDepartmentIndicatorCountData = function getDepartmentIndicatorCountData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_indicators"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_indicators/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -622,9 +635,9 @@ var getDivisionIndicatorCountData = function getDivisionIndicatorCountData(id) {
     });
   };
 };
-var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData() {
+var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "status_update"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "status_update/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -654,9 +667,9 @@ var getDivisionIndicatorStatusData = function getDivisionIndicatorStatusData() {
     });
   };
 };
-var getCountStatusData = function getCountStatusData() {
+var getCountStatusData = function getCountStatusData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "count_for_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
