@@ -20,13 +20,21 @@ use App\Models\VerifiedReport;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index($fin_year)
     {
         // DB::enableQueryLog();
         $indicator_count =
             DB::table('departments')
-            ->leftJoin('output_indicators', 'output_indicators.department_id', '=', 'departments.id')
-            ->leftJoin('outcome_indicators', 'outcome_indicators.department_id', '=', 'departments.id')
+            ->leftJoin('output_indicators', function($join) use ($fin_year){
+                $join->on('output_indicators.department_id', '=', 'departments.id')
+                ->where('output_indicators.fin_year', '=', $fin_year);
+            })
+            ->leftJoin('outcome_indicators', function($join) use ($fin_year){
+                $join->on('outcome_indicators.department_id', '=', 'departments.id')
+                ->where('outcome_indicators.fin_year', '=', $fin_year);
+            })
+            // ->leftJoin('output_indicators', 'output_indicators.department_id', '=', 'departments.id')
+            // ->leftJoin('outcome_indicators', 'outcome_indicators.department_id', '=', 'departments.id')
             ->select([
                 'departments.id', 'departments.name',
                 DB::raw('COUNT(DISTINCT(output_indicators.id)) AS OutputIndicator_count'),
@@ -61,15 +69,15 @@ class DashboardController extends Controller
         return response()->json($indicator_count, 200);
     }
 
-    public function count_for_dashboard()
+    public function count_for_dashboard($fin_year)
     {
-        $state_share_outlay = FinancialOutlay::all()->sum('state_share');
-        $centre_share_outlay = FinancialOutlay::all()->sum('center_share');
+        $state_share_outlay = FinancialOutlay::where(['fin_year' => $fin_year])->sum('state_share');
+        $centre_share_outlay = FinancialOutlay::where(['fin_year' => $fin_year])->sum('center_share');
         $departments = Department::all()->count();
-        $schemes = Scheme::all()->count();
-        $subschemes = SubScheme::all()->count();
-        $outputs = Output::all()->count();
-        $outcomes = Outcome::all()->count();
+        $schemes = Scheme::where(['fin_year' => $fin_year])->count();
+        $subschemes = SubScheme::where(['fin_year' => $fin_year])->count();
+        $outputs = Output::where(['fin_year' => $fin_year])->count();
+        $outcomes = Outcome::where(['fin_year' => $fin_year])->count();
 
         return response()->json([
             'financial_outlay' => round(($state_share_outlay + $centre_share_outlay) / 100, 2),

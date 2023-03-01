@@ -361,7 +361,7 @@ class SubSchemeController extends Controller
         }
     }
 
-    public function status_update()
+    public function status_update($fin_year)
     {
         $divisions = DB::table('divisions')
             ->select('divisions.*', 'd.name as dept_name')
@@ -369,7 +369,7 @@ class SubSchemeController extends Controller
             ->orderBy('dept_name', 'asc')
             ->get();
         foreach ($divisions as $division) {
-            $division->quater = DB::table('verified_reports')->where('division_id', $division->id)->where('verified_btn_flag', true)->latest('created_at')->first();
+            $division->quater = DB::table('verified_reports')->where(['division_id' => $division->id, 'fin_year' => $fin_year])->where('verified_btn_flag', true)->latest('created_at')->first();
             if (!$division->quater) {
                 $division->quater = '0';
             }
@@ -377,7 +377,7 @@ class SubSchemeController extends Controller
             $division->output_updated = 0;
             $division->outcome_indicator = 0;
             $division->outcome_updated = 0;
-            $subschemes = DB::table('sub_schemes')->where('division_id', $division->id)->get();
+            $subschemes = DB::table('sub_schemes')->where(['division_id' => $division->id, 'fin_year' => $fin_year])->get();
             foreach ($subschemes as $subscheme) {
                 $outputs = DB::table('outputs')->where('subscheme_id', $subscheme->id)->get();
                 foreach ($outputs as $output) {

@@ -161,10 +161,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/update_outputindicator_and_target', [OutputIndicatorController::class, 'update_outputindicator_and_target']);
     Route::post('/update_outcomeindicator_and_target', [OutcomeIndicatorController::class, 'update_outcomeindicator_and_target']);
 
-    Route::get('/count_indicators', [DashboardController::class, 'index']);
+    Route::get('/count_indicators/{fin_year}', [DashboardController::class, 'index']);
     Route::get('/department_count_indicators/{id}', [DashboardController::class, 'indicator_by_department']);
-    Route::get('/status_update', [SubSchemeController::class, 'status_update']);
-    Route::get('/count_for_dashboard', [DashboardController::class, 'count_for_dashboard']);
+    Route::get('/status_update/{fin_year}', [SubSchemeController::class, 'status_update']);
+    Route::get('/count_for_dashboard/{fin_year}', [DashboardController::class, 'count_for_dashboard']);
     Route::get('/dept_dashboard/{fin_year}', [DepartmentController::class, 'dept_dashboard'])->middleware(['can:isAdmin']);
     Route::get('/div_dashboard/{id}/{fin_year}', [DivisionController::class, 'div_dashboard'])->middleware(['can:isAdmin']);
 

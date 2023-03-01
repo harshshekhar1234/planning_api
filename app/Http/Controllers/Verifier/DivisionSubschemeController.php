@@ -361,7 +361,7 @@ class DivisionSubschemeController extends Controller
             try {
                 DB::transaction(function () use ($division) {
                     $report = DB::table('verified_reports')->where(['division_id' => $division, 'verified_btn_flag' => false])->get();
-                    DB::table('verified_reports')->where(['division_id' => $division, 'verified_btn_flag' => false])->update(['verified_btn_flag' => true]);
+                    VerifiedReport::where(['division_id' => $division, 'verified_btn_flag' => false])->update(['verified_btn_flag' => true]);
                     $subschemes = SubScheme::where(['division_id' => $division, 'verified_status' => 'A', 'submitted_status' => 'S'])->get();
                     foreach ($subschemes as $subscheme) {
                         DB::table('output_indicators')->where(['subscheme_id' => $subscheme->id])->update(['add_btn_flag' => true]);
@@ -747,7 +747,7 @@ class DivisionSubschemeController extends Controller
             try {
                 DB::transaction(function () use ($division) {
                     $report = DB::table('aor_verified_reports')->where(['division_id' => $division, 'verified_btn_flag' => false])->get();
-                    DB::table('aor_verified_reports')->where(['division_id' => $division, 'verified_btn_flag' => false])->update(['verified_btn_flag' => true]);
+                    AorVerifiedReport::where(['division_id' => $division, 'verified_btn_flag' => false])->update(['verified_btn_flag' => true]);
                     $subschemes = SubScheme::where(['division_id' => $division, 'aor_verified_status' => 'A', 'aor_submitted_status' => 'S'])->get();
                     foreach ($subschemes as $subscheme) {
                         DB::table('output_indicators')->where(['subscheme_id' => $subscheme->id])->update(['aor_add_btn_flag' => true]);
