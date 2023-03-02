@@ -28,9 +28,9 @@ class SchemeController extends Controller
         return response()->json($schemes, 200);
     }
 
-    public function indexdept($id)
+    public function indexdept($id, $fin_year)
     {
-        $schemes = DB::table('schemes')->select('id', 'state_code', 'state_name', 'center_code', 'center_name')->where('division_id', $id)->orderBy('state_name')->get();
+        $schemes = DB::table('schemes')->select('id', 'state_code', 'state_name', 'center_code', 'center_name')->where(['division_id' => $id, 'fin_year' => $fin_year])->orderBy('state_name')->get();
         return response()->json($schemes, 200);
     }
 

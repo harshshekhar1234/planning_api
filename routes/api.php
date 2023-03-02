@@ -145,9 +145,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::post('/outputindictortarget', [TargetOutputController::class, 'store'])->middleware(['can:isAdmin']);
 
-    Route::get('/schemesdept/{id}', [SchemeController::class, 'indexdept']);
+    Route::get('/schemesdept/{id}/{fin_year}', [SchemeController::class, 'indexdept']);
 
-    Route::get('/subschemesdeptuser/{id}', [SubSchemeController::class, 'indexdept']);
+    Route::get('/subschemesdeptuser/{id}/{fin_year}', [SubSchemeController::class, 'indexdept']);
 
     Route::get('/genders', [GenderController::class, 'index']);
     Route::get('/socials', [SocialController::class, 'index']);
@@ -174,7 +174,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/subscheme_header/{id}', [SubSchemeController::class, 'subscheme_header']);
 
     Route::get('/div_status_update/{id}', [SubSchemeController::class, 'div_status_update']);
-    Route::get('/count_for_div_dashboard/{id}', [DashboardController::class, 'count_for_div_dashboard']);
+    Route::get('/count_for_div_dashboard/{id}/{fin_year}', [DashboardController::class, 'count_for_div_dashboard']);
     Route::get('/get_by_dept/{id}', [FinancialOutlayController::class, 'get_by_dept']);
     Route::get('/get_by_division/{id}', [FinancialOutlayController::class, 'get_by_division']);
 

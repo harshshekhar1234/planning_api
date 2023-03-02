@@ -34,9 +34,9 @@ class SubSchemeController extends Controller
         return response()->json($subschemes, 200);
     }
 
-    public function indexdept($id)
+    public function indexdept($id, $fin_year)
     {
-        $subschemes = DB::table('sub_schemes')->select('id', 'name', 'subscheme_code')->where('scheme_id', $id)->orderBy('id')->get();
+        $subschemes = DB::table('sub_schemes')->select('id', 'name', 'subscheme_code')->where(['scheme_id' => $id, 'fin_year' => $fin_year])->orderBy('id')->get();
         return response()->json($subschemes, 200);
     }
 

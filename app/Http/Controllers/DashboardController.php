@@ -92,19 +92,19 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function count_for_div_dashboard($id)
+    public function count_for_div_dashboard($id, $fin_year)
     {
-        $state_share_outlay = FinancialOutlay::where('division_id', $id)->sum('state_share');
-        $centre_share_outlay = FinancialOutlay::where('division_id', $id)->sum('center_share');
-        $schemes = Scheme::where('division_id', $id)->count();
-        $subschemes = SubScheme::where('division_id', $id)->count();
-        $outputs = Output::where('division_id', $id)->count();
-        $outcomes = Outcome::where('division_id', $id)->count();
-        $output_indicators = OutputIndicator::where('division_id', $id)->count();
-        $outcome_indicators = OutcomeIndicator::where('division_id', $id)->count();
+        $state_share_outlay = FinancialOutlay::where(['division_id' => $id, 'fin_year' => $fin_year])->sum('state_share');
+        $centre_share_outlay = FinancialOutlay::where(['division_id' => $id, 'fin_year' => $fin_year])->sum('center_share');
+        $schemes = Scheme::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
+        $subschemes = SubScheme::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
+        $outputs = Output::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
+        $outcomes = Outcome::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
+        $output_indicators = OutputIndicator::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
+        $outcome_indicators = OutcomeIndicator::where(['division_id' => $id, 'fin_year' => $fin_year])->count();
 
         //On the basis of cumulative sum
-        $rid = VerifiedReport::where('division_id', $id)
+        $rid = VerifiedReport::where(['division_id' => $id, 'fin_year' => $fin_year])
         ->where('verified_btn_flag', true)
         ->pluck('id')->toArray();
         $SubschemeExpenditure = SubSchemeExpenditure::where('division_id', $id)
@@ -126,13 +126,23 @@ class DashboardController extends Controller
         $allotment = $subSchemeExpenditure->sum('allotment');
         $expenditure = $subSchemeExpenditure->sum('expenditure');
         */
-        $submitted_status = SubScheme::where('division_id', $id)->where('submitted_status', '=', 'S')->count();
+        $submitted_status = SubScheme::where(['division_id' => $id, 'fin_year' => $fin_year])->where('submitted_status', '=', 'S')->count();
         if( $submitted_status == $subschemes) {
             $achievement_output = $output_indicators;
             $achievement_outcome = $outcome_indicators;
         } else {
-            $achievement_output = AchievementOutput::where('division_id', $id)->where('submitted_status', '=', 'N')->distinct('outputindicator_id')->count('outputindicator_id');
-            $achievement_outcome = AchievementOutcome::where('division_id', $id)->where('submitted_status', '=', 'N')->distinct('outcomeindicator_id')->count('outcomeindicator_id');
+            $subscheme_ids = SubScheme::where(['division_id' => $id, 'fin_year' => $fin_year])
+                ->pluck('id')->toArray();
+            $achievement_output = AchievementOutput::where('division_id', $id)
+            ->where('submitted_status', '=', 'N')
+            ->whereIn('subscheme_id', $subscheme_ids)
+            ->distinct('outputindicator_id')->count('outputindicator_id');
+            $achievement_outcome = AchievementOutcome::where('division_id', $id)
+            ->where('submitted_status', '=', 'N')
+            ->whereIn('subscheme_id', $subscheme_ids)
+            ->distinct('outcomeindicator_id')->count('outcomeindicator_id');
+            // $achievement_output = AchievementOutput::where('division_id', $id)->where('submitted_status', '=', 'N')->distinct('outputindicator_id')->count('outputindicator_id');
+            // $achievement_outcome = AchievementOutcome::where('division_id', $id)->where('submitted_status', '=', 'N')->distinct('outcomeindicator_id')->count('outcomeindicator_id');
         }
 
         return response()->json([
