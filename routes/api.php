@@ -278,7 +278,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Fetch all subschemes for the division with its status
     Route::get('/divisions/{division}/subschemes', [DivisionSubschemeController::class, 'index']);
     //Submit division report for verification
-    Route::post('/verification/{division}', [DivisionSubschemeController::class, 'submit']);
+    Route::post('/verification/{division}/{fin_year}', [DivisionSubschemeController::class, 'submit']);
     //Fetch list of submitted subscheme pending for verification.
     Route::get('/verification/pending/{division}', [DivisionSubschemeController::class, 'verification_pending']);
     //Approve Sub-scheme Report
@@ -331,7 +331,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Fetch all subschemes for the division with its status - As on Date report
     Route::get('/aor_divisions/{division}/subschemes', [DivisionSubschemeController::class, 'aor_index']);
     //Submit As on Date division report for verification
-    Route::post('/aor_verification/{division}', [DivisionSubschemeController::class, 'aor_submit']);
+    Route::post('/aor_verification/{division}/{fin_year}', [DivisionSubschemeController::class, 'aor_submit']);
     //Fetch list of Verified As on Date Report List
     Route::get('/aor_quater_report_list/{division}', [DivisionSubschemeController::class, 'aor_quater_report']);
     //Fetch Verification Review Remarks for a subscheme

@@ -46,7 +46,7 @@ class DivisionSubschemeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function submit(Request $request, $division)
+    public function submit(Request $request, $division, $fin_year)
     {
         $submitted_status = SubScheme::where(['division_id' => $division, 'submitted_status' => 'S'])->count();
         if ($submitted_status) {
@@ -69,12 +69,13 @@ class DivisionSubschemeController extends Controller
             }
 
             try {
-                DB::transaction(function () use ($division, $request) {
+                DB::transaction(function () use ($division, $request, $fin_year) {
                     $report = VerifiedReport::create([
                         'division_id' => $division,
                         'user_id' => Auth::user()->id,
                         'name' => $request->name,
-                        'year' => $request->year
+                        'year' => $request->year,
+                        'fin_year' => $fin_year
                     ]);
                     $reportId = $report->id;
                     $subschemes = SubScheme::where(['division_id' => $division])->get();
@@ -85,7 +86,7 @@ class DivisionSubschemeController extends Controller
                         DB::table('sub_schemes')->where(['id' => $subscheme->id])->update(['submitted_status' => 'S']);
                     }
                 });
-            } catch (\Throwable $e) {
+            } catch (QueryException $e) {
                 return response()->json([
                     'status' => 'error',
                     'message' => $e
@@ -473,7 +474,7 @@ class DivisionSubschemeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function aor_submit(Request $request, $division)
+    public function aor_submit(Request $request, $division, $fin_year)
     {
         $submitted_status = SubScheme::where(['division_id' => $division, 'aor_submitted_status' => 'S'])->count();
         if ($submitted_status) {
@@ -497,13 +498,14 @@ class DivisionSubschemeController extends Controller
             }
 
             try {
-                DB::transaction(function () use ($division, $request) {
+                DB::transaction(function () use ($division, $request, $fin_year) {
                     $report = AorVerifiedReport::create([
                         'division_id' => $division,
                         'user_id' => Auth::user()->id,
                         'from_date' => $request->from_date,
                         'to_date' => $request->to_date,
-                        'year' => $request->year
+                        'year' => $request->year,
+                        'fin_year' => $fin_year
                     ]);
                     $reportId = $report->id;
                     $subschemes = SubScheme::where(['division_id' => $division])->get();
@@ -514,7 +516,7 @@ class DivisionSubschemeController extends Controller
                         DB::table('sub_schemes')->where(['id' => $subscheme->id])->update(['aor_submitted_status' => 'S']);
                     }
                 });
-            } catch (\Throwable $e) {
+            } catch (QueryException $e) {
                 return response()->json([
                     'status' => 'error',
                     'message' => $e

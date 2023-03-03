@@ -18,6 +18,7 @@ class VerifiedReport extends Model
         'division_id',
         'user_id',
         'name',
-        'year'
+        'year',
+        'fin_year'
     ];
 }

@@ -19,6 +19,7 @@ class AorVerifiedReport extends Model
         'user_id',
         'from_date',
         'to_date',
-        'year'
+        'year',
+        'fin_year'
     ];
 }
