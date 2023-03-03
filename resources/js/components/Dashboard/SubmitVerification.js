@@ -190,7 +190,7 @@ const SubmitVerification = () => {
   const [yearTD, setyearTD] = useState('2022-23')
 
   useEffect(() => {
-    dispatch(getSubschemeData(divisionid));
+    dispatch(getSubschemeData(divisionid,finYear));
     dispatch(getLatestQuater(divisionid));
     
     return () => {
@@ -290,7 +290,7 @@ const SubmitVerification = () => {
 
   useEffect(() => {
       if(update){
-        dispatch(getSubschemeData(divisionid));
+        dispatch(getSubschemeData(divisionid,finYear));
       }
       }, [update]);
 

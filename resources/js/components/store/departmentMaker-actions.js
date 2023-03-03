@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getSubschemeData = (id) => {
+export const getSubschemeData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}divisions/${id}/subschemes`, {
+        fetch(`${laravel_api}divisions/${id}/subschemes/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -30,10 +30,10 @@ export const getSubschemeData = (id) => {
     };
   };
 
-  export const aorgetSubschemeData = (id) => {
+  export const aorgetSubschemeData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}aor_divisions/${id}/subschemes`, {
+        fetch(`${laravel_api}aor_divisions/${id}/subschemes/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

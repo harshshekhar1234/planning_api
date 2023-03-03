@@ -16,9 +16,10 @@ function OutcomeBudgetDashboard() {
   let params = useParams();
 
   const divisionreport = useSelector((state) => state.divisions.divisionReport);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   useEffect(() => {
-    dispatch(getCurrentSubSchemesDivisionReport(params.id));
+    dispatch(getCurrentSubSchemesDivisionReport(params.id,finYear));
     return () => {
       dispatch(divisionsActions.setDivisionReport({divisionReport: {}})) 
     }

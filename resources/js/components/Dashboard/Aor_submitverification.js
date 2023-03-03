@@ -185,7 +185,7 @@ const AorSubmitVerification = () => {
   const [reportSubmiteMessage, setReportSubmitMessage] = useState('')
 
   useEffect(() => {
-    dispatch(aorgetSubschemeData(divisionid));
+    dispatch(aorgetSubschemeData(divisionid,finYear));
     
     return () => {
       setApprovedCount(0)
@@ -231,7 +231,7 @@ const AorSubmitVerification = () => {
 
   useEffect(() => {
       if(update){
-        dispatch(aorgetSubschemeData(divisionid));
+        dispatch(aorgetSubschemeData(divisionid,finYear));
       }
       }, [update]);
 
