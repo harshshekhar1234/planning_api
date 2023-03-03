@@ -495,6 +495,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/budget_entry_setting/{id}', [BudgetEntrySettingController::class, 'show']);
     //Update Budget Entry Settings for a specific division
     Route::post('/budget_entry_setting/update', [BudgetEntrySettingController::class, 'update'])->middleware(['can:isAdmin']);
+    //Take Json Backup of all tables
+    Route::get('/all_table_backup', [AdminController::class, 'all_table_backup'])->middleware(['can:isAdmin']);
     /*---------------------------------- End of Data Base Administration Module -------------------------------------*/
 
     /*--------------------------------- Start of Routes to be deleted after Deployment ------------------------------------*/
