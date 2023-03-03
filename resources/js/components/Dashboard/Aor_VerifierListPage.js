@@ -169,6 +169,7 @@ const AorVerifierListPage = () => {
     const approveNotificationFailure = useSelector((state) => state.verifier.approveNotificationFailure);
     const finalApproveNotificationSuccess = useSelector((state) => state.verifier.finalApproveNotificationSuccess);
     const finalApproveNotificationFailure = useSelector((state) => state.verifier.finalApproveNotificationFailure);
+    const finYear = useSelector((state) => state.finYear.finYear);
   
     const [filteredSubscheme,setFilteredSubschemes] = useState([]);
     const [approvedcount, setApprovedCount] = useState(0)
@@ -178,7 +179,7 @@ const AorVerifierListPage = () => {
 
 
     useEffect(() => {
-        dispatch(aorgetSubschemeData(divisionid));
+        dispatch(aorgetSubschemeData(divisionid,finYear));
         return () => {
           dispatch(departmentVerifierActions.setSubschemes({subschemes:[]}))
           dispatch(subschemesActions.setSubSchemeSearch({subschemeSearch: []})) 
@@ -211,7 +212,7 @@ const AorVerifierListPage = () => {
 
   useEffect(() => {
       if(update){
-        dispatch(aorgetSubschemeData(divisionid));
+        dispatch(aorgetSubschemeData(divisionid,finYear));
       }
       }, [update]);
 

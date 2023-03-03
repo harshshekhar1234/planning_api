@@ -170,6 +170,7 @@ const VerifierListPage = () => {
     const approveNotificationFailure = useSelector((state) => state.verifier.approveNotificationFailure);
     const finalApproveNotificationSuccess = useSelector((state) => state.verifier.finalApproveNotificationSuccess);
     const finalApproveNotificationFailure = useSelector((state) => state.verifier.finalApproveNotificationFailure);
+    const finYear = useSelector((state) => state.finYear.finYear);
   
     const [filteredSubscheme,setFilteredSubschemes] = useState([]);
     const [approvedcount, setApprovedCount] = useState(0)
@@ -181,7 +182,7 @@ const VerifierListPage = () => {
 
 
     useEffect(() => {
-        dispatch(getSubschemeData(divisionid));
+        dispatch(getSubschemeData(divisionid,finYear));
         dispatch(getLatestQuater(divisionid));
         return () => {
           dispatch(departmentVerifierActions.setSubschemes({subschemes:[]}))
@@ -243,7 +244,7 @@ const VerifierListPage = () => {
 
   useEffect(() => {
       if(update){
-        dispatch(getSubschemeData(divisionid));
+        dispatch(getSubschemeData(divisionid,finYear));
       }
       }, [update]);
 

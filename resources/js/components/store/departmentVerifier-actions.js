@@ -3,10 +3,10 @@ import {laravel_api} from '../configuration';
 import { errorActions } from './errorSlice';
 
 
-export const getSubschemeData = (id) => {
+export const getSubschemeData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}verification/pending/${id}`, {
+        fetch(`${laravel_api}verification/pending/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -36,10 +36,10 @@ export const getSubschemeData = (id) => {
     };
   };
 
-  export const aorgetSubschemeData = (id) => {
+  export const aorgetSubschemeData = (id,finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}aor_verification/pending/${id}`, {
+        fetch(`${laravel_api}aor_verification/pending/${id}/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

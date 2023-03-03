@@ -101,7 +101,7 @@ XLSX.writeFile(workbook, `${divisionreport.subschemes[0].sub_scheme[0].demand_no
     {
       (divisionreport.status === 200) ? (
         divisionreport.subschemes.map(report => {
-          return <CurrentSubSchemeReportDivision report={report}/>
+          return <CurrentSubSchemeReportDivision report={report} finYear={finYear}/>
         })
       ):(
         <div>

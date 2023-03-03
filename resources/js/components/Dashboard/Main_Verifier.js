@@ -24,6 +24,7 @@ function Main_Verifier() {
     const departmentId = useSelector((state) => state.department.departmentId);
     const division = useSelector((state) => state.divisions.division);
     const department = useSelector((state) => state.department.name);
+    const finYear = useSelector((state) => state.finYear.finYear);
 
     useEffect(() => {
       dispatch(getUserData());
@@ -38,7 +39,7 @@ function Main_Verifier() {
   useEffect(() => {
       if(divisionID){
           dispatch(getDivisionData(divisionID));
-          dispatch(getDivisionIndicatorCountData(divisionID));
+          dispatch(getDivisionIndicatorCountData(divisionID,finYear));
       }
     }, [divisionID]);
 
@@ -57,12 +58,18 @@ function Main_Verifier() {
       </div>
     }
 
-
-    
+    const getFinYear = () => {
+        if(finYear === 2324){
+          return '2023-24'
+        }
+        if(finYear === 2223){
+          return '2022-23'
+        }
+      }
 
   return <main>
   <div className="container-fluid px-4">
-      <h1 className="mt-4 b">{`Department of ${department} (${division} Division) (FY:- 2022-23)`}</h1>
+  <h1 className="mt-4 b">{`Department of ${department} (${division} Division) (FY:- ${getFinYear()})`}</h1>
       <div className="row">
           <div className="col-xl-3 col-md-6">
               <div className="card budgetColor text-white mb-4">
