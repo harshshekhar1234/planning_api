@@ -276,11 +276,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     /*-----------Verifier Module--------------*/
     //Fetch all subschemes for the division with its status
-    Route::get('/divisions/{division}/subschemes', [DivisionSubschemeController::class, 'index']);
+    Route::get('/divisions/{division}/subschemes/{fin_year}', [DivisionSubschemeController::class, 'index']);
     //Submit division report for verification
     Route::post('/verification/{division}/{fin_year}', [DivisionSubschemeController::class, 'submit']);
     //Fetch list of submitted subscheme pending for verification.
-    Route::get('/verification/pending/{division}', [DivisionSubschemeController::class, 'verification_pending']);
+    Route::get('/verification/pending/{division}/{fin_year}', [DivisionSubschemeController::class, 'verification_pending']);
     //Approve Sub-scheme Report
     Route::get('/verification/approve/{subscheme}', [DivisionSubschemeController::class, 'approve']);
     //Reject Sub-scheme Report 
@@ -329,7 +329,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Fetch risk/remarks of a subscheme for As on Date report
     Route::get('/aor_subscheme/fetch_risk_remark/{id}', [SubSchemeController::class, 'aor_fetch_risk_remark']);
     //Fetch all subschemes for the division with its status - As on Date report
-    Route::get('/aor_divisions/{division}/subschemes', [DivisionSubschemeController::class, 'aor_index']);
+    Route::get('/aor_divisions/{division}/subschemes/{fin_year}', [DivisionSubschemeController::class, 'aor_index']);
     //Submit As on Date division report for verification
     Route::post('/aor_verification/{division}/{fin_year}', [DivisionSubschemeController::class, 'aor_submit']);
     //Fetch list of Verified As on Date Report List
@@ -341,7 +341,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Fetch As on date report of the division on the basis of report id - For Excel Download
     Route::get('/aor_reportsubschemedivision/{division}/report/{rid}', [SubSchemeController::class, 'aor_report_subscheme_division_quater']);
     //Fetch list of submitted subscheme pending for verification - As on date.
-    Route::get('/aor_verification/pending/{division}', [DivisionSubschemeController::class, 'aor_verification_pending']);
+    Route::get('/aor_verification/pending/{division}/{fin_year}', [DivisionSubschemeController::class, 'aor_verification_pending']);
     //Approve Sub-scheme As on date Report
     Route::get('/aor_verification/approve/{subscheme}', [DivisionSubschemeController::class, 'aor_approve']);
     //Reject Sub-scheme As on date Report

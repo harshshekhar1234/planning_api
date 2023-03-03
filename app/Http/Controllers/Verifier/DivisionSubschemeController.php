@@ -26,12 +26,12 @@ use App\Models\AorRiskRemark;
 
 class DivisionSubschemeController extends Controller
 {
-    public function index($division)
+    public function index($division, $fin_year)
     {
-        $subschemes = SubScheme::where('division_id', $division)->orderBy('subscheme_code')->get();
+        $subschemes = SubScheme::where(['division_id' => $division, 'fin_year' => $fin_year])->orderBy('subscheme_code')->get();
         foreach ($subschemes as $subscheme) {
-            $subscheme->pending_output_indicator = OutputIndicator::where(['subscheme_id' => $subscheme->id, 'add_btn_flag' => true])->count();
-            $subscheme->pending_outcome_indicator = OutcomeIndicator::where(['subscheme_id' => $subscheme->id, 'add_btn_flag' => true])->count();
+            $subscheme->pending_output_indicator = OutputIndicator::where(['subscheme_id' => $subscheme->id, 'add_btn_flag' => true, 'fin_year' => $fin_year])->count();
+            $subscheme->pending_outcome_indicator = OutcomeIndicator::where(['subscheme_id' => $subscheme->id, 'add_btn_flag' => true, 'fin_year' => $fin_year])->count();
         }
         return response()->json([
             'status' => 200,
@@ -164,9 +164,9 @@ class DivisionSubschemeController extends Controller
      * @param  \App\Models\Division  $division
      * @return \Illuminate\Http\Response
      */
-    public function verification_pending($division)
+    public function verification_pending($division, $fin_year)
     {
-        $subschemes = SubScheme::where(['division_id' => $division, 'submitted_status' => 'S'])->orderby('id')->get();
+        $subschemes = SubScheme::where(['division_id' => $division, 'submitted_status' => 'S', 'fin_year' => $fin_year])->orderby('id')->get();
 
         return response()->json([
             'status' => 200,
@@ -454,12 +454,12 @@ class DivisionSubschemeController extends Controller
     }
 
     /*---------- Functions for AS ON DATE repoprts -----------*/
-    public function aor_index($division)
+    public function aor_index($division, $fin_year)
     {
-        $subschemes = SubScheme::where('division_id', $division)->orderBy('subscheme_code')->get();
+        $subschemes = SubScheme::where(['division_id' => $division, 'fin_year' => $fin_year])->orderBy('subscheme_code')->get();
         foreach ($subschemes as $subscheme) {
-            $subscheme->pending_output_indicator = OutputIndicator::where(['subscheme_id' => $subscheme->id, 'aor_add_btn_flag' => true])->count();
-            $subscheme->pending_outcome_indicator = OutcomeIndicator::where(['subscheme_id' => $subscheme->id, 'aor_add_btn_flag' => true])->count();
+            $subscheme->pending_output_indicator = OutputIndicator::where(['subscheme_id' => $subscheme->id, 'aor_add_btn_flag' => true, 'fin_year' => $fin_year])->count();
+            $subscheme->pending_outcome_indicator = OutcomeIndicator::where(['subscheme_id' => $subscheme->id, 'aor_add_btn_flag' => true, 'fin_year' => $fin_year])->count();
         }
         return response()->json([
             'status' => 200,
@@ -618,9 +618,9 @@ class DivisionSubschemeController extends Controller
         }
     }
 
-    public function aor_verification_pending($division)
+    public function aor_verification_pending($division, $fin_year)
     {
-        $subschemes = SubScheme::where(['division_id' => $division, 'aor_submitted_status' => 'S'])->orderby('id')->get();
+        $subschemes = SubScheme::where(['division_id' => $division, 'aor_submitted_status' => 'S', 'fin_year' => $fin_year])->orderby('id')->get();
 
         return response()->json([
             'status' => 200,
