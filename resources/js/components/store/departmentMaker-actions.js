@@ -57,9 +57,9 @@ export const getSubschemeData = (id) => {
     };
   };
 
-  export const submitVerification = (id,name,year) => {
+  export const submitVerification = (id,name,year,finYear) => {
     return (dispatch) => {
-      fetch(`${laravel_api}verification/${id}`, {
+      fetch(`${laravel_api}verification/${id}/${finYear}`, {
         method: 'post',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
@@ -91,9 +91,9 @@ export const getSubschemeData = (id) => {
     };
   };
 
-  export const aorsubmitVerification = (id,fromDate,toDate) => {
+  export const aorsubmitVerification = (id,fromDate,toDate,finYear) => {
     return (dispatch) => {
-      fetch(`${laravel_api}aor_verification/${id}`, {
+      fetch(`${laravel_api}aor_verification/${id}/${finYear}`, {
         method: 'post',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('access_token')}`,

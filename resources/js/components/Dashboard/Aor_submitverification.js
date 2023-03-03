@@ -170,6 +170,7 @@ const AorSubmitVerification = () => {
   const submitNotificationFailure = useSelector((state) => state.maker.submitNotificationFailure);
   const correctNotificationSuccess = useSelector((state) => state.maker.correctNotificationSuccess);
   const correctNotificationFailure = useSelector((state) => state.maker.correctNotificationFailure);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   const [filteredSubscheme,setFilteredSubschemes] = useState([]);
   const [submitButton, setSubmitButton] = useState(false)
@@ -404,7 +405,7 @@ const handleFinalSubmit = () => {
     return
   }
   
-  dispatch(aorsubmitVerification(divisionid,fromDate,toDate));
+  dispatch(aorsubmitVerification(divisionid,fromDate,toDate,finYear));
   handleClose3()
 }
 

@@ -171,6 +171,7 @@ const SubmitVerification = () => {
   const submitNotificationFailure = useSelector((state) => state.maker.submitNotificationFailure);
   const correctNotificationSuccess = useSelector((state) => state.maker.correctNotificationSuccess);
   const correctNotificationFailure = useSelector((state) => state.maker.correctNotificationFailure);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   const [filteredSubscheme,setFilteredSubschemes] = useState([]);
   const [submitButton, setSubmitButton] = useState(false)
@@ -447,7 +448,7 @@ const handleFinalSubmit = () => {
     setFinancialYearMessage('Please select a year')
     return
   }
-  dispatch(submitVerification(divisionid,quater,financialyear));
+  dispatch(submitVerification(divisionid,quater,financialyear,finYear));
   handleClose3()
 }
 
