@@ -51,6 +51,7 @@ use App\Models\MigFinancialOutlay;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
 {
@@ -269,6 +270,348 @@ class AdminController extends Controller
             'mig_sub_scheme_socials' => $mig_sub_scheme_socials,
             'mig_sub_scheme_sdgs' => $mig_sub_scheme_sdgs,
             'mig_financial_outlays' => $mig_financial_outlays,
+        ]);
+    }
+
+    public function update_scheme_center_code()
+    {
+        try {
+            DB::transaction(function () {
+                Scheme::where(['center_code' => '0000'])->update(['center_code' => 'NAPL']);
+            });
+        } catch (QueryException $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $e
+            ]);
+        }
+        return response()->json([
+            'status' => 200,
+            'message' => 'Center Code for all schemes updated successfully.'
+        ]);
+    }
+
+    public function migrate_all_schemes($id, $fin_year)
+    {
+        $division = Division::find($id);
+        $demand_no = $division->demand_no;
+        $demand_no = sprintf("%02d", $demand_no);
+        $response = Http::acceptJson()->get('http://jkuber.jharkhand.gov.in/outcomebudgetservice/OutcomeScheme.svc/getSubschemeWiseOutcomeBudgetOutlay?demand='.$demand_no.'&finyear='. $fin_year.'&subscheme=&pwd='.$this->api_password);
+        $api_schemes = json_decode($response);     
+        $api_schemes = json_decode($api_schemes->getSubschemeWiseOutcomeBudgetOutlayResult);
+        if($api_schemes == null)
+        {
+            return response()->json([
+                'status' => 404,
+                'error' => "Connection Error",
+            ]);
+        }
+        $data = [];
+        $map = collect($api_schemes)->map(function ($items) use ($data, $division, $fin_year) {
+            $data['state_code'] = $items->STATESCHEMECODE;
+            $data['state_name'] = ($items->STATESCHEMENAME == null) ? $items->STATESCHEMECODE : $items->STATESCHEMENAME;
+            $data['center_code'] = $items->CPSMSSCHEME_CODE;
+            $data['center_name'] = ($items->GOISCHEMENAME == null) ? $items->CPSMSSCHEME_CODE : $items->GOISCHEMENAME;
+            $data['department_id'] = $division->department_id;
+            $data['division_id'] = $division->id;
+            $data['fin_year'] = $fin_year;
+            $data['subscheme_code'] = $items->SUB_SCHEMECODE;
+            $data['name'] = $items->SUB_SCHEMEENAME;
+            $data['state_share'] = $items->S_BE / 100000;
+            $data['center_share'] = $items->C_BE / 100000;
+            return $data;
+        });
+        $api_schemes_unique = collect($map)->unique(function ($item) {
+            return $item['state_code'] . $item['center_code'];
+        });
+        $api_schemes_unique = $api_schemes_unique->map(function ($item, $key) use ($map) {
+            $item = collect($item)->forget('subscheme_code')->forget('name')
+                    ->forget('state_share')->forget('center_share');
+            return $item;
+        });
+        $local_schemes = MigScheme::where('division_id', $id)->get();
+        $migrated_schemes = collect($api_schemes_unique)->filter(function ($value, $key) use ($local_schemes) {
+            return $local_schemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return ($lvalue['state_code'] == $value['state_code'] &&  $lvalue['center_code'] == $value['center_code']);
+            });
+        });
+        $migrated_schemes = $migrated_schemes->map(function ($item, $key) use ($local_schemes) {
+            $scheme = $local_schemes->where('state_code', $item['state_code'])->where('center_code', $item['center_code'])->first();
+            if ($scheme) {
+                $item['id'] = $scheme->id;
+                $item['created_at'] = $scheme->created_at;
+                $item['updated_at'] = $scheme->updated_at;
+                $item['fin_year'] = $scheme->fin_year;
+            } else {
+                $item['id'] = null;
+            }
+            return $item;
+        });
+        $local_subschemes = MigSubScheme::where('division_id', $id)->get();
+        $migrated_subschemes = collect($map)->filter(function ($value, $key) use ($local_subschemes) {
+            return $local_subschemes->contains(function ($lvalue, $lkey) use ($value, $key) {
+                return $lvalue['subscheme_code'] == $value['subscheme_code'];
+            });
+        });
+        $migrated_subschemes = $migrated_subschemes->map(function ($item, $key) use ($local_subschemes) {
+            $subscheme = $local_subschemes->where('subscheme_code', $item['subscheme_code'])->first();
+            if ($subscheme) {
+                $item['id'] = $subscheme->id;
+                $item['scheme_id'] = $subscheme->scheme_id;
+                $item['risk_remarks'] = $subscheme->risk_remarks;
+                $item['initial_remarks'] = $subscheme->initial_remarks;
+                $item['created_at'] = $subscheme->created_at;
+                $item['updated_at'] = $subscheme->updated_at;
+                $item['fin_year'] = $subscheme->fin_year;
+            } else {
+                $item['id'] = null;
+            }
+            return $item;
+        });
+        $migrated_subschemes = $migrated_subschemes->map(function ($item, $key) {
+            $outputs = MigOutput::where('subscheme_id', $item['id'])->orderBy('id')->get();
+            if (sizeof($outputs) == 0) {
+                return response()->json([
+                    'status' => 404,
+                    'message' => 'No Output Found'
+                ]);
+            }
+            foreach ($outputs as $output) {
+                $output->outputindicators = MigOutputIndicator::where('output_id', $output->id)->orderBy('id')->get();
+                if (sizeof($output->outputindicators) == 0) {
+                    return response()->json([
+                        'status' => 404,
+                        'message' => 'No Output Indicator Found for Output'
+                    ]);
+                }
+                foreach ($output->outputindicators as $outputindicator) {
+                    $outputindicator->target_outputs = MigOutputIndicatorTarget::where('outputindicator_id', $outputindicator->id)->orderBy('id')->get();
+                    if (sizeof($outputindicator->target_outputs) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'Target Not Set for Output Indicator'
+                        ]);
+                    }
+                }
+            }
+            $outcomes = MigOutcome::where('subscheme_id', $item['id'])->orderBy('id')->get();
+            if (sizeof($outcomes) == 0) {
+                return response()->json([
+                    'status' => 404,
+                    'message' => 'No Outcome Found'
+                ]);
+            }
+            foreach ($outcomes as $outcome) {
+                $outcome->outcomeindicators = MigOutcomeIndicator::where('outcome_id', $outcome->id)->orderBy('id')->get();
+                if (sizeof($outcome->outcomeindicators) == 0) {
+                    return response()->json([
+                        'status' => 404,
+                        'message' => 'No Outcome Indicator Found for Outcome'
+                    ]);
+                }
+                foreach ($outcome->outcomeindicators as $outcomeindicator) {
+                    $outcomeindicator->target_outcomes = MigOutcomeIndicatorTarget::where('outcomeindicator_id', $outcomeindicator->id)->orderBy('id')->get();
+                    if (sizeof($outcomeindicator->target_outcomes) == 0) {
+                        return response()->json([
+                            'status' => 404,
+                            'message' => 'Target Not Set for Outcome Indicator'
+                        ]);
+                    }
+                }
+            }
+            $genders = MigSubSchemeGender::where('subscheme_id', $item['id'])->get();
+            $socials = MigSubSchemeSocial::where('subscheme_id', $item['id'])->get();
+            $sdg = MigSubSchemeSdg::where('subscheme_id', $item['id'])->get();
+            $financial_outlays = MigFinancialOutlay::where('subscheme_id', $item['id'])->first();
+            $financial_outlays->state_share = $item['state_share'];
+            $financial_outlays->center_share = $item['center_share'];
+            $item['outputs'] = $outputs;
+            $item['outcomes'] = $outcomes;
+            $item['genders'] = $genders;
+            $item['socials'] = $socials;
+            $item['sdg'] = $sdg;
+            $item['financial_outlays'] = $financial_outlays;
+            return $item;
+        });
+        $migrated_schemes = $migrated_schemes->map(function ($item, $key) use ($migrated_subschemes) {
+            $subschemes = collect($migrated_subschemes)->filter(function ($value, $skey) use ($item) {
+                return ($value['state_code'] == $item['state_code'] &&  $value['center_code'] == $item['center_code']);
+            });
+            $subschemes = collect($subschemes)->map(function ($sitem, $key) use ($item) {
+                $sitem = collect($sitem)->forget('state_name')->forget('center_name')->forget('state_code')->forget('center_code');
+                return $sitem;
+            });
+            $item['subschemes'] = $subschemes->values()->all();
+            return $item;
+        });
+        $migrated_schemes = $migrated_schemes->values()->all();
+        // return response()->json([
+        //     'status' => 200,
+        //     'migrated_schemes' => $migrated_schemes,
+        // ]);
+        try {
+            DB::transaction(function () use ($migrated_schemes) {
+                foreach ($migrated_schemes as $migrated_scheme) {
+                    $scheme = new Scheme();
+                    $scheme->state_code = $migrated_scheme['state_code'];
+                    $scheme->state_name = $migrated_scheme['state_name'];
+                    $scheme->center_code = $migrated_scheme['center_code'];
+                    $scheme->center_name = $migrated_scheme['center_name'];
+                    $scheme->department_id = $migrated_scheme['department_id'];
+                    $scheme->division_id = $migrated_scheme['division_id'];
+                    $scheme->created_at = $migrated_scheme['created_at'];
+                    $scheme->updated_at = $migrated_scheme['updated_at'];
+                    $scheme->fin_year = $migrated_scheme['fin_year'];
+                    $scheme->save();
+                    foreach ($migrated_scheme['subschemes'] as $migrated_subscheme) {
+                        $subScheme = new SubScheme();
+                        $subScheme->name = $migrated_subscheme['name'];
+                        $subScheme->subscheme_code = $migrated_subscheme['subscheme_code'];
+                        $subScheme->scheme_id = $scheme->id;
+                        $subScheme->division_id = $migrated_subscheme['division_id'];
+                        $subScheme->department_id = $migrated_subscheme['department_id'];
+                        $subScheme->risk_remarks = $migrated_subscheme['risk_remarks'];
+                        $subScheme->initial_remarks = $migrated_subscheme['initial_remarks'];
+                        $subScheme->created_at = $migrated_subscheme['created_at'];
+                        $subScheme->updated_at = $migrated_subscheme['updated_at'];
+                        $subScheme->fin_year = $migrated_subscheme['fin_year'];
+                        $subScheme->save();
+
+                        $financialOutlay = new FinancialOutlay;
+                        $financialOutlay->state_share = $migrated_subscheme['financial_outlays']['state_share'];
+                        $financialOutlay->center_share =$migrated_subscheme['financial_outlays']['center_share'];
+                        $financialOutlay->department_id = $migrated_subscheme['financial_outlays']['department_id'];
+                        $financialOutlay->division_id = $migrated_subscheme['financial_outlays']['division_id'];
+                        $financialOutlay->scheme_id = $scheme->id;
+                        $financialOutlay->subscheme_id = $subScheme->id;
+                        $financialOutlay->created_at = $migrated_subscheme['financial_outlays']['created_at'];
+                        $financialOutlay->updated_at = $migrated_subscheme['financial_outlays']['updated_at'];
+                        $financialOutlay->fin_year = $migrated_subscheme['financial_outlays']['fin_year'];
+                        $financialOutlay->save();
+                        foreach ($migrated_subscheme['socials'] as $social) {
+                            $dataSocial[] = [
+                                'subscheme_id' => $subScheme->id,
+                                'social_id' => $social['social_id'],
+                                'created_at' => $social['created_at'],
+                                'updated_at' => $social['updated_at']
+                            ];
+                        }
+                        SubschemeSocial::insert($dataSocial);
+                        foreach ($migrated_subscheme['genders'] as $gender) {
+                            $dataGender[] = [
+                                'subscheme_id' => $subScheme->id,
+                                'gender_id' => $gender['gender_id'],
+                                'created_at' => $gender['created_at'],
+                                'updated_at' => $gender['updated_at'],
+                            ];
+                        }
+                        SubschemeGender::insert($dataGender);
+
+                        foreach ($migrated_subscheme['sdg'] as $sdg) {
+                            $dataSdg[] = [
+                                'subscheme_id' => $subScheme->id,
+                                'sdg_id' => $sdg['sdg_id'],
+                                'created_at' => $sdg['created_at'],
+                                'updated_at' => $sdg['updated_at'],
+                            ];
+                        }
+                        SubschemeSdg::insert($dataSdg);
+                        foreach ($migrated_subscheme['outputs'] as $output_key => $output_value) {
+                            $output = new Output();
+                            $output->name = $output_value['name'];
+                            $output->subscheme_id = $subScheme->id;
+                            $output->scheme_id = $scheme->id;
+                            $output->division_id = $output_value['division_id'];
+                            $output->department_id = $output_value['department_id'];
+                            $output->created_at = $output_value['created_at'];
+                            $output->updated_at = $output_value['updated_at'];
+                            $output->fin_year = $output_value['fin_year'];
+                            $output->save();
+                            foreach ($output_value['outputindicators'] as $outputIndicator_key => $outputIndicator_value) {
+                                $outputindicator = new OutputIndicator();
+                                $outputindicator->name = $outputIndicator_value['name'];
+                                $outputindicator->output_id = $output->id;
+                                $outputindicator->subscheme_id = $subScheme->id;
+                                $outputindicator->scheme_id = $scheme->id;
+                                $outputindicator->division_id = $outputIndicator_value['division_id'];
+                                $outputindicator->department_id = $outputIndicator_value['department_id'];
+                                $outputindicator->created_at = $outputIndicator_value['created_at'];
+                                $outputindicator->updated_at = $outputIndicator_value['updated_at'];
+                                $outputindicator->fin_year = $outputIndicator_value['fin_year'];
+                                $outputindicator->save();
+                                foreach ($outputIndicator_value['target_outputs'] as $targetOutput_key => $targetOutput_value) 
+                                {
+                                    $targetOutput = new TargetOutput();
+                                    $targetOutput->value = $targetOutput_value['value'];
+                                    $targetOutput->output_id = $output->id;
+                                    $targetOutput->outputindicator_id = $outputindicator->id;
+                                    $targetOutput->subscheme_id = $subScheme->id;
+                                    $targetOutput->scheme_id = $scheme->id;
+                                    $targetOutput->division_id = $targetOutput_value['division_id'];
+                                    $targetOutput->department_id = $targetOutput_value['department_id'];
+                                    $targetOutput->year = 2023;
+                                    $targetOutput->measurement = $targetOutput_value['measurement'];
+                                    $targetOutput->created_at = $targetOutput_value['created_at'];
+                                    $targetOutput->updated_at = $targetOutput_value['updated_at'];
+                                    $targetOutput->save();
+                                }
+                            }
+                        }
+                        foreach ($migrated_subscheme['outcomes'] as $outcome_key => $outcome_value) {
+                            $outcome = new Outcome;
+                            $outcome->name = $outcome_value['name'];
+                            $outcome->subscheme_id = $subScheme->id;
+                            $outcome->scheme_id = $scheme->id;
+                            $outcome->division_id = $outcome_value['division_id'];
+                            $outcome->department_id = $outcome_value['department_id'];
+                            $outcome->created_at = $outcome_value['created_at'];
+                            $outcome->updated_at = $outcome_value['updated_at'];
+                            $outcome->fin_year = $outcome_value['fin_year'];
+                            $outcome->save();
+
+                            foreach ($outcome_value['outcomeindicators'] as $outcomeIndicator_key => $outcomeIndicator_value) {
+                                $outcomeindicator = new OutcomeIndicator;
+                                $outcomeindicator->name = $outcomeIndicator_value['name'];
+                                $outcomeindicator->outcome_id = $outcome->id;
+                                $outcomeindicator->subscheme_id = $subScheme->id;
+                                $outcomeindicator->scheme_id = $scheme->id;
+                                $outcomeindicator->division_id = $outcomeIndicator_value['division_id'];
+                                $outcomeindicator->department_id = $outcomeIndicator_value['department_id'];
+                                $outcomeindicator->created_at = $outcomeIndicator_value['created_at'];
+                                $outcomeindicator->updated_at = $outcomeIndicator_value['updated_at'];
+                                $outcomeindicator->fin_year = $outcomeIndicator_value['fin_year'];
+                                $outcomeindicator->save();
+                                foreach ($outcomeIndicator_value['target_outcomes'] as $targetOutcome_key => $targetOutcome_value) 
+                                {
+                                    $targetOutcome = new TargetOutcome();
+                                    $targetOutcome->value = $targetOutcome_value['value'];
+                                    $targetOutcome->outcome_id = $outcome->id;
+                                    $targetOutcome->outcomeindicator_id = $outcomeindicator->id;
+                                    $targetOutcome->subscheme_id = $subScheme->id;
+                                    $targetOutcome->scheme_id = $scheme->id;
+                                    $targetOutcome->division_id = $targetOutcome_value['division_id'];
+                                    $targetOutcome->department_id = $targetOutcome_value['department_id'];
+                                    $targetOutcome->year = 2023;
+                                    $targetOutcome->measurement = $targetOutcome_value['measurement'];
+                                    $targetOutcome->created_at = $targetOutcome_value['created_at'];
+                                    $targetOutcome->updated_at = $targetOutcome_value['updated_at'];
+                                    $targetOutcome->save();
+                                }
+                            }
+                        }
+                        MigSubScheme::where(['id' => $migrated_subscheme['id']])->update(['migrated' => 1]);
+                    }
+                    MigScheme::where(['id' => $migrated_scheme['id']])->update(['migrated' => 1]);
+                }
+            });
+        } catch (QueryException $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $e
+            ]);
+        }
+        return response()->json([
+            'status' => 200
         ]);
     }
 }

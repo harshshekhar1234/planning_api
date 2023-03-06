@@ -497,11 +497,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/budget_entry_setting/update', [BudgetEntrySettingController::class, 'update'])->middleware(['can:isAdmin']);
     //Take Json Backup of all tables
     Route::get('/all_table_backup', [AdminController::class, 'all_table_backup'])->middleware(['can:isAdmin']);
+    //Migrate Division wise all schemes from migration table to original tables
+    Route::get('/migrate_all_schemes/{division}/{fin_year}', [AdminController::class, 'migrate_all_schemes'])->middleware(['can:isAdmin']);
     /*---------------------------------- End of Data Base Administration Module -------------------------------------*/
 
     /*--------------------------------- Start of Routes to be deleted after Deployment ------------------------------------*/
     //Initial Setting of Budget Entry Settings for all directorates
     Route::post('/budget_entry_setting', [BudgetEntrySettingController::class, 'store'])->middleware(['can:isAdmin']);
+    //Update All Scheme Center_code from 0000 to NAPL
+    Route::post('/update_scheme_center_code', [AdminController::class, 'update_scheme_center_code'])->middleware(['can:isAdmin']);
     /*---------------------------------- End of Routes to be deleted after Deployment -------------------------------------*/
 });
 
