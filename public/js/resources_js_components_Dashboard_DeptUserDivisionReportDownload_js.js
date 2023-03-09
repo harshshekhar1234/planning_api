@@ -1214,8 +1214,11 @@ function OutcomeBudgetDashboard() {
   var divisionreport = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
     return state.divisions.divisionReport;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getCurrentSubSchemesDivisionReport)(params.id));
+    dispatch((0,_store_divisions_action__WEBPACK_IMPORTED_MODULE_3__.getCurrentSubSchemesDivisionReport)(params.id, finYear));
     return function () {
       dispatch(_store_divisionsSlice__WEBPACK_IMPORTED_MODULE_4__.divisionsActions.setDivisionReport({
         divisionReport: {}
@@ -1341,7 +1344,8 @@ function OutcomeBudgetDashboard() {
       })]
     }), divisionreport.status === 200 ? divisionreport.subschemes.map(function (report) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_CurrentSubschemeReportDivision__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        report: report
+        report: report,
+        finYear: finYear
       });
     }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_9__["default"], {

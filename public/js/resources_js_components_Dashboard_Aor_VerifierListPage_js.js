@@ -46135,6 +46135,9 @@ var AorVerifierListPage = function AorVerifierListPage() {
   var finalApproveNotificationFailure = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.verifier.finalApproveNotificationFailure;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -46162,7 +46165,7 @@ var AorVerifierListPage = function AorVerifierListPage() {
       setCorrectededCount = _useState10[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_departmentVerifier_actions__WEBPACK_IMPORTED_MODULE_1__.aorgetSubschemeData)(divisionid));
+    dispatch((0,_store_departmentVerifier_actions__WEBPACK_IMPORTED_MODULE_1__.aorgetSubschemeData)(divisionid, finYear));
     return function () {
       dispatch(_store_departmentVerifierSlice__WEBPACK_IMPORTED_MODULE_2__.departmentVerifierActions.setSubschemes({
         subschemes: []
@@ -46217,7 +46220,7 @@ var AorVerifierListPage = function AorVerifierListPage() {
   }, [subschemes]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (update) {
-      dispatch((0,_store_departmentVerifier_actions__WEBPACK_IMPORTED_MODULE_1__.aorgetSubschemeData)(divisionid));
+      dispatch((0,_store_departmentVerifier_actions__WEBPACK_IMPORTED_MODULE_1__.aorgetSubschemeData)(divisionid, finYear));
     }
   }, [update]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -46830,9 +46833,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSubschemeData = function getSubschemeData(id) {
+var getSubschemeData = function getSubschemeData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/pending/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/pending/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -46889,9 +46892,9 @@ var getSubschemeData = function getSubschemeData(id) {
     });
   };
 };
-var aorgetSubschemeData = function aorgetSubschemeData(id) {
+var aorgetSubschemeData = function aorgetSubschemeData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_verification/pending/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_verification/pending/").concat(id, "/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

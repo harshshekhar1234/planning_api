@@ -46136,6 +46136,9 @@ var SubmitVerification = function SubmitVerification() {
   var correctNotificationFailure = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.maker.correctNotificationFailure;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -46213,7 +46216,7 @@ var SubmitVerification = function SubmitVerification() {
       setyearTD = _useState30[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemeData)(divisionid));
+    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemeData)(divisionid, finYear));
     dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getLatestQuater)(divisionid));
     return function () {
       setApprovedCount(0);
@@ -46335,7 +46338,7 @@ var SubmitVerification = function SubmitVerification() {
   }, [subschemes]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (update) {
-      dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemeData)(divisionid));
+      dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemeData)(divisionid, finYear));
     }
   }, [update]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -46539,7 +46542,7 @@ var SubmitVerification = function SubmitVerification() {
       return;
     }
 
-    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.submitVerification)(divisionid, quater, financialyear));
+    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.submitVerification)(divisionid, quater, financialyear, finYear));
     handleClose3();
   };
 
@@ -47092,9 +47095,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var getSubschemeData = function getSubschemeData(id) {
+var getSubschemeData = function getSubschemeData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "divisions/").concat(id, "/subschemes"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "divisions/").concat(id, "/subschemes/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47133,9 +47136,9 @@ var getSubschemeData = function getSubschemeData(id) {
     });
   };
 };
-var aorgetSubschemeData = function aorgetSubschemeData(id) {
+var aorgetSubschemeData = function aorgetSubschemeData(id, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_divisions/").concat(id, "/subschemes"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_divisions/").concat(id, "/subschemes/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -47174,9 +47177,9 @@ var aorgetSubschemeData = function aorgetSubschemeData(id) {
     });
   };
 };
-var submitVerification = function submitVerification(id, name, year) {
+var submitVerification = function submitVerification(id, name, year, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/").concat(id, "/").concat(finYear), {
       method: 'post',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token')),
@@ -47226,9 +47229,9 @@ var submitVerification = function submitVerification(id, name, year) {
     });
   };
 };
-var aorsubmitVerification = function aorsubmitVerification(id, fromDate, toDate) {
+var aorsubmitVerification = function aorsubmitVerification(id, fromDate, toDate, finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_verification/").concat(id), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "aor_verification/").concat(id, "/").concat(finYear), {
       method: 'post',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token')),
