@@ -46352,6 +46352,16 @@ var SubmitVerification = function SubmitVerification() {
       subschemeStatus = _React$useState8[0],
       setSubschemeStatus = _React$useState8[1];
 
+  var getFinYear = function getFinYear() {
+    if (finYear === '2324') {
+      return '2023-24';
+    }
+
+    if (finYear === '2223') {
+      return '2022-23';
+    }
+  };
+
   var handleSubschemeChange = function handleSubschemeChange(event) {
     setSubschemeStatus(event.target.value);
   };
@@ -46503,46 +46513,45 @@ var SubmitVerification = function SubmitVerification() {
 
   var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState32 = _slicedToArray(_useState31, 2),
-      quater = _useState32[0],
-      setQuater = _useState32[1];
+      tillDate = _useState32[0],
+      setTillDate = _useState32[1];
 
   var _useState33 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState34 = _slicedToArray(_useState33, 2),
-      quatermessage = _useState34[0],
-      setQuaterMessage = _useState34[1];
+      tillDatemessage = _useState34[0],
+      setTillDateMessage = _useState34[1];
 
-  var _useState35 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState36 = _slicedToArray(_useState35, 2),
-      financialyear = _useState36[0],
-      setFinancialYear = _useState36[1];
-
-  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState38 = _slicedToArray(_useState37, 2),
-      financialyearmessage = _useState38[0],
-      setFinancialYearMessage = _useState38[1];
-
-  var handleQuaterChange = function handleQuaterChange(event) {
-    setQuaterMessage('');
-    setQuater(event.target.value);
-  };
-
-  var handleFinancialYearChange = function handleFinancialYearChange(event) {
-    setFinancialYearMessage('');
-    setFinancialYear(event.target.value);
+  var handleTillDateChange = function handleTillDateChange(event) {
+    setTillDateMessage('');
+    setTillDate(event.target.value);
   };
 
   var handleFinalSubmit = function handleFinalSubmit() {
-    if (quater === '') {
-      setQuaterMessage('Please select a quater');
+    if (tillDate === '') {
+      setTillDateMessage('Please select a date');
       return;
     }
 
-    if (financialyear === '') {
-      setFinancialYearMessage('Please select a year');
+    var tillDateConv = new Date(tillDate);
+    var checkTillDate = '';
+    var fromDate = '';
+
+    if (finYear === '2324') {
+      checkTillDate = new Date("1 april 2024");
+      fromDate = new Date("1 april 2023");
+    }
+
+    if (finYear === '2223') {
+      checkTillDate = new Date("1 april 2023");
+      fromDate = new Date("1 april 2022");
+    }
+
+    if (tillDateConv.getTime() > checkTillDate.getTime()) {
+      setTillDateMessage('Please select a valid date range for this financial year');
       return;
     }
 
-    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.submitVerification)(divisionid, quater, financialyear, finYear));
+    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.submitVerification)(divisionid, fromDate, tillDate, finYear));
     handleClose3();
   };
 
@@ -46831,68 +46840,35 @@ var SubmitVerification = function SubmitVerification() {
       "aria-describedby": "alert-dialog-description",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogTitle__WEBPACK_IMPORTED_MODULE_21__["default"], {
         id: "alert-dialog-title",
-        children: "Select Quater"
+        children: "Select report period"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogContent__WEBPACK_IMPORTED_MODULE_22__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_DialogContentText__WEBPACK_IMPORTED_MODULE_23__["default"], {
           id: "alert-dialog-description",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_Box__WEBPACK_IMPORTED_MODULE_10__["default"], {
             sx: {
               minWidth: 200
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_FormControl__WEBPACK_IMPORTED_MODULE_26__["default"], {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_FormControl__WEBPACK_IMPORTED_MODULE_26__["default"], {
               fullWidth: true,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_InputLabel__WEBPACK_IMPORTED_MODULE_27__["default"], {
-                id: "demo-simple-select-label",
-                children: "Financial Year"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Select__WEBPACK_IMPORTED_MODULE_28__["default"], {
-                labelId: "demo-simple-select-label",
-                id: "demo-simple-select",
-                value: financialyear,
-                label: "Financial Year",
-                onChange: handleFinancialYearChange,
-                children: [dropFinYear1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: '2022-23',
-                  children: "2022-23"
-                }), dropFinYear2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: '2023-24',
-                  children: "2023-24"
-                }), dropFinYear3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: '2024-25',
-                  children: "2024-25"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "pa4 black-80",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+                  htmlFor: "tillDate",
+                  className: "f6 b db mb2",
+                  children: "Please select the date of the report"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+                  id: "tillDate",
+                  className: "ba b--black-60 pa2 mb2 db w-100 bg-transparent br2 shadow-1",
+                  type: "date",
+                  "aria-describedby": "name-desc",
+                  onChange: handleTillDateChange,
+                  value: tillDate
                 })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_FormControl__WEBPACK_IMPORTED_MODULE_26__["default"], {
-              fullWidth: true,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_InputLabel__WEBPACK_IMPORTED_MODULE_27__["default"], {
-                id: "demo-simple-select-label",
-                children: "Quater"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material_Select__WEBPACK_IMPORTED_MODULE_28__["default"], {
-                labelId: "demo-simple-select-label",
-                id: "demo-simple-select",
-                value: quater,
-                label: "Quater",
-                onChange: handleQuaterChange,
-                children: [dropQuater1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: 'quater1',
-                  children: "Quater 1"
-                }), dropQuater2 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: 'quater2',
-                  children: "Quater 2"
-                }), dropQuater3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: 'quater3',
-                  children: "Quater 3"
-                }), dropQuater4 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_MenuItem__WEBPACK_IMPORTED_MODULE_29__["default"], {
-                  value: 'quater4',
-                  children: "Quater 4"
-                })]
-              })]
-            })]
-          }), quatermessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+              })
+            })
+          }), tillDatemessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
             className: "f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito",
-            children: "Please select a quater!!"
-          }), financialyearmessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
-            className: "f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito",
-            children: "Please select a year!!"
+            children: tillDatemessage
           })]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material_DialogActions__WEBPACK_IMPORTED_MODULE_24__["default"], {
@@ -46906,7 +46882,7 @@ var SubmitVerification = function SubmitVerification() {
       className: "container-fluid px-4 mt3",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
         className: "b",
-        children: "Dashboard for submission of sub-schemes for verification of ".concat(quaterTD, " (").concat(yearTD, ")")
+        children: "Dashboard for submission of sub-schemes for verification of progress report (FY:- ".concat(getFinYear(), ")")
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "row",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -47177,7 +47153,7 @@ var aorgetSubschemeData = function aorgetSubschemeData(id, finYear) {
     });
   };
 };
-var submitVerification = function submitVerification(id, name, year, finYear) {
+var submitVerification = function submitVerification(id, fromDate, tillDate, finYear) {
   return function (dispatch) {
     fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/").concat(id, "/").concat(finYear), {
       method: 'post',
@@ -47186,8 +47162,8 @@ var submitVerification = function submitVerification(id, name, year, finYear) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        year: year
+        from_date: fromDate,
+        to_date: tillDate
       })
     }).then(function (response) {
       return response.json();

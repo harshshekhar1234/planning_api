@@ -102,8 +102,8 @@ const Signin = () => {
         label="Financial Year"
         onChange={handleChangeFinYear}
       >
-        <MenuItem value={2324}>2023-24</MenuItem>
-        <MenuItem value={2223}>2022-23</MenuItem>
+        <MenuItem value={'2324'}>2023-24</MenuItem>
+        <MenuItem value={'2223'}>2022-23</MenuItem>
       </Select>
     </FormControl>
     </div>

@@ -47083,7 +47083,7 @@ var aorgetSubschemeData = function aorgetSubschemeData(id, finYear) {
     });
   };
 };
-var submitVerification = function submitVerification(id, name, year, finYear) {
+var submitVerification = function submitVerification(id, fromDate, tillDate, finYear) {
   return function (dispatch) {
     fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/").concat(id, "/").concat(finYear), {
       method: 'post',
@@ -47092,8 +47092,8 @@ var submitVerification = function submitVerification(id, name, year, finYear) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        year: year
+        from_date: fromDate,
+        to_date: tillDate
       })
     }).then(function (response) {
       return response.json();

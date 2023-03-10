@@ -301,6 +301,7 @@ function AchievementEntryForm() {
   const department_name = useSelector((state) => state.subschemes.department_name);
   const division_name = useSelector((state) => state.subschemes.division_name);
   const quaterTs = useSelector((state) => state.maker.quaterTs);
+  const finYear = useSelector((state) => state.finYear.finYear);
 
   const [riskremarksedit, setRiskRemarksEdit] = useState('')
   const [openOutputConfirm, setOpenOutputConfirm] = useState(false);
@@ -367,6 +368,15 @@ function AchievementEntryForm() {
   const handleSubmitOutcomeConfirm = () => {
     setOutcomeConfirmAgree(true)
   };
+
+  const getFinYear = () => {
+    if(finYear === '2324'){
+      return '2023-24'
+    }
+    if(finYear === '2223'){
+      return '2022-23'
+    }
+  }
 
   useEffect(() => {
     dispatch(getAchievementsOutputData(params.id));
@@ -1585,8 +1595,8 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Achievement</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleAchievementValueChange} value={value}/>
     <small id="name-desc" className="f6 black-60 db mb2 b">{`Unit:- ${(Object.keys(indicator).length !== 0) ? indicator.target_outputs[0].measurement : 'NA'}`}</small>
-    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement Quater</label>
-    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement entered on</label>
+    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={new Date().toLocaleDateString()}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Achievement for current year</small>
     {(entrymessage !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessage}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={() => onSubmitAchievement(indicator.department_id,indicator.division_id,indicator.scheme_id,indicator.subscheme_id,indicator.output_id,indicator.id,indicator.target_outputs[0].value)}>Save</p>
@@ -1609,8 +1619,8 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Achievement</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleAchievementValueEditChange} value={valueEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2 b">{`Unit:- ${outputAchEditMeasurement}`}</small>
-    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement Quater</label>
-    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement entered on</label>
+    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={timeEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Achievement for current year</small>
     {(entrymessageedit !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessageedit}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={onSubmitAchievementEdit}>Save</p>
@@ -1633,8 +1643,8 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Achievement</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleOutcomeAchievementValueEditChange} value={valueoutcomeEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2 b">{`Unit:- ${outcomeAchEditMeasurement}`}</small>
-    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement Quater</label>
-    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement entered on</label>
+    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={timeoutcomeEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Achievement for current year</small>
     {(entrymessageeditoutcome !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessageeditoutcome}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={onSubmitOutcomeAchievementEdit}>Save</p>
@@ -1657,8 +1667,8 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Achievement</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleAchievementOutcomeValueChange} value={valueoutcome}/>
     <small id="name-desc" className="f6 black-60 db mb2 b">{`Unit:- ${(Object.keys(indicatoroutcome).length !== 0) ? indicatoroutcome.target_outcomes[0].measurement : 'NA'}`}</small>
-    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement Quater</label>
-    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <label htmlFor="name" className="f6 b db mb2 nunito">Achievement entered on</label>
+    <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={new Date().toLocaleDateString()}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Achievement for current year</small>
     {(entrymessageoutcome !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessageoutcome}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={() => onSubmitAchievementOutcome(indicatoroutcome.department_id,indicatoroutcome.division_id,indicatoroutcome.scheme_id,indicatoroutcome.subscheme_id,indicatoroutcome.outcome_id,indicatoroutcome.id,indicatoroutcome.target_outcomes[0].value)}>Save</p>
@@ -1780,8 +1790,8 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Expenditure</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleExpenditureValueChange} value={expenditure}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Rs. in Lakhs</small>
-    <label htmlFor="time" className="f6 b db mb2 nunito">Financial Quater</label>
-    <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <label htmlFor="time" className="f6 b db mb2 nunito">Financial details entered on</label>
+    <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={new Date().toLocaleDateString()}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Financial Details for current quater</small>
     {(entrymessagefinancial !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessagefinancial}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={() => onSubmitFinancial(params.id)}>Save</p>
@@ -1810,7 +1820,7 @@ useEffect(() => {
     <label htmlFor="name" className="f6 b db mb2 nunito">Please Enter Expenditure</label>
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleExpenditureValueEditChange} value={expenditureEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Rs. in Lakhs</small>
-    <label htmlFor="time" className="f6 b db mb2 nunito">Financial Detail Quater</label>
+    <label htmlFor="time" className="f6 b db mb2 nunito">Financial detail entered on</label>
     <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Financial Details for current year</small>
     {(entrymessagefinancialedit !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessagefinancialedit}</p>}
@@ -1897,7 +1907,7 @@ useEffect(() => {
         </Box>
       </Modal>
       <div className='container'>
-      <h1 className='b'>{`Dashboard for submission of sub-schemes details for verification of ${quaterTD} (${yearTD})`}</h1>
+      <h1 className='b'>{`Dashboard for submission of sub-schemes details for verification of progress report (FY:- ${getFinYear()})`}</h1>
       <p className='f4'><span className='b'>State Scheme/Programme :</span> {`${schemeStateCode ? schemeStateCode : '0000'}-${schemeStateName ? schemeStateName : '0000' }`}</p>
       <p className='f4'><span className='b'>Center Scheme/Programme :</span> {`${schemeCenterCode ? schemeCenterCode : 'NAPL'}-${schemeCenterName ? schemeCenterName : 'NAPL'}`}</p>
       <p className='f4'><span className='b'>Sub-Scheme :</span> {`${subschemecode}-${subschemename}`}</p>

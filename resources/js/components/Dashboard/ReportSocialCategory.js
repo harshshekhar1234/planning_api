@@ -175,10 +175,10 @@ const ReportSocialCategory = () => {
       }
 
       const getFinYear = () => {
-        if(finYear === 2324){
+        if(finYear === '2324'){
           return '2023-24'
         }
-        if(finYear === 2223){
+        if(finYear === '2223'){
           return '2022-23'
         }
       }

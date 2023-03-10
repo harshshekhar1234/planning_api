@@ -10619,6 +10619,9 @@ function AchievementEntryForm() {
   var quaterTs = (0,react_redux__WEBPACK_IMPORTED_MODULE_12__.useSelector)(function (state) {
     return state.maker.quaterTs;
   });
+  var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_12__.useSelector)(function (state) {
+    return state.finYear.finYear;
+  });
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -10735,6 +10738,16 @@ function AchievementEntryForm() {
 
   var handleSubmitOutcomeConfirm = function handleSubmitOutcomeConfirm() {
     setOutcomeConfirmAgree(true);
+  };
+
+  var getFinYear = function getFinYear() {
+    if (finYear === '2324') {
+      return '2023-24';
+    }
+
+    if (finYear === '2223') {
+      return '2022-23';
+    }
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -12696,13 +12709,13 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
-              children: "Achievement Quater"
+              children: "Achievement entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: new Date().toLocaleDateString()
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -12762,13 +12775,13 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
-              children: "Achievement Quater"
+              children: "Achievement entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: timeEdit
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -12826,13 +12839,13 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
-              children: "Achievement Quater"
+              children: "Achievement entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: timeoutcomeEdit
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -12890,13 +12903,13 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "name",
               className: "f6 b db mb2 nunito",
-              children: "Achievement Quater"
+              children: "Achievement entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "name",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: new Date().toLocaleDateString()
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -13180,13 +13193,13 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "time",
               className: "f6 b db mb2 nunito",
-              children: "Financial Quater"
+              children: "Financial details entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "time",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: new Date().toLocaleDateString()
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -13276,7 +13289,7 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("label", {
               htmlFor: "time",
               className: "f6 b db mb2 nunito",
-              children: "Financial Detail Quater"
+              children: "Financial detail entered on"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("input", {
               id: "time",
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
@@ -13464,7 +13477,7 @@ function AchievementEntryForm() {
       className: "container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("h1", {
         className: "b",
-        children: "Dashboard for submission of sub-schemes details for verification of ".concat(quaterTD, " (").concat(yearTD, ")")
+        children: "Dashboard for submission of sub-schemes details for verification of progress report (FY:- ".concat(getFinYear(), ")")
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("p", {
         className: "f4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
@@ -15120,7 +15133,7 @@ var aorgetSubschemeData = function aorgetSubschemeData(id, finYear) {
     });
   };
 };
-var submitVerification = function submitVerification(id, name, year, finYear) {
+var submitVerification = function submitVerification(id, fromDate, tillDate, finYear) {
   return function (dispatch) {
     fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "verification/").concat(id, "/").concat(finYear), {
       method: 'post',
@@ -15129,8 +15142,8 @@ var submitVerification = function submitVerification(id, name, year, finYear) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
-        year: year
+        from_date: fromDate,
+        to_date: tillDate
       })
     }).then(function (response) {
       return response.json();

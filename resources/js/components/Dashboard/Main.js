@@ -23,14 +23,14 @@ function Main() {
         
       }, []);
 
-    const getFinYear = () => {
-      if(finYear === 2324){
-        return '2023-24'
+      const getFinYear = () => {
+        if(finYear === '2324'){
+          return '2023-24'
+        }
+        if(finYear === '2223'){
+          return '2022-23'
+        }
       }
-      if(finYear === 2223){
-        return '2022-23'
-      }
-    }
 
     const getQuater = (quater) => {
         if(quater === '0'){

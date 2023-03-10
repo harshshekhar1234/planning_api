@@ -302,6 +302,15 @@ const SubmitVerification = () => {
 
   const [subschemeStatus, setSubschemeStatus] = React.useState('Z');
 
+  const getFinYear = () => {
+    if(finYear === '2324'){
+      return '2023-24'
+    }
+    if(finYear === '2223'){
+      return '2022-23'
+    }
+  }
+
   const handleSubschemeChange = (event) => {
     setSubschemeStatus(event.target.value);
   };
@@ -424,31 +433,35 @@ const onSubmitReview = () => {
   handleClickOpen3()
 }
 
-const [quater, setQuater] = useState('')
-const [quatermessage, setQuaterMessage] = useState('')
-const [financialyear, setFinancialYear] = useState('')
-const [financialyearmessage, setFinancialYearMessage] = useState('')
+const [tillDate, setTillDate] = useState('')
+const [tillDatemessage, setTillDateMessage] = useState('')
 
-const handleQuaterChange = (event) => {
-  setQuaterMessage('')
-  setQuater(event.target.value);
-}
-
-const handleFinancialYearChange = (event) => {
-  setFinancialYearMessage('')
-  setFinancialYear(event.target.value);
+const handleTillDateChange = (event) => {
+  setTillDateMessage('')
+  setTillDate(event.target.value);
 }
 
 const handleFinalSubmit = () => {
-  if(quater === ''){
-    setQuaterMessage('Please select a quater')
+  if(tillDate === ''){
+    setTillDateMessage('Please select a date')
     return
   }
-  if(financialyear === ''){
-    setFinancialYearMessage('Please select a year')
+  const tillDateConv = new Date(tillDate)
+  let checkTillDate = ''
+  let fromDate = ''
+  if(finYear === '2324'){
+    checkTillDate = new Date("1 april 2024");
+    fromDate = new Date("1 april 2023")
+  }
+  if(finYear === '2223'){
+    checkTillDate = new Date("1 april 2023");
+    fromDate = new Date("1 april 2022")
+  }
+  if(tillDateConv.getTime() > checkTillDate.getTime()){
+    setTillDateMessage('Please select a valid date range for this financial year')
     return
   }
-  dispatch(submitVerification(divisionid,quater,financialyear,finYear));
+  dispatch(submitVerification(divisionid,fromDate,tillDate,finYear));
   handleClose3()
 }
 
@@ -657,13 +670,13 @@ const handleCloseCorrectFailure = (event, reason) => {
     aria-describedby="alert-dialog-description"
   >
     <DialogTitle id="alert-dialog-title">
-      {"Select Quater"}
+      {"Select report period"}
     </DialogTitle>
     <DialogContent>
       <DialogContentText id="alert-dialog-description">
       <Box sx={{ minWidth: 200 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Financial Year</InputLabel>
+        {/* <InputLabel id="demo-simple-select-label">Financial Year</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -674,9 +687,13 @@ const handleCloseCorrectFailure = (event, reason) => {
           {dropFinYear1 && <MenuItem value={'2022-23'}>2022-23</MenuItem>}
           {dropFinYear2 && <MenuItem value={'2023-24'}>2023-24</MenuItem>}
           {dropFinYear3 && <MenuItem value={'2024-25'}>2024-25</MenuItem>}
-        </Select>
+        </Select> */}
+        <div className="pa4 black-80">
+    <label htmlFor="tillDate" className="f6 b db mb2">Please select the date of the report</label>
+    <input id="tillDate" className="ba b--black-60 pa2 mb2 db w-100 bg-transparent br2 shadow-1" type="date" aria-describedby="name-desc" onChange={handleTillDateChange} value={tillDate}/>
+    </div>
       </FormControl>
-      <FormControl fullWidth>
+      {/* <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Quater</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -690,10 +707,9 @@ const handleCloseCorrectFailure = (event, reason) => {
           {dropQuater3 && <MenuItem value={'quater3'}>Quater 3</MenuItem>}
           {dropQuater4 && <MenuItem value={'quater4'}>Quater 4</MenuItem>}
         </Select>
-      </FormControl>
+      </FormControl> */}
     </Box>
-    {quatermessage && <h3 className='f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito'>Please select a quater!!</h3>}
-    {financialyearmessage && <h3 className='f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito'>Please select a year!!</h3>}
+    {tillDatemessage && <h3 className='f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito'>{tillDatemessage}</h3>}
       </DialogContentText>
     </DialogContent>
     <DialogActions>
@@ -703,7 +719,7 @@ const handleCloseCorrectFailure = (event, reason) => {
     </DialogActions>
   </Dialog>
   <div className="container-fluid px-4 mt3">
-    <h1 className='b'>{`Dashboard for submission of sub-schemes for verification of ${quaterTD} (${yearTD})`}</h1>
+    <h1 className='b'>{`Dashboard for submission of sub-schemes for verification of progress report (FY:- ${getFinYear()})`}</h1>
         <div className="row">
         <div className="col-xl-3 col-md-6 center">
               <div className="card budgetColor text-white mb-4">

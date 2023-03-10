@@ -326,11 +326,11 @@ function Main_Dept_User() {
   }
 
   var getFinYear = function getFinYear() {
-    if (finYear === 2324) {
+    if (finYear === '2324') {
       return '2023-24';
     }
 
-    if (finYear === 2223) {
+    if (finYear === '2223') {
       return '2022-23';
     }
   };

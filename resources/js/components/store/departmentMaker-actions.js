@@ -57,7 +57,7 @@ export const getSubschemeData = (id,finYear) => {
     };
   };
 
-  export const submitVerification = (id,name,year,finYear) => {
+  export const submitVerification = (id,fromDate,tillDate,finYear) => {
     return (dispatch) => {
       fetch(`${laravel_api}verification/${id}/${finYear}`, {
         method: 'post',
@@ -66,8 +66,8 @@ export const getSubschemeData = (id,finYear) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name:name,
-            year:year
+            from_date:fromDate,
+            to_date:tillDate
         })
       })
         .then(response => response.json())
