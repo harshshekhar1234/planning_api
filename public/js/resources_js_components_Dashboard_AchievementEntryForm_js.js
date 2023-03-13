@@ -10616,9 +10616,6 @@ function AchievementEntryForm() {
   var division_name = (0,react_redux__WEBPACK_IMPORTED_MODULE_12__.useSelector)(function (state) {
     return state.subschemes.division_name;
   });
-  var quaterTs = (0,react_redux__WEBPACK_IMPORTED_MODULE_12__.useSelector)(function (state) {
-    return state.maker.quaterTs;
-  });
   var finYear = (0,react_redux__WEBPACK_IMPORTED_MODULE_12__.useSelector)(function (state) {
     return state.finYear.finYear;
   });
@@ -10677,16 +10674,6 @@ function AchievementEntryForm() {
       _useState22 = _slicedToArray(_useState21, 2),
       valueOutcomeTargetEdit = _useState22[0],
       setValueOutcomeTargetEdit = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState24 = _slicedToArray(_useState23, 2),
-      quaterTD = _useState24[0],
-      setquaterTD = _useState24[1];
-
-  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('2022-23'),
-      _useState26 = _slicedToArray(_useState25, 2),
-      yearTD = _useState26[0],
-      setyearTD = _useState26[1];
 
   var handleOpenOutputConfirm = function handleOpenOutputConfirm() {
     setOpenOutputConfirm(true);
@@ -10787,15 +10774,15 @@ function AchievementEntryForm() {
       open1 = _React$useState8[0],
       setOpen1 = _React$useState8[1];
 
-  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
-      _useState28 = _slicedToArray(_useState27, 2),
-      indicator = _useState28[0],
-      setIndicator = _useState28[1];
+  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+      _useState24 = _slicedToArray(_useState23, 2),
+      indicator = _useState24[0],
+      setIndicator = _useState24[1];
 
-  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
-      _useState30 = _slicedToArray(_useState29, 2),
-      outputAddBtn = _useState30[0],
-      setOutputAddBtn = _useState30[1];
+  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+      _useState26 = _slicedToArray(_useState25, 2),
+      outputAddBtn = _useState26[0],
+      setOutputAddBtn = _useState26[1];
 
   var handleOpen1 = function handleOpen1(indicator) {
     setOutputAddBtn(indicator.add_btn_flag);
@@ -10825,15 +10812,15 @@ function AchievementEntryForm() {
       open3 = _React$useState10[0],
       setOpen3 = _React$useState10[1];
 
-  var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
-      _useState32 = _slicedToArray(_useState31, 2),
-      indicatoroutcome = _useState32[0],
-      setIndicatorOutcome = _useState32[1];
+  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+      _useState28 = _slicedToArray(_useState27, 2),
+      indicatoroutcome = _useState28[0],
+      setIndicatorOutcome = _useState28[1];
 
-  var _useState33 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
-      _useState34 = _slicedToArray(_useState33, 2),
-      outcomeAddBtn = _useState34[0],
-      setOutcomeAddBtn = _useState34[1];
+  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+      _useState30 = _slicedToArray(_useState29, 2),
+      outcomeAddBtn = _useState30[0],
+      setOutcomeAddBtn = _useState30[1];
 
   var handleOpen3 = function handleOpen3(indicator) {
     setOutcomeAddBtn(indicator.add_btn_flag);
@@ -10863,10 +10850,10 @@ function AchievementEntryForm() {
       open2 = _React$useState12[0],
       setOpen2 = _React$useState12[1];
 
-  var _useState35 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-      _useState36 = _slicedToArray(_useState35, 2),
-      achlists = _useState36[0],
-      setAchlists = _useState36[1];
+  var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState32 = _slicedToArray(_useState31, 2),
+      achlists = _useState32[0],
+      setAchlists = _useState32[1];
 
   var handleOpen2 = function handleOpen2(id, measurement, target) {
     setValueTargetEdit(target);
@@ -10892,10 +10879,10 @@ function AchievementEntryForm() {
       open4 = _React$useState14[0],
       setOpen4 = _React$useState14[1];
 
-  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-      _useState38 = _slicedToArray(_useState37, 2),
-      achlistsoutcome = _useState38[0],
-      setAchlistsOutcome = _useState38[1];
+  var _useState33 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState34 = _slicedToArray(_useState33, 2),
+      achlistsoutcome = _useState34[0],
+      setAchlistsOutcome = _useState34[1];
 
   var handleOpen4 = function handleOpen4(id, measurement, target) {
     setValueOutcomeTargetEdit(target);
@@ -10973,10 +10960,10 @@ function AchievementEntryForm() {
       open7 = _React$useState20[0],
       setOpen7 = _React$useState20[1];
 
-  var _useState39 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
-      _useState40 = _slicedToArray(_useState39, 2),
-      remarksBtnStatus = _useState40[0],
-      setRemarksBtnStatus = _useState40[1];
+  var _useState35 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+      _useState36 = _slicedToArray(_useState35, 2),
+      remarksBtnStatus = _useState36[0],
+      setRemarksBtnStatus = _useState36[1];
 
   var handleOpen7 = function handleOpen7() {
     if (submitted_status_ss === 'N' && verified_status_ss === 'N') {
@@ -11027,15 +11014,15 @@ function AchievementEntryForm() {
       open10 = _React$useState22[0],
       setOpen10 = _React$useState22[1];
 
-  var _useState41 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState42 = _slicedToArray(_useState41, 2),
-      finEditId = _useState42[0],
-      setFinEditId = _useState42[1];
+  var _useState37 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState38 = _slicedToArray(_useState37, 2),
+      finEditId = _useState38[0],
+      setFinEditId = _useState38[1];
 
-  var _useState43 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState44 = _slicedToArray(_useState43, 2),
-      finEditAllow = _useState44[0],
-      setFinEditAllow = _useState44[1];
+  var _useState39 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState40 = _slicedToArray(_useState39, 2),
+      finEditAllow = _useState40[0],
+      setFinEditAllow = _useState40[1];
 
   var handleOpen10 = function handleOpen10(id, sanction, allotment, expenditure, time, submit, verified) {
     if (submit === 'N' && verified === 'N') {
@@ -11116,20 +11103,20 @@ function AchievementEntryForm() {
       open8 = _React$useState24[0],
       setOpen8 = _React$useState24[1];
 
-  var _useState45 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState41 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState42 = _slicedToArray(_useState41, 2),
+      outputAchIdEdit = _useState42[0],
+      setOutputAchIdEdit = _useState42[1];
+
+  var _useState43 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState44 = _slicedToArray(_useState43, 2),
+      outputAchEditMeasurement = _useState44[0],
+      setOutputAchEditMeasurement = _useState44[1];
+
+  var _useState45 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState46 = _slicedToArray(_useState45, 2),
-      outputAchIdEdit = _useState46[0],
-      setOutputAchIdEdit = _useState46[1];
-
-  var _useState47 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState48 = _slicedToArray(_useState47, 2),
-      outputAchEditMeasurement = _useState48[0],
-      setOutputAchEditMeasurement = _useState48[1];
-
-  var _useState49 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState50 = _slicedToArray(_useState49, 2),
-      outputAchEditAllow = _useState50[0],
-      setOutputAchEditAllow = _useState50[1];
+      outputAchEditAllow = _useState46[0],
+      setOutputAchEditAllow = _useState46[1];
 
   var verifiedstatustodisplay = function verifiedstatustodisplay(verified) {
     if (verified === 'A') {
@@ -11183,10 +11170,10 @@ function AchievementEntryForm() {
     }
   };
 
-  var _useState51 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState52 = _slicedToArray(_useState51, 2),
-      indicatorId = _useState52[0],
-      setIndicatorId = _useState52[1];
+  var _useState47 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState48 = _slicedToArray(_useState47, 2),
+      indicatorId = _useState48[0],
+      setIndicatorId = _useState48[1];
 
   var handleOpen8 = function handleOpen8(id, time, value, measurement, submit, verified, indicatorid) {
     if (submit === 'N' && verified === 'N') {
@@ -11259,20 +11246,20 @@ function AchievementEntryForm() {
       open9 = _React$useState26[0],
       setOpen9 = _React$useState26[1];
 
-  var _useState53 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState49 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState50 = _slicedToArray(_useState49, 2),
+      outcomeAchIdEdit = _useState50[0],
+      setOutcomeAchIdEdit = _useState50[1];
+
+  var _useState51 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState52 = _slicedToArray(_useState51, 2),
+      outcomeAchEditMeasurement = _useState52[0],
+      setOutcomeAchEditMeasurement = _useState52[1];
+
+  var _useState53 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState54 = _slicedToArray(_useState53, 2),
-      outcomeAchIdEdit = _useState54[0],
-      setOutcomeAchIdEdit = _useState54[1];
-
-  var _useState55 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState56 = _slicedToArray(_useState55, 2),
-      outcomeAchEditMeasurement = _useState56[0],
-      setOutcomeAchEditMeasurement = _useState56[1];
-
-  var _useState57 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState58 = _slicedToArray(_useState57, 2),
-      outcomeAchEditAllow = _useState58[0],
-      setOutcomeAchEditAllow = _useState58[1];
+      outcomeAchEditAllow = _useState54[0],
+      setOutcomeAchEditAllow = _useState54[1];
 
   var handleOpen9 = function handleOpen9(id, time, value, measurement, submit, verified, indicatorid) {
     if (submit === 'N' && verified === 'N') {
@@ -11348,15 +11335,10 @@ function AchievementEntryForm() {
     dispatch((0,_store_achievement_actions__WEBPACK_IMPORTED_MODULE_11__.getAchievementsOutcomeData)(params.id));
     dispatch((0,_store_outlay_actions__WEBPACK_IMPORTED_MODULE_3__.getOutlayData)(params.id));
     dispatch((0,_store_subschemes_actions__WEBPACK_IMPORTED_MODULE_8__.getSubSchemesHeaderReport)(params.id));
-    dispatch((0,_store_achievement_actions__WEBPACK_IMPORTED_MODULE_11__.getRiskRemarksData)(params.id));
-    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_9__.getLatestQuater)(divisionid));
+    dispatch((0,_store_achievement_actions__WEBPACK_IMPORTED_MODULE_11__.getRiskRemarksData)(params.id)); // dispatch(getLatestQuater(divisionid));
+
     return function () {
       setRiskRemarksEdit('');
-      setquaterTD('');
-      setyearTD('2022-23');
-      dispatch(_store_departmentMakerSlice__WEBPACK_IMPORTED_MODULE_10__.departmentMakerActions.setQuaterTs({
-        quaterTs: ''
-      }));
       dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessage({
         entrymessage: ''
       }));
@@ -11493,36 +11475,12 @@ function AchievementEntryForm() {
         schemeStateCode: ''
       }));
     };
-  }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (quaterTs) {
-      if (quaterTs === '0') {
-        setquaterTD('Quater 1');
-      }
+  }, []); // useEffect(() => {
+  //   if((quaterTD === 'Quater 1') && (yearTD === '2023-24')){
+  //     return navigate(`/dashboarddeptuser/blockentry`);
+  //   }
+  //   }, [quaterTD,yearTD]);
 
-      if (quaterTs.name === 'quater1') {
-        setquaterTD('Quater 2');
-      }
-
-      if (quaterTs.name === 'quater2') {
-        setquaterTD('Quater 3');
-      }
-
-      if (quaterTs.name === 'quater3') {
-        setquaterTD('Quater 4');
-      }
-
-      if (quaterTs.name === 'quater4') {
-        setquaterTD('Quater 1');
-        setyearTD('2023-24');
-      }
-    }
-  }, [quaterTs]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (quaterTD === 'Quater 1' && yearTD === '2023-24') {
-      return navigate("/dashboarddeptuser/blockentry");
-    }
-  }, [quaterTD, yearTD]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_achievement_actions__WEBPACK_IMPORTED_MODULE_11__.getAchievementsOutputData)(params.id));
   }, [update]);
@@ -11534,36 +11492,6 @@ function AchievementEntryForm() {
       dispatch((0,_store_achievement_actions__WEBPACK_IMPORTED_MODULE_11__.getAchievementFillData)(params.id));
     }
   }, [addAchievement]);
-
-  var getQuater = function getQuater(quater) {
-    if (!quater) {
-      return quaterTD;
-    }
-
-    if (quater === 'quater1') {
-      return 'Quater 1';
-    }
-
-    if (quater === 'quater2') {
-      return 'Quater 2';
-    }
-
-    if (quater === 'quater3') {
-      return 'Quater 3';
-    }
-
-    if (quater === 'quater4') {
-      return 'Quater 4';
-    }
-  };
-
-  var getYear = function getYear(year) {
-    if (!year) {
-      return yearTD;
-    }
-
-    return year;
-  };
 
   var handleRiskRemarksChange = function handleRiskRemarksChange(event) {
     dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setRiskRemarksEntryMessage({
@@ -11745,42 +11673,7 @@ function AchievementEntryForm() {
       return;
     }
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(timeEdit);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageEdit({
-        entrymessageedit: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageEdit({
-        entrymessageedit: 'Future dates are not allowed'
-      }));
-      return;
-    }
-
-    var achL = achievements.filter(function (achievement) {
-      return achievement.outputindicator_id === indicatorId;
-    });
-    var achAA = achL.filter(function (d) {
-      return d.reportYear === yearTD;
-    });
-    var achAAA = achAA.filter(function (d) {
-      return d.verified_status === 'A';
-    });
-    var valueA = achAAA.map(function (s) {
-      return parseFloat(s.value);
-    });
-    var valueTC = valueA.length !== 0 ? valueA.reduce(function (t, n) {
-      return t + n;
-    }) : 0;
-
-    if (!outputConfirmEditAgree && parseFloat(valueEdit) + valueTC > parseFloat(valueTargetEdit)) {
+    if (!outputConfirmEditAgree && parseFloat(valueEdit) > parseFloat(valueTargetEdit)) {
       handleOpenOutputEditConfirm();
       return;
     }
@@ -11820,42 +11713,7 @@ function AchievementEntryForm() {
       return;
     }
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(timeoutcomeEdit);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageOutcomeEdit({
-        entrymessageeditoutcome: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageOutcomeEdit({
-        entrymessageeditoutcome: 'Future dates are not allowed'
-      }));
-      return;
-    }
-
-    var achL = achievementsoutcome.filter(function (achievement) {
-      return achievement.outcomeindicator_id === indicatorId;
-    });
-    var achAA = achL.filter(function (d) {
-      return d.reportYear === yearTD;
-    });
-    var achAAA = achAA.filter(function (d) {
-      return d.verified_status === 'A';
-    });
-    var valueA = achAAA.map(function (s) {
-      return parseFloat(s.value);
-    });
-    var valueTC = valueA.length !== 0 ? valueA.reduce(function (t, n) {
-      return t + n;
-    }) : 0;
-
-    if (!outcomeConfirmEditAgree && parseFloat(valueoutcomeEdit) + valueTC > parseFloat(valueOutcomeTargetEdit)) {
+    if (!outcomeConfirmEditAgree && parseFloat(valueoutcomeEdit) > parseFloat(valueOutcomeTargetEdit)) {
       handleOpenOutcomeEditConfirm();
       return;
     }
@@ -11895,39 +11753,7 @@ function AchievementEntryForm() {
       return;
     }
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(time);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessage({
-        entrymessage: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessage({
-        entrymessage: 'Future dates are not allowed'
-      }));
-      return;
-    }
-
-    var achL = achievements.filter(function (achievement) {
-      return achievement.outputindicator_id === outputindicatorId;
-    });
-    var achAA = achL.filter(function (d) {
-      return d.reportYear === yearTD;
-    });
-    var valueA = achAA.map(function (s) {
-      return parseFloat(s.value);
-    });
-    var valueTC = valueA.length !== 0 ? valueA.reduce(function (t, n) {
-      return t + n;
-    }) : 0;
-
-    if (!outputConfirmAgree && parseFloat(value) + valueTC > parseFloat(valueTarget)) {
+    if (!outputConfirmAgree && parseFloat(value) > parseFloat(valueTarget)) {
       handleOpenOutputConfirm();
       return;
     }
@@ -12026,32 +11852,6 @@ function AchievementEntryForm() {
     //   return
     // }
 
-
-    if (outlaytime === '') {
-      dispatch(_store_outlaySlice__WEBPACK_IMPORTED_MODULE_5__.outlayActions.setEntryMessage({
-        entrymessage: 'Please enter a date'
-      }));
-      return;
-    }
-
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(outlaytime);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_outlaySlice__WEBPACK_IMPORTED_MODULE_5__.outlayActions.setEntryMessage({
-        entrymessage: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_outlaySlice__WEBPACK_IMPORTED_MODULE_5__.outlayActions.setEntryMessage({
-        entrymessage: 'Future dates are not allowed'
-      }));
-      return;
-    }
 
     dispatch((0,_store_outlay_actions__WEBPACK_IMPORTED_MODULE_3__.storeFinancialData)(sanctioned, allotment, expenditure, outlaytime, id));
     handleClose5();
@@ -12154,25 +11954,6 @@ function AchievementEntryForm() {
       return;
     }
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(outlaytimeedit);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_outlaySlice__WEBPACK_IMPORTED_MODULE_5__.outlayActions.setEntryMessageEdit({
-        entrymessageedit: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_outlaySlice__WEBPACK_IMPORTED_MODULE_5__.outlayActions.setEntryMessageEdit({
-        entrymessageedit: 'Future dates are not allowed'
-      }));
-      return;
-    }
-
     dispatch((0,_store_outlay_actions__WEBPACK_IMPORTED_MODULE_3__.updateFinancialData)(sanctionedEdit, allotmentEdit, expenditureEdit, outlaytimeedit, finEditId));
     handleClose10();
   };
@@ -12206,39 +11987,7 @@ function AchievementEntryForm() {
       return;
     }
 
-    var d = new Date();
-    var year = d.getFullYear();
-    var d1 = new Date(timeoutcome);
-    var yearToCheck = d1.getFullYear();
-
-    if (year !== yearToCheck) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageOutcome({
-        entrymessageoutcome: 'Please enter a valid date'
-      }));
-      return;
-    }
-
-    if (d1 > d) {
-      dispatch(_store_achievementSlice__WEBPACK_IMPORTED_MODULE_4__.achievementActions.setEntryMessageOutcome({
-        entrymessageoutcome: 'Future dates are not allowed'
-      }));
-      return;
-    }
-
-    var achL = achievementsoutcome.filter(function (achievement) {
-      return achievement.outcomeindicator_id === outcomeindicatorId;
-    });
-    var achAA = achL.filter(function (d) {
-      return d.reportYear === yearTD;
-    });
-    var valueA = achAA.map(function (s) {
-      return parseFloat(s.value);
-    });
-    var valueTC = valueA.length !== 0 ? valueA.reduce(function (t, n) {
-      return t + n;
-    }) : 0;
-
-    if (!outcomeConfirmAgree && parseFloat(valueoutcome) + valueTC > parseFloat(valueTarget)) {
+    if (!outcomeConfirmAgree && parseFloat(valueoutcome) > parseFloat(valueTarget)) {
       handleOpenOutcomeConfirm();
       return;
     }
@@ -12961,7 +12710,7 @@ function AchievementEntryForm() {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("tr", {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr3 b",
-                        children: "Achievement for Quater"
+                        children: "Achievement Entry Date"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr3 b",
                         children: "Achievement Value"
@@ -12985,7 +12734,7 @@ function AchievementEntryForm() {
                       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("tr", {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                           className: "pv3 pr3  b--black-80 tc",
-                          children: "".concat(getQuater(achlist.reportName), " (FY - ").concat(getYear(achlist.reportYear), ")")
+                          children: achlist.updated_at.slice(0, 10)
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                           className: "pv3 pr3  b--black-80 tc",
                           children: achlist.value
@@ -13009,7 +12758,7 @@ function AchievementEntryForm() {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
                             className: "f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer",
                             onClick: function onClick() {
-                              return handleOpen8(achlist.id, achlist.time, achlist.value, achlist.measurement, achlist.submitted_status, achlist.verified_status, achlist.outputindicator_id);
+                              return handleOpen8(achlist.id, achlist.updated_at.slice(0, 10), achlist.value, achlist.measurement, achlist.submitted_status, achlist.verified_status, achlist.outputindicator_id);
                             },
                             children: "Edit"
                           })
@@ -13058,7 +12807,7 @@ function AchievementEntryForm() {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("tr", {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr3 b",
-                        children: "Achievement for Quater"
+                        children: "Achievement Entry Date"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr3 b",
                         children: "Achievement Value"
@@ -13081,8 +12830,8 @@ function AchievementEntryForm() {
                     children: achlistsoutcome && achlistsoutcome.map(function (achlist) {
                       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("tr", {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
-                          className: "pv3 pr3  b--black-80",
-                          children: "".concat(getQuater(achlist.reportName), " (FY - ").concat(getYear(achlist.reportYear), ")")
+                          className: "pv3 pr3  b--black-80 tc",
+                          children: achlist.updated_at.slice(0, 10)
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                           className: "pv3 pr3  b--black-80",
                           children: achlist.value
@@ -13106,7 +12855,7 @@ function AchievementEntryForm() {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
                             className: "f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer",
                             onClick: function onClick() {
-                              return handleOpen9(achlist.id, achlist.time, achlist.value, achlist.measurement, achlist.submitted_status, achlist.verified_status, achlist.outcomeindicator_id);
+                              return handleOpen9(achlist.id, achlist.updated_at.slice(0, 10), achlist.value, achlist.measurement, achlist.submitted_status, achlist.verified_status, achlist.outcomeindicator_id);
                             },
                             children: "Edit"
                           })
@@ -13203,7 +12952,7 @@ function AchievementEntryForm() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
-              children: "Enter Financial Details for current quater"
+              children: "Enter Financial Details for current year"
             }), entrymessagefinancial !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
               className: "f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito",
               children: entrymessagefinancial
@@ -13295,7 +13044,7 @@ function AchievementEntryForm() {
               className: "ba b--black-80 pa2 mb2 db w-100 bg-transparent",
               type: "text",
               "aria-describedby": "name-desc",
-              value: "".concat(quaterTD, " (FY- ").concat(yearTD, ")")
+              value: outlaytimeedit
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("small", {
               id: "name-desc",
               className: "f6 black-60 db mb2",
@@ -13356,9 +13105,6 @@ function AchievementEntryForm() {
                         children: "Expenditure Amount (Rs. in Lakhs)"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr4 b",
-                        children: "Financial Record for quater"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
-                        className: "b--black-80 tc pb3 pr4 b",
                         children: "Entered On"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                         className: "b--black-80 tc pb3 pr3 b",
@@ -13386,10 +13132,7 @@ function AchievementEntryForm() {
                           children: financial.expenditure
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                           className: "pv3 pr4 b--black-80",
-                          children: "".concat(getQuater(financial.reportName), " (FY - ").concat(getYear(financial.reportYear), ")")
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
-                          className: "pv3 pr4 b--black-80",
-                          children: financial.created_at.slice(0, 10)
+                          children: financial.updated_at.slice(0, 10)
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                           className: "pv3 pr3  b--black-80 tc",
                           children: financial.submitted_status === 'N' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_mui_icons_material_Cancel__WEBPACK_IMPORTED_MODULE_31__["default"], {
@@ -13407,7 +13150,7 @@ function AchievementEntryForm() {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
                             className: "f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer",
                             onClick: function onClick() {
-                              return handleOpen10(financial.id, financial.sanction, financial.allotment, financial.expenditure, financial.time.slice(0, 10), financial.submitted_status, financial.verified_status);
+                              return handleOpen10(financial.id, financial.sanction, financial.allotment, financial.expenditure, financial.updated_at.slice(0, 10), financial.submitted_status, financial.verified_status);
                             },
                             children: "Edit"
                           })
@@ -13638,9 +13381,6 @@ function AchievementEntryForm() {
                                 children: "Measurement Unit"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                                 className: "b--black-80 tc pb3 pr3 b",
-                                children: "Target Year"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
-                                className: "b--black-80 tc pb3 pr3 b",
                                 children: "Add Achievement"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                                 className: "b--black-80 tc pb3 pr3 b",
@@ -13660,9 +13400,6 @@ function AchievementEntryForm() {
                                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                                   className: "pv3 pr3  b--black-80",
                                   children: indicator.target_outputs[0].measurement
-                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
-                                  className: "pv3 pr3  b--black-80",
-                                  children: indicator.target_outputs[0].year
                                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                                   className: "pv3 pr3  b--black-80",
                                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {
@@ -13748,9 +13485,6 @@ function AchievementEntryForm() {
                                 children: "Measurement Unit"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                                 className: "b--black-80 tc pb3 pr3 b",
-                                children: "Target Year"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
-                                className: "b--black-80 tc pb3 pr3 b",
                                 children: "Add Achievement"
                               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("th", {
                                 className: "b--black-80 tc pb3 pr3 b",
@@ -13770,9 +13504,6 @@ function AchievementEntryForm() {
                                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                                   className: "pv3 pr3  b--black-80",
                                   children: indicator.target_outcomes[0].measurement
-                                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
-                                  className: "pv3 pr3  b--black-80",
-                                  children: indicator.target_outcomes[0].year
                                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("td", {
                                   className: "pv3 pr3 b--black-80",
                                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("p", {

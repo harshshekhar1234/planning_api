@@ -699,9 +699,9 @@ var getCountStatusData = function getCountStatusData(finYear) {
     });
   };
 };
-var getPublicCountStatusData = function getPublicCountStatusData() {
+var getPublicCountStatusData = function getPublicCountStatusData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "public_count_for_dashboard"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "public_count_for_dashboard/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))
@@ -731,9 +731,9 @@ var getPublicCountStatusData = function getPublicCountStatusData() {
     });
   };
 };
-var getPublicIndicatorCountData = function getPublicIndicatorCountData() {
+var getPublicIndicatorCountData = function getPublicIndicatorCountData(finYear) {
   return function (dispatch) {
-    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "public_count_indicators"), {
+    fetch("".concat(_configuration__WEBPACK_IMPORTED_MODULE_1__.laravel_api, "public_count_indicators/").concat(finYear), {
       method: 'GET',
       headers: {
         'Authorization': "Bearer ".concat(localStorage.getItem('access_token'))

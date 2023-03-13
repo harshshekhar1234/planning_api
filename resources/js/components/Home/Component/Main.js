@@ -13,10 +13,11 @@ function Main() {
   const dispatch = useDispatch();
 
   const countIndicator = useSelector((state) => state.dashboard.countIndicators);
+  const pubFinYear = useSelector((state) => state.finYear.pubFinYear);
 
   useEffect(() => {
-    dispatch(getPublicCountStatusData())
-    dispatch(getPublicIndicatorCountData())
+    dispatch(getPublicCountStatusData(pubFinYear))
+    dispatch(getPublicIndicatorCountData(pubFinYear))
   }, []);
 
   return <main className="cfa w-100a">

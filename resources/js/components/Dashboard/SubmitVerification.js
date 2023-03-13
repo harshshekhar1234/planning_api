@@ -166,7 +166,6 @@ const SubmitVerification = () => {
   const comment = useSelector((state) => state.maker.comment);
   const sendEmail = useSelector((state) => state.maker.sendEmail);
   const mailDetail = useSelector((state) => state.maker.mailDetail);
-  const quaterTs = useSelector((state) => state.maker.quaterTs);
   const submitNotificationSuccess = useSelector((state) => state.maker.submitNotificationSuccess);
   const submitNotificationFailure = useSelector((state) => state.maker.submitNotificationFailure);
   const correctNotificationSuccess = useSelector((state) => state.maker.correctNotificationSuccess);
@@ -179,88 +178,26 @@ const SubmitVerification = () => {
     const [pendingcount, setPendingCount] = useState(0)
     const [reviewcount, setReviewCount] = useState(0)
     const [correctedcount, setCorrectededCount] = useState(0)
-  const [dropQuater1, setdropQuater1] = useState(false)
-  const [dropQuater2, setdropQuater2] = useState(false)
-  const [dropQuater3, setdropQuater3] = useState(false)
-  const [dropQuater4, setdropQuater4] = useState(false)
-  const [dropFinYear1, setdropFinYear1] = useState(false)
-  const [dropFinYear2, setdropFinYear2] = useState(false)
-  const [dropFinYear3, setdropFinYear3] = useState(false)
-  const [quaterTD, setquaterTD] = useState('')
-  const [yearTD, setyearTD] = useState('2022-23')
 
   useEffect(() => {
     dispatch(getSubschemeData(divisionid,finYear));
-    dispatch(getLatestQuater(divisionid));
     
     return () => {
       setApprovedCount(0)
         setPendingCount(0)
         setReviewCount(0)
         setCorrectededCount(0)
-        setQuater('')
+        
         setFinancialYear('')
-        setquaterTD('')
-        setyearTD('2022-23')
+        
         dispatch(departmentMakerActions.setSubschemes({subschemes: []}))
       dispatch(subschemesActions.setSubSchemeSearch({subschemeSearch: []})) 
-      dispatch(departmentMakerActions.setQuaterTs({quaterTs:''}))
       dispatch(departmentMakerActions.setSubmitNotificationSuccess({submitNotificationSuccess:false}))
       dispatch(departmentMakerActions.setSubmitNotificationFailure({submitNotificationFailure:false}))
       dispatch(departmentMakerActions.setCorrectNotificationSuccess({correctNotificationSuccess:false}))
       dispatch(departmentMakerActions.setCorrectNotificationFailure({correctNotificationFailure:false}))
     }
     }, []);
-
-    useEffect(() => {
-      if(quaterTs){
-      if(quaterTs === '0'){
-        setdropQuater1(true)
-        setdropFinYear1(true)
-      }
-      if(quaterTs.name === 'quater1'){
-        setdropFinYear1(true)
-        setdropQuater2(true)
-      }
-      if(quaterTs.name === 'quater2'){
-        setdropQuater3(true)
-        setdropFinYear1(true)
-      }
-      if(quaterTs.name === 'quater3'){
-        setdropFinYear1(true)
-        setdropQuater4(true)
-      }
-      if(quaterTs.name === 'quater4'){
-        setdropFinYear2(true)
-        setdropQuater1(true)
-      }
-      }
-      }, [quaterTs]);
-
-      useEffect(() => {
-        if(quaterTs){
-        if(quaterTs === '0'){
-          setquaterTD('Quater 1')
-          
-        }
-        if(quaterTs.name === 'quater1'){
-          setquaterTD('Quater 2')
-          
-        }
-        if(quaterTs.name === 'quater2'){
-          setquaterTD('Quater 3')
-          
-        }
-        if(quaterTs.name === 'quater3'){
-          setquaterTD('Quater 4')
-          
-        }
-        if(quaterTs.name === 'quater4'){
-          setquaterTD('Quater 1')
-          setyearTD('2023-24')
-        }
-        }
-        }, [quaterTs]);
 
     useEffect(() => {
       if(subschemes){
@@ -352,8 +289,6 @@ const [open, setOpen] = React.useState(false);
   };
 
   const handleClose3 = () => {
-    setQuaterMessage('')
-    setFinancialYearMessage('')
     setOpen3(false);
   };
 

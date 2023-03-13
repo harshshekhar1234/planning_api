@@ -71,8 +71,8 @@ Route::post('/sdgmapstore', [SdgMapController::class, 'store']);
 Route::get('/sdgmaplist', [SdgMapController::class, 'index']);
 Route::post('/sdgmapupdate/{id}', [SdgMapController::class, 'update']);
 
-Route::get('/public_count_indicators', [DashboardController::class, 'public_indicator']);
-Route::get('/public_count_for_dashboard', [DashboardController::class, 'public_count_for_dashboard']);
+Route::get('/public_count_indicators/{fin_year}', [DashboardController::class, 'public_indicator']);
+Route::get('/public_count_for_dashboard/{fin_year}', [DashboardController::class, 'public_count_for_dashboard']);
 
 //using middleware
 Route::group(['middleware' => ['auth:sanctum']], function () {

@@ -13,19 +13,29 @@ function PublicDashboard() {
 
     const departments = useSelector((state) => state.dashboard.departmentIndicatorCount);
     const countIndicator = useSelector((state) => state.dashboard.countIndicators);
+    const pubFinYear = useSelector((state) => state.finYear.pubFinYear);
 
     useEffect(() => {
         if(!countIndicator.financial_outlay){
-        dispatch(getPublicCountStatusData())
-        dispatch(getPublicIndicatorCountData())
+        dispatch(getPublicCountStatusData(pubFinYear))
+        dispatch(getPublicIndicatorCountData(pubFinYear))
     }
       }, []);
+
+     const getFinYear = () => {
+        if(pubFinYear === '2324'){
+          return '2023-24'
+        }
+        if(pubFinYear === '2223'){
+          return '2022-23'
+        }
+      }
 
     
 
   return <main>
   <div className="container-fluid px-4 w-90">
-      <h1 className="mt-4 b f2 f1-ns">Outcome Budget Dashboard for 13 Departments</h1>
+      <h1 className="mt-4 b f2 f1-ns">{`Outcome Budget Dashboard for 13 Departments (FY:- ${getFinYear()})`}</h1>
       {/* <ol className="breadcrumb mb-4">
           <li className="breadcrumb-item active">Dashboard</li>
       </ol> */}

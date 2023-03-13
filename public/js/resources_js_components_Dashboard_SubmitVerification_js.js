@@ -46121,9 +46121,6 @@ var SubmitVerification = function SubmitVerification() {
   var mailDetail = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.maker.mailDetail;
   });
-  var quaterTs = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
-    return state.maker.quaterTs;
-  });
   var submitNotificationSuccess = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(function (state) {
     return state.maker.submitNotificationSuccess;
   });
@@ -46170,71 +46167,19 @@ var SubmitVerification = function SubmitVerification() {
       correctedcount = _useState12[0],
       setCorrectededCount = _useState12[1];
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState14 = _slicedToArray(_useState13, 2),
-      dropQuater1 = _useState14[0],
-      setdropQuater1 = _useState14[1];
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState16 = _slicedToArray(_useState15, 2),
-      dropQuater2 = _useState16[0],
-      setdropQuater2 = _useState16[1];
-
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState18 = _slicedToArray(_useState17, 2),
-      dropQuater3 = _useState18[0],
-      setdropQuater3 = _useState18[1];
-
-  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState20 = _slicedToArray(_useState19, 2),
-      dropQuater4 = _useState20[0],
-      setdropQuater4 = _useState20[1];
-
-  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState22 = _slicedToArray(_useState21, 2),
-      dropFinYear1 = _useState22[0],
-      setdropFinYear1 = _useState22[1];
-
-  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState24 = _slicedToArray(_useState23, 2),
-      dropFinYear2 = _useState24[0],
-      setdropFinYear2 = _useState24[1];
-
-  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState26 = _slicedToArray(_useState25, 2),
-      dropFinYear3 = _useState26[0],
-      setdropFinYear3 = _useState26[1];
-
-  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState28 = _slicedToArray(_useState27, 2),
-      quaterTD = _useState28[0],
-      setquaterTD = _useState28[1];
-
-  var _useState29 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('2022-23'),
-      _useState30 = _slicedToArray(_useState29, 2),
-      yearTD = _useState30[0],
-      setyearTD = _useState30[1];
-
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getSubschemeData)(divisionid, finYear));
-    dispatch((0,_store_departmentMaker_actions__WEBPACK_IMPORTED_MODULE_1__.getLatestQuater)(divisionid));
     return function () {
       setApprovedCount(0);
       setPendingCount(0);
       setReviewCount(0);
       setCorrectededCount(0);
-      setQuater('');
       setFinancialYear('');
-      setquaterTD('');
-      setyearTD('2022-23');
       dispatch(_store_departmentMakerSlice__WEBPACK_IMPORTED_MODULE_2__.departmentMakerActions.setSubschemes({
         subschemes: []
       }));
       dispatch(_store_subschemesSlice__WEBPACK_IMPORTED_MODULE_4__.subschemesActions.setSubSchemeSearch({
         subschemeSearch: []
-      }));
-      dispatch(_store_departmentMakerSlice__WEBPACK_IMPORTED_MODULE_2__.departmentMakerActions.setQuaterTs({
-        quaterTs: ''
       }));
       dispatch(_store_departmentMakerSlice__WEBPACK_IMPORTED_MODULE_2__.departmentMakerActions.setSubmitNotificationSuccess({
         submitNotificationSuccess: false
@@ -46250,58 +46195,6 @@ var SubmitVerification = function SubmitVerification() {
       }));
     };
   }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (quaterTs) {
-      if (quaterTs === '0') {
-        setdropQuater1(true);
-        setdropFinYear1(true);
-      }
-
-      if (quaterTs.name === 'quater1') {
-        setdropFinYear1(true);
-        setdropQuater2(true);
-      }
-
-      if (quaterTs.name === 'quater2') {
-        setdropQuater3(true);
-        setdropFinYear1(true);
-      }
-
-      if (quaterTs.name === 'quater3') {
-        setdropFinYear1(true);
-        setdropQuater4(true);
-      }
-
-      if (quaterTs.name === 'quater4') {
-        setdropFinYear2(true);
-        setdropQuater1(true);
-      }
-    }
-  }, [quaterTs]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (quaterTs) {
-      if (quaterTs === '0') {
-        setquaterTD('Quater 1');
-      }
-
-      if (quaterTs.name === 'quater1') {
-        setquaterTD('Quater 2');
-      }
-
-      if (quaterTs.name === 'quater2') {
-        setquaterTD('Quater 3');
-      }
-
-      if (quaterTs.name === 'quater3') {
-        setquaterTD('Quater 4');
-      }
-
-      if (quaterTs.name === 'quater4') {
-        setquaterTD('Quater 1');
-        setyearTD('2023-24');
-      }
-    }
-  }, [quaterTs]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (subschemes) {
       setSubmitButton(false);
@@ -46415,8 +46308,6 @@ var SubmitVerification = function SubmitVerification() {
   };
 
   var handleClose3 = function handleClose3() {
-    setQuaterMessage('');
-    setFinancialYearMessage('');
     setOpen3(false);
   };
 
@@ -46511,15 +46402,15 @@ var SubmitVerification = function SubmitVerification() {
     handleClickOpen3();
   };
 
-  var _useState31 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState32 = _slicedToArray(_useState31, 2),
-      tillDate = _useState32[0],
-      setTillDate = _useState32[1];
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState14 = _slicedToArray(_useState13, 2),
+      tillDate = _useState14[0],
+      setTillDate = _useState14[1];
 
-  var _useState33 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState34 = _slicedToArray(_useState33, 2),
-      tillDatemessage = _useState34[0],
-      setTillDateMessage = _useState34[1];
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState16 = _slicedToArray(_useState15, 2),
+      tillDatemessage = _useState16[0],
+      setTillDateMessage = _useState16[1];
 
   var handleTillDateChange = function handleTillDateChange(event) {
     setTillDateMessage('');

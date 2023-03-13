@@ -15023,11 +15023,15 @@ __webpack_require__.r(__webpack_exports__);
 var finYearSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
   name: 'finYear',
   initialState: {
-    finYear: '2324'
+    finYear: '2324',
+    pubFinYear: '2324'
   },
   reducers: {
     setFinYear: function setFinYear(state, action) {
       state.finYear = action.payload.finYear;
+    },
+    setPubFinYear: function setPubFinYear(state, action) {
+      state.pubFinYear = action.payload.pubFinYear;
     }
   }
 });

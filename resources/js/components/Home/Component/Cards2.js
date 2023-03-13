@@ -123,7 +123,7 @@ return <div className = 'container'>
        <div className="card-body">
          <h4 className='blue'>Outcome Budget</h4>
          <h5 className="card-title b ju">Outcome Budget Estimate</h5>
-        <p className="card-text f4 b green">&#8377;{`${finance} (cr)`}<br /><span className='f6 fw4 black'>FY:- 2022-23</span></p>
+        <p className="card-text f4 b green">&#8377;{`${finance} (cr)`}<br /><span className='f6 fw4 black'>FY:- 2023-24</span></p>
          <p className = "f6 no-underline br-pill ph3 pv2 mb2 dib white btncolor">View All Departments</p> 
        </div>
     </div>

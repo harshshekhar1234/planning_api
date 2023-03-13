@@ -103,10 +103,10 @@ export const getDepartmentIndicatorCountData = (finYear) => {
     };
   };
 
-  export const getPublicCountStatusData = () => {
+  export const getPublicCountStatusData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}public_count_for_dashboard`, {
+        fetch(`${laravel_api}public_count_for_dashboard/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`
@@ -128,10 +128,10 @@ export const getDepartmentIndicatorCountData = (finYear) => {
     };
   };
 
-  export const getPublicIndicatorCountData = () => {
+  export const getPublicIndicatorCountData = (finYear) => {
   
     return (dispatch) => {
-        fetch(`${laravel_api}public_count_indicators`, {
+        fetch(`${laravel_api}public_count_indicators/${finYear}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`

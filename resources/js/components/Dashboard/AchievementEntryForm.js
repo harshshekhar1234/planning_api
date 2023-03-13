@@ -300,7 +300,6 @@ function AchievementEntryForm() {
   const submitted_status_ss = useSelector((state) => state.subschemes.submitted_status_ss);
   const department_name = useSelector((state) => state.subschemes.department_name);
   const division_name = useSelector((state) => state.subschemes.division_name);
-  const quaterTs = useSelector((state) => state.maker.quaterTs);
   const finYear = useSelector((state) => state.finYear.finYear);
 
   const [riskremarksedit, setRiskRemarksEdit] = useState('')
@@ -314,8 +313,6 @@ function AchievementEntryForm() {
   const [outcomeConfirmAgree, setOutcomeConfirmAgree] = useState(false)
   const [valueTargetEdit, setValueTargetEdit] = useState('');
   const [valueOutcomeTargetEdit, setValueOutcomeTargetEdit] = useState('');
-  const [quaterTD, setquaterTD] = useState('')
-  const [yearTD, setyearTD] = useState('2022-23')
 
   const handleOpenOutputConfirm = () => {
     setOpenOutputConfirm(true);
@@ -748,12 +745,9 @@ useEffect(() => {
         dispatch(getOutlayData(params.id));
         dispatch(getSubSchemesHeaderReport(params.id));
         dispatch(getRiskRemarksData(params.id));
-        dispatch(getLatestQuater(divisionid));
+        // dispatch(getLatestQuater(divisionid));
         return () => {
           setRiskRemarksEdit('')
-          setquaterTD('')
-          setyearTD('2022-23')
-          dispatch(departmentMakerActions.setQuaterTs({quaterTs:''}))
           dispatch(achievementActions.setEntryMessage({entrymessage:''}))
           dispatch(achievementActions.setValue({value: ''}))
           dispatch(achievementActions.setTime({time: ''}))
@@ -802,36 +796,12 @@ useEffect(() => {
         }
         }, []);
 
-        useEffect(() => {
-          if(quaterTs){
-          if(quaterTs === '0'){
-            setquaterTD('Quater 1')
-            
-          }
-          if(quaterTs.name === 'quater1'){
-            setquaterTD('Quater 2')
-            
-          }
-          if(quaterTs.name === 'quater2'){
-            setquaterTD('Quater 3')
-            
-          }
-          if(quaterTs.name === 'quater3'){
-            setquaterTD('Quater 4')
-            
-          }
-          if(quaterTs.name === 'quater4'){
-            setquaterTD('Quater 1')
-            setyearTD('2023-24')
-          }
-          }
-          }, [quaterTs]);
 
-          useEffect(() => {
-            if((quaterTD === 'Quater 1') && (yearTD === '2023-24')){
-              return navigate(`/dashboarddeptuser/blockentry`);
-            }
-            }, [quaterTD,yearTD]);
+          // useEffect(() => {
+          //   if((quaterTD === 'Quater 1') && (yearTD === '2023-24')){
+          //     return navigate(`/dashboarddeptuser/blockentry`);
+          //   }
+          //   }, [quaterTD,yearTD]);
 
         useEffect(() => {
           dispatch(getAchievementsOutputData(params.id));
@@ -846,31 +816,6 @@ useEffect(() => {
           dispatch(getAchievementFillData(params.id));
         }
           }, [addAchievement]);
-
-    const getQuater = (quater) => {
-      if(!quater){
-        return quaterTD
-      }
-      if(quater === 'quater1'){
-        return 'Quater 1'
-      }
-      if(quater === 'quater2'){
-        return 'Quater 2'
-      }
-      if(quater === 'quater3'){
-        return 'Quater 3'
-      }
-      if(quater === 'quater4'){
-        return 'Quater 4'
-      }
-    }
-
-    const getYear = (year) => {
-      if(!year){
-        return yearTD
-      }
-      return year
-    }
 
     const handleRiskRemarksChange = (event) => {
       dispatch(achievementActions.setRiskRemarksEntryMessage({entrymessageriskremarks:''}))
@@ -974,27 +919,7 @@ useEffect(() => {
         dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Please enter a date'}))
         return
       }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(timeEdit);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
-        return
-      }
-      
-      const achL = achievements.filter(achievement => achievement.outputindicator_id === indicatorId)
-      const achAA = achL.filter(d => d.reportYear === yearTD)
-      const achAAA = achAA.filter(d => d.verified_status === 'A')
-      const valueA = achAAA.map(s => parseFloat(s.value))
-      const valueTC = valueA.length !== 0 ? valueA.reduce((t,n) => { 
-        return t + n
-      }) : 0
-      if(!outputConfirmEditAgree && ((parseFloat(valueEdit) + valueTC) > parseFloat(valueTargetEdit))){
+      if(!outputConfirmEditAgree && (parseFloat(valueEdit) > parseFloat(valueTargetEdit))){
         handleOpenOutputEditConfirm()
         return
       }
@@ -1022,26 +947,7 @@ useEffect(() => {
         dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Please enter a date'}))
         return
       }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(timeoutcomeEdit);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessageOutcomeEdit({entrymessageeditoutcome:'Future dates are not allowed'}))
-        return
-      }
-      const achL = achievementsoutcome.filter(achievement => achievement.outcomeindicator_id === indicatorId)
-      const achAA = achL.filter(d => d.reportYear === yearTD)
-      const achAAA = achAA.filter(d => d.verified_status === 'A')
-      const valueA = achAAA.map(s => parseFloat(s.value))
-      const valueTC = valueA.length !== 0 ? valueA.reduce((t,n) => { 
-        return t + n
-      }) : 0
-      if(!outcomeConfirmEditAgree && ((parseFloat(valueoutcomeEdit) + valueTC) > parseFloat(valueOutcomeTargetEdit))){
+      if(!outcomeConfirmEditAgree && (parseFloat(valueoutcomeEdit) > parseFloat(valueOutcomeTargetEdit))){
         handleOpenOutcomeEditConfirm()
         return
       }
@@ -1069,25 +975,7 @@ useEffect(() => {
         dispatch(achievementActions.setEntryMessage({entrymessage:'Please enter a date'}))
         return
       }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(time);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessage({entrymessage:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessage({entrymessage:'Future dates are not allowed'}))
-        return
-      }
-      const achL = achievements.filter(achievement => achievement.outputindicator_id === outputindicatorId)
-      const achAA = achL.filter(d => d.reportYear === yearTD)
-      const valueA = achAA.map(s => parseFloat(s.value))
-      const valueTC = valueA.length !== 0 ? valueA.reduce((t,n) => { 
-        return t + n
-      }) : 0
-      if(!outputConfirmAgree && ((parseFloat(value) + valueTC) > parseFloat(valueTarget))){
+      if(!outputConfirmAgree && (parseFloat(value) > parseFloat(valueTarget))){
         handleOpenOutputConfirm()
         return
       }
@@ -1161,22 +1049,6 @@ useEffect(() => {
       //   dispatch(outlayActions.setEntryMessage({entrymessage: 'Expenditure cannot be greater than Alloted amount'}))
       //   return
       // }
-      if(outlaytime === ''){
-        dispatch(outlayActions.setEntryMessage({entrymessage:'Please enter a date'}))
-        return
-      }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(outlaytime);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(outlayActions.setEntryMessage({entrymessage:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(outlayActions.setEntryMessage({entrymessage:'Future dates are not allowed'}))
-        return
-      }
       
       dispatch(storeFinancialData(sanctioned,allotment,expenditure,outlaytime,id));
       handleClose5();
@@ -1250,18 +1122,6 @@ useEffect(() => {
         dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Please enter a date'}))
         return
       }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(outlaytimeedit);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(outlayActions.setEntryMessageEdit({entrymessageedit:'Future dates are not allowed'}))
-        return
-      }
       
       dispatch(updateFinancialData(sanctionedEdit,allotmentEdit,expenditureEdit,outlaytimeedit,finEditId));
       handleClose10();
@@ -1284,25 +1144,7 @@ useEffect(() => {
         dispatch(achievementActions.setEntryMessageOutcome({entrymessageoutcome:'Please enter a date'}))
         return
       }
-      const d = new Date();
-      let year = d.getFullYear();
-      const d1 = new Date(timeoutcome);
-      let yearToCheck = d1.getFullYear();
-      if(year !== yearToCheck){
-        dispatch(achievementActions.setEntryMessageOutcome({entrymessageoutcome:'Please enter a valid date'}))
-        return
-      }
-      if(d1 > d){
-        dispatch(achievementActions.setEntryMessageOutcome({entrymessageoutcome:'Future dates are not allowed'}))
-        return
-      }
-      const achL = achievementsoutcome.filter(achievement => achievement.outcomeindicator_id === outcomeindicatorId)
-      const achAA = achL.filter(d => d.reportYear === yearTD)
-      const valueA = achAA.map(s => parseFloat(s.value))
-      const valueTC = valueA.length !== 0 ? valueA.reduce((t,n) => { 
-        return t + n
-      }) : 0
-      if(!outcomeConfirmAgree && ((parseFloat(valueoutcome) + valueTC) > parseFloat(valueTarget))){
+      if(!outcomeConfirmAgree && (parseFloat(valueoutcome) > parseFloat(valueTarget))){
         handleOpenOutcomeConfirm()
         return
       }
@@ -1693,7 +1535,7 @@ useEffect(() => {
     <table className="f6 w-100 mw8 center " cellSpacing="0">
       <thead>
         <tr>
-          <th className="b--black-80 tc pb3 pr3 b">Achievement for Quater</th>
+          <th className="b--black-80 tc pb3 pr3 b">Achievement Entry Date</th>
           <th className="b--black-80 tc pb3 pr3 b">Achievement Value</th>
           <th className="b--black-80 tc pb3 pr3 b">Unit</th>
           <th className="b--black-80 tc pb3 pr3 b">Submitted</th>
@@ -1704,12 +1546,12 @@ useEffect(() => {
       <tbody className="lh-copy">
       {achlists && achlists.map(achlist => {
         return (<tr>
-          <td className="pv3 pr3  b--black-80 tc">{`${getQuater(achlist.reportName)} (FY - ${getYear(achlist.reportYear)})`}</td>
+          <td className="pv3 pr3  b--black-80 tc">{achlist.updated_at.slice(0,10)}</td>
           <td className="pv3 pr3  b--black-80 tc">{achlist.value}</td>
           <td className="pv3 pr3  b--black-80 tc">{achlist.measurement}</td>
           <td className="pv3 pr3  b--black-80 tc">{(achlist.submitted_status === 'N') ? <CancelIcon sx={{ color: red[500] }} /> : <TaskAltIcon color="success" />}</td>
           <td className={`pv3 pr3  b--black-80 tc`}>{verifiedstatustodisplay(achlist.verified_status)}</td>
-          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen8(achlist.id,achlist.time,achlist.value,achlist.measurement,achlist.submitted_status,achlist.verified_status,achlist.outputindicator_id)}>Edit</p></td>
+          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen8(achlist.id,achlist.updated_at.slice(0,10),achlist.value,achlist.measurement,achlist.submitted_status,achlist.verified_status,achlist.outputindicator_id)}>Edit</p></td>
         </tr>
         ) })}
       </tbody>
@@ -1740,7 +1582,7 @@ useEffect(() => {
     <table className="f6 w-100 mw8 center " cellSpacing="0">
       <thead>
         <tr>
-          <th className="b--black-80 tc pb3 pr3 b">Achievement for Quater</th>
+        <th className="b--black-80 tc pb3 pr3 b">Achievement Entry Date</th>
           <th className="b--black-80 tc pb3 pr3 b">Achievement Value</th>
           <th className="b--black-80 tc pb3 pr3 b">Unit</th>
           <th className="b--black-80 tc pb3 pr3 b">Submitted</th>
@@ -1751,12 +1593,12 @@ useEffect(() => {
       <tbody className="lh-copy">
       {achlistsoutcome && achlistsoutcome.map(achlist => {
         return (<tr>
-          <td className="pv3 pr3  b--black-80">{`${getQuater(achlist.reportName)} (FY - ${getYear(achlist.reportYear)})`}</td>
+          <td className="pv3 pr3  b--black-80 tc">{achlist.updated_at.slice(0,10)}</td>
           <td className="pv3 pr3  b--black-80">{achlist.value}</td>
           <td className="pv3 pr3  b--black-80">{achlist.measurement}</td>
           <td className="pv3 pr3  b--black-80 tc">{(achlist.submitted_status === 'N') ? <CancelIcon sx={{ color: red[500] }} /> : <TaskAltIcon color="success" />}</td>
           <td className={`pv3 pr3  b--black-80 tc`}>{verifiedstatustodisplay(achlist.verified_status)}</td>
-          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen9(achlist.id,achlist.time,achlist.value,achlist.measurement,achlist.submitted_status,achlist.verified_status,achlist.outcomeindicator_id)}>Edit</p></td>
+          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen9(achlist.id,achlist.updated_at.slice(0,10),achlist.value,achlist.measurement,achlist.submitted_status,achlist.verified_status,achlist.outcomeindicator_id)}>Edit</p></td>
         </tr>
         ) })}
       </tbody>
@@ -1792,7 +1634,7 @@ useEffect(() => {
     <small id="name-desc" className="f6 black-60 db mb2">Enter Rs. in Lakhs</small>
     <label htmlFor="time" className="f6 b db mb2 nunito">Financial details entered on</label>
     <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={new Date().toLocaleDateString()}/>
-    <small id="name-desc" className="f6 black-60 db mb2">Enter Financial Details for current quater</small>
+    <small id="name-desc" className="f6 black-60 db mb2">Enter Financial Details for current year</small>
     {(entrymessagefinancial !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessagefinancial}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={() => onSubmitFinancial(params.id)}>Save</p>
 </div> : <p>You have already entered an entry. New Entry will only be allowed once verifier approves the entry.</p>}
@@ -1821,7 +1663,7 @@ useEffect(() => {
     <input id="name" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="number" aria-describedby="name-desc" onChange={handleExpenditureValueEditChange} value={expenditureEdit}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Rs. in Lakhs</small>
     <label htmlFor="time" className="f6 b db mb2 nunito">Financial detail entered on</label>
-    <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={`${quaterTD} (FY- ${yearTD})`}/>
+    <input id="time" className="ba b--black-80 pa2 mb2 db w-100 bg-transparent" type="text" aria-describedby="name-desc" value={outlaytimeedit}/>
     <small id="name-desc" className="f6 black-60 db mb2">Enter Financial Details for current year</small>
     {(entrymessagefinancialedit !== '') && <p className="f6 ph3 pv2 mb2 mt2 red w-100 tc pointer b ba b--dark-red nunito">{entrymessagefinancialedit}</p>}
     <p className="f6 link dim br3 ph3 pv2 mb2 dib mt2 white bg-dark-green w5 tc pointer" onClick={() => onSubmitFinancialEdit()}>Save</p>
@@ -1849,7 +1691,6 @@ useEffect(() => {
           <th className="b--black-80 tc pb3 pr2 b">{"Sanctioned Amount (Rs. in Lakhs)"}</th>
           <th className="b--black-80 tc pb3 pr2 b">{"Allotment Amount (Rs. in Lakhs)"}</th>
           <th className="b--black-80 tc pb3 pr2 b">{"Expenditure Amount (Rs. in Lakhs)"}</th>
-          <th className="b--black-80 tc pb3 pr4 b">Financial Record for quater</th>
           <th className="b--black-80 tc pb3 pr4 b">Entered On</th>
           <th className="b--black-80 tc pb3 pr3 b">Submitted</th>
           <th className="b--black-80 tc pb3 pr3 b">Verified</th>
@@ -1862,11 +1703,10 @@ useEffect(() => {
           <td className="pv3 pr2  b--black-80">{financial.sanction}</td>
           <td className="pv3 pr2  b--black-80">{financial.allotment}</td>
           <td className="pv3 pr2  b--black-80">{financial.expenditure}</td>
-          <td className="pv3 pr4 b--black-80">{`${getQuater(financial.reportName)} (FY - ${getYear(financial.reportYear)})`}</td>
-          <td className="pv3 pr4 b--black-80">{financial.created_at.slice(0,10)}</td>
+          <td className="pv3 pr4 b--black-80">{financial.updated_at.slice(0,10)}</td>
           <td className="pv3 pr3  b--black-80 tc">{(financial.submitted_status === 'N') ? <CancelIcon sx={{ color: red[500] }} /> : <TaskAltIcon color="success" />}</td>
           <td className={`pv3 pr3  b--black-80 tc`}>{verifiedstatustodisplay(financial.verified_status)}</td>
-          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen10(financial.id,financial.sanction,financial.allotment,financial.expenditure,financial.time.slice(0,10),financial.submitted_status,financial.verified_status)}>Edit</p></td>
+          <td className="pv4 pr4  b--black-80 tc"><p className="f6 link dim br3 ph1 pv1 ml3 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen10(financial.id,financial.sanction,financial.allotment,financial.expenditure,financial.updated_at.slice(0,10),financial.submitted_status,financial.verified_status)}>Edit</p></td>
         </tr>
         ) })}
       </tbody>
@@ -2005,7 +1845,7 @@ useEffect(() => {
           <th className="b--black-80 tc pb3 pr3 b">Output Indicator</th>
           <th className="b--black-80 tc pb3 pr3 b">Target Value</th>
           <th className="b--black-80 tc pb3 pr3 b">Measurement Unit</th>
-          <th className="b--black-80 tc pb3 pr3 b">Target Year</th>
+          {/* <th className="b--black-80 tc pb3 pr3 b">Target Year</th> */}
           <th className="b--black-80 tc pb3 pr3 b">Add Achievement</th>
           <th className="b--black-80 tc pb3 pr3 b">View Achievement</th>
         </tr>
@@ -2017,7 +1857,7 @@ useEffect(() => {
           <td className="pv3 pr3  b--black-80">{indicator.name.toUpperCase()}</td>
           <td className="pv3 pr3  b--black-80">{parseFloat(indicator.target_outputs[0].value)}</td>
           <td className="pv3 pr3  b--black-80">{indicator.target_outputs[0].measurement}</td>
-          <td className="pv3 pr3  b--black-80">{indicator.target_outputs[0].year}</td>
+          {/* <td className="pv3 pr3  b--black-80">{indicator.target_outputs[0].year}</td> */}
           <td className="pv3 pr3  b--black-80"><p className="f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen1(indicator)}>Add</p></td>
           <td className="pv3 pr3  b--black-80"><p className="f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen2(indicator.id,indicator.target_outputs[0].measurement,indicator.target_outputs[0].value)}>View</p></td>
         </tr>
@@ -2059,7 +1899,7 @@ useEffect(() => {
           <th className="b--black-80 tc pb3 pr3 b">Outcome Indicator</th>
           <th className="b--black-80 tc pb3 pr3 b">Target Value</th>
           <th className="b--black-80 tc pb3 pr3 b">Measurement Unit</th>
-          <th className="b--black-80 tc pb3 pr3 b">Target Year</th>
+          {/* <th className="b--black-80 tc pb3 pr3 b">Target Year</th> */}
           <th className="b--black-80 tc pb3 pr3 b">Add Achievement</th>
           <th className="b--black-80 tc pb3 pr3 b">View Achievement</th>
         </tr>
@@ -2071,7 +1911,7 @@ useEffect(() => {
           <td className="pv3 pr3  b--black-80">{indicator.name.toUpperCase()}</td>
           <td className="pv3 pr3  b--black-80">{parseFloat(indicator.target_outcomes[0].value)}</td>
           <td className="pv3 pr3  b--black-80">{indicator.target_outcomes[0].measurement}</td>
-          <td className="pv3 pr3  b--black-80">{indicator.target_outcomes[0].year}</td>
+          {/* <td className="pv3 pr3  b--black-80">{indicator.target_outcomes[0].year}</td> */}
           <td className="pv3 pr3 b--black-80"><p className="f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen3(indicator)}>Add</p></td>
           <td className="pv3 pr3 b--black-80"><span className="f6 link dim br3 ph1 pv1 mb1 dib mt1 white bg-dark-green w3 tc pointer" onClick={() => handleOpen4(indicator.id,indicator.target_outcomes[0].measurement,indicator.target_outcomes[0].value)}>View</span></td>
         </tr>

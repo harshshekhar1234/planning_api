@@ -164,13 +164,35 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function public_indicator()
+    public function public_indicator($fin_year)
     {
-        DB::enableQueryLog();
+        // DB::enableQueryLog();
+        // $indicator_count =
+        //     DB::table('departments')
+        //     ->leftJoin('output_indicators', 'output_indicators.department_id', '=', 'departments.id')
+        //     ->leftJoin('outcome_indicators', 'outcome_indicators.department_id', '=', 'departments.id')
+        //     ->select([
+        //         'departments.id', 'departments.name',
+        //         DB::raw('COUNT(DISTINCT(output_indicators.id)) AS OutputIndicator_count'),
+        //         DB::raw('COUNT(DISTINCT(outcome_indicators.id)) AS OutcomeIndicator_count')
+        //     ])
+        //     ->groupBy('departments.id')
+        //     ->orderBy('departments.name')
+        //     ->get();
+        // return response()->json($indicator_count, 200);
+        // DB::enableQueryLog();
         $indicator_count =
             DB::table('departments')
-            ->leftJoin('output_indicators', 'output_indicators.department_id', '=', 'departments.id')
-            ->leftJoin('outcome_indicators', 'outcome_indicators.department_id', '=', 'departments.id')
+            ->leftJoin('output_indicators', function($join) use ($fin_year){
+                $join->on('output_indicators.department_id', '=', 'departments.id')
+                ->where('output_indicators.fin_year', '=', $fin_year);
+            })
+            ->leftJoin('outcome_indicators', function($join) use ($fin_year){
+                $join->on('outcome_indicators.department_id', '=', 'departments.id')
+                ->where('outcome_indicators.fin_year', '=', $fin_year);
+            })
+            // ->leftJoin('output_indicators', 'output_indicators.department_id', '=', 'departments.id')
+            // ->leftJoin('outcome_indicators', 'outcome_indicators.department_id', '=', 'departments.id')
             ->select([
                 'departments.id', 'departments.name',
                 DB::raw('COUNT(DISTINCT(output_indicators.id)) AS OutputIndicator_count'),
@@ -178,20 +200,45 @@ class DashboardController extends Controller
             ])
             ->groupBy('departments.id')
             ->orderBy('departments.name')
+            //->toSql();
             ->get();
+        // echo $indicator_count;
+        // exit;
         return response()->json($indicator_count, 200);
+        //$data['chart_data'] = json_encode($indicator_count);
+        //return view('chart-js', $data);
     }
 
-    public function public_count_for_dashboard()
+    public function public_count_for_dashboard($fin_year)
     {
-        $state_share_outlay = FinancialOutlay::all()->sum('state_share');
-        $centre_share_outlay = FinancialOutlay::all()->sum('center_share');
-        $departments = Department::all()->count();
-        $schemes = Scheme::all()->count();
-        $subschemes = SubScheme::all()->count();
-        $outputs = Output::all()->count();
-        $outcomes = Outcome::all()->count();
+        // $state_share_outlay = FinancialOutlay::where(['fin_year' => '2324'])->sum('state_share');
+        // $centre_share_outlay = FinancialOutlay::where(['fin_year' => '2324'])->sum('center_share');
+        // $departments = Department::all()->count();
+        // $schemes = Scheme::where(['fin_year' => '2324'])->count();
+        // $subschemes = SubScheme::where(['fin_year' => '2324'])->count();
+        // $outputs = Output::where(['fin_year' => '2324'])->count();
+        // $outcomes = Outcome::where(['fin_year' => '2324'])->count();
 
+
+        // return response()->json([
+        //     'financial_outlay' => round(($state_share_outlay + $centre_share_outlay) / 100, 2),
+        //     'state_share_outlay' => round($state_share_outlay / 100, 2),
+        //     'centre_share_outlay' => round($centre_share_outlay / 100, 2),
+        //     'departments' => $departments,
+        //     'schemes' => $schemes,
+        //     'subschemes' => $subschemes,
+        //     'outputs' => $outputs,
+        //     'outcomes' => $outcomes,
+        //     'status' => 200
+        // ]);
+
+        $state_share_outlay = FinancialOutlay::where(['fin_year' => $fin_year])->sum('state_share');
+        $centre_share_outlay = FinancialOutlay::where(['fin_year' => $fin_year])->sum('center_share');
+        $departments = Department::all()->count();
+        $schemes = Scheme::where(['fin_year' => $fin_year])->count();
+        $subschemes = SubScheme::where(['fin_year' => $fin_year])->count();
+        $outputs = Output::where(['fin_year' => $fin_year])->count();
+        $outcomes = Outcome::where(['fin_year' => $fin_year])->count();
 
         return response()->json([
             'financial_outlay' => round(($state_share_outlay + $centre_share_outlay) / 100, 2),
